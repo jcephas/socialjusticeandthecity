@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Politics and Aesthetics</title>
+
+        <script src="https://cdnjs.cloudfare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+    </head>
+    <body>
+        <script type="application/processing">
+            void setup() {
+                size(600, 600);
+                noStroke();
+              }
+              void draw() {
+                background(255);
+                if (mouseY < 300) {
+                  rect(0, 0, 600, 300);
+                      ellipse(250,240,400,400);
+                          fill();
+                          stroke();
+                      ellipse(145,220,150,150);
+                          fill();
+                          stroke();
+                      ellipse(270,350,150,150);
+                          fill(164,128,176);
+                          stroke();
+                      textSize(18);
+                          fill(255);
+                          text("PEOPLE IN POWER", 210, 145);
+                      textSize(12);
+                          fill(30);
+                          text("DIVISION THROUGH", 82, 220);
+                      textSize(12);
+                          fill(30);
+                          text("BINARIES", 110, 236);
+                      textSize(12);
+                          fill(30);
+                          text("RADICAL POWER", 220, 345);
+                      textSize(12);
+                          fill(30);
+                          text("THROUGH AUTHORITY", 205, 360);
+                } else {
+                  rect(0, 300, 600, 600);
+                      ellipse(425,300,275,275);
+                          fill();
+                          stroke(90);
+                      ellipse(175,300,275,275);
+                          fill();
+                          stroke();
+                      textSize(14);
+                          fill(30);
+                          text("LOSS OF IDENTITY", 105, 290);
+                      textSize(14);
+                          fill(30);
+                          text("THROUGH GENERALIZATION", 70, 310);
+                      textSize(14);
+                          fill(30);
+                          text("WITHIN SOCIAL MOVEMENTS", 70, 330);
+                      textSize(14);
+                          fill();
+                          text("IMAGINATION & NARRITIVE TO", 325, 295);
+                      textSize(14);
+                          fill();
+                          text("ACHIEVE ALTERNATE IDENTITY", 325, 315);
+                  }
+              
+              textSize(32);
+              fill(161,76,115); 
+              text("UNIVERSALITY", 25, 80);
+              fill(161,76,115);  
+              text("POWER", 25, 500); 
+                  
+              if (mousePressed) {
+                  rect(0, 0, 400, 600);
+                      fill();
+                      stroke();
+                  rect(400, 0, 200, 600);
+                      fill();
+                      stroke();
+                  textSize(75);
+                      fill(255);
+                      text("POLITICS",0, 600);
+                  textSize(25);
+                      fill(161,76,115);
+                      text("ARCHITECTURE",400,25);
+                  rect(250, 275, 300, 200);
+                      fill(255);
+                      stroke(255);
+                  rect(100, 175, 200, 150);
+                      fill(255);
+                      stroke(255);
+                  textSize(16);
+                          fill(30);
+                          text("PERCEIVED SPACE", 125, 260);
+                  textSize(16);
+                          fill(255);
+                          text("ACTUAL SPACE", 345, 380);
+              }
+                  
+              if ((keyPressed == true) && (key == 'a')) {
+                  rect(0,0,600,600);
+                      fill();
+                      stroke();
+                  textSize(14);
+                      String s = ("Emma Palacio");
+                      fill(255,255,255);
+                      text(s, 50, 35, 500, 650);
+                  textSize(14);
+                      String s = ("Interactive Analysis I");
+                      fill(255,255,255);
+                      text(s, 50, 53, 500, 650);
+                  textSize(14);
+                      String s = ("2/18/21");
+                      fill(255,255,255);
+                      text(s, 50, 71, 500, 650);
+                  textSize(11);
+                      String s = "Calhoun discusses the various nuances in which social movements have both created identity narratives and caused the loss of individuality, while Ranciere explores the ways in which the creation of art is tied to the political sphere. Both readings touch upon crucial points regarding the notion of universality and other ideologies. One of the most salient concepts that Calhoun suggests is the notion that individual identity was often lost through the generalization of movement struggles. However, it is also interesting to note that social movements were often used to achieve an alternate identity. The use of imagination and narrative were particularly important in supporting this cause. Ranciere argues a similar point when he states, “this equality destroys all of the hierarchies of representation and also establishes a community of readers as a community without legitimacy, a community formed only by the random circulation of written word.”.  This idea plays into the ways in which he discusses the role of arts in the political realm. Furthermore, it supports his main argument that art becomes political through a combination of craft and intent. This concept is particularly true to architecture as we have seen the various ways in which the politicization of architecture has caused both accidental and intentional harm to individuals and communities. For example, the rise of industrialization and modernization have led to the loss of individual identity, thus further enabling racial erasure. However, on the other hand, policies such as residential segregation and redlining have directly targeted specific racial groups. Ranciere’s argument is especially important as it holds architects, city planners, policy makers, politicians, etc. responsible for their intentions and designs within the built landscape.";
+                      fill(255,255,255);
+                      text(s, 50, 110, 500, 650);
+                  textSize(11);
+                      String s = "Notions of power are also central to the arguments that these texts address. Calhoun cites that division through binaries is especially harmful in relation to political parties as they enable only specific voices to be heard. However, the other end to this idea is that only “authorized elites” can carry out success through radical action. These two ideas support the importance of carefully selecting who is put in power. In contrast, Ranciere discusses how individuals can directly exude power through art. An idea that stuck out to me the most was the distinction between one’s individual perceived sense of space and the actual physical space. Within this framework one can argue an endless possibilities for subjections that one can experience. ";
+                      fill(255,255,255);
+                      text(s, 50, 425, 500, 650);
+                  textSize(8.25);
+                      String s = ("[1] Jacques Ranciére, “The Distribution of the Sensible: Politics and Aesthetics,” in The Politics of Aesthetics (London: Continuum, 2000), pp. 12–19. (14).");
+                      fill(255,255,255);
+                      text(s, 50, 563, 500, 650);
+                }
+              }              
+        </script>
+        <canvas></canvas>
+    </body>
+</html>
