@@ -5,73 +5,137 @@
 
         <!--Loads the Processing.js Library-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+
+        <style>
+          
+          .CourseInfoStrip {
+              padding-top: 10vw;
+              padding-right: 5vw;
+              width: 100vw;
+              text-align: right;
+              font: Arial;
+              font-size: medium;
+              font-color: rgb(207, 207, 207);
+          }
+
+          .ThisPageTitleStrip{
+              top: 30vw;
+              position: fixed;
+              text-align: right;
+              font: Arial;
+              font-size: large;
+              font-variant: small-caps;
+              font-weight: bold;
+              font-color: rgb(0,0,0);
+          }
+
+          .GraphicsRenderZone{
+
+          }
+
+          .ExplanatoryTextZone{
+              padding-left: 10vw;
+              padding-right: 10vw;
+              top: 40vw;
+              left: 10vw;
+              width: 30vw;
+              text-align: left;
+              font: 16px Arial;
+              font-color: black;
+
+          }
+        </style>
     </head>
+
+
     <body>
+
+
+
+        <div id="CourseInfoStrip">
+            Social Justice and the City 
+            Annalee Fuller
+            Prof. Jay Cephas
+        </div>
+
+        <div id="ThisPageTitleStrip">
+Politics and Aesthetics
+        </div>
+
+        <div id="GraphicsRenderZone">
+
+            
         <script type="application/processing">
-void setup(){
-size(700,400);
-background(4,4,4);
-}
+            void setup(){
+            size(1200,750);
+            background(4,4,4);
+            }
+            
+            void draw(){
+            
+            fill(255,255,255);
+            stroke(255,255,255);
+            rect(500 ,10, 190, 380);
+            
+            stroke(4,4,4);
+            fill(mouseX/3+100, mouseY/3+100, mouseX/3+100);
+            rect(10,10,480,380);
+            
+            fill(4,4,4);
+            stroke(4,4,4);
+            
+            ellipse(50+mouseX/40,50,10,10);
+            ellipse(100-mouseX/40,50,10,10);
+            ellipse(150-mouseX/20,50,10,10);
+            
+            ellipse(50+mouseX/30,100-mouseX/40,10,13);
+            ellipse(100-mouseX/40,100-mouseX/30,10,13);
+            ellipse(150-mouseX/20,100-mouseX/20,10,13);
+            
+            ellipse(50-mouseX/40,150-mouseX/37,10,18);
+            ellipse(100-mouseX/15,150-mouseX/20,10,18);
+            ellipse(150-mouseX/30,150-mouseX/35,10,18);
+            
+            
+            fill(4,4,4);
+            stroke(4,4,4);
+            
+            ellipse(350+mouseX/20,200+mouseX/10,10,26);
+            ellipse(400+mouseX/20,200+mouseX/10,10,26);
+            ellipse(450+mouseX/20,200+mouseX/10,10,26);
+            
+            ellipse(350+mouseX/20,250+mouseX/10,10,33);
+            ellipse(400+mouseX/20,250+mouseX/10,10,33);
+            ellipse(450+mouseX/20,250+mouseX/10,10,33);
+            
+            ellipse(350+mouseX/20,300+mouseX/10,10,37);
+            ellipse(400+mouseX/25,300+mouseX/10,10,37);
+            ellipse(450+mouseX/32,300+mouseX/15,10,37);
+            
+            
+            if (mousePressed) {
+            fill(30,40,70);
+            stroke(50,88,75);
+            ellipse(mouseX,mouseY,10,mouseY/8);
+            }
+            
+            
+            fill(4,4,4);
+            stroke(4,4,4);
+            ellipse(mouseX,mouseY,10,mouseY/8);           
+            }
+                    </script>
+            <canvas><!--Processing code render space--></canvas>
+        </div>
 
-void draw(){
-
-fill(255,255,255);
-stroke(255,255,255);
-rect(500 ,10, 190, 380);
-
-stroke(4,4,4);
-fill(mouseX/10, mouseY/3, mouseX/8);
-rect(10,10,480,380);
-
-fill(4,4,4);
-stroke(4,4,4);
-
-ellipse(50+mouseX/40,50,10,10);
-ellipse(100-mouseX/40,50,10,10);
-ellipse(150-mouseX/20,50,10,10);
-
-ellipse(50+mouseX/30,100-mouseX/40,10,13);
-ellipse(100-mouseX/40,100-mouseX/30,10,13);
-ellipse(150-mouseX/20,100-mouseX/20,10,13);
-
-ellipse(50-mouseX/40,150-mouseX/37,10,18);
-ellipse(100-mouseX/15,150-mouseX/20,10,18);
-ellipse(150-mouseX/30,150-mouseX/35,10,18);
+        <div id="Explanatory TextZone">
+ text("In “Social Movements and the Idea of Progress,” Calhoun argues that \nsocial questions arising from hierarchies have prompted social movement \nactions on the basis of “material determination”, and that the develop-\nment of social imaginaries-- non-neutral and non-external-- have precipi-\ntated political factions. These constructs operate in a feedback loop with \nthe identities of community members. Thinkers like Hannah Arendt have \ntraced the origins of social movements to a public realization that \ndivisions among people aren’t inherent and eternal, but that systemic \nchanges could redistribute certain benefits to more or different people. In \nthis piece, thinkers’ orientations toward a definitive “social good” vary \nwidely, but such vectors have cohered with the interests of groups and \nidentities of individuals (be it from a place of “virtue or egotism”). A \nrecent teleology among movements, counter-movements, and their \nrespective identities directly contrast “The social movement” widely \nregarded by social thinkers in the early 19th century-- a unified belief and \naction by “the people” against corrupt elites. Calhuon caputres the \nfactionalization of identities, changing economic composition, \npolitical interests and social behavior that characterize movements, their \ndevelopment, propagation, transference, and transposition onto other \ncauses. In “The Distribution of the Sensible: Politics and Aesthetics,” \nRanciere posits that non-neutral frames of reference and representation \nparameterize methods of conscious association and identity, be it with \nother humans or elements of the physical environment. He characterizes \naesthetics as discourse and properties of a set of ideas. Furthermore, \nhe explains that one’s occupation determines their capacity to “take \ncharge of what is common to the community.” Ranciere's argument \nsuggests that the properties, discourse, and representation of a set of \nideas (physical, visual, and otherwise) are developed in environments \nthat are inherently skewed by interests.",504, 20);
+            text("Central to the arguments of both of these perspectives is the behavior \nof individuals within groups, their internalization of ideas and association \nof those ideas with their identities and self-orientation. Dynamics of \nthought among members of groups are complex. Membership in a group \nmay provide orientation and self-definition in belonging; a basis for likeness; \na characteristic convergence toward ideals, and kinship.  Moreover, as a \nmember of a group, an individual may define themselves in opposition to \nmembers that are not in the group. These group dynamics, inward and \nvariable acceleration toward ideals, and the absorption of new \nidentities within changing political, economical, and social contexts all \naffect the development and proliferation of social movements.", 504, 290);
+        </div>
 
 
-fill(4,4,4);
-stroke(4,4,4);
-
-ellipse(350+mouseX/20,200+mouseX/10,10,26);
-ellipse(400+mouseX/20,200+mouseX/10,10,26);
-ellipse(450+mouseX/20,200+mouseX/10,10,26);
-
-ellipse(350+mouseX/20,250+mouseX/10,10,33);
-ellipse(400+mouseX/20,250+mouseX/10,10,33);
-ellipse(450+mouseX/20,250+mouseX/10,10,33);
-
-ellipse(350+mouseX/20,300+mouseX/10,10,37);
-ellipse(400+mouseX/25,300+mouseX/10,10,37);
-ellipse(450+mouseX/32,300+mouseX/15,10,37);
 
 
-if (mousePressed) {
-fill(30,40,70);
-stroke(50,88,75);
-ellipse(mouseX,mouseY,10,mouseY/8);
-}
 
-
-fill(4,4,4);
-stroke(4,4,4);
-ellipse(mouseX,mouseY,10,mouseY/8);
-
-fill(4,4,4);
-textSize(6);
-text("In “Social Movements and the Idea of Progress,” Calhoun argues that \nsocial questions arising from hierarchies have prompted social movement \nactions on the basis of “material determination”, and that the develop-\nment of social imaginaries-- non-neutral and non-external-- have precipi-\ntated political factions. These constructs operate in a feedback loop with \nthe identities of community members. Thinkers like Hannah Arendt have \ntraced the origins of social movements to a public realization that \ndivisions among people aren’t inherent and eternal, but that systemic \nchanges could redistribute certain benefits to more or different people. In \nthis piece, thinkers’ orientations toward a definitive “social good” vary \nwidely, but such vectors have cohered with the interests of groups and \nidentities of individuals (be it from a place of “virtue or egotism”). A \nrecent teleology among movements, counter-movements, and their \nrespective identities directly contrast “The social movement” widely \nregarded by social thinkers in the early 19th century-- a unified belief and \naction by “the people” against corrupt elites. Calhuon caputres the \nfactionalization of identities, changing economic composition, \npolitical interests and social behavior that characterize movements, their \ndevelopment, propagation, transference, and transposition onto other \ncauses. In “The Distribution of the Sensible: Politics and Aesthetics,” \nRanciere posits that non-neutral frames of reference and representation \nparameterize methods of conscious association and identity, be it with \nother humans or elements of the physical environment. He characterizes \naesthetics as discourse and properties of a set of ideas. Furthermore, \nhe explains that one’s occupation determines their capacity to “take \ncharge of what is common to the community.” Ranciere's argument \nsuggests that the properties, discourse, and representation of a set of \nideas (physical, visual, and otherwise) are developed in environments \nthat are inherently skewed by interests.",504, 20);
-text("Central to the arguments of both of these perspectives is the behavior \nof individuals within groups, their internalization of ideas and association \nof those ideas with their identities and self-orientation. Dynamics of \nthought among members of groups are complex. Membership in a group \nmay provide orientation and self-definition in belonging; a basis for likeness; \na characteristic convergence toward ideals, and kinship.  Moreover, as a \nmember of a group, an individual may define themselves in opposition to \nmembers that are not in the group. These group dynamics, inward and \nvariable acceleration toward ideals, and the absorption of new \nidentities within changing political, economical, and social contexts all \naffect the development and proliferation of social movements.", 504, 290);
-}
-        </script>
-        <canvas><!--Processing code render space--></canvas>
     </body>
 </html>
