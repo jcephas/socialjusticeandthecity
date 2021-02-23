@@ -12,15 +12,18 @@
 	#header {
 		color: white;
 		font-family: helvetica; font-weight: bolder; 
-		outline-style: dotted; outline-color: white; outline-width: 0.5;
-		width: 65%;
+		outline-style: dotted; outline-color: white; outline-width: 0.5; outline-offset: 100;
+		width: 75%;
 	}
 
 	#preface {
+		margin-left: 100;
+		margin-right: 100;
+		outline-style: dotted; outline-color: white; outline-width: 0.25; outline-offset: 500;
 		color: white;
 		font-family: helvetica; font-size: 0.1;
 		text-align: justify;
-		width: 65%;
+		width: 100%;
 	}
 
 	#applicaton {
@@ -32,13 +35,13 @@
 		<h1> politics and aesthetics: an interactive analysis </h1>
 
 	<div id="preface">
-		<p> The works considered for this class period were an excerpt from Craig Calhoun's 2012 book "The Roots of Radicalism" entitled "Social Movements and the Idea of Progress" as well as an excerpt from Jacques Ranciere's 2005 book "The Politics of Aesthetics" entitled "The Distribution of the Sensible".</p>
+		<p> The works considered for this class period were an excerpt from Craig Calhoun's 2012 book "The Roots of Radicalism" entitled "Social Movements and the Idea of Progress" as well as an excerpt from Jacques Ranciere's 2005 book "The Politics of Aesthetics" entitled "The Distribution of the Sensible". Information is distilled and distributed to our senses through a process of inclusion and exclusion. Aesthetics is a portal that mediates what is and what is not distibuted.</p>
 
 	<div id="application">
 
 		<script type="application/processing">
 			void setup()  {
-  				size (1000, 1500);
+  				size (1000, 1000);
 			}
 
 			void draw()  {
@@ -53,13 +56,13 @@
   					rect(mouseX,mouseY-50,250,325);
   				}
   				
-  				fill(224,214,101);
-  				ellipse(600,600,25,25);
+  				fill(224,35,101);
+  				ellipse(600,50,25,25);
 
   				fill(56,189,224);
   				ellipse(310,350,50,50);
 
-  				fill(250,35,107);
+  				fill(250,600,107);
   				ellipse(50,50,75,75);
   
   				textSize(10);
@@ -75,7 +78,7 @@
   				textSize(10);
   				String u = "Lastly, Calhoun’s description of the fallacies of bundling together disparate and diverse social movements into a banner that can be easily categorized and holistically misunderstood brings to mind the spatial/racial constructions of “chinatowns”, “ghettos”, and “blight”. Just as with the labor movement described by Calhoun, these areas were congested both socially and spatially so the residents could be easily categorized and generalized."; 
      			fill(0);
-     			text(u, 620,600,200,400);
+     			text(u, 620,50,200,400);
    
   			} 
 		</script>
