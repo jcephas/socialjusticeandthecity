@@ -12,6 +12,8 @@
 	#header {
 		color: white;
 		font-family: helvetica; font-weight: bolder;
+		outline-style: dotted; outline-color: white; outline-width: 0.5;
+		width: 70%;
 	}
 
 	#preface {
@@ -22,7 +24,6 @@
 	}
 
 	#applicaton {
-		outline-style: dotted; outline-color: white; outline-width: 0.5;
 	}
 </style>
 
@@ -48,16 +49,19 @@
   				fill(255);
   				stroke(255);
   				ellipse(mouseX,mouseY,100,100);
-  				rect(mouseX,mouseY-50,250,325);
-  
-  				fill(250,35,107);
-  				ellipse(50,50,75,75);
-  
-  				fill(56,189,224);
-  				ellipse(350,400,50,50);
+  				if (mousePressed) {
+  					rect(mouseX,mouseY-50,250,325);
+  				}
+  				
   
   				fill(224,214,101);
-  				ellipse(700,700,25,25);
+  				ellipse(600,600,25,25);
+
+  				fill(56,189,224);
+  				ellipse(310,350,50,50);
+
+  				fill(250,35,107);
+  				ellipse(50,50,75,75);
   
   				textSize(10);
   				String s = "I found the notion of inclusion and exclusion in this pair of readings especially fascinating. In Craig Calhoun’s Social Movements and the Idea of Progress, dominant and prevailing modes of political conflict and discussion are discussed. The concept of inclusion, both in the dominant “legitimate” public sphere of thought and discussion informs much of what we have discussed thusfar in this course. For example, “struggles for inclusion in the dominant public sphere” (Calhoun 70) were heavily discussed in relation to the efforts of displaced residents of the Lower Ninth Ward to be included in the new, post-disaster public sphere as well as in political decision making. More “radical” or non-normative imaginaries for the future of the area (similar in quality to the black spatial imaginary) were supplanted by the aesthetics of depiction.";
@@ -67,12 +71,12 @@
   				textSize(10);
   				String r = "This notion of inclusion in terms of aesthetics was also expanded upon in Jacques Ranciere’s The Distribution of the Sensible, in which the very definition of the field of politics is defined by the images (and ideas) that are allowed based upon circumstance to participate or are excluded. This, coupled with Ranciere’s specific parallels drawn to artistic expressions, brings to mind the discussion of the decision making involved in the aesthetic practices of space representation. When images are composed and created, a political field of varying imageability is constructed, with elements left out or included. Ranciere draws a connection to the artistic bias of the composer, and thus by extension the composition of social landscape of society.";
  	 			fill(0);
-  				text(r, 380,400,200,400);
+  				text(r, 340,350,200,400);
   
   				textSize(10);
   				String u = "Lastly, Calhoun’s description of the fallacies of bundling together disparate and diverse social movements into a banner that can be easily categorized and holistically misunderstood brings to mind the spatial/racial constructions of “chinatowns”, “ghettos”, and “blight”. Just as with the labor movement described by Calhoun, these areas were congested both socially and spatially so the residents could be easily categorized and generalized."; 
      			fill(0);
-     			text(u, 720,700,200,400);
+     			text(u, 620,600,200,400);
    
   			} 
 		</script>
