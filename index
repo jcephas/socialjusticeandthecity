@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Politics and Aesthetics</title>
+
+		<!-- Load the Processing.js library -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+	</head>
+	<body>
+		<script type="application/processing">
+			void setup(){
+				size(200, 200);
+			}
+
+			void draw(){
+				background(50);
+				ellipse(mouseX, mouseY, 50, 50);
+			}
+		</script>
+		<canvas><!--The processing code will render here.--></canvas>
+	</body>
+</html>
