@@ -7,6 +7,10 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
 	</head>
 	<body>
+		<div id="header" style="color:orange">
+			<h1>A Review of Politics and Aesthetics</h1>
+			<h3>(hold the mouse key for more content!)</h3>
+		</div>
 		<script type="application/processing">
 			void setup()
 			{
