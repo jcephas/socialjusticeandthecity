@@ -1,0 +1,72 @@
+<!D<!DOCTYPE html>
+<html>
+	<head>
+		<title>Politics and Aesthetics</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+	</head>
+	<body>
+		<div id="main" style="background-color:47,59,69">
+		<script type="application/processing">
+			void setup(){
+				size(1500, 675);
+			}
+			void draw(){
+				background(255);	
+
+				fill(47,59,69);
+				rect(0,0, 1000,675);
+
+				fill(255);
+				rect(mouseX,0,10,1000);
+
+				fill(255);
+				rect(0,mouseY,1500,10);
+
+				stroke(47,59,69);
+				fill(255);
+				rect(mouseX,mouseY,2000,700);  
+
+				fill(47,59,69);
+				rect(mouseX-2000,mouseY+10,2000,700);
+
+  				textSize(14);
+  					String s = "A common idea I found within the two readings is the relationship of a part or participant to the whole, and the role that part plays within the larger organization. Calhoun discusses this relationship specifically in terms of participants in a social movement, or a political party. I found politics and movements you associate yourself with. Calhoun touches upon polarization between political parties, and I think this is really relevant to our recent election here in the US. It is really compelling to think of how attachment and identity are created by including oneself within a larger group who have a shared vision of progress. After this reading, I found myself challenging the idea of progress, and its traditional imagery of moving in a linear axis with one direction. As time passes, society will always feel the need to improve, but the definition of improvement and the direction of progress seems like it is also continuously changing.";
+  					fill(255);
+  					text(s,50,50,500,300);
+  				
+  				textSize(14);
+  					String s = "Ranciere discusses the relationship of the part to the larger whole more specifically with the placement of the part within and how it can be defined, which he labels with the phrase distribution of the sensible. Thinking of the role of the participant, Renciere discusses that the distribution of the sensible reveals who is able to participate and how they are able to do so within the larger community. This ties into aesthetic and artistic practices, and the idea of visible and invisible, and how a community is defined.";
+  					fill(47,59,69);
+  					text(s,500,300,475,300);
+
+  				textSize(20);
+  					String s = "Politics + Aesthetics";
+  					fill(47,59,69);
+  					text(s,1025,25,600,300);
+
+  				textSize(14);
+  					String s = "Mia Arenburg";
+  					fill(47,59,69);
+  					text(s,1025,50,600,300);
+
+  				textSize(14);
+  					String s = "Readings:";
+  					fill(47,59,69);
+  					text(s,1260,175,600,300);
+
+				textSize(14);
+  					String s = "Craig Calhoun, Social Movements and the Idea of Progress";
+  					fill(255);
+  					text(s,1025,200,300,300);
+
+  				textSize(14);
+  					String s = "Jacques Ranciére, The Distribution of the Sensible: Politics and Aesthetics";
+  					fill(255);
+  					text(s,1025,250,300,300);
+
+			}
+		</script>
+		<canvas></canvas>
+	</div>
+	</body>
+</html>
