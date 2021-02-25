@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Planning and Activism</title>
+
+        <!--Loads the Processing.js Library-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+
+        <style>
+            .LeftMargin{
+                width: 200px;
+            }
+
+          .CourseInfoStrip {
+              padding-top: 10vw;
+              padding-right: 5vw;
+              left: 20vw;
+              width: 100vw;
+              text-align: right;
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: medium;
+              font-color: rgb(207, 207, 207);
+          }
+
+          .ThisPageTitleStrip{
+              top: 30vw;
+              position: fixed;
+              text-align: right;
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: large;
+              font-variant: small-caps;
+              font-weight: bold;
+              font-color: rgb(0,0,0);
+          }
+
+          .GraphicsRenderZone{
+              align-self: center;
+          }
+
+          .ExplanatoryTextZone{
+              padding-left: 200vw;
+              padding-right: 200vw;
+              left: 600vw;
+              width: 30vw;
+              text-align: left;
+              font-family: Arial, Helvetica, sans-serif;
+              font-color: black;
+
+          }
+
+           /* Popup container */
+          .popup {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+                 }
+
+           /* The actual popup (appears on top) */
+          .popup .popuptext {
+            visibility: hidden;
+            width: 160px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 0;
+            position: absolute;
+            z-index: 1;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+} 
+        </style>
+    </head>
+
+
+    <body>
+        <div id="Left Margin"></div>
+
+        <div id="CourseInfoStrip" style="padding-left: 75px">
+            <h1 style="color: red;">UNDER CONSTRUCTION</h1>
+            <h1>Social Justice and the City </h1>
+            <h2>Annalee Fuller</h2>
+            <h2>Prof. Jay Cephas</h2>
+        </div>
+
+        <div id="ThisPageTitleStrip" style="padding-left: 75px">
+            <h3>Planning and Activism</h3>
+        </div>
+
+        <div id="GraphicsRenderZone" style="padding-top: 20px; padding-left: 75px;">
+       
+          <script type="application/processing">
+            void setup(){
+            size(500,400);
+            background(4,4,4);
+            }
+            
+            void draw(){
+           
+            //processing graphics insert here starting with draw unless there's something to change about the setup  
+          </script>
+
+            <canvas><!--Processing code render space--></canvas>
+
+        </div>
+
+        <div class="popup" onclick="myFunction()" style="padding-left: 555px;">ThingToClickForPopUp
+            <span class="popuptext" id="myPopup">Drag the mouse over the canvas.  What happens as you move your cursor toward and away from the groups of ovals?</span>
+
+            <script>
+                // When the user clicks on <div>, open the popup
+                function myFunction() {
+                  var popup = document.getElementById("myPopup");
+                  popup.classList.toggle("show");
+                }
+                </script>
+          </div> 
+
+        <div id="Explanatory TextZone" style="padding-left: 75px; padding-top: 50px; padding-right: 75px;"> 
+           Insert text here  
+        </div>
+
+    </body>
+</html>
