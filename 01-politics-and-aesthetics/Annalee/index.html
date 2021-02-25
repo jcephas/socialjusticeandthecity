@@ -48,6 +48,54 @@
               font-color: black;
 
           }
+
+           /* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+} 
         </style>
     </head>
 
@@ -65,9 +113,20 @@
             <h3>Politics and Aesthetics</h3>
         </div>
 
-        <div id="GraphicsRenderZone" style="padding-top: 20px; padding-left: 75px;">
+        <div class="popup" onclick="myFunction()" style="padding-left: 75px;">?
+            <span class="popuptext" id="myPopup">Drag the mouse over the canvas.  What happens as you move your cursor toward and away from the groups of ovals?</span>
 
-            
+            <script>
+                // When the user clicks on <div>, open the popup
+                function myFunction() {
+                  var popup = document.getElementById("myPopup");
+                  popup.classList.toggle("show");
+                }
+                </script>
+          </div> 
+
+        <div id="GraphicsRenderZone" style="padding-top: 20px; padding-left: 75px;">
+       
         <script type="application/processing">
             void setup(){
             size(500,400);
