@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title> POLITICS AND AESTHETICS</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+   </head>
+
+   <body>
+   	<script type="application/processing">
+   		
+   		void setup() {
+  size(2000,2000);
+  background(69,74,99);
+}
+
+void draw() {
+
+if (mousePressed) {
+    fill(247,247,247);
+    stroke(252,253,246);
+    rect(mouseX,600,100,22);
+  } else {
+    stroke(0,0,0);
+    fill(0,0,0);
+    ellipse(mouseX,mouseY,600,20);
+  }
+</script>
+
+<canvas>
+
+Size(14);
+String s = "Social movements take on new meaning through history, varying by region, class, political party, and time. They share a similar pattern of change where Jacques Ranciere categorizes the “aesthestics” as a “priori of forms determining what presents itself to sense experience” (13) This definition of “ aesthetics” sits well within how a social movement can be perceives, specifically in regard to Calhoun’s historical analysis of the changing social movements within the 18th and 19th century. Within a particular sphere defending or fighting for social progress, it is evident it is dependent upon the shared collective idea of what is meant by progress and to “advance the cause of an entire “people””. (Calhoun, 47) While not all members within the delimitated community may actively engage in a social cause, it is the “aesthetics” that helps reinforce the idea for political cause. Ranciere’s depiction of the arts align with the composition of a social movement where the “forms of its visibility and organization are clear” (Ranciere, 18).  Along with “social movements” came “the social question” as Calhoun defines, “the problem of how inequality or poverty should be address”. With the growing number of movements, the intentions were not always clearly defined from one person to the next and the preservation of parties relied on solidarity as a tactic to preserve one’s position. The pattern of movements historically are embedded within our past and predictably our future, where fighting, defending, or preserving the idea of equality may rest at its core. It is through these definitions by Ranciere and Calhoun that the composition of these movements can determine the success at which it targets progression, which in the case for equal rights in terms of race has been much more difficult to achieve given the lack of acceptance within society.       ";
+fill(206,189,189);
+text(s, 0, 20, 600, 800);  // Text wraps within text box
+
+textSize(10);
+String s = "Phillip Bryant";
+fill(249,244,244);
+text(s, 200, 500, 600, 100);  // Text wraps within text box
+
+textSize(30);
+String s = "Politics and Aesthetics";
+fill(209,225,37);
+text(s, 100, 600, 1000, 800);  // Text wraps within text box
+
+}
+
+</canvas>
+
+</body>
+
+   </html>
