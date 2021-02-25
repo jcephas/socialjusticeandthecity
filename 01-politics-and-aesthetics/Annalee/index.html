@@ -11,7 +11,6 @@
                 width: 200px;
             }
 
-          
           .CourseInfoStrip {
               padding-top: 10vw;
               padding-right: 5vw;
@@ -48,6 +47,54 @@
               font-color: black;
 
           }
+
+           /* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+} 
         </style>
     </head>
 
@@ -66,8 +113,7 @@
         </div>
 
         <div id="GraphicsRenderZone" style="padding-top: 20px; padding-left: 75px;">
-
-            
+       
         <script type="application/processing">
             void setup(){
             size(500,400);
@@ -126,6 +172,18 @@
                     </script>
             <canvas><!--Processing code render space--></canvas>
         </div>
+
+        <div class="popup" onclick="myFunction()" style="padding-left: 555px;">?
+            <span class="popuptext" id="myPopup">Drag the mouse over the canvas.  What happens as you move your cursor toward and away from the groups of ovals?</span>
+
+            <script>
+                // When the user clicks on <div>, open the popup
+                function myFunction() {
+                  var popup = document.getElementById("myPopup");
+                  popup.classList.toggle("show");
+                }
+                </script>
+          </div> 
 
         <div id="Explanatory TextZone" style="padding-left: 75px; padding-top: 50px; padding-right: 75px;"> 
             In “Social Movements and the Idea of Progress,” Calhoun argues that social questions arising from hierarchies have prompted social movement actions on the basis of “material determination”, and that the development of social imaginaries-- non-neutral and non-external-- have precipitated political factions. These constructs operate in a feedback loop with the identities of community members. Thinkers like Hannah Arendt have traced the origins of social movements to a public realization that divisions among people aren’t inherent and eternal, but that systemic changes could redistribute certain benefits to more or different people. In this piece, thinkers’ orientations toward a definitive “social good” vary widely, but such vectors have cohered with the interests of groups and identities of individuals (be it from a place of “virtue or egotism”). A recent teleology among movements, counter-movements, and their respective identities directly contrast “The social movement” widely regarded by social thinkers in the early 19th century-- a unified belief and action by “the people” against corrupt elites. Calhuon caputres the factionalization of identities, changing economic composition, political interests and social behavior that characterize movements, their development, propagation, transference, and transposition onto other causes. In “The Distribution of the Sensible: Politics and Aesthetics,” Ranciere posits that non-neutral frames of reference and representation parameterize methods of conscious association and identity, be it with other humans or elements of the physical environment. He characterizes aesthetics as discourse and properties of a set of ideas. Furthermore, he explains that one’s occupation determines their capacity to “take charge of what is common to the community.” Ranciere's argument suggests that the properties, discourse, and representation of a set of ideas (physical, visual, and otherwise) are developed in environments that are inherently skewed by interests.  Central to the arguments of both of these perspectives is the behavior of individuals within groups, their internalization of ideas and association of those ideas with their identities and self-orientation. Dynamics of thought among members of groups are complex. Membership in a group may provide orientation and self-definition in belonging; a basis for likeness; a characteristic convergence toward ideals, and kinship.  Moreover, as a member of a group, an individual may define themselves in opposition to members that are not in the group. These group dynamics, inward and variable acceleration toward ideals, and the absorption of new identities within changing political, economical, and social contexts all affect the development and proliferation of social movements.
