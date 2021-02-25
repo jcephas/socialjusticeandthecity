@@ -30,14 +30,13 @@
           }
 
           .GraphicsRenderZone{
-
+              align-self: center;
           }
 
           .ExplanatoryTextZone{
-              padding-left: 10vw;
-              padding-right: 10vw;
-              top: 40vw;
-              left: 10vw;
+              padding-left: 200vw;
+              padding-right: 200vw;
+              left: 600vw;
               width: 30vw;
               text-align: left;
               font: 16px Arial;
@@ -53,13 +52,13 @@
 
 
         <div id="CourseInfoStrip">
-            Social Justice and the City 
-            Annalee Fuller
-            Prof. Jay Cephas
+            <h1>Social Justice and the City </h1>
+            <h2>Annalee Fuller</h2>
+            <h2>Prof. Jay Cephas</h2>
         </div>
 
         <div id="ThisPageTitleStrip">
-Politics and Aesthetics
+            <h3>Politics and Aesthetics</h3>
         </div>
 
         <div id="GraphicsRenderZone">
@@ -67,16 +66,12 @@ Politics and Aesthetics
             
         <script type="application/processing">
             void setup(){
-            size(1200,750);
+            size(500,400);
             background(4,4,4);
             }
             
             void draw(){
-            
-            fill(255,255,255);
-            stroke(255,255,255);
-            rect(500 ,10, 190, 380);
-            
+           
             stroke(4,4,4);
             fill(mouseX/3+100, mouseY/3+100, mouseX/3+100);
             rect(10,10,480,380);
