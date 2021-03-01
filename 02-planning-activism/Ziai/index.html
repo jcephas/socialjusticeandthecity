@@ -1,0 +1,99 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>Planning Activism</title>
+
+		
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+	</head>
+
+	<style>
+		h1{
+			color: black;
+			align-content: center;
+			font-size: 20pt;
+			font-family :"Times New Roman";
+			padding-right: 20%;
+			padding-left:40%;
+		}
+		h2{
+			color: grey;
+			align-content: center;
+			font-size: 12pt;
+			font-family:"Times New Roman";
+			padding-right: 40%;
+			padding-left:40%;
+		}
+		h3{
+			color: black;
+			font-size: 12pt;
+			font-family:"Times New Roman";
+			padding-right: 20%;
+			padding-left:45%;
+		}
+		#square {
+            padding-left: 15%;
+            padding-right: 25%;
+        }
+	</style>
+
+	<h1>Planning Activism</h1>
+	<h2> Interactive Reading Analysis </h2>
+	<h3> Ziai Zhou </h3>
+		<p> Crockett gave a brief introduction of the anti-highway protest movement in the 20th century. The citizens against the projects that would divide the city. The anti-highway protest movement happened in multiple cities across the United States. The citizens were to have the right to decide to control the future of their built environments.
+
+		</p>
+		<p> Gandy introduced a radical Puerto Rican organization called Young Lords and stated how this organization tried its best to improve the community services and focus on community health care. This organization's goal was simple, but the spirit of environmentalism has been influencing the subsequent urban planning. As the urban theorist Manuel Castells said, "the first of these is the demand for more equitable service provision patterns for collective goods such sanitation, housing, and health care. A second feature, which contributes to collective consumption issues' political salience, is the demand for greater cultural and political visibility. And the third is the desire for greater control over urban space as a means to foster a different kind of social structure." (Crockett) </p>
+
+		<p>Those two articles talked about two different movements in the 20th century, but those two-movement had a similar goal. The organization and citizens were all about their community and tried to solve the unfair public service to the poor community. As well as stated, when people get together and want to do something, they will see good results as long as they keep doing it.</p>
+	<body>
+		<script type="application/processing">
+			size(1000,500);
+
+void setup(){
+	background(172,215,231);
+}
+
+			void draw() {
+    		if (mousePressed) {
+    		background(220,246,246);
+
+    		    textSize (45);
+  				  String s ="Community";
+    				fill(255,255,255);
+    
+  					fill(255,255,255);
+   					text(s,400,200,500,500);
+  				} else if(!mousePressed) {
+    		background(176,182,182);
+    
+    		fill(8,8,8);
+    		rect (300,40,60,400)
+
+    		fill(255,255,255);
+    		rect (320,60,20,50);
+ 
+    		fill(255,255,255);
+    		rect (320,150,20,50);
+ 
+    		fill(255,255,255);
+    		rect (320,240,20,50);
+
+    		fill(255,255,255);
+    		rect (320,350,20,50);
+    
+    		textSize (45);
+    		String s ="Young Lords";
+    		fill(255,255,255);
+    
+    		fill(255,255,255);
+    		text(s,600,200,500,500);
+
+  			}
+
+ 
+			}</script>
+		<canvas id="square"></canvas>	
+
+	</body>
+</html>
