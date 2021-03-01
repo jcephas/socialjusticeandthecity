@@ -40,7 +40,7 @@
       <script type="application/processing">
       
       void setup() {
-         size(762,800);
+         size(755,800);
          background(88,112,115);
 
          
@@ -52,7 +52,7 @@
 
             fill(255);
             stroke(255);
-            rect(mouseX,mouseY,mouseX/20,mouseX*1.2);
+            rect(mouseX,mouseY,mouseX/5,mouseX*1.2);
 
             fill(255);
             stroke(255);
@@ -94,6 +94,18 @@
             stroke(255);
             rect(mouseX-250,mouseY,mouseX/32,mouseX*1.2);
 
+            fill(255);
+            stroke(255);
+            rect(mouseX-285,mouseY,mouseX/15,mouseX*1.2);
+
+            fill(255);
+            stroke(255);
+            rect(mouseX-320,mouseY,mouseX/14,mouseX*1.2);
+
+            fill(255);
+            stroke(255);
+            rect(mouseX-380,mouseY,mouseX/11,mouseX*1.2);
+
             PFont z = createFont("Calibri", 12);
       
             textFont(z);
@@ -112,13 +124,21 @@
 
             text(c,350,250,400,600);
 
+            String d = "But the success did not come easy – it took several surrounding cities’ residents to speak out and to insist on protecting their homelands. The subsequential impacts were huge: …the human need for vibrant, socially connected neighborhoods could not have been more antithetical to midcentury American urban planning norms. (Crockett 11)   The people of Puerto Rico in New York also had a valuable case in terms of grouping people together to devote the rights to their communities – The activists were drawn from diverse backgrounds: students, ex-gang members, ex-convicts, addicts and other street people. (Gandy 164).";
 
 
+            text(d,350,375,400,600);
+
+            String e = "These movements from New York and Boston showed the strength of accumulated groups of people regardless the individual identities or racial recognitions. The I-95 would possibly get built if Brookline or any other involved city did not join with the movement nor persist long enough time to uphold their voices, but these different neighborhoods took their stands regardlessly.  The lessons were valuable – people with unfair treats or damaged interests need to advocate their rights together even when they may be powerless from the first place, but the payback will return eventually.";
+
+            
+
+            text(e,350,525,400,600);
 
 
             fill(255);
             stroke(255);
-            rect(700,0,50,50);
+            rect(675,0,50,50);
 
             fill(59,75,77);
             stroke(59,75,77);
@@ -144,7 +164,7 @@
 
          fill(255);
          stroke(255);
-         rect(700,0,50,50);
+         rect(675,0,50,50);
          }
       }
       </script>
