@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title> PLANNING AND ACTIVISIM</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+</head>
+
+
+
+   <body>
+    <script type="application/processing">
+      
+      void setup() {
+  size(2000, 2000);
+  noStroke(0,20,65);
+  fill(0,0,0);
+}
+
+void draw() {
+  background(50);
+  if (mouseX < 33) {
+    rect(0, 0, 33, 2000); // Left
+  } else if (mouseX < 66) {
+    rect(66, 0, 33, 2000); // Middle
+  } else  if (mouseX < 66) {
+    rect(66, 0, 33, 2000); // Right
+    }else if (mouseX < 132) {
+    rect(132, 0, 33, 2000); // More Right 
+   } else  if (mouseX < 150) {
+   rect(150, 0, 33, 200);
+    } else  if (mouseX < 175) {
+    rect(175, 0, 33, 600);
+     } else  if (mouseX < 220) {
+     rect(220, 0, 33, 2000);
+      } else  if (mouseX < 250) {
+      rect(250, 0, 33, 2112);
+         } else  if (mouseX < 300) {
+   rect(300, 0, 33, 2500);
+    } else  if (mouseX < 350) {
+    rect(350, 0, 33, 2500);
+     } else  if (mouseX < 400) {
+     rect(400, 0, 33, 2550);
+      } else  if (mouseX < 500) {
+      fill(247,247,247);
+    stroke(252,253,246);
+      rect(500, 0, 200, 3000);
+    } else  if (mouseX < 700) {
+     fill(247,247,247);
+    stroke(252,253,246);
+     rect(700, 0, 33, 20);
+       } else  if (mouseX < 1600) {
+     fill(275,2,247);
+    stroke(275,2,246);
+     rect(1600, 0, 33, 50);
+
+     fill(255);
+        rect(mouseX,0,10,5000);
+        fill(255);
+        rect(mouseX,10,10,5000);
+        fill(255);
+        rect(mouseX,20,10,5000);
+        fill(255);
+        rect(mouseX,30,10,6000);
+        fill(255);
+        rect(mouseX,40,10,1000);
+        fill(255);
+        rect(mouseX,50,10,1000);
+        fill(255);
+        rect(mouseX,60,10,1000);
+        fill(255);
+        rect(mouseX,70,10,1000);
+        fill(255);
+        rect(mouseX,80,10,1000);
+ }
+ else {
+    stroke(0,80,0);
+    fill(0,80,0);
+    rect(mouseX,mouseY,200,200);
+
+  }
+
+ 
+
+textSize(16);
+String s = "The 1965 highway act sat amidst a growing residential interest in urban planning decisions, and a desire for local and state politicians to bring growth back to declining business districts. The result generated social movements which had become a normative process at this point in time, especially considering many other cities within the United States has already wared battles against highway construction aimed at “modernity”. Supporting the mass involvement of communities against new construction were journalists and authors like Jane Jacobs who projected views to the public that planners essentially “misunderstand the essence of neighborhood life” (Jacobs, 9)  The growth occurs after a sense of lack of response for individuals meant to be the voice of residents. Without proper political representation and support residents whom are comprised mostly of individuals already adjourned to the years of abuse from the actions of political system turn, turn towards activism as more awareness is generated.        ";
+fill(206,189,189);
+text(s, 500, 20, 200, 2000);  // Text wraps within text box
+
+textSize(10);
+String s = "Phillip Bryant";
+fill(249,244,244);
+text(s, 500, 1000, 600, 100);  // Text wraps within text box
+
+textSize(200);
+String s = "PLANNING ACTIVISM";
+fill(21,225,20);
+text(s, 700, 100, 1000, 800);  // Text wraps within text box
+
+
+}
+
+</script>
+
+<canvas></canvas>
+<a href="02-planning-activisim/index.html" style="display:block">Politics and Aesthetics</a>
+
+
+
+</body>
+
+   </html>
