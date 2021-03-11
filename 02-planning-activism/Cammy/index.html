@@ -2,7 +2,7 @@
 	<html> 
 		<head>
 			<style>
-				.col-3 {width: 25%;}
+				.col-3 {width: 30%;}
 				.col-6 {width: 50%;}
 				.col-12 {width:100%;}
 				.row::after {
@@ -22,53 +22,19 @@
 		</head>
 		
 		<body>
-			<div id="header" style="font-family:Helvetica;padding-top: 30px;padding-left: 25px">
+			<div id="header" style="font-family:Helvetica;padding-top: 25px;padding-left: 25px">
 				<h1>Planning Activism</h1>
 			</div>
-			<div id="main" style="font-family:Georgia;padding-left: 25px;padding-bottom: 40px">
+			<div id="subheader" style="font-family:Georgia;padding-left: 25px;padding-bottom: 40px">
 				<i>In response to the introduction of Karilyn Crockett's </i>People Before Highway<i> and Matthew Gandy's </i>Concrete and Clay:<i>"Between Boriquen and the Barrio</i>"
 			</div>
 
 			<script type="application/processing">
 			void setup() {
-			  size(800, 700);
+			  size(600, 700);
 			  background(255);
 			  myFont = createFont("Georgia");
 			  textFont(myFont);
-			}
-
-			void draw() {
-			if ((mouseX > 600) || (mouseX < 200) || (mouseY < 0) || (mouseY > 700)) {
-			  
-			textSize(16);
-			fill(0);
-			textLeading(22);
-			String s = "''...a high stakes regional battle for the democratic production of space defining knowledge'' (Crockett 15)"; 
-			  text(s, 615, 5, 190, 700);
-			String s = "''The legacy of the Boston antihighway movement continues to assert its call for a redistribution of power within urban built environments, the field of planning, and democratic governance (Crockett 18)''"; 
-			  text(s, 615, 150, 190, 700);
-			String s = "''The focus on the human environment transcended dualistic conceptions of nature and culture and opened up new possibilities for profressive environmental politics'' (Gandy 183)"; 
-			  text(s, 615, 360, 190, 700);
-			String s = "''Ultimately, however, the tension between cultural nationalism and revolutionary ideals became impossible to resolve'' (Gandy 186)"; 
-			  text(s, 615, 570, 190, 700); 
-			
-			stroke(0);
-			  strokeWeight(5);
-			  fill(255,255,255,0);
-			  rect(200, 4, 400, 687);
-
-			} else {
-			  stroke(255,255,255);
-			  fill(255,255,255);
-			  rect(600, 0, 200, 700);
-			  stroke(255,255,255);
-			  fill(255,255,255);
-			  rect(000, 0, 200, 700);
-			  fill(255,255,255);
-			  rect(000, 0, 700, 5);			
-			  fill(255,255,255);
-			  rect(000, 690, 700, 15);
-			}
 			}
 
 			void mouseMoved() {
@@ -84,16 +50,50 @@
 			  fill(mouseY/2, mouseX/7+50, mouseY/5+150, 20);
 			  ellipse(x, y, 32, 32);   // Draw an ellipse at our "normal" random location
 			}
+
+			void draw() {
+			if ((mouseX > 600) || (mouseX < 200) || (mouseY < 0) || (mouseY > 700)) {
+			  
+			stroke(0);
+			  strokeWeight(5);
+			  fill(255,255,255,0);
+			  rect(120, 1, 350, 698);
+			} else {
+			  strokeWeight(5);
+			  stroke(255);
+			  fill(255,255,255,0);
+			  rect(120, 1, 350, 698);
+			}
+			}
+
 			</script>
 			<canvas><!--The Processing code will render here.--> </canvas>
 
 			<div class="col-3" id="main" style="font-family:Helvetica;padding-left: 25px;line-height:16pt;">
-			In her book, Crockett centers citizen-led highway opposition in Boston and other cities as it transformed from vernacular discussions into national reform, proposing the necessity of redistributing power within the urban landscape.  In “Between Boriquen and the Barrio,” Gandy traces the rise, power, and decline of the Young Lords in relation to their shared sense of identity as their community played a key role in the environmental justice movement.
-			<p>While a social movement can unite individuals of a community by ethnicity and culture, this identity, at the same time, is the limiting factor. Identities opposing highway growth held together the wide network of Boston organizations.  Still, as the Young Lords began to lose a grounded focus, community influence swiftly dissipated.  This suggests that, in forming community around shared impulses, senses, and ideologies to the outside world, fear of the unknown and the other is cemented.  The precarious dichotomy of solidarity and suspicion is paradoxically unified within communities and social movements.  This notion is similarly present in Jacobs’ and Leavitt’s critiques of planning.  A conglomeration of disparate communities creates hostile urban vitality.</p>
-			<p>As second- and third-generation Puerto Ricans, their identity as divergence and discrimination from dominant culture is forced upon them by the American society.  Like many other diaspora, their aesthetic experience of the physical world is orchestrated by disconnection from both their lived spaces and their ancestral spaces.  This inability to access influence over the either space led to their decline. </p>
-			<p>Unfortunately, the Young Lords' local movement, which provided a cultural haven, was stunted by the desire of some members to return to their roots as they pursued this lternative to their accessible identity. A sense of physical and cultural isolation arose as a natural product of colonization, imperialism, and marginalization.  Where the Boston antihighway movement was succesful with its strong focus and opposition to convention, relief to diasporic isolation continues to be a struggle as an anticolonial society remains out of reach.</p>
+			
+			"...a high stakes regional battle for the democratic production of space defining knowledge" (Crockett 15) <p>"The legacy of the Boston antihighway movement continues to assert its call for a redistribution of power within urban built environments, the field of planning, and democratic governance" (Crockett 18)</p> <p>"The focus on the human environment transcended dualistic conceptions of nature and culture and opened up new possibilities for profressive environmental politics" (Gandy 183)</p> <p>"Ultimately, however, the tension between cultural nationalism and revolutionary ideals became impossible to resolve" (Gandy 186)</p>
 
+			<button type="button" 
+			onMouseOut=this.style="border:10px;height:25px;color:black"
+			onMouseOver=this.style="font-weight:bold;border:10px;height:25px;color:teal"
+			onclick='document.getElementById("main").innerHTML = "In her book, Crockett centers citizen-led highway opposition in Boston and other cities as it transformed from vernacular discussions into national reform, proposing the necessity of redistributing power within the urban landscape.  In “Between Boriquen and the Barrio,” Gandy traces the rise, power, and decline of the Young Lords in relation to their shared sense of identity as their community played a key role in the environmental justice movement.			<p>While a social movement can unite individuals of a community by ethnicity and culture, this identity, at the same time, is the limiting factor. Identities opposing highway growth held together the wide network of Boston organizations.  Still, as the Young Lords began to lose a grounded focus, community influence swiftly dissipated.  This suggests that, in forming community around shared impulses, senses, and ideologies to the outside world, fear of the unknown and the other is cemented.  The precarious dichotomy of solidarity and suspicion is paradoxically unified within communities and social movements.  This notion is similarly present in Jacobs’ and Leavitt’s critiques of planning.  A conglomeration of disparate communities creates hostile urban vitality.</p>			<p>As second- and third-generation Puerto Ricans, their identity as divergence and discrimination from dominant culture is forced upon them by the American society.  Like many other diaspora, their aesthetic experience of the physical world is orchestrated by disconnection from both their lived spaces and their ancestral spaces.  This inability to access influence over the either space led to their decline. </p>			<p>Unfortunately, the Young Lords local movement, which provided a cultural haven, was stunted by the desire of some members to return to their roots as they pursued this lternative to their accessible identity. A sense of physical and cultural isolation arose as a natural product of colonization, imperialism, and marginalization.  Where the Boston antihighway movement was succesful with its strong focus and opposition to convention, relief to diasporic isolation continues to be a struggle as an anticolonial society remains out of reach.</p>"'>Response
+			</button>
 			</div>
+
+			<div class="col-6" id="main" style="font-family:Helvetica;padding-left: 25px">
+			<button type="button" 
+			onMouseOut=this.style="border:10px;height:25px;color:black"
+			onMouseOver=this.style="font-weight:bold;border:10px;height:25px;color:magenta"
+			onclick='document.getElementById("main").innerHTML = "In her book, Crockett centers citizen-led highway opposition in Boston and other cities as it transformed from vernacular discussions into national reform, proposing the necessity of redistributing power within the urban landscape.  In “Between Boriquen and the Barrio,” Gandy traces the rise, power, and decline of the Young Lords in relation to their shared sense of identity as their community played a key role in the environmental justice movement.			<p>While a social movement can unite individuals of a community by ethnicity and culture, this identity, at the same time, is the limiting factor. Identities opposing highway growth held together the wide network of Boston organizations.  Still, as the Young Lords began to lose a grounded focus, community influence swiftly dissipated.  This suggests that, in forming community around shared impulses, senses, and ideologies to the outside world, fear of the unknown and the other is cemented.  <b>The precarious dichotomy of solidarity and suspicion</b> is paradoxically unified within communities and social movements.  This notion is similarly present in Jacobs’ and Leavitt’s critiques of planning.  A conglomeration of disparate communities creates hostile urban vitality.</p>			<p>As second- and third-generation Puerto Ricans, their <b>identity as divergence and discrimination from dominant culture</b> is forced upon them by the American society.  Like many other diaspora, their aesthetic experience of the physical world is <b>orchestrated by disconnection from both their lived spaces and their ancestral spaces</b>.  This inability to access influence over the either space led to their decline. </p>			<p>Unfortunately, the Young Lords local movement, which provided a cultural haven, was stunted by the very desire it cultivated in some members to return to their roots as they pursued this lternative to their accessible identity. A sense of physical and cultural isolation arose as <b>a natural product of colonization, imperialism, and marginalization</b>.  Where the Boston antihighway movement was succesful with its strong focus and opposition to convention, relief to diasporic isolation continues to be a struggle as an anticolonial society remains out of reach.</p>"'>O
+			</button>
+
+			<button type="button" 
+			onMouseOut=this.style="border:10px;height:25px;color:black"
+			onMouseOver=this.style="font-weight:bold;border:10px;height:25px;color:magenta"
+			onclick='document.getElementById("main").innerHTML = "In her book, Crockett centers citizen-led highway opposition in Boston and other cities as it transformed from vernacular discussions into national reform, proposing the necessity of redistributing power within the urban landscape.  In “Between Boriquen and the Barrio,” Gandy traces the rise, power, and decline of the Young Lords in relation to their shared sense of identity as their community played a key role in the environmental justice movement.			<p>While a social movement can unite individuals of a community by ethnicity and culture, this identity, at the same time, is the limiting factor. Identities opposing highway growth held together the wide network of Boston organizations.  Still, as the Young Lords began to lose a grounded focus, community influence swiftly dissipated.  This suggests that, in forming community around shared impulses, senses, and ideologies to the outside world, fear of the unknown and the other is cemented.  The precarious dichotomy of solidarity and suspicion is paradoxically unified within communities and social movements.  This notion is similarly present in Jacobs’ and Leavitt’s critiques of planning.  A conglomeration of disparate communities creates hostile urban vitality.</p>			<p>As second- and third-generation Puerto Ricans, their identity as divergence and discrimination from dominant culture is forced upon them by the American society.  Like many other diaspora, their aesthetic experience of the physical world is orchestrated by disconnection from both their lived spaces and their ancestral spaces.  This inability to access influence over the either space led to their decline. </p>			<p>Unfortunately, the Young Lords local movement, which provided a cultural haven, was stunted by the desire of some members to return to their roots as they pursued this lternative to their accessible identity. A sense of physical and cultural isolation arose as a natural product of colonization, imperialism, and marginalization.  Where the Boston antihighway movement was succesful with its strong focus and opposition to convention, relief to diasporic isolation continues to be a struggle as an anticolonial society remains out of reach.</p>"'>X
+			</button>
+			</div>
+
 
 		</body>
 	</html>
