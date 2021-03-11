@@ -53,66 +53,66 @@
 
 				stroke(47,59,69);
 				fill(47,59,69);
-				rect(700,mouseY-100,10,400);  
+				rect(700,mouseY-215,5,400);  
 
 				stroke(47,59,69);
 				fill(47,59,69);
-				rect(750,mouseY-200,10,400);
+				rect(750,mouseY-200,5,400);
 
 				stroke(47,59,69);
 				fill(47,59,69);
-				rect(500,mouseY-125,10,400);
+				rect(500,mouseY-150,5,400);
 
 				stroke(47,59,69);
 				fill(47,59,69);
-				rect(550,mouseY-150,10,400);
+				rect(550,mouseY-185,5,400);
 
 				stroke(47,59,69);
 				fill(47,59,69);
-				rect(600,mouseY-50,10,400);
+				rect(600,mouseY-200,5,400);
 
 				stroke(47,59,69);
 				fill(47,59,69);
-				rect(650,mouseY-75,10,400);
+				rect(650,mouseY-175,5,400);
 
 				stroke(47,59,69);
 				fill(47,59,69);
-				rect(800,mouseY-50,10,400);
+				rect(800,mouseY-220,5,400);
 
 				stroke(47,59,69);
 				fill(47,59,69);
-				rect(850,mouseY-175,10,400);
+				rect(850,mouseY-175,5,400);
 
 				stroke(47,59,69);
 				fill(47,59,69);
-				rect(900,mouseY-125,10,400);
+				rect(900,mouseY-195,5,400);
 
   				stroke(189,220,185);
 				fill(189,220,185);
-				rect(mouseX-400,50,600,10);  
+				rect(mouseX-400,50,600,5);  
 
 				stroke(189,220,185);
 				fill(189,220,185);
-				rect(mouseX-500,150,600,10);
+				rect(mouseX-500,150,600,5);
 
 				stroke(189,220,185);
 				fill(189,220,185);
-				rect(mouseX-350,100,600,10);
+				rect(mouseX-350,100,600,5);
 
 				stroke(189,220,185);
 				fill(189,220,185);
-				rect(mouseX-300,200,600,10);
+				rect(mouseX-300,200,600,5);
 
 				stroke(189,220,185);
 				fill(189,220,185);
-				rect(mouseX-450,300,600,10);
+				rect(mouseX-450,300,600,5);
 
 				stroke(189,220,185);
 				fill(189,220,185);
-				rect(mouseX-250,250,600,10);
+				rect(mouseX-250,250,600,5);
 
 
-  					if (mousePressed) {
+
     			textSize(14);
   					String s = "Karilyn Crockett, “Introduction,” People before Highways: Boston Activists, Urban Planners, and a New Movement for City Making";
   					fill(47,59,69);
@@ -123,11 +123,30 @@
   					fill(47,59,69);
   					text(s,1025,250,410,500);
 
-    				}
 
 			}
 		</script>
 		<canvas></canvas>
 	</div>
+	
+	<div>
+
+		<p id="demo"></p>
+
+		<button type="roundbtn" onclick='document.getElementById("demo").innerHTML = "Karilyn Crockett, “Introduction,” People before Highways: Boston Activists, Urban Planners, and a New Movement for City Making, Matthew Gandy, “Between Borinquen and the Barrio,” in Concrete and Clay: Reworking Nature in New York City"'>Readings</button>
+
+
+		<button id="roundbtn">test</button>
+		<script>
+			function myFunction(){
+				var String = "These readings have an evident relation to the ideas that we discussed last week as well, in regards to the social movements and individuals identifying with the goals and objectives of a larger group. Specifically with the reading by Gandy, a strong sense of community was formed around a common goal for social justice. I think it is really important to have advocacy for communities, but these advocacy organizations should not be oppressed as the Young Lords and similar groups were. City planners and architects should take steps to communicate with these advocates to protect and improve upon communities in which are already established, rather than citizens having to fight against more powerful politicians and planners.";
+				var result = str.bold();
+				document.getElementById("roundbtn").innerhtml=result;
+			}
+		</script>
+
+	</div>
+
+
 	</body>
 </html>
