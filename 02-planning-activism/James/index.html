@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Interactive Analysis 02</title>
+      <!--Comment.-->
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+   <style>
+      h3{
+      font-family: "Stencil Std", fantasy;
+      font-size: 2em;
+      letter-spacing: 0px;
+      background-color: black;
+      color: white;
+      }
+      h3{
+      height: 105px;
+      width: 40%;
+      background-color: powderblue;   
+      }
+      h3{text-align:center;}
+      div{
+      height: 50px;
+      width: 40%;   
+      }
+      
+      
+
+   </style>
+   <h3>Interactive Analysis 01 - Social Justice and the City</h3>
+   </head>
+   <body>
+      
+      <div id="main" style="background-color:#587073; color:white">
+         <p class="p1">The Anti-highway social movements back in the 1960s in Boston protected and executed the rights of minority groups' living communities, which is valuable to nowadays' considerations regarding urban planning.
+         </p>
+      </div>
+      <!--SPLIT LINE-->
+
+      <script type="application/processing">
+      
+      void setup() {
+         size(755,800);
+         background(88,112,115);
+
+         
+      }
+
+      void draw(){
+         if(mousePressed){
+            background(88,112,115);
+
+            fill(59+mouseX/3,75+mouseX/3,77+mouseX/3);
+            stroke(255); 
+            rect(-1,-1,250,800);
+
+            fill(255);
+            stroke(255);
+            rect(mouseX,mouseY,mouseX/5,mouseX*2);
+
+            fill(255);
+            stroke(255);
+            rect(mouseX-25,mouseY,mouseX/20,mouseX*2);
+
+            fill(255);
+            stroke(255);
+            rect(mouseX-50,mouseY,mouseX/19,mouseX*2);
+
+            fill(255);
+            stroke(255);
+            rect(mouseX-75,mouseY,mouseX/5,mouseX*2);
+
+            fill(255);
+            stroke(255);
+            rect(mouseX-100,mouseY,mouseX/25,mouseX*2);
+
+            fill(255);
+            stroke(255);
+            rect(mouseX-125,mouseY,mouseX/25,mouseX*2);
+
+            fill(255);
+            stroke(255);
+            rect(mouseX-150,mouseY,mouseX/25,mouseX*2);
+
+            fill(255);
+            stroke(255);
+            rect(mouseX-175,mouseY,mouseX/40,mouseX*2);
+
+            fill(255);
+            stroke(255);
+            rect(mouseX-200,mouseY,mouseX/12,mouseX*2);
+
+            fill(255);
+            stroke(255);
+            rect(mouseX-230,mouseY,mouseX/22,mouseX*2);
+
+            fill(255);
+            stroke(255);
+            rect(mouseX-250,mouseY,mouseX/32,mouseX*2);
+
+            fill(255);
+            stroke(255);
+            rect(mouseX-285,mouseY,mouseX/15,mouseX*2);
+
+            fill(255);
+            stroke(255);
+            rect(mouseX-320,mouseY,mouseX/14,mouseX*2);
+
+            fill(255);
+            stroke(255);
+            rect(mouseX-400,mouseY,mouseX/6,mouseX*2);
+
+            
+
+            stroke(255);
+            strokeWeight(2);
+            line(50, 800, 50, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(100, 800, 100, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(150, 800, 150, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(200, 800, 200, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(250, 800, 250, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(300, 800, 300, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(350, 800, 350, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(400, 800, 400, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(450, 800, 450, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(500, 800, 500, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(550, 800, 550, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(600, 800, 600, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(650, 800, 650, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(700, 800, 700, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 50, 800, 50);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 100, 800, 100);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 150, 800, 150);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 200, 800, 200);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 250, 800, 250);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 300, 800, 300);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 350, 800, 350);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 400, 800, 400);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 450, 800, 450);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 500, 800, 500);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 550, 800, 550);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 600, 800, 600);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 650, 800, 650);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 700, 800, 700);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 750, 800, 750);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 800, 800, 800);
+
+            PFont z = createFont("Calibri", 12);
+      
+            textFont(z);
+            textSize(12);
+            fill(88,112,115);
+
+            String a = "From both Crockertt and Gandy’s readings, one of the crucial concepts is the consensus achieved by the people against the municipal influences. Reflecting from prior readings, the misconceptions and injustice planted deep down within the beneficial white middle-class and governments caused countless biased scenarios from home mortgages to racial labeled communities among various colored groups throughout decades.";
+
+            text(a,350,75,400,600);
+
+             String b = "The social movement reading from last week discussed such social activities which are been more directly addressed by Crockertt and Gandy by going through two case studies: Boston’s antihighway activities and Puerto Rico’s social movements in New York.";
+
+            text(b,350,175,400,600);
+
+            String c = "By living in Boston, one could feel the fragmentary outline along the highway grid around the greater Boston area where the I-95 is getting branched around two ways instead of going straight into the downtown areas. The branching of the I-95 stayed as a victorious result of a series of social movements that occurred through decades from the 1950s, which stood as one of the successful examples of confronting the municipal authorities on reshaping the urban landscapes and communities. ";
+
+            text(c,350,250,400,600);
+
+            String d = "But the success did not come easy – it took several surrounding cities’ residents to speak out and to insist on protecting their homelands. The subsequential impacts were huge: …the human need for vibrant, socially connected neighborhoods could not have been more antithetical to midcentury American urban planning norms. (Crockett 11)   The people of Puerto Rico in New York also had a valuable case in terms of grouping people together to devote the rights to their communities – The activists were drawn from diverse backgrounds: students, ex-gang members, ex-convicts, addicts and other street people. (Gandy 164).";
+
+
+            text(d,350,375,400,600);
+
+            String e = "These movements from New York and Boston showed the strength of accumulated groups of people regardless the individual identities or racial recognitions. The I-95 would possibly get built if Brookline or any other involved city did not join with the movement nor persist long enough time to uphold their voices, but these different neighborhoods took their stands regardlessly.  The lessons were valuable – people with unfair treats or damaged interests need to advocate their rights together even when they may be powerless from the first place, but the payback will return eventually.";
+
+            
+
+            text(e,350,525,400,600);
+
+
+            fill(255);
+            stroke(255);
+            rect(650,0,50,50);
+
+            fill(59,75,77);
+            stroke(59,75,77);
+            rect(mouseX,mouseY,50,50);
+
+            
+            
+            PFont z = createFont("Calibri", 12);
+      
+        textFont(z);
+        textSize(12);
+        fill(7,54,61);
+  
+  
+  
+
+
+
+      }else{background(88,112,115);
+         fill(59,75,77);
+         stroke(59,75,77);
+         rect(50,350,50,50);
+
+         fill(255);
+         stroke(255);
+         rect(650,0,50,50);
+
+            stroke(255);
+            strokeWeight(2);
+            line(50, 800, 50, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(100, 800, 100, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(150, 800, 150, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(200, 800, 200, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(250, 800, 250, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(300, 800, 300, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(350, 800, 350, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(400, 800, 400, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(450, 800, 450, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(500, 800, 500, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(550, 800, 550, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(600, 800, 600, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(650, 800, 650, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(700, 800, 700, 0);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 50, 800, 50);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 100, 800, 100);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 150, 800, 150);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 200, 800, 200);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 250, 800, 250);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 300, 800, 300);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 350, 800, 350);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 400, 800, 400);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 450, 800, 450);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 500, 800, 500);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 550, 800, 550);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 600, 800, 600);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 650, 800, 650);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 700, 800, 700);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 750, 800, 750);
+
+            stroke(255);
+            strokeWeight(2);
+            line(0, 800, 800, 800);
+
+
+
+         }
+      }
+      </script>
+      
+
+
+
+      <canvas></canvas>
+
+
+
+   </body>
+</html>

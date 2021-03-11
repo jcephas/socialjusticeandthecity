@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Palacio-ARCH 6340</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+
+    <style>
+        body{
+            background-color: black;
+        }
+
+        #button {
+            padding-left: 50%;
+            padding-top: 1%;
+        }
+
+        #button2 {
+            padding-left: 50%;
+            padding-bottom: 1%;
+        }
+
+        p {
+            padding-left: 30%;
+            padding-right: 30%;
+            font-size: 12pt;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            line-height: 24pt;
+            text-align: justify;
+            }
+
+        h1 {
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 24pt;
+        }
+
+        #name {
+            font-size: 13pt;
+            font-style: italic;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: justify;
+        }
+
+        #quote1 {
+            font-size: 18pt;
+            font-style: italic;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            padding-top: 20px;
+            color: black;
+        }
+
+        #quote2 {
+            font-size: 18pt;
+            font-style: italic;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            padding-top: 20px;
+            padding-right: 30%;
+            color: black;
+        }
+
+        #author, #author2 {
+            text-align: right;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 13.5pt;
+            color: black;
+            font-weight: bold;
+        }
+
+        #interact {
+            padding-left: 29%;
+            padding-right: 29%;
+        }
+
+        #source {
+                font-size: 9pt;
+                line-height: 12pt;
+                border-top: 1.5px solid rgb(214,78,47);
+                padding-top: 20px;
+                text-align: justify;
+                padding-left: 30%;
+                padding-right: 30%;
+            }
+
+        </style>
+    </head>
+    
+    <h1>Planning Activism</h1>
+
+    <body>
+
+    <div id="button">
+        <button type="button" onclick="myFunction()">¶</button>
+    </div>
+
+        <script>
+            function myFunction() {
+            document.body.style.backgroundColor = "white";
+            document.getElementById("quote1").style.color = "white";
+            document.getElementById("quote2").style.color = "white";
+            document.getElementById("author").style.color = "white";
+            document.getElementById("author2").style.color = "white";
+        }
+        </script>
+
+        <p id="quote1">"If we examine key interventions in the urban studies literature we find that the process of capitalist urbanization has periodically generated wide-ranging challenges to the inequalities of modern societies."</p>
+
+        <p id="author2">- Matthew Gandy, Concrete and Clay: Reworking Nature in New York City</p>
+
+        <p id="name">Emma Palacio</p>
+
+        <p id="intro">These readings discuss the ways in which one can use social movements as a way of understanding the identities of those involved within them, each author is particularly interested in how physical landscapes play into these dynamics.</p>
+
+        <script type="application/processing">
+        
+            void setup() {
+                size(800, 600);
+                noStroke();
+            }
+            
+            void draw() {
+                float x = mouseX;
+                float y = mouseY;
+                float ix = width - mouseX; 
+                float iy = height - mouseY;
+                background(0);
+                    fill(237,235,218, 200);
+                ellipse(x, height/2, y, y);
+                    fill(10,180);
+                ellipse(ix, height/2, iy, iy);
+                textSize(20);
+                    fill(0);  
+                    text("SOCIAL MOVEMENTS", 30, 400);
+                textSize(20);
+                    fill(0);  
+                    text("PHYSICAL LANDSCAPE", 510, 200);
+                textSize(12);
+                    String s = ("SPACE AS A POLITICAL AGENT");
+                    fill(214,78,47);
+                    text(s, 325,375,120,100);
+                rect(390,290,20,20);
+                    fill(255);
+            
+            if (mousePressed) {
+                rect(0, 0, 800, 600);
+                    fill(255);
+                    stroke(214,78,47);
+                textSize(32);
+                    fill(214,78,47);
+                    text("MODERNISM", 400,400);
+                ellipse(40,40,600,600);
+                    fill(214,78,47);
+                textSize(18);
+                    fill(10);
+                    text("POLITICS +", 400,355);
+                ellipse(225,450,220,220);
+                    fill(10);
+                textSize(14);
+                    fill(255);
+                    text("RIGHTS TO PUBLIC",160,450);
+                textSize(14);
+                    fill(255);
+                    text("SPACE & ACCESSIBILITY",145,469);
+                textSize(18);
+                    fill(120);
+                    text("AESTHETICS =", 400,372);
+                ellipse(600,200,210,210);
+                    fill(120);
+                textSize(14);
+                    fill(255);
+                    text("PERCEPTION INDICATES",520,200);
+                textSize(14);
+                    fill(255);
+                    text("STATUS", 575,220);
+                textSize(20);
+                    fill(255);
+                    text("INHERENTLY EXCLUSIVE", 30,160);
+                }               
+            }
+        
+        </script>
+        <canvas id="interact"></canvas>
+
+        <p id="text1">Crockett in particular makes a key argument within Modernism in that it embodies the intersection of politics and aesthetics, while inherently eradicating race and class. She also cites Jacobs to support her argument that the people in power are largely responsible for spatial equity. One of the most important concepts that she addresses is the notion that the control for space is endlessly tied to politics. This idea enforces the importance of rights to public space and accessibility.</p>
+
+        <p id="quote2">"The contradictory dimensions to social and economic change are tightly compressed in urban space as a volatile arena for political action."</p>
+
+        <p id="author">- Matthew Gandy, Concrete and Clay: Reworking Nature in New York City</p>
+
+        <p id="text2">Gandy additionally makes a similar argument regarding the power of spatial aspects in social movements. His most crucial argument suggests that the transformation of landscape through social and political movements is more impactful than those that solely rely on aesthetics. Through this argument and Crocketts criticism of Modernism, one can understand how the importance of aesthetics within Modernism has hindered the movements towards equity and justice. Through Grandy’s description of the work among the Young Lords, one can see the themes of identity that were addressed in previous readings. For example, the development of the movement through the collaboration of a range of ethnic and racial backgrounds ties into the idea of how unity among a shared set of beliefs or values can create a collective identity. Additionally, the shift in focus of the Young Lords corresponding to the age range of their majority relates to the fight for a desire for a change in outward perception of their identity.</p>
+
+    <div id="button2">
+        <button type="button" onclick="myFunction2()">“ ”</button>
+    </div>
+
+        <script>
+            function myFunction2() {
+            document.getElementById("quote1").style.color = "#d64e2f";
+            document.getElementById("quote2").style.color = "#d64e2f";
+            document.getElementById("author").style.color = "#d64e2f";
+            document.getElementById("author2").style.color = "#d64e2f";
+        }
+        </script>
+
+        <p id="source">Matthew Gandy, “Between Borinquen and the Barrio,” in Concrete and Clay: Reworking Nature in New York City (Cambridge: MIT Press, 2002), pp. 153–186. (185).</p>
+    </body>
