@@ -6,6 +6,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
 
     <style>
+        body{
+            background-color: black;
+        }
+
+        #button {
+            padding-left: 50%;
+            padding-top: 1%;
+        }
+
+        #button2 {
+            padding-left: 50%;
+            padding-bottom: 1%;
+        }
+
         p {
             padding-left: 30%;
             padding-right: 30%;
@@ -34,7 +48,7 @@
             font-weight: bold;
             font-family: 'Times New Roman', Times, serif;
             padding-top: 20px;
-            color: rgb(214,78,47);
+            color: black;
         }
 
         #quote2 {
@@ -44,25 +58,15 @@
             font-family: 'Times New Roman', Times, serif;
             padding-top: 20px;
             padding-right: 30%;
-            color: rgb(214,78,47);
+            color: black;
         }
 
-        #author {
+        #author, #author2 {
             text-align: right;
             font-family: 'Times New Roman', Times, serif;
             font-size: 13.5pt;
-            color: rgb(214,78,47);
+            color: black;
             font-weight: bold;
-        }
-
-        #citation {
-            font-size: 9pt;
-            line-height: 12pt;
-            border-top: 1.5px solid rgb(34, 133, 172);
-            padding-top: 20px;
-            text-align: justify;
-            padding-left: 30%;
-            padding-right: 30%;
         }
 
         #interact {
@@ -87,9 +91,23 @@
 
     <body>
 
+    <div id="button">
+        <button type="button" onclick="myFunction()">¶</button>
+    </div>
+
+        <script>
+            function myFunction() {
+            document.body.style.backgroundColor = "white";
+            document.getElementById("quote1").style.color = "white";
+            document.getElementById("quote2").style.color = "white";
+            document.getElementById("author").style.color = "white";
+            document.getElementById("author2").style.color = "white";
+        }
+        </script>
+
         <p id="quote1">"If we examine key interventions in the urban studies literature we find that the process of capitalist urbanization has periodically generated wide-ranging challenges to the inequalities of modern societies."</p>
 
-        <p id="author">- Matthew Gandy, Concrete and Clay: Reworking Nature in New York City</p>
+        <p id="author2">- Matthew Gandy, Concrete and Clay: Reworking Nature in New York City</p>
 
         <p id="name">Emma Palacio</p>
 
@@ -172,6 +190,19 @@
         <p id="author">- Matthew Gandy, Concrete and Clay: Reworking Nature in New York City</p>
 
         <p id="text2">Gandy additionally makes a similar argument regarding the power of spatial aspects in social movements. His most crucial argument suggests that the transformation of landscape through social and political movements is more impactful than those that solely rely on aesthetics. Through this argument and Crocketts criticism of Modernism, one can understand how the importance of aesthetics within Modernism has hindered the movements towards equity and justice. Through Grandy’s description of the work among the Young Lords, one can see the themes of identity that were addressed in previous readings. For example, the development of the movement through the collaboration of a range of ethnic and racial backgrounds ties into the idea of how unity among a shared set of beliefs or values can create a collective identity. Additionally, the shift in focus of the Young Lords corresponding to the age range of their majority relates to the fight for a desire for a change in outward perception of their identity.</p>
+
+    <div id="button2">
+        <button type="button" onclick="myFunction2()">“ ”</button>
+    </div>
+
+        <script>
+            function myFunction2() {
+            document.getElementById("quote1").style.color = "#d64e2f";
+            document.getElementById("quote2").style.color = "#d64e2f";
+            document.getElementById("author").style.color = "#d64e2f";
+            document.getElementById("author2").style.color = "#d64e2f";
+        }
+        </script>
 
         <p id="source">Matthew Gandy, “Between Borinquen and the Barrio,” in Concrete and Clay: Reworking Nature in New York City (Cambridge: MIT Press, 2002), pp. 153–186. (185).</p>
     </body>
