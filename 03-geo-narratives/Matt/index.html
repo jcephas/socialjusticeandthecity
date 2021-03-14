@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+		<!--copied from bootstrap site-->
+
+		<script script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+	</head>
+
+	<style>
+
+		p:hover, h1:hover {
+			background-color: white;
+			color:black;
+		}
+
+		.container {
+			background-color: black;
+		}
+
+		.header {
+		color:red; 
+      font-family:helvetica; 
+      font-weight:bolder;
+      font-size: 30px;
+		}
+
+		.text {
+		color:white; 
+      font-family:helvetica; 
+      font-weight:lighter; 
+      font-size:12px;
+		}
+
+		.spacer {
+			height:50px;
+		}
+
+	</style>
+
+	<body>
+		<div class="container header">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1  onclick="document.getElementById('body').style.color='red'"> geo narratives: an interactive analysis </h1>
+				</div>
+			</div>
+
+		<div class="container spacer">
+			<div class="row">
+				<div class="col-lg-12">
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div id="application">
+					<script type="application/processing">
+						float x=0;
+						float y=0;
+
+						void setup()  {
+  							size (500, 600);
+						}
+
+						void draw()  {
+  							background(0);
+  
+						  fill(255,255,255);
+						  stroke(255,255,255);
+						  strokeWeight(1);
+						  rect(50,50,100,100);
+  
+						  fill(255,255,255);
+						  stroke(255,255,255);
+						  strokeWeight(1);
+						  rect(200,50,100,100);
+						  
+						  fill(255,255,255);
+						  stroke(255,255,255);
+						  strokeWeight(1);
+						  rect(350,50,100,100);
+						  
+						  fill(255,255,255);
+						  stroke(255,255,255);
+						  strokeWeight(1);
+						  rect(50,250,100,100);
+						  
+						  fill(255,255,255);
+						  stroke(255,255,255);
+						  strokeWeight(1);
+						  rect(200,250,100,100);
+						  
+						  fill(255,255,255);
+						  stroke(255,255,255);
+						  strokeWeight(1);
+						  rect(350,250,100,100);
+						  
+						  fill(255,255,255);
+						  stroke(255,255,255);
+						  strokeWeight(1);
+						  rect(350,450,100,100);
+						  
+						  fill(255,255,255);
+						  stroke(255,255,255);
+						  strokeWeight(1);
+						  rect(200,450,100,100);
+						  
+						  fill(255,255,255);
+						  stroke(255,255,255);
+						  strokeWeight(1);
+						  rect(50,450,100,100);
+						  
+						  fill (255,255,255,50);
+						  stroke (255,255,255);
+						  strokeWeight(5);
+						  ellipse (mouseX,mouseY, mouseX+25,mouseY+25);
+  
+						   if (mousePressed) {
+						     
+						      background(0);
+						       
+						      stroke(125);
+						      strokeWeight(1);
+						      x=50;
+						      while (x<width) {
+						        line(x,0,x,height);
+						        x=x+50;
+						      }
+						      y=50;
+						      while (y<height) {
+						        line(0,y,width,y);
+						        y=y+50;
+						      }
+						   }
+						}
+
+					</script>
+					<canvas></canvas>
+					</div>
+
+				</div>
+				<div class="col-lg-4 text" id="body" onclick="document.getElementById('body').style.color='white'">
+					<p> The readings this week began to pivot in a compelling way towards the processes and ethics of map making and top-down planning. In Scott’s Seeing Like a State, the author ponders the origin and motivation of the codification and standardization of peoples and landscape by the state. These goals were economically and politically motivated, to “simplify taxation, conscription, and [the] prevention of rebellion.” This simplification of the richness and diversity of local life by a removed power represented a supplanting of the use value of a place for the exchange value, a tension we grappled with  in the discussion of the usage of portions of cities for the people that live there and its use as a “high modernism” system of highway control. This is made most clear in the analogy of the managed forest, in which all positive uses and benefits of the trees are discarded in favor of the simplified economic yield of each unit of measurement. If the state can wield such power (for good or ill) what can local communities do to wrest control of these plans? </p>
+
+					<p> Scott posits that “these state simplifications […] were rather like abridged maps.” It became clear, then, that maps were the methodology of state control. We have seen this in the past, as the mechanism that makes political and social groups invisible or visible through redlining practices, highway maps, and post-disaster planning. In all of these cases, the discrimination for the existing of the map making has lead to a lack of democracy in decision making. It is for this reason that Crampton and Krygier’s An Introduction to Critical Cartography is most interesting in determining a path forward. The democratization of technology in the 21st century (especially the skills of map making falling from the hands of the elite to the general populace) is crucial, as communities that have the required skills have the ability to utilize the tools of the state to subvert the perception of their communities. The issue of access to this technology and the skills required to utilize it remains an important one, as it is often tied to resources denied from excluded communities. </p>
+				</div>			
+		</div>
+
+	</body>
