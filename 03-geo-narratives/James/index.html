@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>
+      Interactive Analysis 03
+      </title>
+      <!--Comment.-->
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+   <style>
+      body{background-color: black;}
+      h2{
+      font-family: "Stencil Std", fantasy;
+      font-size: 2em;
+      letter-spacing: 0px;
+      color: white;
+      text-align:center;
+      padding-top: 35px;
+      float: initial;
+      }
+       
+
+      h3{
+      font-family: "Garamond",Serif;
+      font-size:1em;
+      text-align: left;
+      width: 600px;
+      letter-spacing: 1.5px;
+      float: right;
+      padding-right: 550px;
+      color: white;      
+      }
+      
+      p{
+      font-size: 1em;
+      letter-spacing: 0px;
+      color: white;
+      text-align:center;
+      float: initial;    
+      }
+
+   </style>
+   <h2>Interactive Analysis 03 - Social Justice and the City</h2>
+   </head>
+   <body>
+      
+      
+      
+         <p>ARCH 6340 - Instructor Prof. Jay Cephas</p>
+      
+      
+          <h3>This week’s readings talked a lot about space regardless of the belonging subjects – Scott’s discussed cadastral and its attached values and Crampton went straightforward to criticize cartography from various perspectives.
+Scott had gone through the early developments and usages of the forest exploitations which can be seen as rather unsustainable from nowadays’ perspective. Nevertheless, the municipalities realized the rapid consumption of the forest and started to make sorts of constraints to oversee the process and rates regarding the exploitation, but it was not a successful approach as it involved too many other interests for various parties. Then Scott went on to talk more about the statecrafts and measurements that can be only seen as a “ministrative headache” since it was nearly impossible to take control in inspecting the market on a nationwide scale due to the differences among different regions. The simplification of measurement could be only seen as a part of the emancipatory approach.
+In the second reading from Crampton, he addressed some of the issues towards cartography that with technical developments people can share and create an informative mapping than ever compared to our histories. However, this advancement is not getting objectively useful as it starts to involve many other factors in the process of generating cartographical information. He also mentioned some key mapping practices along with the occurrence of open-source mapping that distributes cartography to not only cartographers and GIScientists but also most people. But this opening of information data is not something providing all the goods, but also some of the bad implications from other aspects such as political or racial usages. The different approaches can be taken to take advantage of the existing objective information to generate beneficial outcomes for interested parties, just as the quotation showed in the reading “…it over-values the white man and distorts the picture of the world to the advantage of the colonial masters of the time.”. (Crampton 23)
+
+          </h3> 
+
+
+      <!--SPLIT LINE-->
+
+
+
+      
+      <script type="application/processing">
+         
+      int rectX, rectY;      // Position of square button
+int circleX, circleY;  // Position of circle button
+int rectSize = 90;     // Diameter of rect
+int circleSize = 93;   // Diameter of circle
+color rectColor, circleColor, baseColor;
+color rectHighlight, circleHighlight;
+color currentColor;
+boolean rectOver = false;
+boolean circleOver = false;
+
+void setup() {
+  size(600, 600);
+  rectColor = color(161, 129, 5);
+  rectHighlight = color(255, 204, 0);
+  circleColor = color(5, 54, 161);
+  circleHighlight = color(0, 80, 255);
+  baseColor = color(102);
+  currentColor = color (161, 129, 5);
+  circleX = width/2+circleSize/2+10;
+  circleY = height/2;
+  rectX = width/2-rectSize-10;
+  rectY = height/2-rectSize/2;
+  ellipseMode(CENTER);
+}
+
+void draw() {
+  update(mouseX, mouseY);
+  background(currentColor);
+  
+  if (rectOver) {
+    fill(rectHighlight);
+  } else {
+    fill(rectColor);
+  }
+  stroke(0, 80, 255);
+  rect(rectX, rectY, rectSize, rectSize);
+  
+  if (circleOver) {
+    fill(circleHighlight);
+  } else {
+    fill(circleColor);
+  }
+  stroke(255, 204, 0);
+  ellipse(circleX, circleY, circleSize, circleSize);
+  
+  fill(161, 129, 5);
+  stroke(161, 129, 5);
+  rect(300,200,50,50);
+  
+  fill(161, 129, 5);
+  stroke(161, 129, 5);
+  rect(360,200,50,50);
+  
+  fill(161, 129, 5);
+  stroke(161, 129, 5);
+  rect(420,230,50,50);
+  
+  fill(161, 129, 5);
+  stroke(161, 129, 5);
+  rect(420,290,50,50);
+  
+  fill(161, 129, 5);
+  stroke(161, 129, 5);
+  rect(360,350,50,50);
+  
+  fill(161, 129, 5);
+  stroke(161, 129, 5);
+  rect(300,350,50,50);
+  
+  fill(5, 54, 161);
+  stroke(5, 54, 161);
+  ellipse(250,220,50,50);
+  
+  fill(5, 54, 161);
+  stroke(5, 54, 161);
+  ellipse(180,220,50,50);
+  
+  fill(5, 54, 161);
+  stroke(5, 54, 161);
+  ellipse(170,280,50,50);
+  
+  fill(5, 54, 161);
+  stroke(5, 54, 161);
+  ellipse(170,340,50,50);
+  
+  fill(5, 54, 161);
+  stroke(5, 54, 161);
+  ellipse(210,380,50,50);
+  
+  fill(5, 54, 161);
+  stroke(5, 54, 161);
+  ellipse(265,380,50,50);
+}
+
+void update(int x, int y) {
+  if ( overCircle(circleX, circleY, circleSize) ) {
+    circleOver = true;
+    rectOver = false;
+  } else if ( overRect(rectX, rectY, rectSize, rectSize) ) {
+    rectOver = true;
+    circleOver = false;
+  } else {
+    circleOver = rectOver = false;
+  }
+  
+ 
+}
+
+void mousePressed() {
+  
+  
+  
+  if (circleOver) {
+    currentColor = circleColor;
+  }
+  if (rectOver) {
+    currentColor = rectColor;
+  }
+  
+  
+  
+}
+
+boolean overRect(int x, int y, int width, int height)  {
+  if (mouseX >= x && mouseX <= x+width && 
+      mouseY >= y && mouseY <= y+height) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+boolean overCircle(int x, int y, int diameter) {
+  float disX = x - mouseX;
+  float disY = y - mouseY;
+  if (sqrt(sq(disX) + sq(disY)) < diameter/2 ) {
+    return true;
+  } else {
+    return false;
+  }
+ 
+}
+      </script>
+      </div>
+      <canvas></canvas>
+
+
+
+   </body>
+</html>
