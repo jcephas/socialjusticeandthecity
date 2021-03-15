@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Planning Activism</title>
+
+		<!-- Load the Processing.js library -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+	</head>
+
+	<style>
+		.standard
+		{
+			color:blue;
+			font-family: monospace;
+			align-content: center;
+		}
+	</style>
+
+	<body>
+		<div id="header">
+			<h1 class="standard">Understanding Activism through the Young Lords and Boston's Highway Opposition</h1>
+		</div>
+
+
+		<p id="final" style="display:none"> 
+			What both Gandy and Crockett are identifying in their writings is the mismanagement of public funds that results in detrimental effects for our country’s most vulnerable people. The Young Lords fought to address the neglect of their community, attempting to address the inequitable infant mortality rates and waste management policies that resulted in poor living conditions and a sense of poverty in an otherwise wealthy country. Boston’s antihighway activists conversely fought for money to not be spent in such a way that would result in the destruction of homes and communities. Both are demonstrations of how public services and public works are skewed to benefit individuals who are in power while further suppressing those who would suffer due to their side-effects or the ruling class’s negligence of those below them.
+		</p>
+
+		<button type="button" onclick="document.getElementById('final').style.display='block'">
+    		More!
+		</button>
+
+		<button type="button" onclick="document.getElementById('final').style.fontSize='21px'">
+    		Hidden Size
+		</button>
+
+		<script type="application/processing">
+			size(510,510);
+
+			void setup()
+			{
+			}
+
+			void draw()
+			{
+			    background(mouseY-20,mouseY-20,mouseY-20);
+       
+    			textSize(12);
+    			String a = "When it comes to planning activism, this week's readings reflected on how different groups have utilized collective action to create an opposition against larger, seemingly monolithic institutions.";
+    
+   				textSize(12);
+    			String b = "For the Young Lords, they challenged the history of injustices that existed in municipal services regarding New York City’s infrastructure, taking matters into their own hands to develop social services such as child-care and healthcare in places where their government failed them. They grew into a full-fledged political entity which would then go on to advocate for better services provided to the Nuyorican population, advocating for equal rights for a population of Americans that had been consistently disenfranchised by the existing system of power.";
+
+    			textSize(12);
+    			String c = "In Boston, the activism in question came in regards to the antihighway movement, as citizens had been made to witness the bulldozing of neighborhoods throughout its history, in Boston itself and in other American cities, in order to further the agenda of “progress” in the future. These activists came together to vehemently oppose the construction of public works projects that would inadvertently result in the destruction of neighborhoods and further divide the city.";
+
+    			textSize(12);
+    			String d = "What both Gandy and Crockett are identifying in their writings is the mismanagement of public funds that results in detrimental effects for our country’s most vulnerable people. The Young Lords fought to address the neglect of their community, attempting to address the inequitable infant mortality rates and waste management policies that resulted in poor living conditions and a sense of poverty in an otherwise wealthy country. Boston’s antihighway activists conversely fought for money to not be spent in such a way that would result in the destruction of homes and communities. Both are demonstrations of how public services and public works are skewed to benefit individuals who are in power while further suppressing those who would suffer due to their side-effects or the ruling class’s negligence of those below them.";
+ 
+    			{
+        			textSize(14);
+        			fill(255,255,255);
+        			text(a,10,25,490,490);
+        
+        			textSize(12);
+        			fill(0,0,0);
+        			text(b,10,120,490,490);
+        			text(c,10,280,490,490);
+        
+        			fill(mouseY/5,mouseY/2,mouseY)
+        			rect(430,450,60,20);
+        
+        			fill(-mouseY/2,mouseY,mouseY/3)
+        			triangle(460,430,460,490,510,460);
+    			}
+			}   
+    	</script>
+		<canvas>
+		</canvas>
+	</body>
+</html>

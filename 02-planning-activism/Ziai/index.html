@@ -1,0 +1,141 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>Planning Activism</title>
+
+		
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+	</head>
+
+	<style>
+		h1{
+			color: black;
+			align-content: center;
+			font-size: 20pt;
+			font-family :"Times New Roman";
+			padding-right: 20%;
+			padding-left:40%;
+		}
+		h2{
+			color: grey;
+			align-content: center;
+			font-size: 12pt;
+			font-family:"Times New Roman";
+			padding-right: 40%;
+			padding-left:40%;
+		}
+		h3{
+			color: black;
+			font-size: 12pt;
+			font-family:"Times New Roman";
+			padding-right: 20%;
+			padding-left:45%;
+		}
+		h4{
+			color: black;
+			font-size: 14pt;
+			font-family:"Times New Roman";
+			padding-right: 30%;
+			padding-left:30%;
+		}
+		h5{
+			color: black;
+			font-size: 14pt;
+			font-family:"Times New Roman";
+			padding-right: 30%;
+			padding-left:30%;
+		}
+		p{
+			color:black;
+			font-size: 12pt;
+			font-family: "Times New Roman";
+			padding-right:20%;
+			padding-left: 20%;
+					}
+		#square {
+            padding-left: 15%;
+            padding-right: 25%;
+        }
+        #demo {
+        	color:black;
+        	font-size: 12pt;
+			font-family: "Times New Roman";
+			padding-right:20%;
+			padding-left: 20%;
+        }
+        #one {	
+        	padding-right:40%;
+			padding-left: 45%;
+		}
+		#two {	
+        	padding-right:40%;
+			padding-left: 45%;
+		}
+		#three {	
+        	padding-right:40%;
+			padding-left: 45%;
+		}
+	</style>
+
+	<h1>Planning Activism</h1>
+	<h2> Interactive Reading Analysis </h2>
+	<h3> Ziai Zhou </h3>
+
+	<body>
+		<script type="application/processing">
+			size(1000,250);
+
+
+
+void setup(){
+	background(172,215,231);
+}
+
+			void draw() {
+    		if (mousePressed) {
+    		background(220,246,246);
+
+    		    textSize (18);
+  				  String s ="''Boston's antihighway movement rejected the land-gobbling agenda of federal highway building and, instead, advanced a new vision for urban development based on progressive politics and the concerns of local cotizens (Crockett, 2018, p.1).''";
+    				fill(255,255,255);
+    
+  					fill(255,255,255);
+   					text(s,100,100,800,500);
+  				} else if(!mousePressed) {
+    		background(255,255,255);
+    
+    		textSize (18);
+    		String s ="''The Young Lords is, was, the most important political event to happen for my generation of Puerto Ricans in recent history. The Young Lords were an initiation for a whole generation of people into their culture and their history (Figueroa as cited in Gandy, 2002, p.162).''";
+            fill(238,135,0);
+   			text(s,100,100,800,500);}
+
+ 
+			}</script>
+			
+		<canvas id="square"></canvas>	
+
+	</body>
+	<p id="demo" style="display:none"> Crockett gave a brief introduction of the anti-highway protest movement in the 20th century. The citizens against the projects that would divide the city. The anti-highway protest movement happened in multiple cities across the United States.The anti-highway movement brought the residents together and their goal was to abandon the highway plans. The citizens were to have the right to decide to control the future of their built environments. </p>
+
+	<div id=one>
+	<button type="button" onclick="document.getElementById('demo').style.display='block'">Paragraph 1</button> 
+	<button type="button" onclick="document.getElementById('demo').style.fontSize='16pt'">Bigger</button>
+</div>
+
+	<p id="dem" style="display:none"> Gandy introduced a radical Puerto Rican organization called Young Lords and stated how this organization tried its best to improve the community services and focus on community health care. This organization's goal was simple, but the spirit of environmentalism has been influencing the subsequent urban planning. As the urban theorist Manuel Castells said, "the first of these is the demand for more equitable service provision patterns for collective goods such sanitation, housing, and health care. A second feature, which contributes to collective consumption issues' political salience, is the demand for greater cultural and political visibility. And the third is the desire for greater control over urban space as a means to foster a different kind of social structure(Crockett, 2018)."  </p>
+
+	<div id=two>
+	<button type="button" onclick="document.getElementById('dem').style.display='block'">Paragraph 2</button>
+	<button type="button" onclick="document.getElementById('dem').style.fontSize='16pt'">Bigger</button>
+	</div>
+
+
+	<p id="de" style="display:none"> Those two articles talked about two different movements in the 20th century, but those two-movement had a similar goal. The organization and citizens were all about their community and tried to solve the unfair public service to the poor community. As well as stated, when people get together and want to do something, they will see good results as long as they keep doing it. </p>
+
+<div id=three>
+	<button type="button" onclick="document.getElementById('de').style.display='block'">Paragraph 3</button>
+	<button type="button" onclick="document.getElementById('de').style.fontSize='16pt'">Bigger</button>
+	</div>
+
+
+	</html>

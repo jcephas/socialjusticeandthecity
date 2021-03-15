@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Planning Activism </title>
+
+		<script script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+	</head>
+
+	<style>
+    p:hover {
+    background-color:red;
+  }
+
+		#header {
+			color:white; 
+      font-family:helvetica; 
+      font-weight:bolder;
+		}
+
+		#text {
+			color:white; 
+      font-family:helvetica; 
+      font-weight:lighter; 
+      font-size:12px;
+      width:150%;  
+      margin-left:105%;
+      margin-top:-103%;
+		}
+
+		#application {
+			display:block; 
+      float-left;
+      margin-top:20%;
+		}
+
+    #preface {
+      color:white; 
+      font-family:helvetica; 
+      font-weight:lighter; 
+      font-size:10px;
+      width:35.5%;
+      margin-bottom: 20%;
+    }
+
+	</style>
+
+	<body style="background-color:black">
+		<div id="header">
+			<h1> planning activism: interactive analysis </h1>
+
+    <div id="preface" onclick="document.getElementById('text').style.display='block'">
+      <p> The works considered during this class period were the introduction from Karilyn Crockett's 2018 book <i>People Before Highways</i> and an excerpt from Matthew Gandy's 2002 book <i>Concrete and Clay</i> entitled "Between Boriquen and the Barrio". Both works chronicle two distinct yet related diverse social movements in which marginalized people in Boston and New York City respectivly attempted to seize control of their urban environment to varying degrees of success.</p>
+
+		<div id="application">
+			<script type="application/processing">
+				float x=0;
+        float y=0;
+
+        void setup()  {
+          size (500, 500);
+        }
+
+        void draw()  {
+          background(0);
+  
+          fill(255);
+          stroke(255);
+          strokeWeight(1);
+          rect(300,100,50,50);
+  
+          stroke(125);
+          strokeWeight(1);
+          x=50;
+          while (x<width) {
+            line(x,0,x,height);
+            x=x+50;
+          }
+          y=50;
+          while (y<height) {
+            line(0,y,width,y);
+            y=y+50;
+          }
+  
+          fill(74,138,207,125);
+          stroke(74,138,207);
+          strokeWeight(1);
+          rect(0,mouseY,500,mouseY+250);
+  
+          fill(74,138,207,125);
+          stroke(74,138,207);
+          strokeWeight(1);
+          rect(0,mouseY+50,500,mouseY+300);
+  
+          fill(74,138,207,125);
+          stroke(74,138,207);
+          strokeWeight(1);
+          rect(0,mouseY+100,500,mouseY+350);
+    
+          fill(74,138,207,125); 
+          stroke(74,138,207);
+          strokeWeight(1);
+          rect(0,mouseY+150,500,mouseY+400);
+  
+          fill(207,74,105,200);
+          stroke(207,74,105);
+          rect(0,mouseY-500,500,mouseY+250);
+  
+          if (mousePressed) {
+            background(74,207,107);
+            stroke(255);
+            strokeWeight(8);
+            x=100;
+            while (x<width) {
+              line(x,0,x,height);
+              x=x+100;
+            }
+            y=100;
+            while (y<height) {
+              line(0,y,width,y);
+              y=y+100;
+            }
+    
+          }
+        }
+			</script>
+			<canvas></canvas>
+
+    <div id="text" style="display:none">
+      <p onclick="document.getElementById('text').style.color='white'"> Both readings examined this week detailed the efforts of two diverse social movements that aimed to wrest control of their urban environments from a perceived uncaring and undemocratic municipal government. Karilyn Crockett’s introduction to <i>People Before Highways</i> detailed the success of Bostonians in rescuing swaths of the city from destruction in favor of highways and Matthew Gandy’s “Between Boriquen and the Barrio” covered the successes and eventual failings of the Young Lords in creating an alternate vision of Puerto Rican neighborhoods in New York City. Both groups fit Calhoun’s model of social movements often being comprised of diverse groups of people with both individual and shared goals.</p>
+
+      <p>The most compelling connection between both cases is in the examination of how and why the people of Boston succeeded where the Young Lords of New York City faded into memory. Both groups faced dire circumstances: as Crockett states, <b>“the language of blight assumed a pernicious urban bile capable of devouring entire communities.”</b> Residents felt that their backs were against the wall, so to speak. Bostonians were at risk of losing their homes to a highways system that would do nothing to connect them to housing and jobs, while the Puerto Rican communities of New York faced these challenges along with deteriorating health, safety, and social infrastructure due to racialized neglect. In both cases, the self-fulfilling prophecies of “the ghetto”, “chinatown”, and “blight” continue to be relevant. Both groups felt excluded from monumental decisions and, above all, fought tooth and nail to be included in the “sensible” political and spatial landscape of their cities.</p>
+
+      <p onclick="document.getElementById('text').style.color='black'">The deterioration of the Young Lord’s momentum appeared to of stemmed from a change in vision. As The exclusion of the Puerto Rican community from decisions was the issue elevated to the surface, and the Young Lords and their allies took direct action that reflected a new spatial imaginary and, between 69’ and 71’ successfully filled the gaps that were left empty by the municipal government. However, I believe that the movement fell apart when their movement shifted focus to more lofty, farway political ideals that (though important) were not as salient to their local allies. Gandy details Manuel Castells’ three key points that tie urban social movements together: demand for equitable service allocation, demand for visibility, and demand for greater input into the physical environment. In all three cases, the shift in focus away from the Barrio to Boriquen lead to these three binding ties of the earlier movement being dissolved over time. Although the work of the Lords would go on to inspire environmental activists of the 90’s, the Boston movement was ultimately more successful as it remained focused, keeping all the diverse components of the movement united in Castells' three vectors. The question that remains, in my opinion, is how a local movement relate to and work across scales to connect to larger processes of anti-colonialism and independence?</p>
+
+	</html>
+
+
