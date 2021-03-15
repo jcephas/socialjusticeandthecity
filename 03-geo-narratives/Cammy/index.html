@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+	<html> 
+		<head>
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+		</head>
+		
+		<style>
+			.button {
+				background-color: #ff5050;
+				border: none;
+				color: white;
+				padding: 6px 16px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 0px 8px;
+				cursor: pointer;
+			}
+			.col-3 {width: 30%;}
+			.col-6 {width: 50%;}
+			.col-1 {width: 10%;}
+			.row::after {
+			  content: "";
+			  clear: both;
+			  display: table;
+			}
+			[class*="col-"] {
+			  float: left;
+			}
+			p{
+			text-indent:10pt; 
+			}
+		</style>
+
+		<body>
+			<div id="header" style="padding-top: 25px;padding-left: 25px">
+				<h1>Geo-Narratives</h1>
+			</div>
+			<div id="subheader" style="padding-left: 25px;padding-bottom: 20px">
+				<i>In response to Jeremy W. Crampton's </i>"An Introduction Critical Cartography"<i> and James C. Scott's </i>"Nature and Space"
+			</div>
+			<div id="thisisid" class="row">
+				<div class="col-md-4" id="main" style="padding-left: 30px;font-size:14px;line-height:16pt;">
+					<p>By quantifying possessions, accomplishments, and value, society loses its humanity in this tremendous simplification of the world–distilled to the profitable, the manipulatable, and the legible.  Crampton emphasizes cartography’s political nature–originally an imperialist tool, evolving into a communal instrument–as a means of actively composing objective truth, signifying its potential at activating social change.  Scott discusses the inherent need for simplification and commodification in imperialist high-modernist social order, resulting in the creation of “legible” forms as it allows for profit and losing practical knowledge.</p>
+					<p>As such, the European-imported American forestry focuses on the economic resource of timber.  Forest agencies were originally firefighting agencies that lacked any proper training or local wisdom, and so fire suppression conquered.  Individuals that rose in rank in forestry were war hero types who suppressed fire, protecting the valuable “natural resources.”  The 10am rule and the fight of time against pests, beetles, fires, and floods obscured the need for these processes and cycles to allow for healthy forests.</p>
+					<p>In obscuring all else, we lose the natural presence of our world.  Gone are the endless, cyclical, meandering stories.  All that remains is a simple, linear narrative, as determined by capitalistic desires.  A lifecycle, under these conditions is no longer viewed as a cycle.  It is simply the life to the death of a commodity.  Time itself has been quantified and checked.  The simplification of the geometries of physical space is a common mistake of the design profession, which seeks to solve problems it defines for itself.</p>
+					<p>Grassroots mapping envisions alternative promises, valuing informality and locality. Rebecca Solnit and her team’s atlases are a popularized example of the recent, critical approach as they map various characteristics of a city.  In “Monarchs and Queens,” butterfly habitats and queer spaces are mapped without a true physical correlation but still a significant symbolic approach.  The space provided by creative critical cartography allows imagination to dominate as we discover possibilities beyond existing structure.</p>
+				</div>
+				<div class="col-md-7">
+				<script type="application/processing">
+					float xStep = 45;
+					float yStep = 10;
+					float sw, alpha;
+					float angle = mouseX;
+
+					void setup() {
+					  size(900, 720);
+					}
+
+					void draw () {
+					  background(255);
+							  
+					  mouseX = constrain(mouseX, 10, width);
+					  mouseY = constrain(mouseY, 10, height);
+							  
+					  xStep = mouseX;
+					  yStep = mouseY;
+							  
+					  for(int y=0; y<=width; y+=yStep) {
+					    sw = map(sin(radians(y-alpha)), -1, 1, 2, yStep);
+					    strokeWeight(sw);
+					    stroke(alpha/5, mouseY/6, sw);
+					    line(y, 0, y, height);
+					  }
+					  alpha++;
+					}
+				</script>
+				<canvas style="padding-left: 25px"><!--The Processing code will render here.--> </canvas>
+				</div>
+				<div class="col-md-1" style="float:right;padding-bottom: 20px">
+				<button class="button" onclick="alert('“The organization of the natural world...These state simplifications, the basic givens of modern statecraft, were, I began to realize, rather like abridged maps. They did not successfully represent the actual activity of the society…it created such a system through.”\n–Scott, pp. 2-3')">←</button>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<button class="button" onclick="alert('“...a critical cartography refers to the choice of new worlds, new societies. Here, the practice of the cartographer is immediately political.”\n–Crampton, p. 24')">O</button>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<button class="button" onclick="alert('“If the natural world, however shaped by human use, is too unwieldy in its “raw” form for administrative manipulation, so too are the actual patterns of human interaction with nature bureaucratically indigestible in their raw form.”\n–Scott, p. 22')">←</button>
+				</div>		
+			</div>
+		</body>
+	</html>
