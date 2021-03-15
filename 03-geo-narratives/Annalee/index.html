@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geo-Narratives</title>
+        <link rel="stylesheet" href="indexstyle.css">
+
+        <!--Loads the Processing.js Library-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+
+        <!--Loads d3.js Library and a topojson-->
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://unpkg.com/topojson@3"></script>
+
+        <!--Loads Chart.js library-->
+        <script src="dist/Chart.js"></script>
+        <script src="dist/Chart.min.js"></script>
+ 
+    </head>
+
+    <body>
+<!--Sidenav-->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Sources</a>
+      </div>
+      
+      <!-- Use any element to open the sidenav -->
+      <span onclick="openNav()"> <span style='font-size:20px;'>&#8688;</span>  </span>
+      
+      <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+      <div id="main">
+        <!--Add here-->
+      </div> 
+
+      <script>
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "60vw";
+  document.getElementById("main").style.marginLeft = "500px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";
+}
+      </script>
+<!--End Sidenav-->
+
+
+
+
+<!--Begin visible page content-->
+
+<body>
+  <div class="container-fluid" style="font-family:Arial, Helvetica, sans-serif">
+      <div class="row">
+        <div class = "col-sm-1">
+          1,1
+       </div>
+
+          <div class = "col-md-6">
+          </div>
+
+          <div class = "col-md-4">
+              <div id="CourseInfoStrip" style="padding-left:3vw">
+                  <!--<h1 style="color: red;">UNDER CONSTRUCTION</h1> -->
+                  <h1 style="font-weight: bold">Social Justice and the City </h1>
+                  <h2>Annalee Fuller    |    Prof. Jay Cephas</h2>
+              </div>
+      
+              <div id="ThisPageTitleStrip" style="padding-left:3vw">
+                  <h3>Geo-Narratives</h3>
+                  <h2>Access | Distortion | Visibility</h2>
+              </div>
+            </div>
+            <div class = "col-sm-1">
+              1,4
+           </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class = "col-sm-1">
+          2,1
+       </div>
+
+        <div class = "col-md-6">        
+            <div class='tableauPlaceholder' id='viz1615788175971' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;USCensusInternetAccess2&#47;Story1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='USCensusInternetAccess2&#47;Story1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;USCensusInternetAccess2&#47;Story1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1615788175971');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='50vw';vizElement.style.height='70vh';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        </div>
+        
+        <div class = "col-md-4" style="padding-left: 3vw">
+          <svg width="30vw" height="8vw" style="y=20%, padding-top=:2vw, padding-bottom:5vw;">
+            <rect class="WhiteAlone" width="60%" height="100px" x="0px" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+            <rect class="HispanicLatino" width="19%" height="100px" x="60%" style="fill:rgb(27, 158, 86);stroke-width:3;stroke:rgb(0,0,0)" />
+            <rect class="Black" width="13%" height="100px" x="79%" style="fill:rgb(195, 206, 51);stroke-width:3;stroke:rgb(0,0,0)" />
+            <rect class="Asian" width="6%" height="100px" x="92%" style="fill:rgb(212, 25, 103);stroke-width:3;stroke:rgb(0,0,0)" />
+            <rect class="ALNativeNativePIslander" width="2%" height="100px" x="98%" style="fill:rgb(32, 142, 194);stroke-width:3;stroke:rgb(0,0,0)" />
+          </svg> 
+          <p>
+            In “Nature and Space” from his book, Seeing Like a State,  James C. Scott shows how state-imposed measurements of people, resources, products, and space have historically been created and sanctioned as means to serve the state’s own interests, obscuring “on-the-ground” realities and locally-derived, practical systems.  Situated in his larger “case against imperialism of high-modernist, planned social order” and advocacy for “practical knowledge” and “informal processes,”  Scott argues that the resilience of social and natural diversities are threatened by obtuse, reductionist measurement sciences introduced by the state. “Certain forms of knowledge and control,” Scott asserts, “require a narrowing of vision.” By homogenizing and abstracting the real practices of local individuals into more legible models of defined coordinates and uniform units of measure, the state achieves greater administrative control. 
+            On the other hand, Jeremy Crampton describes in “Critical Cartography” a movement where cartography is democratized by access to information and technological means of generating maps.  In this lies a power to generate narratives alternative to those posed by the state or academia.  
+            Together, these readings suggest that with more free-flowing information and the tools to assemble and represent that information publicly, the pool of participants in shaping narratives of space, processes, and resources grows.  Crampton, especially, focuses on how the movement toward critical cartography has been underpinned by increased use of technology.  If elites were able to administer such control by way of parsing land, abstracting realities, and suiting the organization to their needs, it follows that making the practice more public would reissue some of this power to the people once subject to the consequences of those maps.  Evidently, it implicates the notion of access.
+            While equipping more of the non-elite public with the means to represent space would make the science of cartography more democratic, we must qualify this potential with questions of access. Suppose the movement illustrated by Crampton continues to accelerate: increasing members of the public take to their computers and make visible the nuanced practicalities of their daily lives, how they use resources or space, or generally express what they wish to make known. The ability to do this rests upon access to that technology.  While wide-spread, there remain disparities in who has access to the necessary technology.
+          </p>
+
+         </div>
+
+        <div class = "col-sm-1">
+          2,4
+       </div>
+       </div>
+    
+    <div class="row">
+      <div class = "col-sm-1">
+        3,1
+     </div>
+
+      <div class = "col-md-6">
+        <div id="GraphicsRenderZone" style="padding-top: 10px; padding-left: 0vw;">    
+          <div class='tableauPlaceholder' id='viz1615788346033' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;X8&#47;X8JZMHRGW&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;X8JZMHRGW' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;X8&#47;X8JZMHRGW&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1615788346033');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='50vw';vizElement.style.height='70vh';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>              
+        </div>
+      </div>
+      <div class = "col-md-4" style="padding-left: 3vw">
+        <p>
+          In this set of visualizations, 
+          A pair of maps created with Tableau Public portray the percentage of people over age 3 who live in a home that successfully accesses the internet, per state.  The first is organized without geographic boundaries, and the latter corresponds to US state boundaries.
+          Tableau Public is an organization and application that connects people without formal education in data analytics to easily visualize statistics, fostering accessibility in visualization sciences.  
+          A small interactive illustration at right contains a series of rectangles whose widths proportionally represent the racial composition of the population of the United States.  Hovering over these rectangles scales each vertically in proportion to the percentage among that group of individuals, above the age of 5, live in a home that accesses the internet.  
+          We notice that, not only does internet connectivity vary by state, but it also varies by racial category. 
+          We can expect, then, that even positive-sounding democratization of cartography with digital methods is subject to racial disparity. As long as there remain economic and connectivity-related inequities, there will be a continued assertion of a dominant narrative that makes less numerous voices seem even fewer.
+          </p>
+       </div>
+       <div class = "col-sm-1">
+          3,4
+     </div>
+  </div>
+
+
+</div>
+
+    </body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    
+</head>
+
+<style>
+    </style>
+
+
+
+</body>
+
+</html>
