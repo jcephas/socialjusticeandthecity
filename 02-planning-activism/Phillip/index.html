@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang ="en">
 <head>
-   <title> PLANNING AND ACTIVISIM</title>
+  <meta charset="UTF-8">
+   <title> mEmeddding JavaScript </title>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
 </head>
 
@@ -9,6 +10,8 @@
 
    <body>
     <script type="application/processing">
+
+
       
       void setup() {
   size(2000, 2000);
@@ -18,16 +21,28 @@
 
 void draw() {
   background(50);
-  if (mouseX < 33) {
+
+
+
+
+  if (mouseX < 0) {
     rect(0, 0, 33, 2000); // Left
-  } else if (mouseX < 66) {
-    rect(66, 0, 33, 2000); // Middle
-  } else  if (mouseX < 66) {
+  } 
+   fill (49,244,244);
+    if (mouseX < 66) {
+    rect(66, 0, 33, 2000); // Left
+  }
+     fill (49,244,244);
+    if (mouseX < 88) {
+    rect(66, 0, 33, 2000); // Left
+
+
+   } else  if (mouseX < 66) {
     rect(66, 0, 33, 2000); // Right
     }else if (mouseX < 132) {
     rect(132, 0, 33, 2000); // More Right 
    } else  if (mouseX < 150) {
-   rect(150, 0, 33, 200);
+   rect(150, 0, 33, 2000);
     } else  if (mouseX < 175) {
     rect(175, 0, 33, 600);
      } else  if (mouseX < 220) {
@@ -62,15 +77,15 @@ void draw() {
         fill(255);
         rect(mouseX,30,10,6000);
         fill(255);
-        rect(mouseX,40,10,1000);
+        rect(mouseX,40,10,2000);
         fill(255);
-        rect(mouseX,50,10,1000);
+        rect(mouseX,50,10,2000);
         fill(255);
-        rect(mouseX,60,10,1000);
+        rect(mouseX,60,10,2000);
         fill(255);
-        rect(mouseX,70,10,1000);
+        rect(mouseX,70,10,2000);
         fill(255);
-        rect(mouseX,80,10,1000);
+        rect(mouseX,80,10,2000);
  }
  else {
     stroke(0,80,0);
@@ -78,6 +93,10 @@ void draw() {
     rect(mouseX,mouseY,200,200);
 
   }
+
+
+
+
 
  
 
@@ -96,14 +115,21 @@ String s = "PLANNING ACTIVISM";
 fill(21,225,20);
 text(s, 700, 100, 1000, 800);  // Text wraps within text box
 
-
 }
 
+
+
 </script>
+
+
 
 <canvas></canvas>
 <a href="02-planning-activisim/index.html" style="display:block">Politics and Aesthetics</a>
 
+    <button type="button" id="myBtn">Click Me</button>
+    <script>    var greet = "Hello World!";
+    document.write(greet); // Prints: Hello World!</script>
+   
 
 
 </body>
