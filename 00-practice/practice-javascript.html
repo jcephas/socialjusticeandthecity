@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>This Is the Title of My Webpage</title>
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+</head>
+
+<style>
+	.first {
+		background-color: grey;
+		height: 400px;
+	}
+
+	.second {
+		margin-top: 10px;
+		background-color: green;
+		height: 400px;
+	}
+
+	img {
+		height: 200px;
+		display: block;
+	}
+
+
+</style>
+
+
+<body>
+
+	<!--page sections without bootstrap-->
+	<div id="section01" class="first">
+		<h1>This is a header tag. Look at how big it is!</h1>
+		<p>This is the body of my webpage. It contains all the content I'd like to show on this page.</p>
+		<a href="#section02">Go to second section.</a>
+		<a href="#section03">Go to third section.</a>
+	</div>
+	<div id="section02" class="second">
+		<h1>This is a header tag. Look at how big it is!</h1>
+
+		<p>This is the body of my webpage. It contains all the content I'd like to show on this page.</p>
+	</div>
+
+
+	<div id="section03" class="first">
+		<h1>This is a header tag. Look at how big it is!</h1>
+
+		<p>This is the body of my webpage. It contains all the content I'd like to show on this page.</p>
+	</div>
+
+	<!-- page sections with bootstrap -->
+	<div class="container"> <!--use the .container-fluid class for full screen width-->
+		<div class="row">
+			<div class="col-md-4">
+				<div id="section01" class="first">
+					<h1>This is a header tag. Look at how big it is!</h1>
+
+					<p>This is the body of my webpage. It contains all the content I'd like to show on this page.</p>
+
+					<a href="#section02">Go to second section.</a>
+					<a href="#section03">Go to third section.</a>
+
+					<!--This is a comment. It's a little note to myself about the code. It won't show up on the webpage.-->
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div id="section02" class="second">
+					<h1>This is a header tag. Look at how big it is!</h1>
+
+					<p>This is the body of my webpage. It contains all the content I'd like to show on this page.</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div id="section03" class="first">
+					<h1>This is a header tag. Look at how big it is!</h1>
+
+					<p>This is the body of my webpage. It contains all the content I'd like to show on this page.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div id="section01" class="first">
+					<h1>This is a header tag. Look at how big it is!</h1>
+
+					<p>This is the body of my webpage. It contains all the content I'd like to show on this page.</p>
+
+					<a href="#section02">Go to second section.</a>
+					<a href="#section03">Go to third section.</a>
+
+					<!--This is a comment. It's a little note to myself about the code. It won't show up on the webpage.-->
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div id="section02" class="second">
+					<h1>This is a header tag. Look at how big it is!</h1>
+
+					<p>This is the body of my webpage. It contains all the content I'd like to show on this page.</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div id="section03" class="first">
+					<h1>This is a header tag. Look at how big it is!</h1>
+
+					<p>This is the body of my webpage. It contains all the content I'd like to show on this page.</p>
+				</div>
+			</div>
+		</div>
+
+		<div style="background-color: #97b1db;">
+			<p id="demo">JavaScript can change HTML content.</p>
+
+			<button type="button" onclick='document.getElementById("demo").innerHTML = "Change content."'>Change it!</button>
+
+		</div>
+
+		<div style="background-color: #a297db;">
+			<button onclick="document.getElementById('myImage').src='testimage01.jpg'">One building</button>
+			<button onclick="document.getElementById('myImage').src='testimage02.jpg'">Another building</button>
+			<img id="myImage" src="testimage01.jpg">
+		</div>
+
+		<div style="background-color: #c097db;">
+			<p id="anotherDemo">JavaScript can change the style of an HTML element.</p>
+
+			<button type="button" onclick="document.getElementById('anotherDemo').style.fontSize='60px'">Change the style!</button>
+		</div>
+		<div style="background-color: #db97d8;">
+			<p id="demo3">JavaScript can hide HTML elements.</p>
+
+			<button type="button" onclick = "document.getElementById('demo3').style.display='none'">Hide it!</button>
+
+		</div>
+
+	</div>
+
+
+
+<script>
+	
+
+</script>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+<script src="/js/myScript.js"></script>
+	
+
+</body>
+
+</html>

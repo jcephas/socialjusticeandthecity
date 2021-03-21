@@ -5,6 +5,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
 
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
     <style>
         body{
             background-color: rgb(71,71,71)
@@ -27,6 +30,14 @@
             color: white;
         }
 
+        h3 {
+            font-size: 14pt;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: justify;
+            color: white;
+            padding-left: 30%;
+        }
+
         #name {
             font-size: 13pt;
             font-style: italic;
@@ -40,6 +51,11 @@
             padding-right: 33%;
         }
 
+        #map {
+          padding-left: 40%;
+          padding-right: 40%;
+        }
+
         #source {
                 font-size: 9pt;
                 line-height: 12pt;
@@ -50,14 +66,40 @@
                 padding-right: 30%;
             }
 
+        a:link, a:visited {
+            text-decoration: none;
+            color: white;
+          }
+
+        a:hover {
+          color: rgb(184,39,63);
+        }
+
+        #maptext {
+          text-align: center;
+        }
+
         </style>
     </head>
-    
     <h1>Geo-Narratives</h1>
+
+    <div id='map' style='width: 400px; height: 300px;'></div>
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZW1tYXBhbGFjaW8iLCJhIjoiY2ttZXd1dTU0Mno1ZDMwdzB5cGQzNnp3aiJ9.WOO3zGxaP9t8WBufMwAUhQ';
+    var map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/emmapalacio/ckmjfchfu27hs17s6zcp6jztw', // style URL
+        center: [-73.935242, 40.730610], // starting position [lng, lat]
+        zoom: 10 // starting zoom
+    });
+    </script>
+    
 
     <body>
 
-        <p id="name">Emma Palacio</p>
+      <p id="maptext"><i>The map above depicts the historic districs of New York City as defined by the New York City Landmarks Preservation Commission (LPC). Each color represents a historic area in their respective boroughs, they are defined by the following: blue - Queens,  green - Manhattan, pink - Brooklyn, orange - The Bronx, and yellow - Staten Island. This data was obtained from <a target="_blank" href="https://data.cityofnewyork.us/Housing-Development/Historic-Districts/xbvj-gfnw">NYC OpenData</a>.</i></p>
+
+        <h3>Introduction</h3>
 
         <p id="intro">These two readings discuss the various nuances and practices within the larger context of politics and space. Scott draws key parallels between the control of forests to the ways in which government exudes power over a society. On the other hand, Crompton is interested in how maps and the act of map making influences the political and ethical realms.</p>
 
@@ -439,7 +481,12 @@
             </script>
             <canvas id="interact"></canvas>
 
+            <h3>Analysis</h3>
+
             <p>In each reading, the theme of judgement and omnipotence are crucial factors in setting up their respective arguments. For example, Scott states, “From the beekeeper’s point of view, the modern hive is an orderly, ‘legible’ hive allowing the beekeeper to inspect the condition of the colony and the queen...to ensure that the colony will overwinter successfully.”. From this perspective one can see how the ordered structure of a beehive enables its subjection through higher beings. Therefore, the power lies through this interpretation. A similar phenomenon can be understood in Crampton’s argument. He often cites the growing opportunities for anyone to create maps thus, the power in mapping belongs to its users. Another common theme that one can draw from these readings is how power is used to control narratives. Scott explicitly explains this phenomenon by stating that control enables categorization, which further leads to harm. Furthermore, this harm can be experienced in varying degrees through the degree of measures of exploitation. This idea also applies to maps as one can choose how to represent a particular space and as Crampton cites, this is not always portrayed in an honest manner.</p>
+
+            <p id="name">Emma Palacio</p>
+
 
             <p id="source">James C. Scott, “Introduction” and “Nature and Space,” in Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed (New Haven: Yale University Press, 1998), pp. 1–52. (3).</p>
 
