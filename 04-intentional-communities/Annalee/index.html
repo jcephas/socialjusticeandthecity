@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Intentional Communities</title>
+        <link rel="stylesheet" href="indexstyle.css">
+
+        <!--Loads the Processing.js Library-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+
+        <!--Loads d3.js Library and a topojson-->
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://unpkg.com/topojson@3"></script>
+
+        <!--Loads Chart.js library-->
+        <script src="dist/Chart.js"></script>
+        <script src="dist/Chart.min.js"></script>
+
+        <!--Loads MapBox-->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+ 
+    </head>
+
+    <body>
+<!--Sidenav-->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Sources</a>
+      </div>
+      
+      <!-- Use any element to open the sidenav -->
+      <span onclick="openNav()"> <span style='font-size:20px;'>&#8688;</span>  </span>
+      
+      <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+      <div id="main">
+        <!--Add here-->
+      </div> 
+
+      <script>
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "60vw";
+  document.getElementById("main").style.marginLeft = "500px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";
+}
+      </script>
+<!--End Sidenav-->
+
+
+
+
+<!--Begin visible page content-->
+
+<body>
+  <div class="container-fluid" style="font-family:Arial, Helvetica, sans-serif">
+      <div class="row">
+        <div class = "col-sm-1">
+
+       </div>
+
+          <div class = "col-md-6">
+          </div>
+
+          <div class = "col-md-4">
+              <div id="CourseInfoStrip" style="padding-left:3vw">
+                  <!--<h1 style="color: red;">UNDER CONSTRUCTION</h1> -->
+                  <h1 style="font-weight: bold">Social Justice and the City </h1>
+                  <h2>Annalee Fuller    |    Prof. Jay Cephas</h2>
+              </div>
+      
+              <div id="ThisPageTitleStrip" style="padding-left:3vw">
+                  <h3>Intentional Communities for a New Social Order</h3>
+                  <h2>Agency | Democracy | Distribution | Forms</h2>
+              </div>
+            </div>
+            <div class = "col-sm-1">
+              
+           </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class = "col-sm-1">
+         
+       </div>
+
+        <div class = "col-md-6" style="padding-left: 10vw; padding-right: 10vw">        
+          <script type="application/processing">
+            int count = 5;
+   
+  float[] x = new float[count];
+  float[] y = new float[count];
+  float[] r = new float[count];
+  float[] g = new float[count];
+  float[] b = new float[count];
+  float[] w = new float[count];
+   
+  void setup() {
+    size(500, 400);
+   
+    for (int i = 0; i < count; i++) {
+      x[i] = random(width);
+      y[i] = 10;
+     
+      r[i] = random(200);
+      g[i] = random(50);
+      b[i] = random(200);
+      w[i] = 300;
+     
+    }
+   
+    background(256);
+    
+    noSmooth();
+    frameRate(200);
+  }
+   
+  void draw(){
+    for(int i = 0; i < count; i++){
+      x[i] += random(-0.5, .5);
+      y[i] += random(-1, .5);
+     
+      if(x[i] < 0){
+       x[i] = width;
+      }
+      if(x[i] > width){
+        x[i] = 0;
+      }
+     
+      if(y[i] < 0){
+        y[i] = height;
+      }
+      if(y[i] > height){
+       y[i] = 0;
+      }
+  
+      stroke(r[i], g[i], b[i]);
+      point(x[i], y[i]);
+
+    }
+
+
+  }
+  </script>
+
+  <canvas></canvas>
+
+
+        </div>
+
+
+      <div class = "col-md-4" style="padding-left: 4vw; padding-top: 10%; font-family: Arial, Helvetica, sans-serif; font-size: xx-large;">
+      "Up, not out."
+       </div>
+
+        <div class = "col-sm-1">
+          
+       </div>
+       </div>
+    
+    <div class="row">
+      <div class = "col-sm-1">
+        
+     </div>
+
+      <div class = "col-md-6" class = "col-md-6" style="padding-left: 10vw; padding-right: 10vw; padding-top: 3vw; padding-bottom: 5vw">
+        <p>
+          In the above graphic, code that generated a random walk [from https://happycoding.io/examples/processing/arrays/random-walkers] was modified by restricting the x-movement to a very small domain, and by adjusting the y-movement to a moderately smaller range, beginning at 0 (canvas-bottom). 
+        </p>
+     </div>
+      <div class = "col-md-4" style="padding-left: 3vw; padding-top: 3vw;">
+        In the video “Arcosanti: Paolo Soleri on his futuristic utopian city in the desert,” the values, architecture, and operation of an urban planning experiment are explored.  The experiment is a built, standalone settlement based on the premise of abandoning cities, building upward in self-contained agglomerations of human-centered programs, and minimizing environmental impact with climatically-responsive design. The concept at work is archology, which combines architecture and ecology.  In this vision, humans dwell in a “habitat that belongs to a landscape.” There are no streets, but an emphasis on self-sustenance through crop cultivation and performative, humanistic, and multi-use architecture. Interestingly, as generations of people move on from the space, incoming generations are left to decide how else the space proceeds; in this way, the planning is democratized. Theoretically, this model of planning minimizes the footprint of human settlement, opting to “build up, not out,” while leaving thousands of acres of unoccupied land in which the natural ecology can flourish uninterrupted. 
+
+       </div>
+       <div class = "col-sm-1">
+         
+     </div>
+  </div>
+
+  <div class="row">
+    <div class = "col-sm-1">
+      
+   </div>
+
+    <div class="col-md-6" style="padding-left: 10vw; padding-right: 10vw">
+      <div id='map' style='width: 500px; height: 400px;'></div>
+      <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoiZnVsbGVyYSIsImEiOiJja21rNW1uaWQweTRkMzFxbWs5dHZwNHhlIn0.tSgaslvZr7tp71hdzhmlRQ';
+      var map = new mapboxgl.Map({
+      container: 'map', // container ID
+      style: 'mapbox://styles/fullera/ckmk5qir802yo17o3p4kyvlmr', // style URL
+      center: [-10,0], // starting position [lng, lat]
+      zoom: 1 // starting zoom
+      });
+      </script>
+   </div>
+
+    <div class = "col-md-4" style="padding-left: 4vw; padding-top: 10%; font-family: Arial, Helvetica, sans-serif; font-size: xx-large;">
+        "A habitat that belongs to a landscape"
+     </div>
+     <div class = "col-sm-1">
+        
+   </div>
+</div>
+
+<div class="row">
+  <div class = "col-sm-1">
+   
+ </div>
+
+  <div class = "col-md-6" class = "col-md-6" style="padding-left: 10vw; padding-right: 10vw;">
+    <p>This map shows Tree Biomass Loss at regular intervals.  From Global Forest Watch: https://data.globalforestwatch.org/datasets/tree-biomass-loss?geometry=-140.381%2C-34.570%2C160.381%2C23.916
+   </p> 
+  </div>
+  <div class = "col-md-4" style="padding-left: 3vw">
+    In Goldstein’s Black Utopia, the author describes how, transcending undignified portrayals, ARCH asserts schema for Harlem in which predominantly Black communities take agency in the planning of local spaces. Emphasizing Black empowerment, the chapter recounts the founding education and entry of a group of Black students into the architectural profession, and how the ARCH group approached its goals of democratized planning, promoting community-forward development (as opposed to that imposed by outsiders), and empowering generations of Black designers. As designers from the community began to reimagine the aesthetic of Harlem, they sought to understand and to establish a Black Aesthetic, with aims to preserve the cultural paving that had been done. They sought new forms and layouts to express the ideas and ways of life that they idealized in the community.  
+        
+
+   </div>
+   <div class = "col-sm-1">
+     
+ </div>
+</div>
+
+<div class="row">
+  <div class = "col-sm-1">
+    
+ </div>
+
+  <div class = "col-md-6" style = "padding-left: 10vw">
+    <p>What happens to a dream deferred?</p>
+    <p>Does it dry up</p>
+    <p>like a raisin in the sun?</p>
+    <p>Or fester like a sore—</p>
+    <p>And then run?</p>
+    <p>Does it stink like rotten meat?</p>
+    <p>Or crust and sugar over—</p>
+    <p>like a syrupy sweet?</p>
+    <br>
+    <p>Maybe it just sags</p>
+    <p>like a heavy load.</p>
+    <br>
+    <p>Or does it explode?</p>
+    <br>
+    <br>
+    <p>See analysis by the Poetry Foundation at https://www.poetryfoundation.org/articles/150907/langston-hughes-harlem</p>
+   
+ </div>
+  <div class = "col-md-4" style="padding-left: 4vw; padding-top: 10%; font-family: Arial, Helvetica, sans-serif; font-size: xx-large;">
+    "Harlem" by Langston Hughes
+   </div>
+   <div class = "col-sm-1">
+      
+ </div>
+</div>
+
+<div class="row">
+  <div class = "col-sm-1">
+    
+ </div>
+
+  <div class = "col-md-6" style = "padding-left: 10vw">
+   
+ </div>
+  <div class = "col-md-4" style="padding-left: 3vw">
+    Both readings raise models of urban planning from within (even as the rules for Arcosanti are externally imposed). Furthermore, both raise questions about entitlements to occupy land: in “Arcosanti,” this question is about the space taken up over earth and ecology, while in Black Utopia this pertains to relationships among segregated people and interests.
+   </div>
+   <div class = "col-sm-1">
+      
+ </div>
+</div>
+
+
+
+</div>
+
+    </body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    
+</head>
+
+<style>
+    </style>
+
+
+
+</body>
+
+</html>
