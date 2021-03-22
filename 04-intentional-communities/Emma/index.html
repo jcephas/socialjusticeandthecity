@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Palacio-ARCH 6340</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+
+    <style>
+        body {
+            background-color: rgb(56, 171, 116);
+        }
+
+        p {
+            padding-left: 30%;
+            padding-right: 30%;
+            font-size: 12pt;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            line-height: 24pt;
+            text-align: justify;
+            color: black;
+            }
+
+        h1 {
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 24pt;
+            color: white;
+        }
+
+        h3 {
+            font-size: 14pt;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: justify;
+            color: white;
+            padding-left: 30%;
+        }
+
+        #name {
+            font-size: 13pt;
+            font-style: italic;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: justify;
+            color: black;
+        }
+
+
+        #interact {
+            padding-left: 29%;
+            padding-right: 29%;
+        }
+
+        #quote {
+            font-size: 18pt;
+            font-style: italic;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            padding-top: 20px;
+            color: white;
+        }
+
+            #author {
+            text-align: right;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 13.5pt;
+            color: white;
+            font-weight: bold;
+        }
+
+        #source {
+                font-size: 9pt;
+                line-height: 12pt;
+                border-top: 1.5px solid whitesmoke;
+                padding-top: 20px;
+                text-align: justify;
+                padding-left: 30%;
+                padding-right: 30%;
+            }
+
+        </style>
+    </head>
+    
+    <h1>Intentional Communities</h1>
+
+    <body>
+
+        <h3>Introduction</h3>
+
+        <p id="intro">In this chapter of The Roots of Urban Resistance, Goldstein discusses the ways in which ARCH and the residents of Harlem found empowerment through their community and architecture to define the characteristics of their neighborhood.</p>
+
+        <script type="application/processing">
+
+          void setup() {
+            size(800, 300);
+            noStroke();
+            fill(56, 171, 116);
+          }
+          
+          void draw() {
+            background(255);
+            ellipse(200,142,30,30);
+            ellipse(467,135,50,50);
+            ellipse(249,76,25,25);
+            ellipse(190,243,100,100);
+            ellipse(360,157,120,120);
+            ellipse(557,98,87,87);
+            ellipse(635,225,43,43);
+            ellipse(75,95,36,36);
+            ellipse(725,123,41,41);
+            rect(650,50,98,3);
+            rect(177,268,269,3);
+            rect(85,185,87,2);
+            rect(475,211,33,2);
+            rect(86,43,2,93); 
+            rect(576,125,3,125);
+            rect(52,150,3,125);
+            rect(328,61,3,74);
+            rect(398,179,3,145);
+            rect(350,188,267,2.5);
+            rect(203,0,2.5,223);
+            rect(0,127,456,2);
+            rect(713,43,3,142);
+            rect(32,223,156,2.5);
+            rect(167,111,2.45,100);
+            rect(475,100,2,156);
+            rect(565,222,150,2.5);
+            rect(203,78,65,2);
+            ellipse(24,157,100,100);
+            ellipse(789,56,98,98);
+            ellipse(400,270,21,21);
+            ellipse(321,195,10,10);
+            ellipse(150,87,76,76);
+            if (mouseX < 225) {
+              rect(0, 0, 100, 400);
+              rect(50, 0, 50, 400);
+              rect(130, 0, 30, 400);
+              rect(564, 0, 76, 400)
+            } else if (mouseX < 525) {
+              rect(450, 0, 133, 300);
+              rect(300, 0, 75, 300);
+              rect(50, 0, 80, 300);
+            } else {
+              rect(550, 0, 169, 300);
+              rect(280, 0, 30, 300);
+            }
+          }
+            </script>
+            <canvas id="interact"></canvas>
+
+            <h3>Analysis</h3>
+
+            <p>Many of the themes that have come up in previous readings are also relevant here. For example, the empowerment through shared struggles were additionally crucial to some in <i>Black Metropolis</i>. Along with this, the notion of having the power to create the “black aesthetic” runs parallel to this idea. <b>One concept that is particularly distinctive in this reading is the desire to create an identity for a specific landscape itself.</b> As we have seen before, the social movement has been an important agent for achieving alternate identities through individuals. However, Goldstein touches upon how the character of a space is often tied to those that live there. This concept enforces the high importance of the spatial landscape that has previously been addressed in <i>Concrete and Clay</i>. For example, Goldstein states, “Harlem residents elected to fulfill bringing planning needs in the very heart of the neighborhood, underscoring their desire that Harlem’s spaces and structures reflect its predominantly African American, low-income population.”. Through this quote we can see the strength in the connection between identities and space.</p>
+
+            <p id="quote"> “Harlem residents elected to fulfill bringing planning needs in the very heart of the neighborhood, underscoring their desire that Harlem’s spaces and structures reflect its predominantly African American, low-income population.”</p>
+
+            <p id="author">- Brian Goldstein</p>
+
+            <h3>Redefining Architecture</h2>
+
+            <p>The success of Bond and ARCH’s work leads me to believe that the professional world of architecture is long overdue for restructuring. It also points to the fact that architecture is more than just understanding buildings, their systems, and theory. Therefore, it is also important that architectural education to be reevaluated. The divide between politics and aesthetics in architecture has led to the separate nature of architecture and community development.</p>
+
+            <p id="name">Emma Palacio</p>
+
+            <p id="source">Brian Goldstein, “Black Utopia,” in The Roots of Urban Renaissance: Gentrification and the Struggle over Harlem (Cambridge, MA: Harvard University Press, 2017), pp. 58-106. (106).</p>
+
+            </body>
