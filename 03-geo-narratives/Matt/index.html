@@ -24,9 +24,9 @@
 
 		.header {
 		color:red; 
-      font-family:helvetica; 
-      font-weight:bolder;
-      font-size: 30px;
+     	font-family:helvetica; 
+      	font-weight:bolder;
+      	font-size: 30px;
 		}
 
 		.text {
@@ -157,6 +157,25 @@
 			<div class="row">
 				<div class="col-lg-12">
 				</div>
+			</div>
+		</div>
+
+		<div class="container map">
+			<div class="row">
+				<div class="col-lg-12">
+	
+					<div id='map' style='width: 400px; height: 300px;'></div>
+					<script>
+						mapboxgl.accessToken = 'pk.eyJ1IjoibXJtaWxsZXIiLCJhIjoiY2ttZXdvNml4MDM2dzJ3azFoOGVsc3Y0bSJ9.iCp0TVLRC_i77iQ8p9gaLg';
+							var map = new mapboxgl.Map({
+							    container: 'map', // container ID
+							    style: 'mapbox://styles/mrmiller/ckmmknoqo1efg17s2qeavf9xd', // style URL
+							    center: [42, 71], // starting position [lng, lat]
+							    zoom: 9 // starting zoom
+							});
+					</script>
+				</div>
+				
 			</div>
 		</div>
 
