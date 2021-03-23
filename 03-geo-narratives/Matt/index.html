@@ -7,8 +7,10 @@
 		<script script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
 		<!--code to enable processing animation-->
 
+		
+		<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
 		<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
-		<!--copied from mapbox site to enable map integration-->
+
 	</head>
 
 	<style>
@@ -162,21 +164,25 @@
 
 		<div class="container map">
 			<div class="row">
-				<div class="col-lg-12">
-	
-					<div id='map' style='width: 400px; height: 300px;'></div>
-					<script>
-						mapboxgl.accessToken = 'pk.eyJ1IjoibXJtaWxsZXIiLCJhIjoiY2ttZXdvNml4MDM2dzJ3azFoOGVsc3Y0bSJ9.iCp0TVLRC_i77iQ8p9gaLg';
-							var map = new mapboxgl.Map({
-							    container: 'map', // container ID
-							    style: 'mapbox://styles/mrmiller/ckmmknoqo1efg17s2qeavf9xd', // style URL
-							    center: [42, 71], // starting position [lng, lat]
-							    zoom: 9 // starting zoom
-							});
-					</script>
+				<div class="col-lg-6">
+					<div id='map' style='width: 600px; height: 600px;'></div>
+				</div>
+
+				<div class="col-lg-6">
+					<p> This is the map description the description of the map will go here. </p>
 				</div>
 				
 			</div>
 		</div>
+
+			<script>
+						mapboxgl.accessToken = 'pk.eyJ1IjoibXJtaWxsZXIiLCJhIjoiY2ttZXdvNml4MDM2dzJ3azFoOGVsc3Y0bSJ9.iCp0TVLRC_i77iQ8p9gaLg';
+							var map = new mapboxgl.Map({
+							    container: 'map', // container ID
+							    style: 'mapbox://styles/mrmiller/ckmmknoqo1efg17s2qeavf9xd', // style URL
+							    center: [-71.05, 42.35], // starting position [lng, lat]
+							    zoom: 10.5 // starting zoom
+							});
+					</script>
 
 	</body>
