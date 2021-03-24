@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>
+      Interactive Analysis 04
+      </title>
+      <!--Comment.-->
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+   <style>
+      body{background-color: black;}
+      h2{
+      font-family: "Stencil Std", fantasy;
+      font-size: 2em;
+      letter-spacing: 0px;
+      color: white;
+      text-align:center;
+      padding-top: 35px;
+      float: initial;
+      }
+       
+
+      h3{
+      font-family: Helvetica, sans-serif;
+      font-size:.6em;
+      color:white;
+      text-align: center;
+      letter-spacing: 1px;
+      float: initial;      
+      }
+      
+      p{
+      font-family: Helvetica, sans-serif;
+      font-size:1em;
+      text-align: left;
+      width: 600px;
+      letter-spacing: 1px;
+      float: right;
+      padding-right: 400px;
+      color: white; 
+      }
+
+   </style>
+   <h2>Interactive Analysis 04 - Social Justice and the City</h2>
+   </head>
+   <body>
+      
+      
+      
+         <h3>ARCH 6340 - Instructor Prof. Jay Cephas</h3>
+      
+      
+          <p>Both the short film and the reading are titled “utopia”, but one could easily realize the essential differences behind the contents. For Paolo Soleri, his vision towards a self-sustainable inhabitant became established with Arcosanti which is an experimental town sits in Yavapai County, central Arizona with a population of 80 people living in the community. For Goldstein, the “black utopia” does not stand for a similar self-governed and idealistic community composed of the group of African Americans, but a way more sophisticated and realistic scenario as the African Americans were receiving increasingly suppression throughout various aspects within social and urban contexts.</p>
+
+            <p>In my understanding, the simplest way of distinguishing both the utopias is to point out that Soleri’s vision was to seek out and to invent something ideal in an active manner whereases Goldstein was constructing the acknowledgment of how African Americans have been lived under the built environments which themselves barely participated.</p>
+            
+            <p>For instance, in the reading, Goldstein pointed out that the ARCH counted only “14 black architects in the states of New York and New Jersey combined.”, which is predictable considering the subject of Architecture had been historically controlled by the majority group of people, more specifically, the white males. (Goldstein 71) The white-dominant industry works just fine if the contexts only existed within the singular race such as the past few hundred centuries in Europe. However, with globalization emerged, the mixture of various races living under the same urban contexts is inevitable that people with different background cultures and habits would have occupied that same environment. In reality, we simply could not just renovate the already-built cities and blocks as simple as we renovate a house or building, but it is necessary to realize the demand of having diverse designers and planners with different cultures, and more importantly, with different demands.</p> 
+
+            <p>
+            The plain point is that it will always be problematic and unsustainable for supremacists to configure the spaces and projects to habitat all the people, and it is crucial not to only involving the minorities’ views but also having them take charge of the tasks that are usually dominated by a singular group of people. The Arcosanti serves as a great utopian example for how to live and to design a place for a minority group of people because the residency would have similar demands on their lifestyles and social needs, but as far as reality goes, it may not be suitable for the majority.      
+            </p>
+
+      <!--SPLIT LINE-->
+
+
+
+      
+      <script type="application/processing">
+           float x;
+      float y;
+     
+     float transparency;
+     float dtrans;
+      
+
+      void setup() {
+         size(750,800);
+         background(0);
+         
+         
+          
+         
+         
+         
+      }
+
+      void draw(){
+         if(mousePressed){
+       
+      pushMatrix();
+      translate(60, 80);
+           
+      stroke(mouseX/3, mouseY/3, transparency);
+         strokeWeight(5);
+         line(mouseX, 200-mouseX, mouseX,mouseX+50);
+
+         stroke(mouseX/3, mouseY/3, transparency);
+         strokeWeight(5);
+         line(200-mouseX, mouseX+50, mouseX,mouseX+50);
+
+         stroke(mouseX/3, mouseY/3, transparency);
+         strokeWeight(5);
+         line(-mouseX+200,mouseX+50,-mouseX+200,-mouseX+200);
+         
+         stroke(mouseX/3, mouseY/3, transparency);
+         strokeWeight(5);
+         line(mouseX,-mouseX+200,-mouseX+200,-mouseX+200);
+
+  
+
+
+
+      }else{
+
+      pushMatrix();
+      translate(60, 80);      
+
+         
+         
+         noStroke()   
+         fill(10, 10);
+         rect(-60,-80,800,800);
+
+         fill(mouseX/3,mouseY/3,0);
+         rect(0,0,200,250);
+         
+         
+
+         transparency += dtrans;
+         
+         stroke(mouseX/3, mouseY/3, transparency);
+         strokeWeight(5);
+         line(mouseX, 200-mouseX, mouseX,mouseX+50);
+
+         stroke(mouseX/3, mouseY/3, transparency);
+         strokeWeight(5);
+         line(200-mouseX, mouseX+50, mouseX,mouseX+50);
+
+         stroke(mouseX/3, mouseY/3, transparency);
+         strokeWeight(5);
+         line(-mouseX+200,mouseX+50,-mouseX+200,-mouseX+200);
+         
+         stroke(mouseX/3, mouseY/3, transparency);
+         strokeWeight(5);
+         line(mouseX,-mouseX+200,-mouseX+200,-mouseX+200);
+
+         }
+      }
+      </script>
+     
+
+
+      <canvas></canvas>
+
+
+
+   </body>
+</html>
