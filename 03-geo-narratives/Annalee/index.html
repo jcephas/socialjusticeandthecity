@@ -14,6 +14,15 @@
         <!--Loads Chart.js library-->
         <script src="dist/Chart.js"></script>
         <script src="dist/Chart.min.js"></script>
+
+        <!--Loads MapBox-->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
+        <!--Loads Bootstrap-->
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    
  
     </head>
 
@@ -95,13 +104,7 @@ function closeNav() {
         </div>
         
         <div class = "col-md-4" style="padding-left: 3vw">
-          <svg width="30vw" height="8vw" style="y=20%, padding-top=:2vw, padding-bottom:5vw;">
-            <rect class="WhiteAlone" width="60%" height="100px" x="0px" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
-            <rect class="HispanicLatino" width="19%" height="100px" x="60%" style="fill:rgb(27, 158, 86);stroke-width:3;stroke:rgb(0,0,0)" />
-            <rect class="Black" width="13%" height="100px" x="79%" style="fill:rgb(195, 206, 51);stroke-width:3;stroke:rgb(0,0,0)" />
-            <rect class="Asian" width="6%" height="100px" x="92%" style="fill:rgb(212, 25, 103);stroke-width:3;stroke:rgb(0,0,0)" />
-            <rect class="ALNativeNativePIslander" width="2%" height="100px" x="98%" style="fill:rgb(32, 142, 194);stroke-width:3;stroke:rgb(0,0,0)" />
-          </svg> 
+
           <p>
             In “Nature and Space” from his book, Seeing Like a State,  James C. Scott shows how state-imposed measurements of people, resources, products, and space have historically been created and sanctioned as means to serve the state’s own interests, obscuring “on-the-ground” realities and locally-derived, practical systems.  Situated in his larger “case against imperialism of high-modernist, planned social order” and advocacy for “practical knowledge” and “informal processes,”  Scott argues that the resilience of social and natural diversities are threatened by obtuse, reductionist measurement sciences introduced by the state. “Certain forms of knowledge and control,” Scott asserts, “require a narrowing of vision.” By homogenizing and abstracting the real practices of local individuals into more legible models of defined coordinates and uniform units of measure, the state achieves greater administrative control. 
             On the other hand, Jeremy Crampton describes in “Critical Cartography” a movement where cartography is democratized by access to information and technological means of generating maps.  In this lies a power to generate narratives alternative to those posed by the state or academia.  
@@ -116,7 +119,7 @@ function closeNav() {
        </div>
        </div>
     
-    <div class="row">
+    <div class="row" style="padding-top: 3vw">
       <div class = "col-sm-1">
         3,1
      </div>
@@ -131,15 +134,103 @@ function closeNav() {
           In this set of visualizations, 
           A pair of maps created with Tableau Public portray the percentage of people over age 3 who live in a home that successfully accesses the internet, per state.  The first is organized without geographic boundaries, and the latter corresponds to US state boundaries.
           Tableau Public is an organization and application that connects people without formal education in data analytics to easily visualize statistics, fostering accessibility in visualization sciences.  
-          A small interactive illustration at right contains a series of rectangles whose widths proportionally represent the racial composition of the population of the United States.  Hovering over these rectangles scales each vertically in proportion to the percentage among that group of individuals, above the age of 5, live in a home that accesses the internet.  
-          We notice that, not only does internet connectivity vary by state, but it also varies by racial category. 
-          We can expect, then, that even positive-sounding democratization of cartography with digital methods is subject to racial disparity. As long as there remain economic and connectivity-related inequities, there will be a continued assertion of a dominant narrative that makes less numerous voices seem even fewer.
           </p>
+
+          <h2>Inequities in Internet Access</h2>
+
+          
+          <svg width="30vw" height="8vw" style="y=20%, padding-top=:2vw, padding-bottom:5vw;">
+            <rect class="WhiteAlone" width="60%" height="100px" x="0px" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)">
+              <text x="0px" y="2px" font-family="Verdana" font-size="5px" fill="blue"> Hello </text>
+              </rect>
+            <rect class="HispanicLatino" width="19%" height="100px" x="60%" style="fill:rgb(27, 158, 86);stroke-width:3;stroke:rgb(0,0,0)">
+              <text x="0" y="10" font-family="Verdana" font-size="55" fill="blue"> Hello </text>
+              </rect>
+            <rect class="Black" width="13%" height="100px" x="79%" style="fill:rgb(195, 206, 51);stroke-width:3;stroke:rgb(0,0,0)">
+              <text x="0" y="10" font-family="Verdana" font-size="55" fill="blue"> Hello </text>
+              </rect>
+            <rect class="Asian" width="6%" height="100px" x="92%" style="fill:rgb(212, 25, 103);stroke-width:3;stroke:rgb(0,0,0)">
+              <text x="0" y="10" font-family="Verdana" font-size="55" fill="blue"> Hello </text>
+              </rect>
+            <rect class="ALNativeNativePIslander" width="2%" height="100px" x="98%" style="fill:rgb(32, 142, 194);stroke-width:3;stroke:rgb(0,0,0)">
+              <text x="0" y="10" font-family="Verdana" font-size="55" fill="blue"> Hello </text>
+            </rect>
+          </svg> 
+
+          <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+
+            <g>
+             <title>Layer 1</title>
+             <rect id="svg_1" height="38" width="34" y="51.33334" x="44.5" opacity="undefined" stroke="#000" fill="#0000ff"/>
+             <rect id="svg_2" height="38" width="34" y="114.33334" x="44.5" opacity="undefined" stroke="#000" fill="#007f00"/>
+             <rect id="svg_3" height="38" width="34" y="170.33334" x="45.5" opacity="undefined" stroke="#000" fill="#ffff00"/>
+             <rect id="svg_4" height="38" width="34" y="226.33334" x="46.5" opacity="undefined" stroke="#000" fill="#bf005f"/>
+             <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="24" id="svg_5" y="78.65834" x="97.46666" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">White Americans</text>
+             <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="24" id="svg_6" y="141.65834" x="97.46666" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">Latinx Americans</text>
+             <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="24" id="svg_7" y="197.65834" x="97.46666" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">Black Americans</text>
+             <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="24" id="svg_8" y="253.65836" x="97.5" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">Asian Americans</text>
+            </g>
+           </svg>
+
+
+
        </div>
        <div class = "col-sm-1">
           3,4
      </div>
   </div>
+
+  <div class="row" style="padding-top: 3vw">
+    <div class = "col-sm-1">
+41
+   </div>
+
+    <div class = "col-md-6">
+        
+    <h2>Free, City-Wide Municipal Wi-Fi Programs in the United States</h1>
+  </div>
+    <div class = "col-md-4" style="padding-left: 3vw">
+
+     </div>
+     <div class = "col-sm-1">
+44
+   </div>
+</div>
+
+</div>
+
+
+  <div class="row">
+    <div class = "col-sm-1">
+51
+   </div>
+
+    <div class = "col-md-6">
+      <div id='map' style='width: 50vw; height: 70vh;'></div>
+      <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoiZnVsbGVyYSIsImEiOiJja21rNW1uaWQweTRkMzFxbWs5dHZwNHhlIn0.tSgaslvZr7tp71hdzhmlRQ';
+      var map = new mapboxgl.Map({
+      container: 'map', // container ID
+      style: 'mapbox://styles/fullera/ckmo901h12uf517mnuaj1934p', // style URL
+      center: [-95,40], // starting position [lng, lat]
+      zoom: 3 // starting zoom
+      });
+      </script>
+    </div>
+    <div class = "col-md-4" style="padding-left: 3vw">
+      <p>Above, a series of rectangles' widths proportionally represent the racial composition of the population of the United States. Hovering over these rectangles scales each vertically in proportion to the percentage among that group of individuals, above the age of 5, who live in a home that accesses the internet.  
+        We notice that, not only does internet connectivity vary by state, but it also varies by racial category. 
+        We can expect, then, that even positive-sounding democratization of cartography with digital methods is subject to racial disparity. As long as there remain economic and connectivity-related inequities, there will be a continued assertion of a dominant narrative that makes less numerous voices seem even fewer.</p>
+      </p>
+      <br>
+      <p>
+        Perhaps one way to address this inequity is with state- or municipally-administered programs that provide free internet access within their limits.  At left, a map highlights the cities in the United States who provide free internet access within their city limits at some capacity. <a href="https://en.wikipedia.org/wiki/Municipal_wireless_network#United_States">Source</a> 
+      </p>
+     </div>
+     <div class = "col-sm-1">
+54
+   </div>
+</div>
 
 
 </div>
@@ -150,20 +241,7 @@ function closeNav() {
 
 
 
-<!DOCTYPE html>
-<html>
 
 <head>
-<!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    
+
 </head>
-
-<style>
-    </style>
-
-
-
-</body>
-
-</html>
