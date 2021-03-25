@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Intentional Communities for a New Social Order</title>
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+	</head>
+
+	<style>
+		.header
+			{
+				color:blue;
+				font-family: monospace;
+				align-content: center;
+			}
+
+		.bodyOne
+			{
+				color:green;
+				padding-left: 30px;
+				padding-top: 50px;
+				font-family: Arial;
+
+			}
+
+	</style>
+
+	<body>
+		<div id="header" style="padding-top: 30px;padding-left: 30px">
+			<h1 class="header">
+				Black Utopias and Arcology
+			</h1>
+		</div>
+
+		<div id="header" style="padding-left: 30px;padding-bottom: 30px">
+			<h2 class="header">
+				Iterating Towards an Equitable Future
+			</h2>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-6">
+				<div class="bodyOne">
+					<p>One of the primary ideas communicated in both the reading and the video is the necessity of creating more equitable visions of what architecture should be. While Soleri focuses on the ideal expression of architecture in accordance with political, historical, evolutionary, and cosmic frameworks, ARCH focused on creating equitable architecture as a means of self-expression and empowerment for black people living in the urban areas of American cities.</p>
+
+					<p>One thing from the Soleri video that caught my attention was the acceptance of failure in producing equity and the importance of failure, learning from mistakes, and moving forward. Arcosanti was not meant to be a shining beacon of the future of architecture, rather it was a sample or rough draft on what architecture could be in the future. The essential nature of an open-mind when it comes to interpreting and interacting with architecture and urban planning demonstrates how willing the participants of the urban laboratory are to engaging and evolving their practice further, through the recognition of their practical shortcomings and willingness to iterate.</p>
+
+					<p>Both also emphasize the importance of community when it comes to organizing new spaces to be more beneficial for people, and particularly in using communities to be stakeholders of designs, as well as use urban design to create and benefit community interactions. By understanding that the most powerful force that a settlement has is its ability to localize and define itself, architects and urban planners can develop ideas which accentuate the bonds between people, helping to address issues of isolation as they exist in contemporary layouts of how space is organized in urban environments.</p>
+				</div>
+			</div>
+
+
+			<div class="col-md-6">
+				<script type="application/processing">
+					size(610,510);
+
+						void setup()
+						{
+						}
+
+						void draw()
+						{
+						    background(-mouseX+600,mouseX,0);
+			    		    {
+			    		        fill(145,75,62);
+			    		        rect(0,450,610,100);
+			    		        if(mouseX>50)
+			    		        {
+			    		            rect(50,430,610,500);
+			    		            if(mouseX>100)
+			    		            {
+			    		                rect(100,400,610,600);
+			    		                if(mouseX>200)
+			    		                {
+			    		                    rect(200,350,610,600);
+			    		                    if(mouseX>350)
+			    		                    {
+			    		                        rect(350,275,610,600);
+			    		                        if(mouseX>500)
+			    		                        {
+			    		                            rect(500,200,610,600);
+			    		                        }
+			    		                    }
+			    		                }
+			    		            }
+			    		        }
+			        	    }
+			        	} 
+			  	  </script>
+				<canvas style="padding-left: 30px">
+				</canvas>	
+			</div>
+		</div>
+	</body>
+</html>
