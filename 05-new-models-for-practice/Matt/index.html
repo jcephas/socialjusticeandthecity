@@ -134,6 +134,60 @@
 						<p>  Both example communities identified issues with the environments that they were living in and partnered with average members of the community using the tools of power to bring alternative visions of space into reality. In Harlem, ARCH trained members of the community in the design and planning skills that were being deployed against them as a means of speaking the language of power, to power. Conversely, Arcosanti appeared to embrace a wholly collectivist attitude in which credentials were eschewed, and decisions were made with largely equal voice. </p>
 				</div>
 				<div class="col-lg-4">
+					<div id="application">
+						<script type="application/processing">
+							float x=0;
+							float y=0;
+
+							void setup()  {
+							  size (300, 500);
+							}
+
+							void draw()  {
+							  background(255);
+							  
+							  stroke(0,0,0);
+							  strokeWeight(10);
+							  line(150,0,150,500);
+							  
+							  stroke(0,0,0);
+							  strokeWeight(3);
+							  
+							  fill(88,168,93);
+							  rect(0,0,50,mouseX+96);
+							   
+							  fill(130,232,137);
+							  rect(50,0,50,mouseY+50);
+							  
+							  fill(87,138,90);
+							  rect(100,0,50,mouseX+25);
+							  
+							  fill(108,142,196);
+							  rect(150,0,50,mouseX+100);
+							  
+							  fill(42,75,128);
+							  rect(200,0,50,mouseY+43);
+							  
+							  fill(145,173,217);
+							  rect(250,0,50,mouseX+50);
+							  
+							  if (mouseX<150) {
+							    fill(88,168,93);
+							    stroke(255,255,255);
+							    strokeWeight(5);
+							    ellipse(mouseX,mouseY,50,50); 
+							  }
+							  
+							  if (mouseX>150) {
+							    fill(67,204,172);
+							    stroke(255,255,255);
+							    strokeWeight(5);
+							    ellipse(mouseX,mouseY,50,50); 
+							  }
+							}
+						</script>
+						<canvas></canvas>
+					</div>
 				</div>
 			</div>
 
