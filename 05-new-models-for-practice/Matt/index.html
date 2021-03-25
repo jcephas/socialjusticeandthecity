@@ -67,6 +67,45 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-4">
+					<div id="application">
+						<script type="application/processing">
+							float x=0;
+							float y=0;
+
+							void setup()  {
+							  size (300, 500);
+							}
+
+							void draw()  {
+							  background(0);
+							  
+							  stroke(255,255,255);
+							  strokeWeight(10);
+							  line(150,0,150,500);
+							  
+							  stroke(255,255,255);
+							  strokeWeight(3);
+							  
+							  fill(125,125,125);
+							  rect(150,mouseX,50,mouseY);
+							  
+							  fill(125,125,125);
+							  rect(200,mouseX+200,50,mouseY-50);
+							  
+							  fill(125,125,125);
+							  rect(250,mouseX-400,50,mouseY+300);
+							  
+							  if (mouseX<150) {
+							  
+							  fill(214,51,68);
+							  stroke(255,255,255);
+							  strokeWeight(5);
+							  ellipse(mouseX,mouseY,50,50);
+							  }  
+							}
+						</script>
+						<canvas></canvas>
+					</div>
 				</div>
 				<div class="col-lg-4 text2">
 					<p> An examination of the interactions between architects and the communities that they serve and what responsibilities and possibilities lie in those interactions. Works examined include selections from Colin Ward's <i> Talking to Architects </i>, Leland M. Roth's <i> The Cult of the High Profile Architect </i>, and the 2010 documentary film <i> Citizen Architect: Sam Mockbee and the Spirit of the Rural Studio </i>. </p>
