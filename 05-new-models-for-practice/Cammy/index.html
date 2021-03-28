@@ -1,0 +1,141 @@
+<!DOCTYPE html> 
+	<html> 
+		<head>
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+			<style>
+				.row::after {
+				  content: "";
+				  clear: both;
+				  display: table;
+				}
+				.button {
+				background-color: #10E0A4;
+				border: none;
+				color: white;
+				padding: 6px 16px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 0px 8px;
+				cursor: pointer;
+				}
+				.hlight {
+				background-color: #10E0A4;
+				color: #525252;	
+				}
+				[class*="col-"] {
+				  float: left;
+				}
+				p{
+				text-indent:10pt; 
+				}
+			</style>
+			<title>New Models for Practice | Kuo </title>
+		</head>
+
+		<body style="background-color:white">
+			<div id="header" style="color:#10E0A4;;padding-top: 25px;padding-left: 25px">
+				<h1>New Models for Practice</h1>
+			</div>
+
+			<div id="thisisid" class="row">
+			<div class="col-md-4">
+				<div id="subheader" style="color:black;;padding-left: 25px;padding-bottom: 20px;line-height:18pt;">
+				<i>In response to "The Cult of the High-Profile Architect" in LeLand Roth's and Amanda Roth Clark's </i>American Architecture: A History<i> and Chapters 1 to 3 from Colin Ward's </i>Talking to Architects
+				</div>
+
+				<div id="main" style="color:black;padding-left: 25px;font-size:14px;line-height:16pt;">
+				<p>Roth discusses the elevation of architects into celebrity status where designed, built forms are divorced from any relevant physical, political, or moral context.  Ward announces that professional conventions and dominant narratives of the built environment are unable to address the public’s needs and delight, placing vernacular building and living traditions at odds with architecture.</p>
+				<p>The inflated and constructed respect around professionalized architecture endangers the life of the everyday individual, particularly where architectural imperialism is enacted.  Additionally, as hierarchy is reinforced in the working model so is competition, pressing colleagues to outperform each other.  The architectural education model, more often than not, fails to support its students.  Teaching styles may either be excessively grounded in empirical realities or adrift of any reality.  The excessive value placed on architectural knowledge inhibits the imagination of both designers and the people they design for.</p>
+				<p>Though landscape architecture, by definition, relies on the physical conditions of localities and is less susceptible than architecture, it can and does occasionally fall into the model of a solo creative.  As the budding field seeks to cement itself as reputable, one can only hope landscape architecture does not fall into the same trap by engaging in a for-public model rather than for-profit.</p>
+				<p>The greatest danger of architecture is in the confines architects design and construct for themselves. The need to break down and rebuild our design processes cannot be more clear.  To reengage with the historic vernacular nature of the building culture, community architecture holds a possibility for de-stratifying the field, placing less weight on prestige from public image and more value on pleasure from public service.  </p>
+				</div>
+
+				<div style="color:black;text-align: right">
+				<button class="button" 
+				onclick='document.getElementById("main").innerHTML = "<p>Roth discusses the elevation of architects into celebrity status where designed, built forms are divorced from any relevant physical, political, or moral context.  Ward announces that professional conventions and dominant narratives of the built environment are unable to address the public’s needs and delight, placing vernacular building and living traditions at odds with architecture.</p>					<p>The inflated and constructed respect around professionalized architecture <span class=hlight>endangers the life of the everyday individual,</span> particularly where architectural imperialism is enacted.  Additionally, as hierarchy is reinforced in the working model so is competition, pressing colleagues to outperform each other.  The architectural education model, more often than not, fails to support its students.  Teaching styles may either be excessively grounded in empirical realities or adrift of any reality.  The excessive value placed on <span class=hlight>architectural knowledge inhibits the imagination of both designers and the people they design for.</span></p>					<p>Though landscape architecture, by definition, relies on the physical conditions of localities and is less susceptible than architecture, it can and does occasionally fall into the model of a solo creative.  As the budding field seeks to cement itself as reputable, one can only hope landscape architecture does not fall into the same trap by engaging in a <span class=hlight>for-public model rather than for-profit.</span></p>					<p>The greatest danger of architecture is in the <span class=hlight>confines architects design and construct for themselves.</span>  The need to break down and rebuild our design processes cannot be more clear.  To reengage with the historic vernacular nature of the building culture, community architecture holds a possibility for de-stratifying the field, placing less weight on prestige from public image and more value on pleasure from public service.  </p>"'>O
+				</button>
+				<button class="button" 
+				onclick='document.getElementById("main").innerHTML = "<p>Roth discusses the elevation of architects into celebrity status where designed, built forms are divorced from any relevant physical, political, or moral context.  Ward announces that professional conventions and dominant narratives of the built environment are unable to address the public’s needs and delight, placing vernacular building and living traditions at odds with architecture.</p>					<p>The inflated and constructed respect around professionalized architecture endangers the life of the everyday individual, particularly where architectural imperialism is enacted.  Additionally, as hierarchy is reinforced in the working model so is competition, pressing colleagues to outperform each other.  The architectural education model, more often than not, fails to support its students.  Teaching styles may either be excessively grounded in empirical realities or adrift of any reality.  The excessive value placed on architectural knowledge inhibits the imagination of both designers and the people they design for.</p>					<p>Though landscape architecture, by definition, relies on the physical conditions of localities and is less susceptible than architecture, it can and does occasionally fall into the model of a solo creative.  As the budding field seeks to cement itself as reputable, one can only hope landscape architecture does not fall into the same trap by engaging in a for-public model rather than for-profit.</p>					<p>The greatest danger of architecture is in the confines architects design and construct for themselves.  The need to break down and rebuild our design processes cannot be more clear.  To reengage with the historic vernacular nature of the building culture, community architecture holds a possibility for de-stratifying the field, placing less weight on prestige from public image and more value on pleasure from public service.  </p>"'>X
+				</button>
+				</div>
+			</div>
+
+			<div class="col-md-7">
+				<script type="application/processing">
+				int amount = 6;
+				int[][] state = new int[amount][amount];
+				color fg = #10E0A4;
+
+				int mx, my;
+
+			    cursor(MOVE);
+
+				void setup() {
+				  size(800, 800);
+				  for (int x = 0; x < amount; x++) {
+				    for (int y = 0; y < amount; y++) {
+				      state[x][y] = int(random(0, 8));
+				    }
+				  }
+				}
+
+				void draw() {
+				  background(255);
+
+				  float tileW = width/amount; 
+				  float tileH = height/amount; 
+				  fill(fg);
+				  noStroke();
+				  ellipseMode(CORNER);
+
+				  mx = int(map(mouseX, 0, width, 0, amount));
+				  my = int(map(mouseY, 0, height, 0, amount));
+				  
+				  for (int x = 0; x < amount; x++) {
+				    for (int y = 0; y < amount; y++) {
+
+				      if (state[x][y] == 0) {
+
+				        pushMatrix();
+				        translate(x*tileW, y*tileH);
+				        ellipse(0, 0, tileW, tileH);
+				        popMatrix();
+				      } else if (state[x][y] == 1) {
+
+				        pushMatrix();
+				        translate(x*tileW, y*tileH);
+				        rect(0, 0, tileW, tileH);
+				        popMatrix();
+				      } else if (state[x][y] == 2) {
+
+				        pushMatrix();
+				        translate(x*tileW, y*tileH);
+				        triangle(tileH, 0, tileW, tileH, 0, tileW);
+				        popMatrix();
+				      } 
+				    }
+				  }
+				}
+
+				void countUp(int x, int y) {
+				  if (state[x][y] < 5) {
+				    state[x][y]++;
+				  } else {
+				    state[x][y] = 0;
+				  }
+				}
+
+				void mouseDragged() {
+				  countUp(mx,my);
+				}
+				
+				</script>
+				<canvas style="padding-left: 25px"><!--The Processing code will render here.--> </canvas>
+				</div>
+
+			</div>
+		</body>
+	</html>
