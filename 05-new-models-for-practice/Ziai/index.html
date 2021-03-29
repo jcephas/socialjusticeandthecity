@@ -1,0 +1,139 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>New Models for Practice</title>
+
+		
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+	</head>
+
+	<style>
+		h1{
+			color: black;
+			align-content: center;
+			font-size: 20pt;
+			font-family :"Times New Roman";
+			padding-right: 20%;
+			padding-left:40%;
+		}
+		h2{
+			color: grey;
+			align-content: center;
+			font-size: 12pt;
+			font-family:"Times New Roman";
+			padding-right: 40%;
+			padding-left:42%;
+		}
+		h3{
+			color: black;
+			font-size: 12pt;
+			font-family:"Times New Roman";
+			padding-right: 20%;
+			padding-left:47%;
+		}
+		h4{
+			color: black;
+			font-size: 14pt;
+			font-family:"Times New Roman";
+			padding-right: 30%;
+			padding-left:30%;
+		}
+		h5{
+			color: black;
+			font-size: 14pt;
+			font-family:"Times New Roman";
+			padding-right: 30%;
+			padding-left:30%;
+		}
+		p{
+			color:black;
+			font-size: 12pt;
+			font-family: "Times New Roman";
+			padding-right:20%;
+			padding-left: 20%;
+					}
+		#square {
+            padding-left: 15%;
+            padding-right: 25%;
+        }
+        #demo {
+        	color:black;
+        	font-size: 12pt;
+			font-family: "Times New Roman";
+			padding-right:20%;
+			padding-left: 20%;
+        }
+        #one {	
+        	padding-right:30%;
+			padding-left: 35%;
+			line-height: 30px;
+		}
+		#two {	
+        	padding-right:40%;
+			padding-left: 45%;
+		}
+		#three {	
+        	padding-right:40%;
+			padding-left: 45%;
+		}
+	</style>
+
+	<h1>New Models for Practice</h1>
+	<h2> Interactive Reading Analysis </h2>
+	<h3> Ziai Zhou </h3>
+
+	<body>
+		<script type="application/processing">
+void setup(){
+    size(1000,500);
+    background(0,238,253);
+    line(500,0,500,500);
+    textSize(20);
+    text("rich area", 250, 30);
+    text("poor area", 750, 30); 
+    fill(0, 102, 153);
+}
+
+void draw(){
+    fill(156,156,156);
+    if(mousePressed){
+        if(mouseX>=500){
+            rect(mouseX,mouseY,50,50);
+            line(mouseX,mouseY,mouseX+25,mouseY-20);
+            line(mouseX+50,mouseY,mouseX+25,mouseY-20);
+            rect(mouseX+10,mouseY+20,10,10);
+            rect(mouseX+30,mouseY+30,10,20);
+        }else{
+            rect(mouseX,mouseY,50,150);
+            rect(mouseX+10,mouseY+30,10,10);
+            rect(mouseX+30,mouseY+30,10,10);
+            rect(mouseX+10,mouseY+60,10,10);
+            rect(mouseX+30,mouseY+60,10,10);
+            rect(mouseX+10,mouseY+90,10,10);
+            rect(mouseX+30,mouseY+90,10,10);
+            rect(mouseX+15,mouseY+135,20,15);
+            line(mouseX+25,mouseY+135,mouseX+25,mouseY+150);
+        }
+
+        
+    }
+
+    
+} </script>
+			
+		<canvas id="square"></canvas>	
+
+	</body>
+	<p id="one" > Citizen Architect's movie brought the concept that architecture was a great gift to make peoples' live better, not just the rich people, but everybody. The rural studio is a pioneering landmark for institutionalizing a value system that manifests through architecture. The movie also stated that architecture was something that challenges people, challenges what they want, challenges their ideas of what comfort is, challenges their perspective on how they could live. An example was the rural studio that helped the music man to rebuild his house. Those architects' goal was to provide the music man a better living condition, clean water, and safe building. Those architects donated their time to improve life in poverty-stricken communities and create designs that meet their needs.</p>
+
+
+	<p id="one"> In the article "Talking to Architects," Colin Ward gave three aspects of design: (1)the first is on the professionalization of plan; (2)the second is on the bureaucratization of design;(3) and the third is the narcissism of design. Ward also pointed out five aspects of alternatives in architecture. The first is the vernacular alternative; the second is the ecological impulse alternative; the third is the adaptive alternative; the fourth is the counter-cultural alternative. The fifth approach to alternative is to embrace the idea of an environment that can be shaped and re-shaped by its users. Roth's article stated that some products were sold well simply because of their architect-designer brand name. The architects become purveyors in the consumer culture in the 1980s.
+</p>
+
+
+
+	<p id="one"> I agree with the sentence stated in the movie: "architecture is a part of the culture which makes individual life more a broadening experience." In my opinion, the architect's primary purpose should be to make society and people's living environment better. </p>
+
+
+
+	</html>
