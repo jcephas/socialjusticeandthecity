@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Geo-Narratives</title>
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+	</head>
+
+	<style>
+		.header
+			{
+				color:blue;
+				font-family: monospace;
+				align-content: center;
+			}
+
+		.bodyOne
+			{
+				color:green;
+				padding-left: 30px;
+				padding-top: 50px;
+				font-family: Arial;
+
+			}
+
+	</style>
+
+	<body>
+		<div id="header" style="padding-top: 30px;padding-left: 30px">
+			<h1 class="header">
+				Cartography and Forestry
+			</h1>
+		</div>
+
+		<div id="header" style="padding-left: 30px;padding-bottom: 30px">
+			<h2 class="header">
+				The Result of Intellectualizing Knowledge Practices
+			</h2>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-6">
+				<div class="bodyOne">
+					<p>In Scott’s Nature and Space, he outlines a multitude of ways that demonstrate how human relations with the land have developed. Whether through the lens of scientific forestry in Saxony and Prussia, through the homogenization of measurement tools demonstrated through the introduction of the metric system in France, or the parceling of land in rectangular and gridded allotments introduced into settler-colonial structures, many of the ways that Europeans interact with land conflict with natural approaches to the interconnected nature of how biological and ecological systems actually operate, resulting in us focusing much of our land management policies through the lens of efficient commerce.</p>
+
+					<p>Crampton focuses on the impacts of the democratization of cartography in An Introduction to Critical Cartography, articulating the impacts of governmental cartography and how it affects our perceptions of the world, as well as how interpretations of the world have changed due to the dismantling of hierarchical management in who gets to make maps. </p>
+
+					<p>What both readings have demonstrated is a critical flaw in the assumptions that Western thinkers have when it comes to categorizing the world. Indigenous people and those who lived their whole lives next to and within forested landscapes were familiar with the importance of biodiversity, as different plants provided varying benefits, whether it be forage, building materials, medicines, or firewood. Cartographer have a history of creating boundaries that are ignorant to the physical realities of landscapes, as demonstrated in the parallels drawn in the Western United States to delineate between state boundaries and the fragmentation of different people in Sub-Saharan Africa as a result of European colonialism. Systems of knowledge developed by the people who inhabit the land is more nuanced and valuable than creating artificial boundaries as demarcated by those who have little real interaction with the landscapes they are impacting through their policies.</p>
+				</div>
+			</div>
+
+
+			<div class="col-md-6">
+				<script type="application/processing">
+							size(610,510);
+
+					void setup()
+					{
+					}
+
+					void draw()
+					{
+					    background(-mouseY+250,mouseY+50,0);
+		       
+		    		    {
+		        	       
+		        	            triangle(mouseX+650,mouseY+50,mouseX+600,mouseY-50,mouseX+700,mouseY-50);
+		        	            triangle(mouseX+600,mouseY+50,mouseX+550,mouseY-50,mouseX+650,mouseY-50);
+		        	            triangle(mouseX+550,mouseY+50,mouseX+500,mouseY-50,mouseX+600,mouseY-50);
+		                        triangle(mouseX+500,mouseY+50,mouseX+450,mouseY-50,mouseX+550,mouseY-50);
+		        	            triangle(mouseX+450,mouseY+50,mouseX+400,mouseY-50,mouseX+500,mouseY-50);
+		        	            triangle(mouseX+400,mouseY+50,mouseX+350,mouseY-50,mouseX+450,mouseY-50);
+		        	            triangle(mouseX+350,mouseY+50,mouseX+300,mouseY-50,mouseX+400,mouseY-50);
+		        	            triangle(mouseX+300,mouseY+50,mouseX+250,mouseY-50,mouseX+350,mouseY-50);
+		        	            triangle(mouseX+250,mouseY+50,mouseX+200,mouseY-50,mouseX+300,mouseY-50);
+		        	            triangle(mouseX+200,mouseY+50,mouseX+150,mouseY-50,mouseX+250,mouseY-50);
+		        	            triangle(mouseX+150,mouseY+50,mouseX+100,mouseY-50,mouseX+200,mouseY-50);
+		        	            triangle(mouseX+100,mouseY+50,mouseX+50,mouseY-50,mouseX+150,mouseY-50);
+		        	            triangle(mouseX+50,mouseY+50,mouseX,mouseY-50,mouseX+100,mouseY-50);
+		        	            triangle(mouseX,mouseY+50,mouseX-50,mouseY-50,mouseX+50,mouseY-50);
+		        	            triangle(mouseX-50,mouseY+50,mouseX-100,mouseY-50,mouseX,mouseY-50);
+		        	            triangle(mouseX-100,mouseY+50,mouseX-150,mouseY-50,mouseX-50,mouseY-50);
+		        	            triangle(mouseX-150,mouseY+50,mouseX-200,mouseY-50,mouseX-100,mouseY-50);
+		        	            triangle(mouseX-200,mouseY+50,mouseX-250,mouseY-50,mouseX-150,mouseY-50);
+		        	            triangle(mouseX-250,mouseY+50,mouseX-300,mouseY-50,mouseX-200,mouseY-50);
+		        	            triangle(mouseX-300,mouseY+50,mouseX-350,mouseY-50,mouseX-250,mouseY-50);
+		        	            triangle(mouseX-350,mouseY+50,mouseX-400,mouseY-50,mouseX-300,mouseY-50);
+		        	            triangle(mouseX-400,mouseY+50,mouseX-450,mouseY-50,mouseX-350,mouseY-50);
+		        	            triangle(mouseX-450,mouseY+50,mouseX-500,mouseY-50,mouseX-400,mouseY-50);
+		        	            triangle(mouseX-500,mouseY+50,mouseX-550,mouseY-50,mouseX-450,mouseY-50);
+		        	            triangle(mouseX-550,mouseY+50,mouseX-600,mouseY-50,mouseX-500,mouseY-50);
+		        	            triangle(mouseX-600,mouseY+50,mouseX-650,mouseY-50,mouseX-550,mouseY-50);
+		        	            triangle(mouseX-650,mouseY+50,mouseX-700,mouseY-50,mouseX-600,mouseY-50);
+		        	            
+		        	            triangle(mouseX+650,-mouseY+560,mouseX+600,-mouseY-560,mouseX+700,-mouseY-50);
+		        	            triangle(mouseX+600,-mouseY+560,mouseX+550,-mouseY-560,mouseX+650,-mouseY-50);
+		        	            triangle(mouseX+550,-mouseY+560,mouseX+500,-mouseY-560,mouseX+600,-mouseY-50);
+		                        triangle(mouseX+500,-mouseY+560,mouseX+450,-mouseY-560,mouseX+550,-mouseY-50);
+		        	            triangle(mouseX+450,-mouseY+560,mouseX+400,-mouseY-560,mouseX+500,-mouseY-50);
+		        	            triangle(mouseX+400,-mouseY+560,mouseX+350,-mouseY-560,mouseX+450,-mouseY-50);
+		        	            triangle(mouseX+350,-mouseY+560,mouseX+300,-mouseY-560,mouseX+400,-mouseY-50);
+		        	            triangle(mouseX+300,-mouseY+560,mouseX+250,-mouseY-560,mouseX+350,-mouseY-50);
+		        	            triangle(mouseX+250,-mouseY+560,mouseX+200,-mouseY-560,mouseX+300,-mouseY-50);
+		        	            triangle(mouseX+200,-mouseY+560,mouseX+150,-mouseY-560,mouseX+250,-mouseY-50);
+		        	            triangle(mouseX+150,-mouseY+560,mouseX+100,-mouseY-560,mouseX+200,-mouseY-50);
+		        	            triangle(mouseX+100,-mouseY+560,mouseX+50,-mouseY-560,mouseX+150,-mouseY-50);
+		        	            triangle(mouseX+50,-mouseY+560,mouseX,-mouseY-560,mouseX+100,-mouseY-50);
+		        	            triangle(mouseX,-mouseY+560,mouseX-50,-mouseY-560,mouseX+50,-mouseY-50);
+		        	            triangle(mouseX-50,-mouseY+560,mouseX-100,-mouseY-560,mouseX,-mouseY-50);
+		        	            triangle(mouseX-100,-mouseY+560,mouseX-150,-mouseY-560,mouseX-50,-mouseY-50);
+		        	            triangle(mouseX-150,-mouseY+560,mouseX-200,-mouseY-560,mouseX-100,-mouseY-50);
+		        	            triangle(mouseX-200,-mouseY+560,mouseX-250,-mouseY-560,mouseX-150,-mouseY-50);
+		        	            triangle(mouseX-250,-mouseY+560,mouseX-300,-mouseY-560,mouseX-200,-mouseY-50);
+		        	            triangle(mouseX-300,-mouseY+560,mouseX-350,-mouseY-560,mouseX-250,-mouseY-50);
+		        	            triangle(mouseX-350,-mouseY+560,mouseX-400,-mouseY-560,mouseX-300,-mouseY-50);
+		        	            triangle(mouseX-400,-mouseY+560,mouseX-450,-mouseY-560,mouseX-350,-mouseY-50);
+		        	            triangle(mouseX-450,-mouseY+560,mouseX-500,-mouseY-560,mouseX-400,-mouseY-50);
+		        	            triangle(mouseX-500,-mouseY+560,mouseX-550,-mouseY-560,mouseX-450,-mouseY-50);
+		        	            triangle(mouseX-550,-mouseY+560,mouseX-600,-mouseY-560,mouseX-500,-mouseY-50);
+		        	            triangle(mouseX-600,-mouseY+560,mouseX-650,-mouseY-560,mouseX-550,-mouseY-50);
+		        	            triangle(mouseX-650,-mouseY+560,mouseX-700,-mouseY-560,mouseX-600,-mouseY-50);
+		        	        
+		    	    	}
+			    	} 
+			  	  </script>
+				<canvas style="padding-left: 30px">
+				</canvas>
+			</div>
+		</div>
+	</body>
+</html>
