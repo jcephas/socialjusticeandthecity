@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Intentional Communities</title>
+        <link rel="stylesheet" href="indexstyle.css">
+
+        <!--Loads the Processing.js Library-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+
+        <!--Loads d3.js Library and a topojson-->
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://unpkg.com/topojson@3"></script>
+
+        <!--Loads Chart.js library-->
+        <script src="dist/Chart.js"></script>
+        <script src="dist/Chart.min.js"></script>
+
+        <!--Loads MapBox-->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+ 
+    </head>
+
+    <body>
+<!--Sidenav-->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Sources</a>
+      </div>
+      
+      <!-- Use any element to open the sidenav -->
+      <span onclick="openNav()"> <span style='font-size:20px;'>&#8688;</span>  </span>
+      
+      <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+      <div id="main">
+        <!--Add here-->
+      </div> 
+
+      <script>
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "60vw";
+  document.getElementById("main").style.marginLeft = "500px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";
+}
+      </script>
+<!--End Sidenav-->
+
+
+
+
+<!--Begin visible page content-->
+
+<body>
+  <div class="container-fluid" style="font-family:Arial, Helvetica, sans-serif">
+      <div class="row">
+        <div class = "col-sm-1">
+
+       </div>
+
+          <div class = "col-md-6">
+          </div>
+
+          <div class = "col-md-4">
+              <div id="CourseInfoStrip" style="padding-left:3vw">
+                  <!--<h1 style="color: red;">UNDER CONSTRUCTION</h1> -->
+                  <h1 style="font-weight: bold">Social Justice and the City </h1>
+                  <h2>Annalee Fuller    |    Prof. Jay Cephas</h2>
+              </div>
+      
+              <div id="ThisPageTitleStrip" style="padding-left:3vw">
+                  <h3>New Models for Practice</h3>
+                  <h2>Collaboration | Adaptation | Participation </h2>
+              </div>
+            </div>
+            <div class = "col-sm-1">
+              
+           </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class = "col-sm-1">
+         11
+       </div>
+
+        <div class = "col-md-6" style="padding-left: 10vw; padding-right: 10vw">        
+12
+        </div>
+
+
+      <div class = "col-md-4" style="padding-left: 4vw; padding-top: 10%; font-family: Arial, Helvetica, sans-serif; font-size: xx-large;">
+      13
+       </div>
+
+        <div class = "col-sm-1">
+          14
+       </div>
+       </div>
+    
+    <div class="row">
+      <div class = "col-sm-1">
+        21
+     </div>
+
+      <div class = "col-md-6" class = "col-md-6" style="padding-left: 10vw; padding-right: 10vw; padding-top: 3vw; padding-bottom: 5vw">
+22
+     </div>
+      <div class = "col-md-4" style="padding-left: 3vw; padding-top: 3vw;">
+       23
+
+       </div>
+       <div class = "col-sm-1">
+         24
+     </div>
+  </div>
+
+  <div class="row">
+    <div class = "col-sm-1">
+    31
+   </div>
+
+    <div class="col-md-6" style="padding-left: 10vw; padding-right: 10vw">
+32
+   </div>
+
+    <div class = "col-md-4" style="padding-left: 4vw; padding-top: 10%; font-family: Arial, Helvetica, sans-serif; font-size: xx-large;">
+33
+     </div>
+     <div class = "col-sm-1">
+        34
+   </div>
+</div>
+
+<div class="row">
+  <div class = "col-sm-1">
+   41
+ </div>
+
+  <div class = "col-md-6" class = "col-md-6" style="padding-left: 10vw; padding-right: 10vw;">
+42 
+  </div>
+  <div class = "col-md-4" style="padding-left: 3vw">
+43
+   </div>
+   <div class = "col-sm-1">
+     44
+ </div>
+</div>
+
+<div class="row">
+  <div class = "col-sm-1">
+    51
+ </div>
+
+  <div class = "col-md-6" style = "padding-left: 10vw">
+52
+   
+ </div>
+  <div class = "col-md-4" style="padding-left: 4vw; padding-top: 10%; font-family: Arial, Helvetica, sans-serif; font-size: xx-large;">
+53
+   </div>
+   <div class = "col-sm-1">
+      54
+ </div>
+</div>
+
+<div class="row">
+  <div class = "col-sm-1">
+    61
+ </div>
+
+  <div class = "col-md-6" style = "padding-left: 10vw">
+   62
+ </div>
+  <div class = "col-md-4" style="padding-left: 3vw">
+    63
+  </div>
+   <div class = "col-sm-1">
+      64
+ </div>
+</div>
+
+
+
+</div>
+
+    </body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    
+</head>
+
+<style>
+    </style>
+
+
+
+</body>
+
+</html>
