@@ -2,7 +2,7 @@
 <html>
    <head>
       <title>
-      Interactive Analysis 05
+      Interactive Analysis 06
       </title>
 
 
@@ -300,7 +300,7 @@
       void draw(){
          if(mousePressed){
        
-          fill(16, 103, 105);
+          fill(64, 64, 64);
           noStroke();
          rect(0,0,200,200);
           
@@ -315,12 +315,12 @@
 
       }else{
 
-         fill(16, 103, 105);
+         fill(64, 64, 64);
          noStroke();
          rect(0,0,200,200);
 
          
-         stroke(16, 103, 105,2+mouseX/30);
+         stroke(64, 64, 64,2+mouseX/30);
          strokeWeight(5+mouseX/40);
          line(mouseX, 0, mouseX,800);
     
