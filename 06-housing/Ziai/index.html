@@ -1,0 +1,136 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>Housing</title>
+
+		
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+	</head>
+
+	<style>
+		h1{
+			color: black;
+			align-content: center;
+			font-size: 20pt;
+			font-family :"Times New Roman";
+			padding-right: 20%;
+			padding-left:45.5%;
+		}
+		h2{
+			color: grey;
+			align-content: center;
+			font-size: 12pt;
+			font-family:"Times New Roman";
+			padding-right: 40%;
+			padding-left:42%;
+		}
+		h3{
+			color: black;
+			font-size: 12pt;
+			font-family:"Times New Roman";
+			padding-right: 20%;
+			padding-left:47%;
+		}
+		h4{
+			color: black;
+			font-size: 14pt;
+			font-family:"Times New Roman";
+			padding-right: 30%;
+			padding-left:30%;
+		}
+		h5{
+			color: black;
+			font-size: 14pt;
+			font-family:"Times New Roman";
+			padding-right: 30%;
+			padding-left:30%;
+		}
+		p{
+			color:black;
+			font-size: 12pt;
+			font-family: "Times New Roman";
+			padding-right:20%;
+			padding-left: 20%;
+					}
+		#square {
+            padding-left: 15%;
+            padding-right: 25%;
+        }
+        #demo {
+        	color:black;
+        	font-size: 12pt;
+			font-family: "Times New Roman";
+			padding-right:20%;
+			padding-left: 20%;
+        }
+        #one {	
+        	padding-right:30%;
+			padding-left: 35%;
+			line-height: 30px;
+		}
+		#two {	
+        	padding-right:40%;
+			padding-left: 45%;
+		}
+		#three {	
+        	padding-right:40%;
+			padding-left: 45%;
+		}
+	</style>
+
+	<h1>Housing</h1>
+	<h2> Interactive Reading Analysis </h2>
+	<h3> Ziai Zhou </h3>
+
+	<body>
+		<script type="application/processing">
+bool build1=true;
+bool build2=true;
+bool build3=true;
+
+void setup() {
+  size(1000, 500);
+  background(255);
+  
+}
+
+void draw() {
+    fill(152,152,152);
+    background(255);
+    if(mousePressed){
+        if(mouseX>200&&mouseX<300&&mouseY>200&&mouseY<500) build1=false;
+        if(mouseX>500&&mouseX<600&&mouseY>200&&mouseY<500) build2=false;
+        if(mouseX>700&&mouseX<800&&mouseY>200&&mouseY<500) build3=false;
+    }
+    if(build1) rect(200,200,100,300);
+    if(build2) rect(500,200,100,300);
+    if(build3) rect(700,200,100,300);
+    
+    rect(mouseX,mouseY,70,50);
+    ellipse(mouseX,mouseY+60,20,20);
+    ellipse(mouseX+20,mouseY+60,20,20);
+    ellipse(mouseX+40,mouseY+60,20,20);
+    ellipse(mouseX+60,mouseY+60,20,20);
+    line(mouseX+70,mouseY,mouseX+130,mouseY-50);
+    line(mouseX+130,mouseY-50,mouseX+130,mouseY);
+    ellipse(mouseX+130,mouseY,30,30);
+    
+    
+
+} </script>
+			
+		<canvas id="square"></canvas>	
+
+	</body>
+	<p id="one" > The movie of the Pruitt-Igoe Myth shows the development and failure in St. Louis in the 1950s. The film interviewed the former residents to let them describe their impression of the place. As well as the movie showed the project's early and later situation. Throughout this movie, Pruitt-Igoe's failure was due to various reasons, the adverse effects of public welfare policies on families, and poor building maintenance measures on living conditions. Due to World War II, there were fewer job opportunities that were available for the residents. The residents became poorer and hard to pay the maintenance and security fee, which also caused the living conditions were getting worse and worse. Mainly former residents used straightforward words to describe the house's lack of maintenance, and before how they praised the house showed a marked contrast.</p>
+
+
+
+
+	<p id="one"> Since the families with adult males cannot enjoy public welfare, as the former residents said, their father had to hide in the closet when social workers came to check. This shows that people rely upon the government for their needs. The Pruitt-Igoe Myth's failure gave me a feeling that there was a gap between the residents, the housing designer, and the government. The government approved this project but did not give enough move to maintain this project. Racial discrimination in that society leads many people to fail to see that it is the government's fault and instead blame the residents for not maintaining their homes because they are people of color.
+
+</p>
+
+
+
+	</html>
