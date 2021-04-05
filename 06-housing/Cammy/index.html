@@ -1,0 +1,153 @@
+<!DOCTYPE html> 
+	<html> 
+		<head>
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+			<style>
+				.row:after {
+				  content: "";
+				  clear: both;
+				  display: table;
+				}
+
+				.button {
+				background-color: maroon;
+				border: none;
+				color: white;
+				padding: 6px 16px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 0px 8px;
+				transition-duration: 0.4s;
+				cursor: pointer;
+				float:right;
+				}
+				.button:hover {
+				background-color: #f0e1e1;
+				color: maroon;
+				}
+				.button:span{
+				display:block;
+				}
+
+				.hide {
+				  display: none;
+				  float:right;
+				  text-align:center;
+				}
+				.source:hover + .hide {
+				  display: block;
+				  color: maroon;
+				}
+
+				[class*="col-"] {
+				  float: left;
+				}
+				p{
+				text-indent:10pt; 
+				}
+			</style>
+			<title>Housing | Kuo </title>
+		</head>
+
+		<body style="background-color:white">
+			<div id="header" style="color:white;background-color: maroon;padding-top: 25px;padding-left: 25px;padding-bottom: 5px">
+				<h1>Housing</h1>
+			</div>
+
+			<div id="response" class="row">
+			<div class="col-md-4">
+
+				<div id="subheader" style="color:black;;padding-left: 25px;padding-bottom: 10px;padding-top:10px;line-height:18pt;">
+				<i>In response to Chad Freidrichs's "The Pruitt-Igoe Myth: An Urban History"</i>
+				</div>
+				<div id="main" style="color:black;padding-left: 25px;font-size:14px;line-height:16pt;">
+				<p>In Freidrichs’s documentary, the life and legacy of the infamous public housing complex Pruitt-Igoe is unraveled, challenging the ideas that its dramatic collapse was caused by residents' demographics or by ills of public housing; rather, the film suggests the larger social context and forces of postwar conditions, economic decline, racial divisions, and management failings decimated a home for thousands.</p>
+				<p>The film’s interviews are especially compelling because they are the picture of warmth and joy as depicted by previous residents, sharply contrasting the generally accepted history of a decaying, disparaging project.  Unfortunately, the dream that Pruitt-Igoe held for these individuals only caused the breakdown to be that much more painful.  This decline in management parallels the architecture model that allows a project to be celebrated upon completion but architects immediately move on with no resources to help or understand the project’s true success.</p>
+				<p>With an inherent segregationist approach, the housing policies reinforced negative stereotypes of Black families while allowing for idyllic white suburbia.  Family structures were ripped apart; an opportunity for a family’s safety required the family’s separation.  Despite all efforts, public housing of the mid-twentieth century could only have failed.  Natural human instinct, induced up by the environment, brought about the vandalism and deterioration.  Inherent ideologies and biases that allowed for Pruitt-Igoe’s conception set it up for disaster with its effects spanning generations.</p> 
+				<p>Yet, it is the spectacle of its demolition that drew the country's attention and likely put Pruitt-Igoe into larger discussion.  This situation suggested two ideas: one, modernist architecture and public housing are bad, and two, bad architecture can be imploded.  The project's sheer scale allowed it to be an easy target for attacks on its physical prescence as well as St. Louis' sudden decline.  Unforunately, the spatial footprint obscured the urban context.  Pruitt-Igoe did not fail its people; the city failed Pruitt-Igoe.</p>
+				</div>
+			</div>
+
+			<div class="col-md-7" style="padding-left: 25px;padding-top: 10px">
+				<script type="application/processing">
+				PImage bg;
+				PImage img1, img2, img3, img4, img5, img6, img7;
+
+				void setup() {
+				  size(800, 615);
+				  bg = loadImage("pruittigoeend.jpg");
+
+				  img1 = loadImage("white_flight1.png");
+				  img2 = loadImage("white_flight2.png");
+				  img3 = loadImage("white_flight3.png");
+				  img4 = loadImage("white_flight4.png");
+				  img5 = loadImage("white_flight5.png");
+				  img6 = loadImage("white_flight6.png");
+				  img7 = loadImage("white_flight7.png");
+
+				  textSize(12);
+				}
+
+				void draw() {
+				  background(0);
+				  image(bg);
+
+				  if ((mouseX < 115)) {
+				    image(img1, 0, 0);
+					String s = "1940-1950"; 
+				    text(s, 15, 550, 100, 50);
+				  } if ((mouseX > 115) && (mouseX < 230)) {
+				    image(img2, 0, 0);
+					String s = "1950-1960"; 
+				    text(s, 15, 550, 100, 50);
+				  } if ((mouseX > 230) && (mouseX < 345)) {
+					String s = "1960-1970"; 
+				    text(s, 15, 550, 100, 50);
+				    image(img3, 0, 0);
+				  } if ((mouseX > 345) && (mouseX < 460)) {
+				    image(img4, 0, 0);
+					String s = "1970-1980"; 
+				    text(s, 15, 550, 100, 50);
+				  } if ((mouseX > 460) && (mouseX < 575)) {
+				    image(img5, 0, 0);
+					String s = "1980-1990"; 
+				    text(s, 15, 550, 100, 50);
+				  } if ((mouseX > 575) && (mouseX < 690)) {
+				    image(img6, 0, 0);
+					String s = "1990-2000"; 
+				    text(s, 15, 550, 100, 50);
+				  } if ((mouseX > 690) && (mouseX < 800)) {
+				    image(img7, 0, 0);
+					String s = "2000-2010"; 
+				    text(s, 15, 550, 100, 50);
+				  }
+					String s = "Increase in white population             Increase in Black population             Decrease in white population             Decrease in Black population"; 
+				    text(s, 40, 590, 800, 300);
+
+				    fill(50); //black
+				    rect(210, 590, 15, 10);
+				    fill(230,0,0); //red
+				    rect(402, 590, 15, 10);
+				    fill(220,150, 50); //orange
+				    rect(601, 590, 15, 10);  
+				    fill(230); //white
+				    rect(20, 590, 15, 10);
+				}
+				</script>
+				<canvas><!--The Processing code will render here.--> </canvas>
+
+				<div class="source">
+					<button class="button">Source</button>
+					</div>
+				<div class="hide" style="font-size:12px;text-align:right">
+					<b>Map:</b> mappingdecline.lib.uiowa.edu/ <br>
+					<b>Photo:</b> 99percentinvisible.org/
+				</div>
+
+			</div>
+			</div>
+		</body>
+	</html>
