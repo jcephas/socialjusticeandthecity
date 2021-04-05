@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+		<!--copied from bootstrap site to enable bootstrap column grid-->
+
+		<script script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+		<!--code to enable processing animation-->
+
+	</head>
+
+	<style>
+
+		p:hover {
+			background-color:white;
+			color:black;
+		}
+
+		.container-fluid {
+			background-color: black;
+		}
+
+		.header {
+			color: white;
+			font-family:roboto black;
+			font-weight: bolder;
+			font-size: 15px;
+		}
+
+		.text1 {
+			color:gray;
+			font-family: roboto thin;
+			font-weight: lighter;
+			font-size: 11px;
+			margin-left:-100px;
+		}
+
+		.text2 {
+			color: white;
+			font-family: roboto thin;
+			font-weight: lighter;
+			font-size: 9px;
+			margin-left:-100px;
+		}
+
+		.spacer1 {
+			height: 25px;
+		}
+
+		.spacer2 {
+			height: 100px;
+		}
+
+	</style>
+
+	<body>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col=lg-12 header">
+					<h1> new models for practice: an interactive analysis </h1>
+				</div>
+			</div>
+
+		<div class="container-fluid spacer1">
+			<div class="row">
+				<div class="col-lg-12">
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4">
+				</div>
+				<div class="col-lg-4 text2">
+					<a> An examination of the interactions between architects and the communities that they serve and what responsibilities and possibilities lie in those interactions. Works examined include selections from Colin Ward's <i> Talking to Architects </i>, Leland M. Roth's <i> The Cult of the High Profile Architect </i>, and the 2010 documentary film <i> Citizen Architect: Sam Mockbee and the Spirit of the Rural Studio </i>. </a>
+				</div>
+				<div class="col-lg-4">
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid spacer1">
+			<div class="row">
+				<div class="col-lg-12">
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4">
+					<div id="application">
+						<script type="application/processing">
+							float x=0;
+							float y=0;
+
+							void setup()  {
+							  size (300, 500);
+							}
+
+							void draw()  {
+							  background(255);
+							  
+							  stroke(0,0,0);
+							  strokeWeight(10);
+							  line(150,0,150,500);
+							  
+							  stroke(0,0,0);
+							  strokeWeight(3);
+							  
+							  fill(125,125,125);
+							  rect(150,mouseX,50,mouseY);
+							  
+							  fill(125,125,125);
+							  rect(200,mouseX+200,50,mouseY-50);
+							  
+							  fill(125,125,125);
+							  rect(250,mouseX-400,50,mouseY+300);
+							  
+							  if (mouseX<150) {
+							  
+							  fill(214,51,68);
+							  stroke(0,0,0);
+							  strokeWeight(5);
+							  ellipse(mouseX,mouseY,50,50);
+							  }  
+							}
+						</script>
+						<canvas></canvas>
+					</div>
+				</div>
+				<div class="col-lg-4 text1">
+						<p> Over the course of this semester, we have studied and discussed at various scales the localized, “sensible” <i>effects</i> that top-down structural decisions have on communities. Communities have been disadvantaged in development decisions by malicious or negligent planners and architects, wholly excluded, or segregated from the larger society based upon arbitrary categories such as race. This week’s material presents and interesting piece to this puzzle: the attitudes of the designers of space in relation to the subjects of the built environment (people). </p>
+
+						<p> In Colin Ward’s <i>Talking to Architects</i>, he critiques current architectural practice, using the architectural landscape of Britain as an example. He laments that the power of decision making (and the very desire to make decisions in some cases) have been wrenched from the hands of the many. <b>“In the modern world, professional design is a commodity only the rich can afford.” </b>This has inevitably led to the perception of the disinterested architect with an ulterior, perhaps sinister motive. He closes by suggesting a redefinition of the role of designer in the built environment, one that enables and enriches local conditions instead of becoming an <b>“aesthetic dictator”.</b> </p>
+
+						<p> This, to me, suggests a certain sense of humbleness that is absent from many high-profile architects. It appears that many have embraced their wealthy clientele and have merely become agents of market capitalism and the states that embrace it with little thought for local conditions on the ground in the communities in which they work. Leland Roth describes a moment in the late 1980’s in which many architects made this shift. Branding and imaging became more important than the work itself and its effects: the goal became <b>“to make a dramatic statement of power and wealth.”</b> In this sense, the legibility goals of top-down planning are made explicit in reinforcing and communicating an ideal.  </p>
+
+						<p> Like the alternative paths discussed in Ward’s critique of the contemporary architectural practice of the 1990’s, Sam Mockbee’s Rural Studio in Hale County AL presents a concrete example of the opposite of this disinterested planning. The work of Rural Studio inserted and became partners with the local community of Hale County, similar to the shift noted in ARCH’s work in Harlem. It was informed by <b>“a profound appreciation of the local”</b> and sought to not alter the way in which people lived their lives, but enhance and create, in partnership, a healthier and more successful version of it.</p>
+
+						<p>This is made incredibly clear in contrasting Mockbee’s mindset on practice in relation to the existing community conditions of a project with Peter Eisenman’s. In the film, Eisnman takes a superior view of the role of architects in relation to community, implying that he feels no need to engage with them as the architect already knows what is best. However, examining the joy and success that stemmed from the integrated approaches discussed in the film (as well as the positivity that sprung from ARCH’s work in Harlem and Arcosanti), this attitude is simply untenable.</p>
+				</div>
+				<div class="col-lg-4">
+					<div id="application">
+						<script type="application/processing">
+							float x=0;
+							float y=0;
+
+							void setup()  {
+							  size (300, 500);
+							}
+
+							void draw()  {
+							  background(255);
+							  
+							  stroke(0,0,0);
+							  strokeWeight(10);
+							  line(150,0,150,500);
+							  
+							  stroke(0,0,0);
+							  strokeWeight(3);
+							  
+							  fill(88,168,93);
+							  rect(0,0,50,mouseX+96);
+							   
+							  fill(130,232,137);
+							  rect(50,0,50,mouseY+50);
+							  
+							  fill(87,138,90);
+							  rect(100,0,50,mouseX+25);
+							  
+							  fill(108,142,196);
+							  rect(150,0,50,mouseX+100);
+							  
+							  fill(42,75,128);
+							  rect(200,0,50,mouseY+43);
+							  
+							  fill(145,173,217);
+							  rect(250,0,50,mouseX+50);
+							  
+							  if (mouseX<150) {
+							    fill(88,168,93);
+							    stroke(0,0,0);
+							    strokeWeight(5);
+							    ellipse(mouseX,mouseY,50,50); 
+							  }
+							  
+							  if (mouseX>150) {
+							    fill(67,204,172);
+							    stroke(0,0,0);
+							    strokeWeight(5);
+							    ellipse(mouseX,mouseY,50,50); 
+							  }
+							}
+						</script>
+						<canvas></canvas>
+					</div>
+				</div>
+			</div>
+
+		<div class="container-fluid spacer2">
+			<div class="row">
+				<div class="col-lg-12">
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>
