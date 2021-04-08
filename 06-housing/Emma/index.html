@@ -1,250 +1,53 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Palacio-ARCH 6340</title>
+        <title>Palacio-ARCH 6340 Final</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
 
     <style>
+        body {
+            background-color: whitesmoke;
+        }
 
-        p {
-            padding-left: 30%;
-            padding-right: 30%;
-            font-size: 12pt;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            line-height: 24pt;
-            text-align: justify;
-            color: black;
-            }
-
-        h1 {
+        #question1 {
             text-align: center;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 24pt;
+            font-family: monospace;
+            color: rgb(23, 82, 138);
+            padding-top: 15%;
         }
 
-        h3 {
-            font-size: 14pt;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            text-align: justify;
-            padding-left: 30%;
+        #links {
+            text-align: center;
+            padding-top: 5%;
+            font-family: monospace;
+            letter-spacing: 1px;
         }
 
-        #name {
-            font-size: 13pt;
-            font-style: italic;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            text-align: justify;
+        a:link, a:visited {
+            text-decoration: none;
             color: black;
-            border-top: 2px solid rgb(175, 147, 20);
-            padding-top: 1%;
         }
 
-        #interact {
-            padding-left: 25%;
-            padding-right: 25%;
+        a:hover {
+            font-style: italic;
+            color: tomato;
         }
 
-        #intro {
-            padding-bottom: 2%;
-        }
-
-        #title2 {
-            padding-top: 2%;
-        }
-
-
-        </style>
+    </style>
     </head>
-    
-    <h1>Housing</h1>
+
+    <h1 id="question1">WHY DO WE FIND DISCOMFORT IN OUR BODIES?</h1>
+
+    <nav id="links">
+        <p><a href="about.html">ABOUT</a></p>
+        <p><a href="body-and-identity.html">THE BODY & IDENTITY</a></p>
+        <p><a href="violence-of-aesthetics.html">THE VIOLENCE OF MODERNISM</a></p>
+        <p><a href="redefining-arch.html">REDEFINING ARCHITECTURE</a></p>
+        <p><a href="sources.html">SOURCES</a></p>
+    </nav>
 
     <body>
 
-        <h3>Introduction</h3>
-
-        <p id="intro"><i>The Pruitt-Igoe Myth</i> depicts the various issues and challenges that this housing project in St. Louis faced through a series of personal accounts and factual narratives that highlight its failure.</p>
-
-    <div>
-        <script type="application/processing">
-
-            void setup() {
-                size(1000, 150);
-                noStroke();
-                fill(175, 147, 20);
-              }
-              
-              void draw() {
-                background(255);
-                    fill(175, 147, 20, 191);
-                  rect(mouseX -87.5, mouseY -15, 175, 30);
-                ellipse(200,142,30,30);
-                            ellipse(190,142,7,7);
-                ellipse(467,135,50,50);
-                            ellipse(450,140,15,15);
-                ellipse(249,76,25,25);
-                ellipse(190,243,100,100);
-                            ellipse(220,243,40,40);
-                ellipse(360,157,120,120);
-                            ellipse(380,145,70,70);
-                ellipse(557,98,87,87);
-                ellipse(635,225,43,43);
-                            ellipse(620,210,13,13);
-                            ellipse(610,210,5,5);
-                ellipse(75,95,36,36);
-                ellipse(725,123,41,41);
-                rect(650,50,98,3);
-                rect(177,268,269,3);
-                rect(85,185,87,2);
-                rect(475,211,33,2);
-                rect(86,43,2,93); 
-                rect(576,125,3,125);
-                rect(52,150,3,125);
-                rect(328,61,3,74);
-                rect(398,179,3,145);
-                rect(350,188,267,2.5);
-                rect(203,0,2.5,223);
-                rect(0,127,456,2);
-                rect(713,43,3,142);
-                rect(32,223,156,2.5);
-                rect(167,111,2.45,100);
-                rect(475,100,2,156);
-                rect(565,222,150,2.5);
-                rect(203,78,65,2);
-                            rect(812,76,3,225);
-                            rect(753,82,243,2.5);
-                            rect(954,0,3,190);
-                            rect(712,253,190,3);
-                ellipse(24,157,100,100);
-                ellipse(789,56,98,98);
-                            ellipse(767,56,34,34);
-                ellipse(400,270,21,21);
-                ellipse(321,195,10,10);
-                ellipse(150,87,76,76);
-                            ellipse(700,250,76,76);
-                            ellipse(840,220,149,149);
-                            ellipse(855,186,65,65);
-                            ellipse(967,111,98,98);
-                            ellipse(943,111,25,25);
-                if (mouseX < 225) {
-                  rect(0, 0, 100, 400);
-                  rect(50, 0, 50, 400);
-                  rect(130, 0, 30, 400);
-                  rect(398, 0, 76, 400);
-                                rect(789, 0, 145, 400);
-                                rect(800, 0, 34, 400);
-                                rect(365, 0, 23, 400);
-                                rect(347, 0, 78, 400);
-                } else if (mouseX < 500) {
-                  rect(450, 0, 97, 300);
-                  rect(390, 0, 123, 300);
-                                rect(300, 0, 45, 300);
-                  rect(50, 0, 80, 300);
-                                rect(943, 0, 15, 300);
-                                rect(900, 0, 55, 300);
-                } else {
-                  rect(550, 0, 153, 300);
-                                rect(570, 0, 29, 300);
-                                rect(595, 0, 14, 300);
-                  rect(280, 0, 30, 300);
-                                rect(90, 0, 20, 300);
-                                rect(310, 0, 45, 300);
-                                rect(290, 0, 25, 300);
-                                rect(877, 0, 53, 300);
-                }
-              }
-            </script>
-            <canvas id="interact"></canvas>
-
-            <script type="application/processing">
-
-                void setup() {
-                    size(1000, 150);
-                    noStroke();
-                    fill(175, 147, 20);
-                  }
-                  
-                  void draw() {
-                    background(255);
-                        fill(175, 147, 20, 191);
-                      rect(mouseX -87.5, mouseY -15, 175, 30);
-                    ellipse(200,142,30,30);
-                                ellipse(190,142,7,7);
-                    ellipse(467,135,50,50);
-                                ellipse(450,140,15,15);
-                    ellipse(249,76,25,25);
-                    ellipse(190,123,100,100);
-                                ellipse(220,78,40,40);
-                    ellipse(360,65,120,120);
-                                ellipse(380,145,70,70);
-                    ellipse(557,98,87,87);
-                    ellipse(635,52,43,43);
-                                ellipse(620,65,13,13);
-                                ellipse(610,210,5,5);
-                    ellipse(75,95,36,36);
-                    ellipse(725,33,41,41);
-                    rect(650,50,98,3);
-                    rect(177,39,269,3);
-                    rect(85,54,87,2);
-                    rect(475,98,33,2);
-                    rect(86,43,2,93); 
-                    rect(576,125,3,125);
-                    rect(52,150,3,125);
-                    rect(328,61,3,74);
-                    rect(398,133,3,145);
-                    rect(350,75,267,2.5);
-                    rect(203,0,2.5,223);
-                    rect(0,127,456,2);
-                    rect(713,43,3,142);
-                    rect(32,119,156,2.5);
-                    rect(167,111,2.45,100);
-                    ellipse(321,195,10,10);
-                    ellipse(150,87,76,76);
-                                ellipse(700,84,76,76);
-                                ellipse(840,98,149,149);
-                                ellipse(855,64,65,65);
-                                ellipse(967,111,98,98);
-                                ellipse(943,111,25,25);
-                    if (mouseX < 225) {
-                      rect(450, 0, 97, 300);
-                      rect(390, 0, 123, 300);
-                                    rect(300, 0, 45, 300);
-                      rect(50, 0, 80, 300);
-                                    rect(943, 0, 15, 300);
-                                    rect(900, 0, 55, 300);
-                    } else if (mouseX < 500) {
-                      rect(550, 0, 153, 300);
-                                    rect(570, 0, 29, 300);
-                                    rect(595, 0, 14, 300);
-                      rect(280, 0, 30, 300);
-                                    rect(90, 0, 20, 300);
-                                    rect(310, 0, 45, 300);
-                                    rect(290, 0, 25, 300);
-                                    rect(877, 0, 53, 300);
-                    } else {
-                      rect(0, 0, 100, 400);
-                      rect(50, 0, 50, 400);
-                      rect(130, 0, 30, 400);
-                      rect(398, 0, 76, 400);
-                                    rect(789, 0, 145, 400);
-                                    rect(800, 0, 34, 400);
-                                    rect(365, 0, 23, 400);
-                                    rect(347, 0, 78, 400);
-                    }
-                  }
-            </script>
-            <canvas id="interact"></canvas>
-        </div>
-
-            <h3 id="title2">The Emotionality of Architecture</h3>
-
-            <p>This film touches on a struggle in which we have seen in previous texts regarding place and sense of identity. Similarly to the residents of Harlem, those of Pruitt-Igoe found challenges in defining their homes in contrast to the outside perception of it. Through this perspective one could argue that the struggle for identity within and through architecture can be closely linked to highly personal aspects of an individual. The film sheds light on various perspectives on how former residents have felt about living in these housing projects, many of who often had strong memories that were tied to these spaces. The range of emotions that each person had when reflecting on their homes speaks to the high influence architecture can have on people. In some cases they were positive and in others they were negative however, these strong connections point to the fact that architecture is highly personal and emotional.</p>
-
-            <h3>The Fault of Architects</h2>
-
-            <p>The overall notion of the building itself reflects many ethical issues within the practice of architecture, the politics behind housing projects, and how society governs our bodies. The concept that modernity is equal to being humane poses many harmful stereotypes onto those who may not live in a “modern” way. It is also linked to how the government has policed those who were living in Pruitt-Igoe. These two ideas point to one of the main problems within housing projects as its designers are often projecting a way of life onto people who live their lives in a completely different way. Those who design these spaces often do not have a true understanding of what its inhabitants desire and care about. It also reflects back to the disciplinary alibi and the selfishness of architecture that Ward and Roth have both cited.</p>
-
-            <p id="name">Emma Palacio</p>
-
-
-            </body>
+    </body>
+</html>
