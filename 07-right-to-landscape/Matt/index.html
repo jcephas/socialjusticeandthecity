@@ -132,6 +132,8 @@
 	<div id="section04" class="containerfluid fourth">
 		<div class="row">
 			<div class="col-lg-4">
+				<div id="map" style="width:900px; height:400px;">
+				</div>
 			</div>
 
 			<div class="col-lg-4">
@@ -157,6 +159,16 @@
 			</div>
 		</div>
 	</div>
+
+	<script>
+						mapboxgl.accessToken = 'pk.eyJ1IjoibXJtaWxsZXIiLCJhIjoiY2ttZXdvNml4MDM2dzJ3azFoOGVsc3Y0bSJ9.iCp0TVLRC_i77iQ8p9gaLg';
+							var map = new mapboxgl.Map({
+							    container: 'map', // container ID
+							    style: 'mapbox://styles/mrmiller/ckmmknoqo1efg17s2qeavf9xd', // style URL
+							    center: [-71.05, 42.32], // starting position [lng, lat]
+							    zoom: 10 // starting zoom
+							});
+	</script>
 </body>
 
 </html>
