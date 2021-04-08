@@ -1,0 +1,43 @@
+#starting{
+	color:purple;
+	background: #999;
+	font-size: 6em;
+	font-family: "GrifoL-Bold","Georgia",serif;
+	text-align: center;
+	color: white;
+	position: relative;
+	top: 20px; 
+}
+
+.bodyText{
+	color: white;
+	background: #999;
+	align-content: center;
+	padding: 
+}
+/* Create two equal columns that floats next to each other */
+.column{
+	float: left;
+  	width: 50%;
+  	padding: 10px;
+  	height: 300px;
+}
+
+.column2{
+	float: right;
+  	width: 50%;
+  	padding: 10px;
+  	height: 300px;
+
+
+}
+
+
+#canvas{
+  display:inline;
+  margins:auto;
+  background-color:black;
+  align-items: center;  
+}
+
+
