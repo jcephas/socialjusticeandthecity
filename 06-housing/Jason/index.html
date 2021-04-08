@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Housing</title>
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+
+		<script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+
+		<link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+	</head>
+
+	<style>
+		body
+		{
+			background-color: dimgrey;
+		}
+		.header
+			{
+				color: lightblue;
+				font-family: monospace;
+				padding-left: 30px;
+				padding-top: 10px;
+				align-content: center;
+			}
+		.map
+			{
+				padding-left: 30px;
+				padding-top: 50px;
+			}
+		.bodyOne
+			{
+				color: darkorange;
+				padding-left: 30px;
+				font-family: Arial;
+
+			}
+
+	</style>
+
+	<body>
+		<div id="header" style="padding-left: 100px">
+			<h1 class="header">
+				Who's to Blame for Pruitt-Igoe?
+			</h1>
+		</div>
+
+		<div id="header" style="padding-left: 100px">
+			<h2 class="header">
+				Passing the Buck in a Culture of White Supremacy
+			</h2>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-1">
+			</div>
+
+			<div class="col-md-5" class="map">
+				<div id='map' style= 'width: 600px; height: 670px;'>			
+				</div>
+
+				<script>
+					mapboxgl.accessToken = 'pk.eyJ1IjoianRyb3NlbnRoYWwiLCJhIjoiY2ttZXlrYmJmMHc4ZDJ5bXhlOXhyMHM3bSJ9.92fSkqss9OHpGtzB76_kEw';
+					var map = new mapboxgl.Map
+					({
+  						container: 'map', // container ID
+  			 			style: 'mapbox://styles/jtrosenthal/ckn58avne0b9s17jy5jhhcvf7', // style URL
+  						center: [-71.05, 42.33], // starting position [lng, lat]
+  						zoom: 10.8 // starting zoom
+					});
+				</script>
+			</div>
+
+			<div class="col-md-5">
+				<div class="bodyOne">
+					<p>As evidenced by “The Pruitt-Igoe Myth,” issues related to low-income housing in the United States are not rooted in tangible structures of private or public funding, but are instead predicated on issues within the United States as it pertains to race. In no way should the dehumanization of fellow human beings, referred to as “trash people” or holding onto racially biased prejudices about wanting to live in a racially homogenous white neighborhood be tolerated.</p>
+
+					<p>The history of white supremacy in the United States affects society at large, not only through direct racism incurred against non-white folks, but through the policies and wealth accumulation in this country directly favoring the white hegemony. Well paying jobs with benefits, ability to receive higher education, and representation in media have resulted in a correlation between race and class in this country, that will require interventions in multiple arenas and several lifetimes before the bigotry embedded in these institutions reach any sort of permanent resolution.</p>
+
+					<p>The lessons taken from the rise and fall of the Pruitt-Igoe housing complex shouldn’t be about the incompetence of public housing in the United States or the failures of the individuals within Pruitt-Igoe to maintain their homes. Pruitt-Igoe shows that a welfare state will continue to be an unpopular ideal for a country who views sections of its own populace as less than based on prejudices that are ingrained in our nation’s history. When welfare states across the globe have found more success in maintaining a minimum quality of life for its citizens, directly addressing issues related to houselessness, gun violence, drug trafficking, and poverty, we need to ask ourselves about why addressing these issues is met with backlash and fought tooth and nail to see it fail here. It’s incredibly difficult to convince a population about humanist perspectives pertaining to the equal nature of human beings when so many are stuck in perspectives of racial and ethnic superiority, failing to empathize with those who have endured hardship and struggles because of pseudoscientific reasons.</p>
+				</div>
+			</div>
+			<div class="col-sm-1">
+			</div>
+		</div>
+	</body>
+</html>
