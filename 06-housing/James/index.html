@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>
+      Interactive Analysis 06
+      </title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>  
+
+   <style>
+      body{background-color: black;}
+
+      .mapboxgl-popup {
+         max-width: 400px;
+         color: grey;
+         }
+
+   
+
+      h2{
+      font-family: "Stencil Std", fantasy;
+      font-size: 2em;
+      letter-spacing: 0px;
+      color: white;
+      text-align:center;
+      padding-top: 35px;
+      float: initial;
+      }
+       
+
+      h3{
+      font-family: "Garamond",Serif;
+      font-size: 1em;
+      letter-spacing: 0px;
+      color: white;
+      text-align:center;
+      padding-top: 35px;
+      float: initial;     
+      }
+      
+      p{
+      font-size: 1em;
+      letter-spacing: 0px;
+      color: grey;
+      text-align:left;
+      float: initial;    
+      }
+
+      
+
+      
+
+   </style>
+
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+
+   <h2>Interactive Analysis 06 - Housing</h2>
+   <h3>ARCH 6340 - Instructor Prof. Jay Cephas</h3>
+   </head>
+   <body>
+    
+      
+
+        <div class="row">
+          
+         <div class="col-md-6">
+          <div id='map' style='width: 800px; height: 550px;margin-left: 70px;margin-top:60px;'></div>
+              
+                <script> 
+                  mapboxgl.accessToken = 'pk.eyJ1IjoiemhhbmdkZWgiLCJhIjoiY2ttZXd4bWZ0MGt2aDJvcHEyazN6NzB3aCJ9.WLKMf-78k0CwwtUKiXo55g';
+              var map = new mapboxgl.Map({
+              container: 'map',
+              style: 'mapbox://styles/zhangdeh/ckmez0l3l0m8k17pfdylockqq',
+              center: [-71.063,42.350],
+              zoom: 12
+              });
+               
+              map.on('load', function () {
+              map.loadImage(
+              'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+              // Add an image to use as a custom marker
+              function (error, image) {
+              if (error) throw error;
+              map.addImage('custom-marker', image);
+               
+              map.addSource('places', {
+              'type': 'geojson',
+              'data': {
+              'type': 'FeatureCollection',
+              'features': [
+              {
+              'type': 'Feature',
+              'properties': {
+              'description':
+              '<strong>Bowdoin Manor</strong><p>Elderly Disabled</p><p>41 Bowdoin Street Boston MA 02116</p>'
+              },
+              'geometry': {
+              'type': 'Point',
+              'coordinates': [  -71.063, 42.360]
+              }
+              },
+              {
+              'type': 'Feature',
+              'properties': {
+              'description':
+              '<strong>Heritage Apartments (Elderly)</strong><p>Elderly Disabled</p><p>209 Summer Street East Boston, MA 02128</p>'
+              },
+              'geometry': {
+              'type': 'Point',
+              'coordinates': [-71.055,42.352]
+              }
+              },
+              {
+              'type': 'Feature',
+              'properties': {
+              'description':
+              '<strong>The Metropolitan</strong><p>Family</p><p>1 Nassau Street Boston MA 02111</p>'
+              },
+              'geometry': {
+              'type': 'Point',
+              'coordinates': [-71.063,42.349]
+              }
+              },
+              {
+              'type': 'Feature',
+              'properties': {
+              'description':
+              '<strong>Oak Terrace</strong><p>Family</p><p>888 Washington Street Boston, MA 02111</p>'
+              },
+              'geometry': {
+              'type': 'Point',
+              'coordinates': [-71.064,42.348]
+              }
+              },
+              {
+              'type': 'Feature',
+              'properties': {
+              'description':
+              '<strong>Cortes Apartments</strong><p>Family</p><p>15 Cortes Street Boston, MA 02115</p>'
+              },
+              'geometry': {
+              'type': 'Point',
+              'coordinates': [-71.070,42.348]
+              }
+              },
+              {
+              'type': 'Feature',
+              'properties': {
+              'description':
+              '<strong>The Berkeley Residence</strong><p>Family</p><p>40 Berkeley Street Boston, MA 02116</p>'
+              },
+              'geometry': {
+              'type': 'Point',
+              'coordinates': [-71.071,42.346]
+              }
+              },
+              {
+              'type': 'Feature',
+              'properties': {
+              'description':
+              '<strong>40 Upton Street</strong><p>Family</p><p>42 Upton Street Boston, MA 02118</p>'
+              },
+              'geometry': {
+              'type': 'Point',
+              'coordinates': [-71.073,42.343]
+              }
+              },
+              {
+              'type': 'Feature',
+              'properties': {
+              'description':
+              '<strong>Rollins Square</strong><p>Family</p><p>519 Harrison Avenue, Boston, MA 02111</p>'
+              },
+              'geometry': {
+              'type': 'Point',
+              'coordinates': [-71.067,42.342]
+              }
+              },
+              {
+              'type': 'Feature',
+              'properties': {
+              'description':
+              '<strong>Rutland Square House</strong><p>Family</p><p>20 Rutland Square South End, MA 02118</p>'
+              },
+              'geometry': {
+              'type': 'Point',
+              'coordinates': [-71.078,42.341]
+              }
+              },
+              {
+              'type': 'Feature',
+              'properties': {
+              'description':
+              '<strong>Washington Street</strong><p>Elderly Disabled</p><p>1740 Washington Street Boston, MA 02118</p>'
+              },
+              'geometry': {
+              'type': 'Point',
+              'coordinates': [-71.076,42.337]
+              }
+              },
+              {
+              'type': 'Feature',
+              'properties': {
+              'description':
+              '<strong>698 Mass Ave</strong><p>Family</p><p>698 Mass Ave. Boston, MA 02118</p>'
+              },
+              'geometry': {
+              'type': 'Point',
+              'coordinates': [-71.075,42.335]
+              }
+              }
+              ]
+              }
+              });
+               
+              // Add a layer showing the places.
+              map.addLayer({
+              'id': 'places',
+              'type': 'symbol',
+              'source': 'places',
+              'layout': {
+              'icon-image': 'custom-marker',
+              'icon-allow-overlap': true
+              }
+              });
+              }
+              );
+               
+              // Create a popup, but don't add it to the map yet.
+              var popup = new mapboxgl.Popup({
+              closeButton: false,
+              closeOnClick: false
+              });
+               
+              map.on('mouseenter', 'places', function (e) {
+              // Change the cursor style as a UI indicator.
+              map.getCanvas().style.cursor = 'pointer';
+               
+              var coordinates = e.features[0].geometry.coordinates.slice();
+              var description = e.features[0].properties.description;
+               
+              // Ensure that if the map is zoomed out such that multiple
+              // copies of the feature are visible, the popup appears
+              // over the copy being pointed to.
+              while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+              coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+              }
+               
+              // Populate the popup and set its coordinates
+              // based on the feature found.
+              popup.setLngLat(coordinates).setHTML(description).addTo(map);
+              });
+               
+              map.on('mouseleave', 'places', function () {
+              map.getCanvas().style.cursor = '';
+              popup.remove();
+              });
+          });                
+                </script> 
+          </div>
+          
+          <div class="col-md-6"; style="font-family:Garamond,Serif;font-size: 1.1em;width: 900px;padding-top: 50px;padding-left: 85px;">
+            <p>The Pruitt-Igoe project is always known as an example of inadequate execution in the urban planning aspect. The over-designed structures coming along with supplemented utilities requires consistent maintenances which demands fiscal costs throughout times. However, it was meant to be a public housing accommodating low-income families with enhanced living environments, and ultimately everything fell down quickly.
+          </p>
+          <p>The project was meant to be a new community to have low-income families enjoy a rather modern and welcoming environment regardless of any group identities such as races or labels. However, with the rapid dissolvent of utilities and supplements of security and hygiene, the residencies were starting to move out. The people who could leave, left while everything was still working rather intact, but the remainder of the residency was not able to leave that easily. The reality of the result was thought-provoking that most of the remaining residency were black residents, and they stayed not because they wanted to but there were no alternatives for them to choose. Although with all the negative opinions on Pruitt-Igoe from outsiders, some of the former residents still viewed their living times within the buildings as one of the best memories of their lives.
+          </p>
+          <p>The failure of Pruitt-Igoe was merely a partial reflection on the housing segregations that happened in America back in its times. Learning from some previous lectures and readings on the subject, one could realize the colored groups were often being treated differently than the whites on purchasing and making homes in a well-developed neighborhood, and the intentions were coming from both objective policies and subjective bias from white communities. The fact that after black families put down all their efforts and savings on purchasing an estate in a fine community which was mainly composed of white residents, and the white families would intentionally move out of that community thus causing a decrease in quality and value of the neighborhood was truly the most unspoken tragical scenario which no one could ever understand apart from themselves.
+          </p>
+          <p>
+          <i><strong>Try to fill the bar with the color and then click-drag.</strong></i>
+          </p>
+          </div>
+           
+        </div>
+
+      <!--SPLIT LINE-->
+      <br>
+      <br>
+      <br>
+
+
+      <script type="application/processing">
+         void setup() {
+         size(2200,200);
+         background(255);
+         
+         stroke(255);
+         strokeWeight(2);
+         line(400, 0, 400,800);
+
+         
+         
+      }
+
+      void draw(){
+         if(mousePressed){
+       
+          fill(64, 64, 64);
+          noStroke();
+         rect(0,0,200,200);
+          
+         
+         stroke(255, 60);
+         strokeWeight(50);
+         line(mouseX, 0, mouseX,800); 
+      
+  
+
+
+
+      }else{
+
+         fill(64, 64, 64);
+         noStroke();
+         rect(0,0,200,200);
+
+         
+         stroke(64, 64, 64,2+mouseX/30);
+         strokeWeight(5+mouseX/40);
+         line(mouseX, 0, mouseX,800);
+    
+         
+
+         }
+      }
+
+      </script>
+
+      
+    
+    
+      <canvas></canvas>
+
+
+
+   </body>
+</html>
