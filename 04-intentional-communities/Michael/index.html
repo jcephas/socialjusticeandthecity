@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+
+<html>
+
+<script type="text/javascript" src="black-utopia.js"></script>
+
+<head>
+	<title>Urban Renewal of the Ghetto</title>
+</head>
+
+<style>
+
+	h1, p, h2, iframe, svg, form {
+		padding: 20px 20px 0px 20px
+	}
+
+			.first {
+			background-color: #57b2c9;
+			height: 1500px;
+
+</style>
+
+
+
+<body>
+
+
+
+<div id="section01" class="first"> 
+
+
+	<h1>Urban Renewal of the Ghetto</h1>
+
+
+	<p>
+		Black Utopia, goes through the trial and error of Harlem, New York, during the 1960s.  There was a shift in movement and attitude of the low-income black community, and the "racial and cultural personality of the black community must be preserved", was the new ideology going forward (59).  Typical urban renewal was replaced with the raw findings within the Harlem community itself in order to establish the "black utopia".  The organization Architect's Renewal Committee in Harlem (ARCH) started to bring about the notion of nationalism into the community, and rallied the Harlemites to be successful within their home.  For ARCH leadership started to make a shift from white to African American leadership when J. Max Bond became director.  Bond would bring about that nationalism through his own background in Ghana and into the streets of Harlem.  
+	</p>
+
+	<p>
+		The move for Harlem was focused on being self efficient and reliant.  The "ghetto" looked to rise up and begin to make their own decisions moving forward; not have them made for them. African Americans had to take charge and become owners of their own businesses, and the poor needed to be given a chance to redeem themselves.  African Americans needed to come from a position of strength, where they will be heard.  For this to be successful, there would need to be a large level of community involvement and support. 
+
+	</p> 
+
+	<p>
+		Harlem began to fight back against unwanted or desired plans that were deemed as projects meant to hold back their community.  Passive strikes and protests began the pushback.  This was a white vs black situation, and Harlem believed that the members of their community were being disproportionately and negatively affected by the city's development plans and strategies.  They elected to fight back.  
+	</p>
+
+	<p>
+		The overall underlying theme here, to me, is the notion of urban renewal and what that meant for certain ethnicity groups throughout American cities and neighborhoods, and more specifically Harlem.  Urban renewal was, by many, believed to effectively be, "Negro removal" (67). 
+	</p>
+
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/mWGwsA1V2r4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<p> The circle represents the possibilities of what can happen with growth, and what will evidently happen without growth...</p>
+
+
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svg" >
+    <circle id="circle" cx="100" cy="100" r="30" stroke="blue" stroke-width="2" fill="black" />
+    <circle id="circle1" cx="20" cy="200" r="30" stroke="blue" stroke-width="2" fill="black" />
+	</svg>
+	Selection
+	<input type="button" value="active" />
+	<input type="button" value="inactive" />
+
+<script type="text/javascript">function circle(delta){
+    if (!delta){
+        return false;
+    }
+    else {
+        var e = document.querySelectorAll('circle[id^=circle]'),
+            changeBy = 10;
+        if (delta == 'active'){
+            e[0].setAttribute('r',parseInt(e[0].getAttribute('r'),10) + changeBy);
+            
+        }
+        else if (delta == 'inactive'){
+            e[0].setAttribute('r',parseInt(e[0].getAttribute('r'),10) - changeBy);
+            
+        }
+    }
+}
+
+var inputs = document.getElementsByTagName('input'),
+    buttons = [];
+
+for (var i = 0, len = inputs.length; i < len; i++) {
+    if (inputs[i].type == 'button') {
+        inputs[i].onclick = function(){
+            circle(this.value);
+        }
+    }
+}
+</script>
+
+<script type="text/javascript">
+function validateEmail(theForm) {
+if (/^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/.test(theForm.email-id.value)){
+return(true);
+}
+alert("Invalid e-mail address! Please enter again carefully!.");
+return(false);
+}
+</script>
+
+<p>Feel free to enter your email address below to stay updated with new content and events happening with our page!</p>
+<form onSubmit="return validateEmail(this);" action="">
+E-mail Address:
+<input type="text" name="emailid" />
+<input type="submit" value="Submit" />
+<input type="reset" value="Reset" />
+</form>
+
+<button id="myButton" class="float-right submit-button" >Click Me!</button>
+
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "https://harlemcommunitynews.com";
+    };
+</script>
+
+
+
+
+	<h2>Michael Lydon</h2>
+
+</div>
+
+	
+
+		
+	
+
+
+
+</body>
+</html>
