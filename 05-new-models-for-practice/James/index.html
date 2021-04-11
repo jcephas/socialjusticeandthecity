@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>
+      Interactive Analysis 05
+      </title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>  
+
+   <style>
+      body{background-color: black;}
+
+     #fly {
+      display: block;
+      position: relative;
+      margin: 0px auto;
+      width: 10%;
+      height: 40px;
+      float: relative;
+      border: none;
+      border-radius: 1px;
+      font-size: 16px;
+      text-align: center;
+      color:white;
+      background: gray;
+      padding: center;
+      }
+
+   
+
+      h2{
+      font-family: "Stencil Std", fantasy;
+      font-size: 2em;
+      letter-spacing: 0px;
+      color: white;
+      text-align:center;
+      padding-top: 35px;
+      float: initial;
+      }
+       
+
+      h3{
+      font-family: "Garamond",Serif;
+      font-size: 1em;
+      letter-spacing: 0px;
+      color: white;
+      text-align:center;
+      padding-top: 35px;
+      float: initial;     
+      }
+      
+      p{
+      font-size: 1em;
+      letter-spacing: 0px;
+      color: white;
+      text-align:left;
+      float: initial;    
+      }
+
+
+
+   </style>
+
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+
+   <h2>Interactive Analysis 05 - New Models for Practice</h2>
+   <h3>ARCH 6340 - Instructor Prof. Jay Cephas</h3>
+   </head>
+   <body>
+    
+      
+
+        <div class="row">
+          
+         <div class="col-md-4">
+          <div id='map' style='width: 525px; height: 800px;margin-left: 70px;margin-top:50px; '></div>
+              
+                <script> 
+                 mapboxgl.accessToken = 'pk.eyJ1IjoiemhhbmdkZWgiLCJhIjoiY2ttZXd4bWZ0MGt2aDJvcHEyazN6NzB3aCJ9.WLKMf-78k0CwwtUKiXo55g';
+              var map = new mapboxgl.Map({
+              container: 'map',
+              style: 'mapbox://styles/zhangdeh/ckmez0l3l0m8k17pfdylockqq',
+              center: [-71.078, 42.320],
+              zoom: 12
+              });
+               
+              map.on('load', function () {
+              map.loadImage(
+              'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+              // Add an image to use as a custom marker
+              function (error, image) {
+              if (error) throw error;
+              map.addImage('custom-marker', image);
+               
+              map.addSource('places', {
+              'type': 'geojson',
+              'data': {
+              'type': 'FeatureCollection',
+              'features': [
+              {
+              'type': 'Feature',
+              'properties': {
+              'description':
+              '<strong>Repair and upgrade existing pathways.</strong><p>Make it Mount Pleasant is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>'
+              },
+              'geometry': {
+              'type': 'Point',
+              'coordinates': [  -71.0816576864997, 42.3509457422286]
+              }
+              },
+              {
+              'type': 'Feature',
+              'properties': {
+              'description':
+              '<strong>Install a rain screen wall and added ventilation. Replace doors and exterior windows, concrete work to pool to repair leaks.</strong>'
+              },
+              'geometry': {
+              'type': 'Point',
+              'coordinates': [-71.075421355391,   42.3344200815583]
+              }
+              }
+              ]
+              }
+              });
+               
+              // Add a layer showing the places.
+              map.addLayer({
+              'id': 'places',
+              'type': 'symbol',
+              'source': 'places',
+              'layout': {
+              'icon-image': 'custom-marker',
+              'icon-allow-overlap': true
+              }
+              });
+              }
+              );
+               
+              // Create a popup, but don't add it to the map yet.
+              var popup = new mapboxgl.Popup({
+              closeButton: false,
+              closeOnClick: false
+              });
+               
+              map.on('mouseenter', 'places', function (e) {
+              // Change the cursor style as a UI indicator.
+              map.getCanvas().style.cursor = 'pointer';
+               
+              var coordinates = e.features[0].geometry.coordinates.slice();
+              var description = e.features[0].properties.description;
+               
+              // Ensure that if the map is zoomed out such that multiple
+              // copies of the feature are visible, the popup appears
+              // over the copy being pointed to.
+              while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+              coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+              }
+               
+              // Populate the popup and set its coordinates
+              // based on the feature found.
+              popup.setLngLat(coordinates).setHTML(description).addTo(map);
+              });
+               
+              map.on('mouseleave', 'places', function () {
+              map.getCanvas().style.cursor = '';
+              popup.remove();
+              });
+          });             
+                </script> 
+          </div>
+          <div class="col-md-4">
+              
+          </div>
+          <div class="col-md-4"; style="font-family:Garamond,Serif;font-size: 1.1em;width: 500px;padding-top: 35px;">
+            <p>This week’s materials are very intriguing onto what architecture is to every individual in this industry or profession. The readings discussed a lot about Architecture as a subject regarding to its past, presents, and future in terms of the relationship between the architects and their projects which can be thoroughly different. The video Citizen Architect, however, presents an example of Samuel “Sambo” Mockbee’s dedication on his understandings of architecture, which resulted in the existence of the Rural Studio in Auburn University.
+          </p>
+          <p>There was no recondite puzzle or complicated reasoning behind Sambo’s motivation to establish the Studio in a way that puts out students and faculties into the actual communities and have them to communicate and to interact with the local residents, but his position was clear – to build things to the local communities that no commercially-driven architectural firms would. Extracting from the video and the interview on Sambo, the essential idea on architecture is dramatically different that there is no definitive right or wrong, which sometimes causes confusions for people to understand the true purpose of the subject. 
+          </p>
+          <p>“…it changed our whole scope of thinking. It has a humanitarian side to it…” said by one of the interviewees Peanut Robinson, who explained the shift in his attitude and perspective on architecture and architects, because he witnessed the changes and efforts the Studio dedicated in his community. Compared with the video, the second article by Emery Roth discusses the evolving identities for architects that some of them were becoming the “trendsetters” and “media stars”, which is something different from what Samuel was doing with the Rural Studio. From an neutral point of view, the subject of architecture can be delivered with various forms and goals, and the beneficiaries will also be correspondingly different, but the essential value is to fulfill the needs from either the wealthy individual or the rundown communities.
+          </p>
+          </div>
+           
+        </div>
+      
+        
+      
+      
+          
+
+
+    
+
+      
+
+
+          
+
+
+      <!--SPLIT LINE-->
+
+
+
+      
+    
+    
+      <canvas></canvas>
+
+
+
+   </body>
+</html>

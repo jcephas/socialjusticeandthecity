@@ -1,47 +1,69 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Interactive Analysis 02</title>
+      <title>
+      Interactive Analysis 02
+      </title>
       <!--Comment.-->
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
    <style>
-      h3{
+      h2{
       font-family: "Stencil Std", fantasy;
       font-size: 2em;
       letter-spacing: 0px;
       background-color: black;
       color: white;
-      }
-      h3{
-      height: 105px;
+      height: 80px;
       width: 40%;
-      background-color: powderblue;   
+      background-color: powderblue;
+      text-align:center;
+      padding-top: 35px;
+      position: relative;
       }
-      h3{text-align:center;}
+      
       div{
-      height: 50px;
-      width: 40%;   
+      padding-top: px;
+      height: 80px;
+      width: 40%;
+      padding-top: 5px; 
       }
       
-      
+      div.relative {
+      position: relative;
+      bottom: 25px;      
+      }
+
+      p.outset {border-style: outset;}
 
    </style>
-   <h3>Interactive Analysis 01 - Social Justice and the City</h3>
+   <h2>Interactive Analysis 02 - Social Justice and the City</h2>
    </head>
    <body>
       
-      <div id="main" style="background-color:#587073; color:white">
-         <p class="p1">The Anti-highway social movements back in the 1960s in Boston protected and executed the rights of minority groups' living communities, which is valuable to nowadays' considerations regarding urban planning.
-         </p>
+      <div id="main" style="background-color:#587073; color:white"; class="relative";class>
+         <p>The Anti-highway social movements back in the 1960s in Boston protected and executed the rights of minority groups' living communities, which is valuable to nowadays' considerations regarding urban planning.</p>
       </div>
+      
+      <button type="button" style="background-color:#587073; color:white;" onclick='document.getElementById("demo").innerHTML = "Try to drag the dark square to fill the light one on the top-right corner."'>Show Hint!</button>
+      <p id="demo"></p>
+
+      
+      
+
       <!--SPLIT LINE-->
 
+
+
+      
       <script type="application/processing">
       
+      
+
       void setup() {
          size(755,800);
          background(88,112,115);
+         
 
          
       }
@@ -49,6 +71,9 @@
       void draw(){
          if(mousePressed){
             background(88,112,115);
+            
+
+            
 
             fill(59+mouseX/3,75+mouseX/3,77+mouseX/3);
             stroke(255); 
@@ -284,6 +309,9 @@
 
 
       }else{background(88,112,115);
+
+
+
          fill(59,75,77);
          stroke(59,75,77);
          rect(50,350,50,50);
@@ -417,7 +445,7 @@
          }
       }
       </script>
-      
+      </div>
 
 
 
