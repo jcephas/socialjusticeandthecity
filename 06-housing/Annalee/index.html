@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Intentional Communities</title>
+        <title>Housing</title>
         <link rel="stylesheet" href="indexstyle.css">
 
         <!--Loads the Processing.js Library-->
@@ -78,8 +78,8 @@ function closeNav() {
               </div>
       
               <div id="ThisPageTitleStrip" style="padding-left:3vw">
-                  <h3>New Models for Practice</h3>
-                  <h2>Collaboration | Adaptation | Participation </h2>
+                  <h3>Housing</h3>
+                  <h2>Adaptation | Dignity | Portrayal </h2>
               </div>
             </div>
             <div class = "col-sm-1">
@@ -88,106 +88,179 @@ function closeNav() {
 
       </div>
 
-      <div class="row">
+      <div class="row" >
 
         <div class = "col-sm-1">
-         11
+        
        </div>
 
         <div class = "col-md-6" style="padding-left: 10vw; padding-right: 10vw">        
-12
+          <div style="height: 60vh; width:100%;">
+          
+            <div id="GraphicsRenderZone" style="padding-top: 20px; padding-left: 0px;">
+       
+              <script type="application/processing">
+                void setup() {
+                  size(500, 360);
+                  noSmooth();
+                  fill(126);
+                  background(0,0,0);
+                }
+                
+                void draw() {
+
+                  if (mousePressed) {
+                    stroke(255);
+                  } else {
+                    stroke(0);
+                  }
+                  line(mouseX-2, mouseY, mouseX+2, mouseY);
+                  line(mouseX, mouseY-2, mouseX, mouseY+2); 
+
+                  stroke(255,255,255);
+                  fill(255,255,255);
+                  rect(150,100,100,150);
+
+                  fill(185, 236, 240);
+                  rect(175,150,50,50);
+
+                  stroke(255,255,255);
+                  line(250,250,425,300);
+                  line(150,250,25,300);
+                  line(425,25,250,100);
+
+                }
+                          </script>
+                  <canvas><!--Processing code render space--></canvas>
+              </div>
+
+              <p style="text-align:center;">Make this room your own.</p>
+          
+          </div>
         </div>
 
 
-      <div class = "col-md-4" style="padding-left: 4vw; padding-top: 10%; font-family: Arial, Helvetica, sans-serif; font-size: xx-large;">
-      13
+      <div class = "col-md-4" style="padding-left: 4vw; padding-top: 10%; font-family: Arial, Helvetica, sans-serif; font-size: large;">
+      In The Pruit Igoe Myth, former residents of the complex reflected on their adjustments to living there. 
+
+      <br>
+      <br>
+
+      One resident shared that, with few resources to get school supplies for her children, she adapted by 
+      turning one wall into a chalkboard.  Another resident recalled how playing music from her record player became a community focal point. 
+
+      These are ways that residents took a space and within it, created a sense of place, home, and community.
+      
        </div>
 
         <div class = "col-sm-1">
-          14
+         
        </div>
        </div>
     
     <div class="row">
       <div class = "col-sm-1">
-        21
+        
      </div>
 
       <div class = "col-md-6" class = "col-md-6" style="padding-left: 10vw; padding-right: 10vw; padding-top: 3vw; padding-bottom: 5vw">
-22
+
      </div>
       <div class = "col-md-4" style="padding-left: 3vw; padding-top: 3vw;">
-       23
+       
 
        </div>
        <div class = "col-sm-1">
-         24
+         
      </div>
   </div>
 
   <div class="row">
     <div class = "col-sm-1">
-    31
+    
    </div>
 
     <div class="col-md-6" style="padding-left: 10vw; padding-right: 10vw">
-32
+      <div style="height: 60vh; width:100%; background-color:white;">
+          
+        <img src="nlihcgraph.png" alt="graph" style="height:275px;">
+
+        About a decade after the demolition of Pruitt Igoe, federal discretionary spending as a proportion of GDP on housing 
+        fell sharply.  It remains at this reduction.
+        
+        Source: 
+        <a href="https://nlihc.org/federal-budget-and-spending">NILHC</a>
+        </div>
    </div>
 
-    <div class = "col-md-4" style="padding-left: 4vw; padding-top: 10%; font-family: Arial, Helvetica, sans-serif; font-size: xx-large;">
-33
+    <div class = "col-md-4" style="padding-left: 4vw; padding-top: 10%; font-family: Arial, Helvetica, sans-serif; font-size: large;">
+However, the complex increasingly faced neglect from funding and maintenance.  What began as a well-maintained and clean place 
+reached a state of filth and disrepair due to the severe undermaintenance.
      </div>
      <div class = "col-sm-1">
-        34
+        
    </div>
 </div>
 
 <div class="row">
   <div class = "col-sm-1">
-   41
+  
  </div>
 
-  <div class = "col-md-6" class = "col-md-6" style="padding-left: 10vw; padding-right: 10vw;">
-42 
+  <div class = "col-md-6" class = "col-md-6" style="padding-left: 10vw; padding-right: 10vw; padding-top: 3vw; padding-bottom: 5vw">
+ 
   </div>
   <div class = "col-md-4" style="padding-left: 3vw">
-43
+
    </div>
    <div class = "col-sm-1">
-     44
+     
  </div>
 </div>
 
 <div class="row">
   <div class = "col-sm-1">
-    51
+    
  </div>
 
   <div class = "col-md-6" style = "padding-left: 10vw">
-52
+    <div style="height: 60vh; width:100%; background-color: white;">
+          
+      <img src="publicopinion.png" alt="graph" style="height: 350px">
+      <br>
+      Media portrayal can affect how the public perceives many political issues. In 2002, after roughly 
+      20 years of reduced federal budgetary provisions for housing assistance programs, about two-thirds of 
+      national survey participants believed affordable housing was either a "small problem" or "not a problem" in their area. Other potential factors
+      include the spatial dispersion of suburban versus urban dwellers and political bias, to name a few.
+      Source: <a href="http://www.tcah.org/pdf/Public_Attitudes.pdf">TCAH</a>
+      
+      </div>
    
  </div>
-  <div class = "col-md-4" style="padding-left: 4vw; padding-top: 10%; font-family: Arial, Helvetica, sans-serif; font-size: xx-large;">
-53
+  <div class = "col-md-4" style="padding-left: 4vw; padding-top: 10%; font-family: Arial, Helvetica, sans-serif; font-size: large;">
+The public and politicians saw the complex and its conditions differently than did the people residing and working there. 
+The residents, who had little income and were also disproportionally non-white, were increasingly portrayed by the media 
+alongside images of the complex's deterioration.  The neglect of funding and undermaintenance created undignified conditions 
+for people, while media portrayal exacerbated an already misrepresentative and public image of low-income and non-white people. 
    </div>
    <div class = "col-sm-1">
-      54
+      
  </div>
 </div>
 
 <div class="row">
   <div class = "col-sm-1">
-    61
+    
  </div>
 
-  <div class = "col-md-6" style = "padding-left: 10vw">
-   62
+  <div class = "col-md-6" style = "padding-left: 10vw; padding-top: 3vw; padding-bottom: 5vw">
+   
  </div>
   <div class = "col-md-4" style="padding-left: 3vw">
-    63
+    
   </div>
    <div class = "col-sm-1">
-      64
+      
  </div>
 </div>
 
