@@ -1,54 +1,150 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Palacio-ARCH 6340 Final</title>
+        <title>Palacio-ARCH 6340</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
 
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
     <style>
-        body {
-            background-color: whitesmoke;
+
+        p {
+            padding-left: 30%;
+            padding-right: 30%;
+            font-size: 12pt;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            line-height: 24pt;
+            text-align: justify;
+            }
+
+        h1 {
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 24pt;
         }
 
-        #question1 {
-            text-align: center;
-            font-family: monospace;
-            color: rgb(23, 82, 138);
-            padding-top: 15%;
+        h3 {
+            font-size: 14pt;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: justify;
+            padding-left: 30%;
         }
 
-        #links {
-            text-align: center;
-            padding-top: 5%;
-            font-family: monospace;
-            letter-spacing: 1px;
-            font-size: 10.5pt;
+        #name {
+            font-size: 13pt;
+            font-style: italic;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: justify;
         }
+
+
+        #interact {
+            padding-left: 33%;
+            padding-right: 33%;
+        }
+
+        #map {
+            padding-left: 40%;
+            padding-right: 40%;
+            padding-top: 7%;
+            padding-bottom: 3%;
+        }
+
+        #source {
+                font-size: 9pt;
+                line-height: 12pt;
+                border-top: 1.5px solid rgb(184,39,63);
+                padding-top: 20px;
+                text-align: justify;
+                padding-left: 30%;
+                padding-right: 30%;
+            }
 
         a:link, a:visited {
             text-decoration: none;
-            color: black;
-        }
+          }
 
         a:hover {
-            font-style: italic;
-            color: tomato;
+          color: rgb(184,39,63);
         }
 
-    </style>
+        #map-caption {
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding-left: 20%;
+            padding-right: 20%;
+            padding-bottom: 1%;
+            padding-top: 1%;
+            line-height: 16pt;
+            font-style: italic;
+            text-align: justify;
+            font-size: 10pt;
+        }
+
+        button {
+            background-color: rgb(23, 138, 67);
+            border: none;
+            color: white;
+            padding: 12px 18px;
+            text-align: center;
+            font-size: 11px;
+            margin: 3px 2px;
+            opacity: 0.6;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            margin-left: 47%;
+        }
+
+    button:hover {opacity: 1};
+
+        </style>
     </head>
-
-    <h1 id="question1">WHY DO WE FIND DISCOMFORT IN OUR BODIES?</h1>
-
-    <nav id="links">
-        <p><a href="about.html">ABOUT</a></p>
-        <p><a href="body-and-identity.html">THE BODY, IDENTITY & LANDSCAPE</a></p>
-        <p><a href="violence-of-aesthetics.html">THE VIOLENCE OF MODERNISM</a></p>
-        <p><a href="redefining-arch.html">REDEFINING ARCHITECTURE</a></p>
-        <p><a href="sources.html">SOURCES</a></p>
-    </nav>
+    <h1>The Right to Landscape</h1>
 
     <body>
+    <div>
 
-    </body>
-</html>
+        <h3>Introduction</h3>
+
+        <p id="intro">In chapter 1 of The Right to Landscape, the authors cite various practitioners to assert that the right to landscape is inherently tied to basic human rights and overall well-being, while Cordingley provides a narrative case study of Can Masdeu to describe the ways in which they have defended their landscape through community and activism.</p>
+
+            <h3>Analysis</h3>
+
+            <p>Through their attempt to define the term “landscape”, Egoz, Makhzoumi, and Pungetti stake the amorphous and multifaceted definitions of a landscape that lend to its power. They additionally touch upon themes that have come up through previous readings. The concept that land equals power relates to the politics that surround this notion of using landscape to promote social justice. One interesting idea that they cite is the temporal aspect of landscapes, as they can be subjected to a specific time and place. These concepts are similar to the ways in which we have understood technologies of the body. They state, “landscape therefore is simultaneously a product such as arable field, pasture land, settlement and garden, and the act of production embedding intent, design and action.” [2] Here we can understand how landscape can be both a subject and subjected by its surroundings, similarly to how this phenomenon occurs to our bodies. Furthermore, they are each tangible and intangible entities. Understanding this deep connection between bodies and landscape supports the argument that the right to landscape is tied to “freedom of expression”.</p>
+
+            <div id='map' style='width: 400px; height: 300px;'></div>
+            <script>
+                mapboxgl.accessToken = 'pk.eyJ1IjoiZW1tYXBhbGFjaW8iLCJhIjoiY2ttZXd1dTU0Mno1ZDMwdzB5cGQzNnp3aiJ9.WOO3zGxaP9t8WBufMwAUhQ';
+                var map = new mapboxgl.Map({
+                    container: 'map', // container ID
+                    style: 'mapbox://styles/emmapalacio/ckndsen9v3c6m17oqawzdaqxq', // style URL
+                    center: [-90.2075, 38.6415], // starting position [lng, lat]
+                    zoom: 14.5 // starting zoom
+                });
+                </script>
+            </div>
+
+            <button type="button" onClick="reloadThePage()">RECENTER</button>
+
+            <script>
+                function reloadThePage(){
+                    window.location.reload();
+                } 
+            </script>
+          
+                <p id="map-caption"><i>This map shows the various parks that are located within St. Louis along with the median household income of each neighborhood, which are distinguished by the blue circles. This data has been complied from the <a id="map.link" target="_blank" href="https://www.stlouis-mo.gov/archive/census-1990/index.shtml">St. Louis Open Data Website</a> and includes census information from 1990. As we have seen from "The Right to Landscape: An Introduction", public playgrounds provide "environments that forst opportunities for healthy psychological and physical development of a child". [1]. As designers it is important for us to consider the network of city infastructure in addition to its inhabitants and their desires. By contextualizing their spatial information with median income and demographic data, we can begin to understand the disparity of these resources to particular communities.</i></p>
+
+            <p>Understanding the relationship between landscape and social justice, along with Cordingley’s account on Can masdeu raises many challenges and questions within the architectural profession. A shift in education is also supported by these issues. More time should be put into learning about other ways of life, instead of the content being surrounded solely by buildings themselves. Architectural education should be a balance between learning about people and learning about buildings.</p>
+
+            <p id="name">Emma Palacio</p>
+
+
+            <p id="source">Shelley Egoz, Jala Makhzoumi, and Gloria Pungetti, “The Right to Landscape: An Introduction,” in The Right to Landscape: Contesting Landscape and Human Rights (New York; London: Routledge, 2016), pp. 1-22. (4).</p>
+
+            </body> 
+
+    </html>
