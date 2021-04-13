@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>The Right to the City | Kuo </title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+
+</head>
+
+<style>
+h1 {
+  color: black;
+  font-size: 50px;
+}
+sub {
+  color: white;
+  font-size: 20px;
+  background-color:black;
+}
+p {
+  color: black;
+  text-indent:10pt; 
+  font-size:20px;
+  line-height:22pt;
+}
+p1 {
+  color: white;
+  background-color:black;
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+  padding: 300px 620px 0px 50px;
+  background: white;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+  font-size:200%;
+  position: absolute;
+  bottom: 10px;
+}
+a:link {
+  color: black;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: white;
+  background-color: black;
+}
+a:active {
+  color: orange;
+}
+
+</style>
+
+<body>
+
+    <div style="padding: 0px 50px 0px 50px; float:right">
+    <a href="https://jcephas.github.io/socialjusticeandthecity/07-right-to-landscape/Cammy/index.html">↔</a>
+	</div>
+
+    <div id="one" class="slide one">
+    <a href="#two">↓</a>
+    	<h1>The Right to the City: <br><b>The People's Common</b></h1>
+		<sub><i>In response to Henri Lefebvre’s “The Right To The City” in </i>Writings on the City<i> and Stuart Cowan, Mark Lakeman, Jenny Leis, Daniel Lerch, and Jan C. Semenza’s “The City Repair Project”</i>T</sub>
+    </div>
+
+
+    <div id="two" class="slide two">
+    	<p>Lefebvre images the city as a collaborative bottom up-created space–both exceptionally abstract and concrete–that defines itself beyond the boundaries of circumstance, commodification, and capitalism.  In a similar vein, the authors of “The City Repair Project” discuss the Portland-based grassroots organization that transforms urban intersections into lively, creative places, emphasizing community involvement in urban design.</p>
+    	<p>In practice, <p1>architects are institutionalized and buffered</p1> from any real urban conditions in the same manner as the bourgeoisie.  Architecture, in actuality, <p1>passively creates</p1> structure formulated for specific function.  Both the architect and the inhabitant are <p1>“received but changed by practice.”</p1>  A particularly important note is the need for the proletariat to assume responsibility for the possibility of any just change in the city. PDOT even advised to the City Repair Project and “the neighbors that the only way to get the city to even consider such an untried idea was to just initiate it without permission.”  This suggests the <p1>extremity of the current urban condition.</p1></p>
+    	<p>Thus, the <p1>approach of "experimental utopia"</p1> should be adopted by spatial designers to allow for <p1>active “placemaking.”</p1> The limitations on architects begin their onset even prior to the education as dominant ideology is planted into each of us.  If the goal lies in environmental justice, architectural education must be similarly defeated and ideologically redefined by the people with the same <p1>chaordic dynamism</p1> as the City Repair Project.  Architects cannot self-impose as creator and, instead, must adapt into the roles of communicator, translator, and aide.  Currently, none of our urban landscape is held in common; it is owned and segregated.  As such, ownership–psychological and physical–must lie with community.  No one cannot live in a space that only allows them to exist.</p> 
+    </div>
+    <div id="five" class="slide five" style="float:bottom;padding-left:0px">
+  	   <script type="application/processing">
+        int cols,rows;
+        int scl = 20;
+        int w = 2800;
+        int h = 1000;
+
+        float flying = 0;
+        float[][] terrain; 
+
+        void setup() {
+          size(1500, 500, P3D);
+          cols = w / scl;
+          rows = h / scl;
+          terrain = new float[cols][rows];
+         }
+
+        void draw() {
+          flying -= .05+mouseY/500;
+          float yoff = flying;
+          for (int y = 0; y < rows; y++) {
+            float xoff = 0;
+            for (int x = 0; x < cols; x++) {
+              terrain[x][y] = map(noise(xoff, yoff), 0, 1, -100, 100);
+              xoff += 0.2;
+            }
+            yoff += 0.2;
+           }
+
+          background(255);
+          stroke(mouseX/300, mouseY-50, mouseX/200);
+          noFill();
+
+          translate(width/2, height/2);
+          rotateX(PI/(mouseY/100));
+          translate(-w/2,-h/2);
+          for (int y = 0; y < rows-1; y++) {
+            beginShape(TRIANGLE_STRIP);
+            for (int x = 0; x < cols; x++) {
+              vertex(x*scl, y*scl, terrain[x][y]);
+              vertex(x*scl, (y+1)*scl, terrain[x][y+1]);
+              //rect(x*scl, y*scl, scl, scl);
+          }
+          endShape(TRIANGLE_STRIP);
+        }
+
+        }
+        </script>
+        <!--<canvas><!--The Processing code will render here.--> </canvas>
+    </div>
+
+</body>
+
+</html>
