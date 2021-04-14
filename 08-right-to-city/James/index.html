@@ -41,8 +41,8 @@
 	}
 
 	.third {
-		background-color: black;
-		height: 850px;
+		background-color:#696969;
+		height: 900px;
 	}
 
 	.fourth {
@@ -50,7 +50,7 @@
 		height: 750px;
 	}
 
-	h1{font-family: "Avantgarde", sans-serif;
+	h1{font-family: "Stencil Std", fantasy;
 	  color: white;
       text-align:center;
       float: initial;
@@ -58,7 +58,7 @@
       font-size: 3em;
   }
 
-    h2{font-family: "Avantgarde", sans-serif;
+    h2{font-family: "Stencil Std", fantasy;
     font-size: 2em;
 	  color: white;
       text-align:center;     
@@ -67,7 +67,7 @@
     }
 
 
-    h3{font-family: "Avantgarde", sans-serif;
+    h3{font-family: "Stencil Std", Sans-serif;
     font-size: 1.5em;
 	  color: white;
       text-align:center;     
@@ -201,11 +201,11 @@ max-width: 200px;
          void setup() {
   
   
-         size(1200,600);
+         size(2000,600);
          background(196, 195, 190);
          
          pushMatrix();
-         translate(600, 0);
+         translate(1000, 0);
          
          noCursor();
          img = loadImage("2.jpg");
@@ -216,7 +216,7 @@ max-width: 200px;
       void draw(){
          if(mousePressed){
        
-         image(img, 0, 0,width,height); 
+         image(img, 450, 0,1000,600); 
 
 
 
@@ -225,15 +225,15 @@ max-width: 200px;
         
          fill(105, 105, 105);
          noStroke();
-         rect(0,0,1200,600);
+         rect(0,0,2000,600);
          
          fill(145, 134, 61,50);
          noStroke();
-         ellipse(1200-mouseX,300,mouseY,mouseY);
+         ellipse(2000-mouseX,300,mouseY,mouseY);
          
          fill(0,50);
          noStroke();
-         ellipse(mouseX,300,mouseX/2,mouseX/2);
+         ellipse(mouseX,300,50+mouseX/3,50+mouseX/3);
     
          
       }
@@ -247,7 +247,8 @@ max-width: 200px;
   <br>
 		<center><a href="#section01">Back to top</a></center>
 		
-
+	<br>
+    <br>	
 
 		
 	</div>
@@ -324,7 +325,8 @@ max-width: 200px;
       </center>
 	</div>
 
-	<div style="margin-left: 50px;" >
+	<div style="margin-left: 50px; " >
+		<br>
 		Right to The City - <i>Henri Lefebvre</i>
 		<br> 
 		The City Repair Project - <i>Stuart Cowan, Mark Lakeman, Jenny Leis, Daniel Lerch, Jan C. Semenza</i>
