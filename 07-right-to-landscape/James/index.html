@@ -11,6 +11,10 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>  
 
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
 </head>
 
 <style>
@@ -20,10 +24,10 @@
 	}
 
 	a:hover {
-		color: #ffffff;
+		color: #ba9b3f;
 	}
 
-	a{font-family:"Stencil Std", Sans-serif; }
+	a{font-family:"Stencil Std", Sans-serif; color:#9c9c9c;}
 	
 	.first {
 		background-color: #4a4a4a;
@@ -38,6 +42,11 @@
 	.third {
 		background-color: black;
 		height: 850px;
+	}
+
+	.fourth {
+		background-color: #595959;
+		height: 750px;
 	}
 
 	h1{font-family: "Stencil Std", fantasy;
@@ -76,6 +85,48 @@
       color:white;  
       }
 
+      .fly {
+	  background-color: #b8b8b8; 
+	  border: none;
+	  color: white;
+	  padding: 8px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-family: "Stencil Std", fantasy;
+	  font-size: 16px;
+	  margin: 20px 2px;
+	  transition-duration: 0.4s;
+	  cursor: pointer;
+	  border-radius: 8px;
+	  -webkit-transition-duration: 0.4s; /* Safari */
+	  transition-duration: 0.4s;
+		}
+
+	.fly {
+	  background-color: #595959; 
+	  color: white; 
+	  border: 2px solid #c7c7c7;
+	}
+
+	.fly:hover {
+	  background-color: #c7c7c7;
+	  color: grey;
+	  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19)
+	}
+
+	#marker {
+	background-image: url('Can Masdeu.jpg');
+	background-size: cover;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	cursor: pointer;
+	}
+ 
+.mapboxgl-popup {
+max-width: 200px;
+
 
 </style>
 
@@ -96,13 +147,15 @@
 
 		<h2>Landscapes are more than Land</h2>
 		<center>
-		<p>Both readings are related to the human rights on their physical surroundings which can be either built structures or landscapes. The Right to Landscape written by Shelly Egoz, Jala Makhzoumi, and Gloria Pungetti focuses a lot on the macroscopic view on the subject of the landscape, especially to some extended aspects. The Can Masdeu written by Luke Cordingley, however, narrows down the focus to a specific local community with distinctive buildings and structures.</p>
+		<p>
+		Both readings are related to the human rights on their physical surroundings which can be either built structures or landscapes. The Right to Landscape written by Shelly Egoz, Jala Makhzoumi, and Gloria Pungetti focuses a lot on the macroscopic view on the subject of the landscape, especially to some extended aspects. The Can Masdeu written by Luke Cordingley, however, narrows down the focus to a specific local community with distinctive buildings and structures.
+		</p>
 
 		<p>
 		In the reading of <i>the Right to Landscape</i>, the definition of the landscape had changed over time from its primitive meaning to something more complicated and important to the people living within it:	
 		</p>
 
-		<i style="font-size: 1.5em;"><p>
+		<i style="font-size: 1.5em;"><p style="color: #ba9b3f">
 		“This version leads to contemporary tensions stemming from ideological convictions on private property rights and the supremacy of the economic market value of the land.”	
 		</p></i>
 
@@ -110,7 +163,8 @@
 		The evolving definition of the landscape reflected changing reality about our landscapes that can be easily affected by various factors from conventional subjective measurements. Similar to one of the previous readings in the semester regarding the flooding issues in New Orleans, the importance of landscape is still frequently overlooked by the common residents living within it, which leads to the fact that things get worse from time to time.	
 		</p>
 
-		<p>The example of the Can Masdeu shows the strength of people even started with a short amount, but the influence grows overtimes, and it drags more people into it until the whole community stood as one to make some solid statements to their needs.
+		<p>
+		The example of the Can Masdeu shows the strength of people even started with a short amount, but the influence grows overtimes, and it drags more people into it until the whole community stood as one to make some solid statements to their needs.
 		It is most likely impossible to make statements on all the issues we already have because there are simply too many of them. However, by educating ourselves into such a perspective, we, as designers, have the opportunity to reshape and reconstruct better landscapes to the corresponding communities with their unique needs.
 		</p>
 
@@ -191,15 +245,82 @@
 		
 	</div>
 
-	<div id="section04" class="first">
-		<hr>
-		<div style="margin-left: 50px;">
-		<p>The Right to Landscape - <i>Shelly Egoz, Jala Makhzoumi, and Gloria Pungetti </i> </p>
-		<p>Can Masdeu - <i>Luke Cordingley </i> </p>
-		
-		</div>
-		<center><a href="section01">Back to Top</a></center>
+	<div id="section04" class="fourth">
+		<h2>Map</h2>
+		<center>
+		<div id='map' style='width: 1200px; height: 550px;margin-top:25px; '></div>
+              <button id="fly" class="fly">Locate</button>
+                <script> 
+                 mapboxgl.accessToken = 'pk.eyJ1IjoiemhhbmdkZWgiLCJhIjoiY2ttZXd4bWZ0MGt2aDJvcHEyazN6NzB3aCJ9.WLKMf-78k0CwwtUKiXo55g';
+                          var start = [2.157, 41.446];
+                          var end = [2.157, 41.446];
+                          var monument = [2.157, 41.446];
+                          var map = new mapboxgl.Map({
+                          container: 'map',
+                          style: 'mapbox://styles/zhangdeh/ckmez0l3l0m8k17pfdylockqq',
+                          center: start,
+                          zoom: .7
+                          });
+                           
+                          var isAtStart = true;
+                           
+                          document.getElementById('fly').addEventListener('click', function () {
+
+                          var target = isAtStart ? end : start;
+                           
+
+                          isAtStart = !isAtStart;
+                           
+                          map.flyTo({
+
+                          center: target,
+                          zoom: 17,
+                          bearing: 0,
+                           
+
+                          speed: 3,
+                          curve: .6,
+
+                          easing: function (t) {
+                          return t;
+                          },
+                           
+
+                          essential: true
+                          });
+                          });               
+
+                          var popup = new mapboxgl.Popup({ offset: 25 }).setText(
+							'Can Masdeu is a squatted social centre, residence and community garden in the Collserola Park on the outskirts of Barcelona. In 2001, an international group of activists organizing a conference to raise awareness around climate change squatted the former leper hospital, which had been abandoned for some 53 years.'
+							);
+							 
+							// create DOM element for the marker
+							var el = document.createElement('div');
+							el.id = 'marker';
+							 
+							// create the marker
+							new mapboxgl.Marker(el)
+							.setLngLat(monument)
+							.setPopup(popup) // sets a popup on this marker
+							.addTo(map);
+                </script> 
+                <br>
+
+                
+          </div>
+          
+      </center>
 	</div>
+
+	<div style="margin-left: 50px;" >
+		The Right to Landscape - <i>Shelly Egoz, Jala Makhzoumi, and Gloria Pungetti </i>
+		<br> 
+		Can Masdeu - <i>Luke Cordingley </i>
+		
+		
+	</div>
+		<center><a href="#section01">Back to Top</a></center>
+		<br>
 
 </body>
 
