@@ -136,6 +136,9 @@
 	cursor: pointer;
 	}
  
+
+
+
 .mapboxgl-popup {
 max-width: 200px;
 
@@ -260,6 +263,37 @@ max-width: 200px;
               <button id="fly" class="fly">Locate</button>
                 <script> 
                  mapboxgl.accessToken = 'pk.eyJ1IjoiemhhbmdkZWgiLCJhIjoiY2ttZXd4bWZ0MGt2aDJvcHEyazN6NzB3aCJ9.WLKMf-78k0CwwtUKiXo55g';
+
+
+                 			var geojson = {
+					        'type': 'FeatureCollection',
+					        'features': [
+					          {
+					            'type': 'Feature',
+					            'geometry': {
+					              'type': 'Point',
+					              'coordinates': [-77.032, 38.913]
+					            },
+					            'properties': {
+					              'title': 'Mapbox',
+					              'description': 'Washington, D.C.'
+					            }
+					          },
+					          {
+					            'type': 'Feature',
+					            'geometry': {
+					              'type': 'Point',
+					              'coordinates': [-122.414, 37.776]
+					            },
+					            'properties': {
+					              'title': 'Mapbox',
+					              'description': 'San Francisco, California'
+					            }
+					          }
+					        ]
+					      };
+
+
                           var start = [-122.629, 45.512];
                           var end = [-122.629, 45.512];
                           var monument = [-122.651, 45.505];
@@ -267,7 +301,7 @@ max-width: 200px;
                           
                           var map = new mapboxgl.Map({
                           container: 'map',
-                          style: 'mapbox://styles/zhangdeh/ckmez0l3l0m8k17pfdylockqq',
+                          style: 'mapbox://styles/zhangdeh/ckni1ks1006wm17o4mnuqkv6r',
                           center: start,
                           zoom: .7
                           });
@@ -315,9 +349,6 @@ max-width: 200px;
 							.addTo(map);
 
 							
-
-
-
 
 
                 </script> 
