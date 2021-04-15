@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>The Right to Landscape: An Interactive Analysis</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<!--bootstrap code enabling-->
+
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+	<!--mapbox code enabling-->
+</head>
+
+<style>
+	p:hover {
+		background-color:#f29191;
+	}
+
+	h1 {
+		font: roboto;
+		font-weight: bolder;
+		color: white;
+		justify-content: center;
+	}
+
+	h2 {
+		font:roboto;
+		font-weight:bold;
+		color:white;
+		padding: 0px 0px 0px 150px;
+	}
+
+	h3 {
+		font: roboto;
+		font-weight: lighter;
+		color: white;
+		justify-content: center;
+		padding-bottom: 25px;
+	}
+
+	.preface {
+		font:roboto thin;
+		font-weight:lighter;
+		color:white;
+		font-size:10px;
+	}
+
+	.credits {
+		font:roboto thin;
+		font-weight:lighter;
+		color:black;
+		font-size:12px;
+		padding-top:25px;
+		padding-left::50px;
+	}
+
+	.body1 {
+		font:roboto thin;
+		font-weight:lighter;
+		color:white;
+		font-size:14px;
+		padding-top:25px;
+		padding-left:50px;
+		padding-right:50px;
+	}
+
+	.body2 {
+		font:roboto thin;
+		font-weight:lighter;
+		color:white;
+		font-size:14px;
+		padding-top:15px;
+		padding-right:50px;
+	}
+
+	.first {
+		background-color:#3D33A3;
+		height:200px;
+	}
+
+	.second {
+		background-color:#8077ED;
+		height:200px;
+	}
+
+	.third {
+		background-color:black;
+		height:700px;
+	}
+
+	.fourth {
+		background-color:#A199FF;
+		height:600px;
+	}
+
+	.sixth {
+		background-color:#C4C7FE;
+		height:150px;
+	}
+</style>
+
+<body>
+	<div id="section01" class="containerfluid first">
+		<div class="row">
+			<div class="col-lg-4">
+			</div>
+
+			<div class="col-lg-4">
+				<h1> the right to landscape: </h1>
+				<h3> a responsibility of designers to society </h3>
+				<div class="preface">
+					<p> Responding to Shelly Egoz, Jala Makhazoumi, and Gloria Pungetti's introduction to <i>The Right to Landscape</i> and Luke Cordingley's article <i> Can Masdeu: Rise of the Rurbano Revolution</i>
+				</div>
+
+			<div class="col-lg-4">
+			</div>
+		</div>
+	</div>
+
+	<div id="section02" class="containerfluid second">
+		<div class="row">
+			<div class="col-lg-12">
+					<div class="body1">
+					<p> In their introduction to <i> The Right to Landscape</i>, Egoz, Makhzoumi, and Pungetti outline a framework for expanding the definition of the rights of access to landscape to include not only physical notions of accessibility but spiritual and cultural ones. They argue that landscape exists at the intersection between place and people, and that people utilize landscape as a tool to construct their identities. Creation of identity is, in my opinion, an activity that is intrinsically tied to human rights. The authors define human rights in this context as both those that support existance <b>and</b> those that support dignity. It is clear, especially through our study of the struggles of those denied one or both of these basic human rights that we have witnessed in life and studied in class, that access to the spaces which people utilize as a framework for creating these identities is essential. It becomes problematic, however, when the conflict between use and exchange value limits or denies this access. We have seen this conflict before, particularly in the activism of ARCH in Harlem in regards to the government office building on 125th street. The second material of this week served as an additional first-hand account of this conflict, describing the occupation of an abandoned building on the outskirts of Barcelona by those who actually seeked to <b>use</b> it: to construct new identities around, and to allow the community that surrounded it to do the same, all while serving as a utopian expression of a life beyond capitalism in the same vein as Arcosanti, the 125th street occupation, and the work of the Young Lords in Chicago.</p>
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+			</div>
+
+			<div class="col-lg-4">
+			</div>
+		</div>
+	</div>
+
+	<div id="section03" class="containerfluid third">
+		<div class="row">
+			<div class="col-lg-12">
+				<img src="canmasdeu.jpg" class="image" height="700px" width="1500px">
+			</div>
+		</div>
+	</div>
+
+	<div id="section04" class="containerfluid fourth">
+		<div class="row">
+			<div class="col-lg-4">
+				<div id="map" style="width:900px; height:600px;">
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+			</div>
+
+			<div class="col-lg-4">
+				<div class="body2">
+					<p>If the right to landscape is an unalienable component of human rights, and as urban designers we take it as our mission to provide frameworks for people to live healthy, happy, and safe lives over, what is the role and responsibility of the designer in conflicts such as the one detailed by Luke Cordingley at Can Masdeu in the early 2000's? Masdeu, pictured above, was left to moulder by the building owners, who cared more about the <b>value</b> of the land than the <b>use</b> of the land. Through partnership, they allied themselves specifically with the community. <i>"Our neighbors no longer participate in our project, rather we participate in theirs"</i> In this case, the unnamed planners that the building owners worked with to try to create new, financially focused schemes for the property were complicit in trying to <b>deny</b> the rights to both the landscape and identities that that "okupas" and the surrounding community cultivated together. Thinking more locally, Boston is a city with an increcibly uneven distribution of what is thought of as landscape. As the density of persons increases towards the water, the amount of available space that can be utilized in these processes to create identity and culture decreases. Moreover, the physical access to these spaces through ramping for those with functional limitations or for those who seek to move equipment to enact guerrilla uses similar to Can Masdeu are not evenly distributed across these space. As designers, our responsibility is twofold: firstly, we should, instead of aiming to create culture and identity create frameworks for people to utilize space to do it themselves. Secondly, if the process of landscape-identity creation is occurring, we should not step in on behalf of buisness intrests to remove the right to landscape that is being cultivated.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="section06" class="containerfluid sixth">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="credits">
+					<p> <b>Image credit:</b> https://upload.wikimedia.org/wikipedia/commons/5/54/Can_Masdeu_-_Centro_Social_Ocupado_con_huertos.JPG </p>
+
+					<p> <b>Map data source:</b> https://data.boston.gov/</p>
+
+					<a href="aboutme.html" style="font-family: roboto;color:black;font-size:12px;font-weight:bold">Page made by Matt Miller</a>
+
+				</div>
+			</div>
+
+			<div class="col-lg-6">
+			</div>
+		</div>
+	</div>
+
+	<script>
+						mapboxgl.accessToken = 'pk.eyJ1IjoibXJtaWxsZXIiLCJhIjoiY2ttZXdvNml4MDM2dzJ3azFoOGVsc3Y0bSJ9.iCp0TVLRC_i77iQ8p9gaLg';
+							var map = new mapboxgl.Map({
+							    container: 'map', // container ID
+							    style: 'mapbox://styles/mrmiller/ckn9g033i060r17r6ihk8su5v', // style URL
+							    center: [-71.15, 42.28], // starting position [lng, lat]
+							    zoom: 13 // starting zoom
+							});
+	</script>
+</body>
+
+</html>
