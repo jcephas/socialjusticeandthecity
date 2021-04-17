@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Empowerment through Architecture</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+
+    <style>
+        body {
+            background-color: black;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: monospace;
+            color: #17528a;
+            padding-top: 2%;
+            font-size: 24pt;
+        }
+
+        h3 {
+            text-align: center;
+            font-family: monospace;
+            font-size: 13pt;
+            font-style: italic;
+        }
+
+        #links {
+            text-align: center;
+            padding-top: 3px;
+            padding-bottom: 1%;
+            font-family: monospace;
+            padding-left: 2%;
+            letter-spacing: 1px;
+            border-top: 2px solid rgb(23, 138, 115);
+            margin-right: 20%;
+            margin-left: 20%;
+            font-size: 10pt;
+        }
+
+        #links2 {
+            text-align: center;
+            padding-top: 3px;
+            padding-bottom: 2%;
+            font-family: monospace;
+            padding-left: 2%;
+        }
+
+        a:link, a:visited {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            font-style: italic;
+            color: rgb(255, 99, 71);
+        }
+
+        #intro {
+            text-align: center;
+            font-family: monospace;
+            padding-left: 30%;
+            padding-right: 30%;
+            padding-bottom: 2%;
+            line-height: 16pt;
+            font-style: italic;
+            text-align: justify;
+        }
+
+        #vitruvian, #warrior, #williams, #comparison {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 16%;
+        }
+
+        #caption {
+            text-align: center;
+            font-family: monospace;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: monospace;
+            border-top: 2px solid rgb(23, 138, 115);
+            margin-right: 20%;
+            margin-left: 20%;
+            padding-top: 2%;
+        }
+
+    .navbar {
+        width: 75%;
+        background-color: whitesmoke;
+        overflow: hidden;
+        margin-left: 13%;
+        margin-right: 13%;
+    }
+
+    .navbar a {
+        float: left;
+        padding: 72px;
+        color: rgb(23, 138, 115);
+        text-decoration: none;
+        font-family: monospace;
+        font-size: 14px;
+        width: 33.33%;
+        text-align: center;
+    }
+
+    .navbar a:hover {
+        background-color: rgb(255, 99, 71);
+        color: whitesmoke;
+    }
+
+    .navbar a {
+        float: none;
+        display: inline;
+        width: 100%;
+        text-align: left;
+    }
+
+    #text {
+            padding-left: 30%;
+            padding-right: 30%;
+            font-size: 12pt;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            line-height: 24pt;
+            text-align: justify;
+            color: black;
+            }
+
+    #citation {
+        font-size: 9pt;
+        line-height: 12pt;
+        border-top: 2px solid rgb(23, 138, 115);
+        padding-top: 20px;
+        text-align: justify;
+        padding-left: 27%;
+        padding-right: 27%;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    #interact{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 3%;
+    }
+
+    button {
+        background-color: whitesmoke;
+        border: none;
+        color: rgb(255, 99, 71);
+        padding: 12px 18px;
+        text-align: center;
+        font-size: 11px;
+        margin: 3px 2px;
+        opacity: 0.6;
+        transition: 0.3s;
+        display: inline-block;
+        text-decoration: none;
+        cursor: pointer;
+        margin-left: 47%;
+        margin-top: 3%;
+    }
+
+    button:hover {opacity: 1};
+
+        </style>
+    </head>
+    
+    <h1 id="title" style="display:none">Empowerment Through Architecture</h1>
+    <body>
+
+    <div id="showbar" class="navbar" style="display:none">
+        <a href="arch-empowerment.html#section1">FREEDOM OF EXPRESSION</a>
+        <a href="arch-empowerment.html#section2">ARCHITECTURAL EDUCATION</a>
+        <a href="arch-empowerment.html">INTERACT</a>
+    </div>
+
+        <script type="application/processing">
+        
+            PFont f;
+							f = createFont("Cambria",16,true);
+						
+						void setup() {
+                size(800, 600);
+                noStroke();
+								textFont(f);
+            }
+            
+            void draw() {
+                float x = mouseX;
+                float y = mouseY;
+                float ix = width - mouseX; 
+                float iy = height - mouseY;
+                background(0);
+                    fill(237,235,218, 200);
+                ellipse(x, height/2, y, y);
+                    fill(10,180);
+                ellipse(ix, height/2, iy, iy);
+                textSize(18);
+                    fill(0);  
+                    text("IN WHAT SPACES", 30, 400);
+							textSize(18);
+                    fill(0);  
+                    text("DO YOU FEEL", 30, 420);
+							textSize(18);
+                    fill(0);  
+                    text("FREE?", 30, 440);
+                textSize(18);
+                    fill(0);  
+                    text("ARE THERE SPACES", 510, 200);
+							textSize(18);
+                    fill(0);  
+                    text("WHERE YOU FEEL", 510, 220);
+							textSize(18);
+                    fill(0);  
+                    text("CONFINED?", 510, 240);
+                textSize(12.5);
+                    String s = ("SPACE AS A POLITICAL AGENT");
+                    fill(214,78,47);
+                    text(s, 325,375,120,100);
+                rect(390,290,20,20);
+                    fill(255);
+            
+            if (mousePressed) {
+                rect(0, 0, 800, 600);
+                    fill(255);
+                    stroke(214,78,47);
+                textSize(32);
+                    fill(214,78,47);
+                    text("MODERNISM", 400,400);
+                ellipse(40,40,600,600);
+                    fill(214,78,47);
+                textSize(18);
+                    fill(10);
+                    text("POLITICS +", 400,355);
+                ellipse(225,450,220,220);
+                    fill(10);
+                textSize(14);
+                    fill(255);
+                    text("RIGHTS TO PUBLIC",163,445);
+                textSize(14);
+                    fill(255);
+                    text("SPACE & ACCESSIBILITY",152,464);
+                textSize(18);
+                    fill(120);
+                    text("AESTHETICS =", 400,372);
+                ellipse(600,200,210,210);
+                    fill(120);
+                textSize(14);
+                    fill(255);
+                    text("PERCEPTION INDICATES",520,200);
+                textSize(14);
+                    fill(255);
+                    text("STATUS", 575,220);
+                textSize(20);
+                    fill(255);
+                    text("INHERENTLY EXCLUSIVE", 30,160);
+                }               
+            }
+        
+        </script>
+        <canvas id="interact"></canvas>
+
+    <div id="button">
+        <button type="button" onclick="myFunction()">EXPLORE</button>
+    </div>
+
+        <script>
+            function myFunction() {
+            document.body.style.backgroundColor = "whitesmoke";
+            document.getElementById('section1').style.display='block';
+            document.getElementById('section2').style.display='block';
+            document.getElementById('showbar').style.display='block';
+            document.getElementById('links').style.display='block';
+            document.getElementById('title').style.display='block';
+        }
+        </script>
+
+    <div id="section1" style="display:none">
+        <h2>Freedom of Expression</h2>
+    </div>
+
+    <div id="section2" style="display:none">
+    <h2>The Disciplinary Alibi & Architectural Education</h2>
+        <p id="text">Understanding the relationship between landscape and social justice, along with Cordingley’s account on Can masdeu raises many challenges and questions within the architectural profession. A shift in education is also supported by these issues. More time should be put into learning about other ways of life, instead of the content being surrounded solely by buildings themselves. Architectural education should be a balance between learning about people and learning about buildings.</p>
+    </div>
+</body>
+
+<nav id="links" style="display:none">
+    <p><a href="index.html">HOME</a></p>
+    <p><a href="about.html">ABOUT</a></p>
+    <p><a href="body-and-identity.html">THE BODY, IDENTITY & LANDSCAPE</a></p>
+    <p><a href="violence-of-modernism.html">THE VIOLENCE OF MODERNISM</a></p>
+    <p><a href="sources.html">SOURCES</a></p>
+</nav>
+
+    </body>
