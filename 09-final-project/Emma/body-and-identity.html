@@ -3,270 +3,335 @@
     <head>
         <title>The Body, Identity & Landscape</title>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
 
-    <style>
-        body {
-            background-color: rgb(23, 82, 138);
-        }
-
-        h1 {
-            text-align: center;
-            font-family: monospace;
-            color: rgb(23, 82, 138);
-            padding-top: 2%;
-            font-size: 24pt;
-        }
-
-        h3 {
-            text-align: center;
-            font-family: monospace;
-            font-size: 13pt;
-            font-style: italic;
-        }
-
-        #links {
-            text-align: center;
-            padding-top: 3px;
-            padding-bottom: 1%;
-            font-family: monospace;
-            padding-left: 2%;
-            letter-spacing: 1px;
-            border-top: 2px solid rgb(23, 138, 115);
-            margin-right: 20%;
-            margin-left: 20%;
-            font-size: 10pt;
-        }
-
-        #links2 {
-            text-align: center;
-            padding-top: 3px;
-            padding-bottom: 2%;
-            font-family: monospace;
-            padding-left: 2%;
-        }
-
-        a:link, a:visited {
-            text-decoration: none;
-            color: black;
-        }
-
-        a:hover {
-            font-style: italic;
-            color: rgb(255, 99, 71);
-        }
-
-        #intro {
-            text-align: center;
-            font-family: monospace;
-            padding-left: 30%;
-            padding-right: 30%;
-            padding-bottom: 2%;
-            line-height: 16pt;
-            font-style: italic;
-            text-align: justify;
-        }
-
-        #vitruvian, #warrior, #williams, #comparison {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 16%;
-        }
-
-        #caption {
-            text-align: center;
-            font-family: monospace;
-        }
-
-        h2 {
-            text-align: center;
-            font-family: monospace;
-            border-top: 2px solid rgb(23, 138, 115);
-            margin-right: 20%;
-            margin-left: 20%;
-            padding-top: 2%;
-        }
-
-    .navbar {
-        width: 75%;
-        background-color: whitesmoke;
-        overflow: hidden;
-        margin-left: 13%;
-        margin-right: 13%;
-    }
-
-    .navbar a {
-        float: left;
-        padding: 72px;
-        color: rgb(23, 138, 115);
-        text-decoration: none;
-        font-family: monospace;
-        font-size: 14px;
-        width: 33.33%;
-        text-align: center;
-    }
-
-    .navbar a:hover {
-        background-color: rgb(255, 99, 71);
-        color: whitesmoke;
-    }
-
-    .navbar a {
-        float: none;
-        display: inline;
-        width: 100%;
-        text-align: left;
-    }
-
-    #text {
-            padding-left: 30%;
-            padding-right: 30%;
-            font-size: 12pt;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            line-height: 24pt;
-            text-align: justify;
-            color: black;
+        <style>
+            body {
+                background-color: whitesmoke;
             }
 
-    #citation {
-        font-size: 9pt;
-        line-height: 12pt;
-        border-top: 2px solid rgb(23, 138, 115);
-        padding-top: 20px;
-        text-align: justify;
-        padding-left: 27%;
-        padding-right: 27%;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
+            h1 {
+                text-align: center;
+                font-family: monospace;
+                color: rgb(23, 82, 138);
+                padding-top: 2%;
+                font-size: 24pt;
+            }
 
-    #interact{
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-        padding-top: 3%;
-    }
+            h3 {
+                text-align: center;
+                font-family: monospace;
+                font-size: 13pt;
+                font-style: italic;
+            }
 
-    button {
-        background-color: whitesmoke;
-        border: none;
-        color: #17528a;
-        padding: 12px 18px;
-        text-align: center;
-        font-size: 11px;
-        margin: 3px 2px;
-        opacity: 0.6;
-        transition: 0.3s;
-        display: inline-block;
-        text-decoration: none;
-        cursor: pointer;
-        margin-left: 47%;
-        margin-top: 3%;
-    }
+            #links {
+                text-align: center;
+                padding-top: 3px;
+                padding-bottom: 1%;
+                font-family: monospace;
+                letter-spacing: 1px;
+                border-top: 2px solid rgb(23, 138, 115);
+                margin-right: 20%;
+                margin-left: 20%;
+                font-size: 10pt;
+            }
 
-    button:hover {opacity: 1};
+            #links2 {
+                text-align: center;
+                padding-top: 3px;
+                padding-bottom: 2%;
+                font-family: monospace;
+                padding-left: 2%;
+            }
 
-    </style>
+            a:link, a:visited {
+                text-decoration: none;
+                color: black;
+            }
+
+            a:hover {
+                font-style: italic;
+                color: rgb(255, 99, 71);
+            }
+
+            #intro {
+                text-align: center;
+                font-family: monospace;
+                padding-left: 30%;
+                padding-right: 30%;
+                padding-bottom: 2%;
+                line-height: 16pt;
+                font-style: italic;
+                text-align: justify;
+            }
+
+            #vitruvian, #warrior, #williams, #comparison {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 16%;
+            }
+
+            #caption {
+                text-align: center;
+                font-family: monospace;
+            }
+
+            h2 {
+                text-align: center;
+                font-family: monospace;
+                border-top: 2px solid rgb(23, 138, 115);
+                margin-right: 20%;
+                margin-left: 20%;
+                padding-top: 2%;
+            }
+
+        .navbar {
+            width: 75%;
+            background-color: whitesmoke;
+            overflow: hidden;
+            margin-left: 18%;
+            margin-right: 13%;
+        }
+
+        .navbar a {
+            float: left;
+            padding: 72px;
+            color: rgb(23, 138, 115);
+            text-decoration: none;
+            font-family: monospace;
+            font-size: 14px;
+            width: 33.33%;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: rgb(255, 99, 71);
+            color: whitesmoke;
+        }
+
+        .navbar a {
+            float: none;
+            display: inline;
+            width: 100%;
+            text-align: left;
+        }
+
+        #text {
+                padding-left: 30%;
+                padding-right: 30%;
+                font-size: 12pt;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                line-height: 24pt;
+                text-align: justify;
+                color: black;
+                }
+
+        #citation {
+            font-size: 9pt;
+            line-height: 12pt;
+            border-top: 2px solid rgb(23, 138, 115);
+            padding-top: 20px;
+            text-align: justify;
+            padding-left: 27%;
+            padding-right: 27%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        #interact{
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            padding-top: 1%;
+        }
+        </style>
     </head>
 
     <h1>The Body, Identity & Landscape</h1>
     <body>
 
-        <div id="showbar" class="navbar" style="display:none">
+        <div id="showbar" class="navbar">
             <a href="body-and-identity.html#section1">THE CONSTRUCTION OF ACTIONS</a>
             <a href="body-and-identity.html#section2">EXPLOITATION OF THE BODY</a>
             <a href="body-and-identity.html#section3">THE BODY & LANDSCAPE</a>
-            <a href="body-and-identity.html">INTERACT</a>
+            <a href="body-interact.html">INTERACT</a>
         </div>
 
-<div id="processing">
-<script type="application/processing">
+        <div id="processing">
 
-    PFont f;
-    f = createFont("Cambria",16,true);
+        <script type="application/processing">
 
-    void setup() {
-        size(1000, 300);
-        noStroke();
-        fill(#17528a);
-        textFont(f);
-    }
+            PFont f;
+            f = createFont("Cambria",16,true);
 
-    void draw() {
-        background(#f5f5f5);
-        if ((mouseX <= 500) && (mouseY <= 150)) {
-            rect(0, 0, 500, 150);
-            rect(0, 150, 1000, 150);
-        textSize(17);
-            fill(#18548c);
-            text("HOW DOES SOCIETY CONTINUE TO GOVERN OUR BODIES?", 528, 80);
-        } else {
-        rect(500, 150, 500, 150);
-                        rect(0, 0, 1000, 150);
-        textSize(17);
-            fill(#18548c);
-            text("WHO IS MOST AFFECTED?", 150, 230);
-    }
-    }
-</script>
-<canvas id="interact"></canvas>
+            void setup() {
+                size(1000, 300);
+                noStroke();
+                fill(#f5f5f5);
+                textFont(f);
+            }
 
-<div id="button">
-    <button type="button" onclick="myFunction()">EXPLORE</button>
-</div>
+            void draw() {
+                background(#18548c);
+                if ((mouseX <= 500) && (mouseY <= 150)) {
+                    rect(0, 0, 500, 150);
+                    rect(0, 150, 1000, 150);
+                    textSize(17);
+                        fill(#f5f5f5);
+                        text("HOW DOES SOCIETY CONTINUE TO GOVERN OUR BODIES?", 528, 80);
+                } else {
+                    rect(500, 150, 500, 150);
+                    rect(0, 0, 1000, 150);
+                    textSize(17);
+                        fill(#f5f5f5);
+                        text("WHO IS MOST AFFECTED?", 150, 230);
+            }
+            }
+        </script>
+        <canvas id="interact"></canvas>
+        </div>
 
-    <script>
-        function myFunction() {
-        document.body.style.backgroundColor = "whitesmoke";
-        document.getElementById('section1').style.display='block';
-        document.getElementById('section2').style.display='block';
-        document.getElementById('section3').style.display='block';
-        document.getElementById('showbar').style.display='block';
-        document.getElementById('links').style.display='block';
-        // document.getElementById("processing").style.visibility = "hidden";
-    }
-    </script>
-</div>
+        <div id="section1">
+            <h2>The Construction of Actions</h2>
 
-<div id="section1" style="display:none">
-    <h2>The Construction of Actions</h2>
+            <div id="group1">
+                <p id="vitruvian"><img src="./images/vitruvian.JPG" width="300" alt="Vitruvian Man"></p>
+                <p id="caption">Vitruvian Man - Leonardo Da Vinci</p>
+                <p id="warrior"><img src="./images/warrior.JPG" width="300" alt="Nuer Warrior"></p>
+                <p id="caption">Nuer Warrior - South Sudan</p>
+            </div>
 
-    <div id="group1">
-        <p id="vitruvian"><img src="./images/vitruvian.JPG" width="300" alt="Vitruvian Man"></p>
-        <p id="caption">Vitruvian Man - Leonardo Da Vinci</p>
-        <p id="warrior"><img src="./images/warrior.JPG" width="300" alt="Nuer Warrior"></p>
-        <p id="caption">Nuer Warrior - South Sudan</p>
-    </div>
-
-    <p id="text">The definition of our bodies often lies within several oppositions - “feminine” vs. “masculine”, biological vs. social, or perceived vs. accepted. In extension the ways in which we act in space can also be examined through contradictions - society creates norms for our actions, yet these constraints limit us. As Bordeau states, our actions can be inherited, observed or learned, which further suggests their nature as a construct. However, this codependency that the definition of our bodies relies on is the pivot point in which we find the desire to freely express our identity. Here Da Vinci is cited as a contrast to an example that Bordeau includes. The Vitruvian Man was intended to explore the ideal proportions of a man. Through this intention one understands the social and biological characteristics that have been considered as a standard. In “Techniques of the Body”, Bordeau offers several examples for ways in which our actions have evolved and developed through time and space. In addition to describing actions he discusses how people naturally take up space, which are additionally defined through constructs. The second image above depicts one example he cites a Nuer Warrior from South Sudan in a natural resting position.   
-    </p>
-</div>
+            <p id="text">The definition of our bodies often lies within several oppositions - “feminine” vs. “masculine”, biological vs. social, or perceived vs. accepted. In extension the ways in which we act in space can also be examined through contradictions - society creates norms for our actions, yet these constraints limit us. As Bordeau states, our actions can be inherited, observed or learned, which further suggests their nature as a construct. However, this codependency that the definition of our bodies relies on is the pivot point in which we find the desire to freely express our identity. Here Da Vinci is cited as a contrast to an example that Bordeau includes. The Vitruvian Man was intended to explore the ideal proportions of a man. Through this intention one understands the social and biological characteristics that have been considered as a standard. In “Techniques of the Body”, Bordeau offers several examples for ways in which our actions have evolved and developed through time and space. In addition to describing actions he discusses how people naturally take up space, which are additionally defined through constructs. The second image above depicts one example he cites a Nuer Warrior from South Sudan in a natural resting position.   
+            </p>
+        </div>
 
 
-<div id="section2" style="display:none">
+        <div id="section2">
         <h2>Exploitation of the Body</h2>
 
-        <div id="group2">
-            <p id="williams"><img src="./images/williams.JPG" width="450" alt="Serena Williams - 2018 US Open"></p>
-            <p id="caption">Serena Williams, 2018 US Open - Mark Knight</p>
-            <p id="comparison"><img src="./images/comparison.JPG" width="450" alt="Comparison Image"></p>
-            <p id="caption">Samuel Morton (1799-1851)</p>
+            <div id="group2">
+                <p id="williams"><img src="./images/williams.JPG" width="450" alt="Serena Williams - 2018 US Open"></p>
+                <p id="caption">Serena Williams, 2018 US Open - Mark Knight</p>
+                <p id="comparison"><img src="./images/comparison.JPG" width="450" alt="Comparison Image"></p>
+                <p id="caption">Samuel Morton (1799-1851), <i>Race: The Power of an Illusion</i> (Episode 1)</p>
+            </div>
+
+            <p id="text">The body has also been subjected to exploitation in order to define and justify race. This categorization and classification of physical characteristics has given those in power the control over those who have been subjected. A contradiction that arises in Bordeau’s text gives way to the inclusion of these next set of images. He states, “here is a personal observation: a little girl did not know how to spit and this made every cold she had worse...I taught her to spit. I gave her four sous per spit.”. This anecdote brings up the contradiction in which women are often shamed for presenting as or acting in “masculine” mannerisms. Society often holds men and women to different standards depending on their setting. One area in which this is particularly evident is within the sports arena. A visceral example of this is the way in which Serena Williams was portrayed after her loss in the 2018 U.S. Open. These offensive portrayals have deep and ingrained roots as the physician Samuel Morton, has compared facial proportions in comparison to animals. The aspect of race is also critical here as one can see how certain stereotypes are still around today. In this case we can additionally understand how the tension between perceived characteristics and self identification brings out the desire to break away from these associations in order to be understood as your authentic self.  
+            </p>
         </div>
 
-    <p id="text">The body has also been subjected to exploitation in order to define and justify race, which has led to generations of trauma and pain. The categorization and classification of physical characteristics has given those in power the control over those who have been subjected. A contradiction that arises in Bordeau’s text gives way to the inclusion of these next set of images. He states, “here is a personal observation: a little girl did not know how to spit and this made every cold she had worse...I taught her to spit. I gave her four sous per spit.”. This anecdote brings up the contradiction in which women are often shamed for presenting as or acting in “masculine” mannerisms. Society often holds men and women to different standards depending on their setting. One area in which this is particularly evident is within the sports arena. A visceral example of this is the way in which Serena Williams was portrayed after her loss in the 2018 U.S. Open. These offensive portrayals have deep and ingrained roots as the physician Samuel Morton, has compared facial proportions in comparison to animals. The aspect of race is also critical here as one can see how certain stereotypes are still around today. In this case we can additionally understand how the tension between perceived characteristics and self identification brings out the desire to break away from these associations in order to be understood as your authentic self.   
-    </p>
-</div>
+        <div id="section3">
+            <h2>The Body & Landscape</h2>
 
-<div id="section3" style="display:none">
-    <h2>The Body & Landscape</h2>
+                <script type="application/processing">
+                    PFont f;
+                    f = createFont("Cambria",16,true);
 
-    <p id="text">The temporal aspects of our bodies serve as the link between them and the idea of a landscape. As Mauss discusses, we use our bodies as a way to make sense of time and reality in order to justify consciousness. They are a vehicle for physical expression as they give us the ability to act out our emotions. Furthermore, they cannot be subjected to time or language. This proposition suggests that bodies are a balance between physical and intangible. Just as our bodies can be both a subject and subjected by its surroundings, a landscape can also be exploited in these ways. Egoz, Makhzoumi, and Pungetti cite that the amorphous and multifaceted definitions of landscape lends to their power. They also note that they can be subjected to a particular time and place. The connection between our bodies and landscape asserts that the right to landscape is inherently tied to our freedom.</p>
-</div>
+                void setup() {
+                    size(1000, 600);
+                    noStroke(#18548c);
+                    textFont(f);
+                    }
+                void draw() {
+                    background(255);
+                    if (mouseY < 300) {
+                        rect(0, 0, 1000, 300);
+                        ellipse(500,240,400,400);
+                            fill();
+                            stroke();
+                        ellipse(395,220,150,150);
+                            fill();
+                            stroke();
+                        ellipse(500,350,150,150);
+                            fill(164,128,176);
+                            stroke();
+                        textSize(18);
+                            fill(255);
+                            text("PEOPLE IN POWER", 490, 145);
+                        textSize(12);
+                            fill(#18548c);
+                            text("DIVISION THROUGH", 340, 220);
+                        textSize(12);
+                            fill(#18548c);
+                            text("BINARIES", 365, 236);
+                        textSize(12);
+                            fill(#18548c);
+                            text("RADICAL POWER", 450, 345);
+                        textSize(12);
+                            fill(#18548c);
+                            text("THROUGH AUTHORITY", 435, 360);
+                    } else {
+                        rect(0, 300, 1000, 600);
+                        ellipse(650,300,275,275);
+                            fill();
+                            stroke(#18548c);
+                        ellipse(400,300,275,275);
+                            fill();
+                            stroke();
+                        textSize(14);
+                            fill(#18548c);
+                            text("LOSS OF IDENTITY", 340, 290);
+                        textSize(14);
+                            fill(#18548c);
+                            text("THROUGH GENERALIZATION", 307, 310);
+                        textSize(14);
+                            fill(#18548c);
+                            text("WITHIN SOCIAL MOVEMENTS", 305, 330);
+                        textSize(14);
+                            fill();
+                            text("IMAGINATION & NARRITIVE TO", 550, 295);
+                        textSize(14);
+                            fill();
+                            text("ACHIEVE ALTERNATE IDENTITY", 550, 315);
+                        rect(850,500,20,20);
+                            fill(#18548c);
+                            stroke();
+                    }
 
-        <nav id="links" style="display:none">
+                    textSize(32);
+                        fill(#18548c); 
+                        text("UNIVERSALITY", 25, 80);
+                        fill(#18548c);  
+                        text("POWER", 25, 500); 
+
+                    if (mousePressed) {
+                        rect(0, 0, 700, 600);
+                        fill();
+                        stroke();
+                    rect(800, 0, 1000, 600);
+                        fill();
+                        stroke();
+                    textSize(75);
+                        fill(255);
+                        text("POLITICS",0, 600);
+                    textSize(25);
+                        fill(#18548c);
+                        text("AESTHETICS",700,25);
+                    rect(550, 275, 400, 200);
+                        fill(255);
+                        stroke(255);
+                    rect(325, 175, 250, 150);
+                        fill(255);
+                        stroke(255);
+                    textSize(16);
+                        fill(#18548c);
+                        text("PERCEIVED SPACE", 380, 260);
+                    textSize(22);
+                        fill(255);
+                        text("ACTUAL SPACE", 670, 380);
+                    }
+                }  
+                </script>
+                <canvas id="interact"></canvas>
+
+            <p id="text">The temporal aspects of our bodies serve as the link between them and the idea of a landscape. As Mauss discusses, we use our bodies as a way to make sense of time and reality in order to justify consciousness. They are a vehicle for physical expression as they give us the ability to act out our emotions. Furthermore, they cannot be subjected to time or language. This proposition suggests that bodies are a balance between physical and intangible. Just as our bodies can be both a subject and subjected by its surroundings, a landscape can also be exploited in these ways. Egoz, Makhzoumi, and Pungetti cite that the amorphous and multifaceted definitions of landscape lends to their power. They also note that they can be subjected to a particular time and place. The connection between our bodies and landscape asserts that the right to landscape is inherently tied to our freedom. The embodiment of architecture as the intersection of politics and aesthetics leads to the subjectification of our bodies.</p>
+        </div>
+
+        <nav id="links">
             <p><a href="index.html">HOME</a></p>
             <p><a href="about.html">ABOUT</a></p>
-            <p><a href="violence-of-modernism.html">THE VIOLENCE OF MODERNISM</a></p>
+            <p><a href="modernism-interact.html">THE VIOLENCE OF MODERNISM</a></p>
             <p><a href="arch-empowerment.html">EMPOWERMENT THROUGH ARCHITECTURE</a></p>
             <p><a href="sources.html">SOURCES</a></p>
         </nav>
