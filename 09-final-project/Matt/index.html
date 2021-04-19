@@ -23,48 +23,43 @@
 	}
 
 	h1 {
-		font: roboto;
-		font-weight: bolder;
-		color: white;
-		justify-content: center;
+		font: roboto;font-weight: bolder;color: white;justify-content: center;
 	}
 
 	h4 {
-		font: roboto;
-		font-weight: lighter;
-		color: white;
-		justify-content: center;
-		padding-bottom: 25px;
+		font: roboto;font-weight: lighter;color: white;justify-content: center;padding-bottom: 25px;
 	}
 
 	#body1 {
-		font:roboto thin;
-		color:white;
-		font-size:14px;
-		padding-top:25px;
-		padding-left:50px;
-		padding-right:200px;
+		font:roboto thin;color:white;font-size:14px;padding-top:25px;padding-left:0px;padding-right:100px;
 	}
 
-	#application {
-		padding-left:200px;
-		padding-top:25px;
+	#body2 {
+		font:roboto thin;color:white;font-size:14px;padding-top:25px;padding-right:0px;padding-left:100px;
+	}
+
+	#application1 {
+		padding-left:50px;padding-top:25px;
+	}
+
+	#application2 {
+		padding-top:25px;padding-left:50px;
 	}
 
 	#links {
-		padding-bottom:25px;
-		font:robto thin;
-		font-weight:lighter;
+		padding-bottom:25px;font:robto thin;font-weight:lighter;
 	}
 
 	.first {
-		background-color:#256B30;
-		height:250px;
+		background-color:#256B30;height:250px;
 	}
 
 	.second {
-		background-color:#40B852;
-		height:550px;
+		background-color:#40B852;height:550px;
+	}
+
+	.third {
+		background-color:#52EB69;height:550px;
 	}
 </style>
 
@@ -89,8 +84,11 @@
 
 	<div id="section02" class="containerfluid second">
 		<div class="row">
-			<div class="col-lg-6">
-				<div id="application">
+			<div class="col-lg-4">
+			</div>
+
+			<div class="col-lg-4">
+				<div id="application1">
 					<script type="application/processing">
 						float x=0;
 						float y=0;
@@ -131,10 +129,80 @@
 				</div>
 			</div>
 
-			<div class="col-lg-6">
+			<div class="col-lg-4">
 				<div id="body1">
 					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum varius suscipit. Proin accumsan id risus quis congue. Aliquam mollis quam nec ex lobortis elementum. Proin et nisl quis justo aliquam ornare ut vitae dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi vitae urna ex. Mauris pharetra, purus at accumsan consectetur, nunc ante ultrices sem, ut aliquam odio lectus id justo.Suspendisse eu magna vel metus fermentum maximus. In vitae massa eget dui bibendum condimentum in vitae odio. Nullam nec diam mauris. Cras congue mauris at euismod dignissim. Sed vulputate sodales ligula efficitur finibus. Curabitur vitae felis sapien. Sed arcu purus, ullamcorper et nunc non, commodo placerat felis. Aenean feugiat nec nisl non feugiat. Pellentesque mollis arcu odio, et semper purus faucibus sed. Fusce id imperdiet est. In hac habitasse platea dictumst. Aliquam suscipit purus libero, quis vestibulum risus malesuada a. Cras eleifend, tellus vel gravida ullamcorper, nisl purus vehicula dolor, nec eleifend tortor massa nec ligula. Phasellus efficitur ornare placerat. Cras sed dolor nibh. Pellentesque porta, lorem lobortis commodo accumsan, arcu justo suscipit tellus, in ornare sapien ligula vel risus. Sed malesuada odio non risus molestie accumsan. Ut turpis leo, ornare non.</p>
 				</div> 
+			</div>
+		</div>
+	</div>
+
+	<div id="section03" class="containerfluid third">
+		<div class="row">
+			<div class="col-lg-4">
+				<div id="body2">
+					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum varius suscipit. Proin accumsan id risus quis congue. Aliquam mollis quam nec ex lobortis elementum. Proin et nisl quis justo aliquam ornare ut vitae dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi vitae urna ex. Mauris pharetra, purus at accumsan consectetur, nunc ante ultrices sem, ut aliquam odio lectus id justo.Suspendisse eu magna vel metus fermentum maximus. In vitae massa eget dui bibendum condimentum in vitae odio. Nullam nec diam mauris. Cras congue mauris at euismod dignissim. Sed vulputate sodales ligula efficitur finibus. Curabitur vitae felis sapien. Sed arcu purus, ullamcorper et nunc non, commodo placerat felis. Aenean feugiat nec nisl non feugiat. Pellentesque mollis arcu odio, et semper purus faucibus sed. Fusce id imperdiet est. In hac habitasse platea dictumst. Aliquam suscipit purus libero, quis vestibulum risus malesuada a. Cras eleifend, tellus vel gravida ullamcorper, nisl purus vehicula dolor, nec eleifend tortor massa nec ligula. Phasellus efficitur ornare placerat. Cras sed dolor nibh. Pellentesque porta, lorem lobortis commodo accumsan, arcu justo suscipit tellus, in ornare sapien ligula vel risus. Sed malesuada odio non risus molestie accumsan. Ut turpis leo, ornare non.</p>
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+				<div id="application2">
+					<script type="application/processing">
+							float x=0;
+							float y=0;
+
+							void setup()  {
+							  size (300, 500);
+							}
+
+							void draw()  {
+							  background(255);
+							  
+							  stroke(0,0,0);
+							  strokeWeight(10);
+							  line(150,0,150,500);
+							  
+							  stroke(0,0,0);
+							  strokeWeight(3);
+							  
+							  fill(88,168,93);
+							  rect(0,0,50,mouseX+96);
+							   
+							  fill(130,232,137);
+							  rect(50,0,50,mouseY+50);
+							  
+							  fill(87,138,90);
+							  rect(100,0,50,mouseX+25);
+							  
+							  fill(108,142,196);
+							  rect(150,0,50,mouseX+100);
+							  
+							  fill(42,75,128);
+							  rect(200,0,50,mouseY+43);
+							  
+							  fill(145,173,217);
+							  rect(250,0,50,mouseX+50);
+							  
+							  if (mouseX<150) {
+							    fill(88,168,93);
+							    stroke(0,0,0);
+							    strokeWeight(5);
+							    ellipse(mouseX,mouseY,50,50); 
+							  }
+							  
+							  if (mouseX>150) {
+							    fill(67,204,172);
+							    stroke(0,0,0);
+							    strokeWeight(5);
+							    ellipse(mouseX,mouseY,50,50); 
+							  }
+							}
+					</script>
+					<canvas></canvas>
+				</div>
+			</div>
+
+			<div class="col-lg-4">
 			</div>
 		</div>
 	</div>
