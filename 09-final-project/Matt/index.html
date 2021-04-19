@@ -12,9 +12,16 @@
 	<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
 	<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
 	<!--mapbox code enabling-->
+
+	<script script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+	<!--processing code enabling-->
 </head>
 
 <style>
+	a:hover {
+		background-color:black;
+	}
+
 	h1 {
 		font: roboto;
 		font-weight: bolder;
@@ -30,9 +37,34 @@
 		padding-bottom: 25px;
 	}
 
+	#body1 {
+		font:roboto thin;
+		color:white;
+		font-size:14px;
+		padding-top:25px;
+		padding-left:50px;
+		padding-right:200px;
+	}
+
+	#application {
+		padding-left:200px;
+		padding-top:25px;
+	}
+
+	#links {
+		padding-bottom:25px;
+		font:robto thin;
+		font-weight:lighter;
+	}
+
 	.first {
 		background-color:#256B30;
 		height:250px;
+	}
+
+	.second {
+		background-color:#40B852;
+		height:550px;
 	}
 </style>
 
@@ -48,10 +80,61 @@
 				<h4>advocating for a new relationship between the architect and the community they serve</h3>
 
 				<div id="links">
-					<a href="aboutme.html">about the author</a> <a href="page2.html" style="padding-left:25px">page 2</a> <a href="citations.html" style="padding-left:25px">cited works & data</a>
+					<a href="aboutme.html" style="color:white">about the author</a> <a href="page2.html" style="padding-left:25px;color:white">page 2</a> <a href="citations.html" style="padding-left:25px;color:white">cited works & data</a>
+				</div>
+			<div class="col-lg-4">
+			</div>
+		</div>
+	</div>
+
+	<div id="section02" class="containerfluid second">
+		<div class="row">
+			<div class="col-lg-6">
+				<div id="application">
+					<script type="application/processing">
+						float x=0;
+						float y=0;
+
+						void setup()  {
+							size (300, 500);
+						}
+
+						void draw()  {
+							background(255);
+							  
+							stroke(0,0,0);
+							strokeWeight(10);
+							line(150,0,150,500);
+							  
+							stroke(0,0,0);
+							strokeWeight(3);
+							  
+							fill(125,125,125);
+							rect(150,mouseX,50,mouseY);
+							  
+						 	fill(125,125,125);
+							rect(200,mouseX+200,50,mouseY-50);
+							  
+							fill(125,125,125);
+							rect(250,mouseX-400,50,mouseY+300);
+							  
+							if (mouseX<150) {
+							  
+							fill(214,51,68);
+							stroke(0,0,0);
+							strokeWeight(5);
+							ellipse(mouseX,mouseY,50,50);
+							}  
+						}
+					</script>
+					<canvas></canvas>
+				</div>
 			</div>
 
-			<div class="col-lg-4">
+			<div class="col-lg-6">
+				<div id="body1">
+					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum varius suscipit. Proin accumsan id risus quis congue. Aliquam mollis quam nec ex lobortis elementum. Proin et nisl quis justo aliquam ornare ut vitae dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi vitae urna ex. Mauris pharetra, purus at accumsan consectetur, nunc ante ultrices sem, ut aliquam odio lectus id justo.Suspendisse eu magna vel metus fermentum maximus. In vitae massa eget dui bibendum condimentum in vitae odio. Nullam nec diam mauris. Cras congue mauris at euismod dignissim. Sed vulputate sodales ligula efficitur finibus. Curabitur vitae felis sapien. Sed arcu purus, ullamcorper et nunc non, commodo placerat felis. Aenean feugiat nec nisl non feugiat. Pellentesque mollis arcu odio, et semper purus faucibus sed. Fusce id imperdiet est. In hac habitasse platea dictumst. Aliquam suscipit purus libero, quis vestibulum risus malesuada a. Cras eleifend, tellus vel gravida ullamcorper, nisl purus vehicula dolor, nec eleifend tortor massa nec ligula. Phasellus efficitur ornare placerat. Cras sed dolor nibh. Pellentesque porta, lorem lobortis commodo accumsan, arcu justo suscipit tellus, in ornare sapien ligula vel risus. Sed malesuada odio non risus molestie accumsan. Ut turpis leo, ornare non.</p>
+				</div> 
 			</div>
 		</div>
 	</div>
