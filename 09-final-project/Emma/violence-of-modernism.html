@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Violence of Modernism</title>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
+        <style>
+            body{
+                background-color: #3b3b3b;
+            }
+
+            h1 {
+                text-align: center;
+                font-family: monospace;
+                color: rgb(255, 99, 71);
+                padding-top: 2%;
+                font-size: 24pt;
+            }
+
+            h3 {
+                text-align: center;
+                font-family: monospace;
+                font-size: 13pt;
+                color: white;
+            }
+
+            #quote1 {
+                font-size: 18pt;
+                font-style: italic;
+                font-weight: bold;
+                font-family: 'Times New Roman', Times, serif;
+                padding-top: 20px;
+                color: white;
+            }
+
+            #author1 {
+                text-align: right;
+                padding-right: 10%;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 12pt;
+                font-weight: bold;
+                color: white;
+            }
+
+            #links {
+                text-align: center;
+                padding-top: 3px;
+                padding-bottom: 1%;
+                font-family: monospace;
+                border-top: 2px solid rgb(23, 138, 115);
+                margin-right: 20%;
+                margin-left: 20%;
+                letter-spacing: 1px;
+                font-size: 10pt;
+                color: white;
+            }
+
+            #links2 {
+                text-align: center;
+                padding-top: 3px;
+                padding-bottom: 2%;
+                font-family: monospace;
+                padding-left: 2%;
+                letter-spacing: 1px;
+                border-top: 2px solid rgb(23, 138, 115);
+                margin-right: 20%;
+                margin-left: 20%;
+            }
+
+            a:link, a:visited {
+                text-decoration: none;
+                color: white;
+            }
+
+            a:hover {
+                font-style: italic;
+                color: #ff6347;
+            }
+
+            #intro {
+                text-align: center;
+                font-family: monospace;
+                padding-left: 30%;
+                padding-right: 30%;
+                padding-bottom: 2%;
+                line-height: 16pt;
+                font-style: italic;
+                text-align: justify;
+                color: white;
+            }
+
+            #map-caption {
+                text-align: center;
+                font-family: monospace;
+                padding-left: 20%;
+                padding-right: 20%;
+                padding-bottom: 1%;
+                padding-top: 1%;
+                line-height: 16pt;
+                font-style: italic;
+                text-align: justify;
+                color: white;
+            }
+
+            #igoe {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 33%;
+                color: white;
+            }
+
+            #caption {
+                text-align: center;
+                font-family: monospace;
+                line-height: 16pt;
+                font-style: italic;
+                color: white;
+                font-size: 11pt;
+            }
+
+            h2 {
+                text-align: center;
+                font-family: monospace;
+                border-top: 2px solid #178a73;
+                margin-right: 20%;
+                margin-left: 20%;
+                padding-top: 2%;
+                color: white;
+            }
+
+            .border1 {
+                text-align: center;
+                font-family: monospace;
+                border-top: 2px solid #178a73;
+                margin-right: 10%;
+                margin-left: 10%;
+                padding-top: 2%;
+            }
+
+            #text {
+                padding-left: 30%;
+                padding-right: 30%;
+                font-size: 12pt;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                line-height: 24pt;
+                text-align: justify;
+                color: black;
+                color: white;
+                }
+
+            #map {
+                padding-left: 35%;
+                padding-right: 35%;
+                padding-top: 15%;
+                padding-bottom: 7%;
+                margin-left: 4%;
+            }
+
+            .navbar {
+            width: 100%;
+            background-color: #3b3b3b;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            padding: 72px;
+            color: white;
+            text-decoration: none;
+            font-family: monospace;
+            font-size: 14px;
+            width: 33.33%;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: rgb(255, 99, 71);
+            color: whitesmoke;
+        }
+
+        .navbar a {
+            float: none;
+            display: inline;
+            width: 100%;
+            text-align: left;
+        }
+
+        button {
+                background-color: #178a73;
+                border: none;
+                color: white;
+                padding: 12px 18px;
+                text-align: center;
+                font-size: 11px;
+                margin: 3px 2px;
+                opacity: 0.4;
+                transition: 0.3s;
+                display: inline-block;
+                text-decoration: none;
+                cursor: pointer;
+                margin-left: 47%;
+            }
+
+        button:hover {opacity: 1};
+
+            .map-link:hover {
+                color: rgb(255, 99, 71);
+            }
+
+            .map-link:link, .map-link:visited {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+
+    <h1>The Violence of Modernism</h1>
+    <body>
+
+        <div class="navbar">
+            <a href="violence-of-modernism.html#section1">CASE STUDY: PRUITT-IGOE</a>
+            <a href="violence-of-modernism.html#section3">THE ROLE OF AESTHETICS</a>
+            <a href="violence-of-modernism.html#section4">THE FAULT OF ARCHITECTS</a>
+            <a href="modernism-interact.html">INTERACT</a>
+        </div>
+
+    <div id="section1">
+        <h2 class="border1">Case Study: Pruitt-Igoe</h2>
+        
+        <div id="group1">
+            <p id="igoe"><img src="./images/pruitt.igoe.jpg" width="600" alt="Demolition of Pruitt-Ioe"></p>
+            <p id="caption">Demolition of Pruitt-Igoe (1972-76)</p>
+            <p id="igoe"><img src="./images/pruit.igoe2.jpg" width="600" alt="Aerial View of Pruitt-Igoe"></p>
+        
+            <p id="caption">Aerial View: (1951-55)</p>
+        </div>
+
+        <p id="text">One fault that lies within the lack of acknowledging hardships due to race and class. Pruitt-Igoe can be seen as an icon of the destruction within modern housing. It also represents the harm that architecture can have on people, both in the context of theoretical and actual violence. This project allowed for the growth of segregation and structural inequalities within housing rights. Additionally, its visibility and associated connotations additionally supported biases that enable stereotypes and racism, while imposing a "modern" lifestyle onto its inhabitants. These new ideals of housing in the 1950s serves as a critical framework of understanding this project, as being "modern" is often equated to being "humane".</p>
+    </div>
+
+    <div id="section2">
+        <h2>St. Louis: Median Income by Zip Code</h2>
+                <div id='map' style='width: 400px; height: 300px;'></div>
+                <script>
+                mapboxgl.accessToken = 'pk.eyJ1IjoiZW1tYXBhbGFjaW8iLCJhIjoiY2ttZXd1dTU0Mno1ZDMwdzB5cGQzNnp3aiJ9.WOO3zGxaP9t8WBufMwAUhQ';
+                var map = new mapboxgl.Map({
+                    container: 'map', // container ID
+                    style: 'mapbox://styles/emmapalacio/cknnb2y940hnl17my3y45ru5h', // style URL
+                    center: [-90.2075, 38.6415], // starting position [lng, lat]
+                    zoom: 14.5 // starting zoom
+                });
+                </script>
+            </div>
+        
+            <button type="button" onClick="reloadThePage()">RECENTER</button>
+        
+            <script>
+                function reloadThePage(){
+                    window.location.reload();
+                } 
+                </script>
+        
+        <p id="map-caption">This map shows the various parks that are located within St. Louis along with the median household income by zip code, which are distinguished by the orange circles. This data has been complied from <a class="map-link" target="_blank" href="https://www.nhgis.org/">IPUMS NHGIS</a> and includes census information from 2015-2019. Click to view the <a class="map-link" href="modernism-interact.html#section2">Black population</a> or the <a class="map-link" href="map2.html">White population</a>.</p>
+    </div>
+
+    <div id="section3">
+        <h2>The Role of Aesthetics</h2>
+
+            <p id="text">Overall, modernization has brought along ideals of uniformity and aesthetic values that undermine the true nature and identity of people. Crockett, in <i>People Before Highways</i>, makes a key argument that Modernism embodies the intersection of politics and aesthetics, while inherently eradicating race and class. One of the most important concepts that she addresses is the notion that the control for space is endlessly tied to politics. This idea enforces the importance of rights to public space and accessibility. Gandy, in <i>Concrete and Clay</i>, additionally makes a similar argument regarding the power of spatial aspects in social movements. His most crucial argument suggests that the transformation of landscape through social and political movements is more impactful than those that solely rely on aesthetics. Through this argument and Crocketts criticism of Modernism, one can understand how the importance of aesthetics within Modernism has hindered the movements towards equity and justice.</p>
+
+            <p id="text">Architecture is both an abstraction and extension of the body or a collective group of people. In chapter 6 of <i>Hybrid Modernities</i>, Morton discusses the ways in which architectural styles at the Colonial Exposition have been subjected to exploitation and appropriation by its creators. This main idea follows the logic that architecture can be seen as an extension of people and their cultural traditions, which both poses a platform for supporting these values, but also a method to their subjectification. Notions of identity can also be extrapolated from this analysis. If one accepts the idea that architecture can represent a certain culture or society, it can be argued that buildings have the ability to signify the physical manifestations of the values of a particular group of people. Thus, people and architecture share a codependent yet complex relationship to each other in similar ways that race and the body are intertwined.</p>
+
+            <p id="text">The role of aesthetics within landscape is additionally critical to understand, especially if one accepts the concept that identity is linked to it. The comparison between the Black Belt, Chinatown, and the U.S.-Mexico Border brings up crucial points within their subjectification. Although formed out of different circumstances the associations and structures formed around them highlight the different stereotypes that surround each group of people. Specifically, there is a capitalistic undertone to each of these associations. For example, many interview accounts in <i>Selections from Black Metropolis</i> show how Black people were often objectified for their labor, while a similar trend can be understood in "The Homeland, Aztlan". This however is not the case described in "The Idea of Chinatown". Anderson argues that the creation of the idea behind Chinatown instilled associations of unsanitary and undesirable lifestyles, which contrasts sharply with the more tangible landscape implications that are found in the Black Belt and U.S.-Mexico Border. These initial differences within subjectification have led to further pitfalls and divides between different racial groups today.  Architecture's reliance on aesthetics throughout the development of Modernism has led to the ignorance of structural, social, and political disparities within the professional field and lived communities.</p>
+    </div>
+
+    <div id="section4">
+        <h2>The Fault of Architects</h2>
+
+            <p id="text">The institutionalization of architectural knowledge and the selfishness of architects has enabled the influence of personal implications on aesthetic or systematic design choices, which lead to larger social and political conflicts. The lack of localized architects has led to harm within communities, as designers do not fully understand what its people are fighting for. The idea of architects being seen as “celebrities” or designing for the sole purpose of impressing their colleagues points to another irony within architecture. The combination of architecture as an elitist profession and the “disciplinary alibi” points to the root issue of architects failing to engage themselves in relationship to communities and their identity.</p>
+    </div>
+
+        <nav id="links">
+            <p><a href="index.html">HOME</a></p>
+            <p><a href="about.html">ABOUT</a></p>
+            <p><a href="body-interact.html">THE BODY, IDENTITY & LANDSCAPE</a></p>
+            <p><a href="arch-empowerment.html">EMPOWERMENT THROUGH ARCHITECTURE</a></p>
+            <p><a href="sources.html">SOURCES</a></p>
+        </nav>
+    </body>
+</html>
+
