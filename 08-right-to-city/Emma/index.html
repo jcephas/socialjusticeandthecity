@@ -116,6 +116,29 @@
 
             <p>Similarly to “The Right to Landscape”, Lefebvre also cites the link between the right to the city and freedom of expression as certain spaces can hinder or facilitate these instances. Another similarity between these two physical entities is their temporal aspects since they both can be subjected to a particular time or place. However, one interesting distinction between cities and landscapes is the idea that since architecture is an abstraction of concepts, it only represents a partial truth. Lefebvre states, “given that these architects form a social body, they attach themselves to institutions, their system tends to close itself off, impose itself and elude all criticism.” [1]. Here we can see how personal implications can begin to influence aesthetic or systematic design choices that can lead to larger social and political conflicts.</p>
 
+        <h3>St Louis: Black Population by Zip Code</h3>
+    
+            <div id='map' style='width: 400px; height: 300px;'></div>
+            <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoiZW1tYXBhbGFjaW8iLCJhIjoiY2ttZXd1dTU0Mno1ZDMwdzB5cGQzNnp3aiJ9.WOO3zGxaP9t8WBufMwAUhQ';
+            var map = new mapboxgl.Map({
+                container: 'map', // container ID
+                style: 'mapbox://styles/emmapalacio/cknnachn10baq17ohshets7wj', // style URL
+                center: [-90.2075, 38.6415], // starting position [lng, lat]
+                zoom: 14.5 // starting zoom
+            });
+            </script>
+    
+            <button type="button" onClick="reloadThePage()">RECENTER</button>
+                
+            <script>
+                function reloadThePage(){
+                    window.location.reload();
+                } 
+                </script>
+    
+            <p id="map-caption">This map shows the various parks that are located within St. Louis along with the Black population by zip code, which are distinguished by the purple circles. This data has been complied from <a class="map-link" target="_blank" href="https://www.nhgis.org/">IPUMS NHGIS</a> and includes census information from 2015-2019. As we have seen from "The Right to Landscape: An Introduction", public playgrounds provide "environments that forst opportunities for healthy psychological and physical development of a child". As designers it is important for us to consider the network of city infastructure in addition to its inhabitants and their desires. By contextualizing their spatial information with median income and demographic data, we can begin to understand the disparity of these resources to particular communities.</p>
+
             <p>The main concept that I took away from this reading is that architecture should be about using its tools and methodologies in conjunction with understanding the human condition in order to achieve freedom. As lefebvre states, only those who are exploited truly understand these systematic struggles can create change within communities. This idea is further supported by the successes that are described by Cowan, Lakeman, Leis, Lerch, and Semenza. Their chapter asserts that architecture should be built by the people for the people. In extension to these rights to the city it is also critical for architectural knowledge to be public and accessible.</p>
 
             <p id="name">Emma Palacio</p>
