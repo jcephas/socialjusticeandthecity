@@ -3,7 +3,7 @@
 <html>
 
 <head>
-	<title>Final Project: The Rise of the Community's Architect</title>
+	<title>Practice in Boston</title>
 
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -16,23 +16,31 @@
 
 <style>
 	h1 {
-		font: roboto;
-		font-weight: bolder;
-		color: white;
-		justify-content: center;
+		font:roboto; font-weight:bolder; color:white; justify-content:center;
 	}
 
 	h4 {
-		font: roboto;
-		font-weight: lighter;
-		color: white;
-		justify-content: center;
-		padding-bottom: 25px;
+		font:roboto; font-weight:lighter; color:white; justify-content:center; padding-bottom:25px;
+	}
+
+	#links {
+		padding-bottom:25px; font:robto thin; font-weight:lighter; text-decoration:none;
+	}
+
+	#body {
+		font:roboto thin; color:white; font-size:12px; padding-top:10px; padding-bottom:25px;
 	}
 
 	.first {
-		background-color:#256B30;
-		height:250px;
+		background-color:#2A2B66; height:200px;
+	}
+
+	.second {
+		background-color:#5E60E6; height:600px;
+	}
+
+	.third {
+		background-color:#999999;height:50px;
 	}
 </style>
 
@@ -43,20 +51,59 @@
 			</div>
 
 			<div class="col-lg-4">
-				<h1> the rise of the community's architect:</h1>
+				<h1> practice in boston</h1>
 
-				<h4>advocating for a new relationship between the architect and the community they serve</h3>
+				<h4>where are more opportunities for community partnership and how should we go about it?</h4>
 
 				<div id="links">
-					<a href="aboutme.html">About the author</a> 
-
+					<a href="aboutme.html" style="color:white">about the author</a> <a href="index.html" style="color:white; padding-left:25px">introduction</a> <a href="citations.html" style="color:white; padding-left:25px">cited works</a>
+				</div>
 			</div>
 
 			<div class="col-lg-4">
-					<a href="page2.html">Page 2</a>
 			</div>
 		</div>
 	</div>
+
+	<div id="section02" class="containerfluid second">
+		<div class="container map">
+			<div class="row">
+				<div class="col-lg-6">
+					<div id="map" style="width:600px; height:600px;">
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<div id="body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla, neque at lobortis commodo, leo mi interdum tellus, ac pretium tellus elit non est. Sed quis odio purus. Vestibulum neque dui, tincidunt non justo vel, cursus euismod neque. Curabitur vehicula sapien vestibulum odio semper gravida vel at nulla. Duis quam felis, placerat eget leo et, ornare pretium erat. Nam pretium ante tincidunt, congue eros efficitur, gravida eros. Proin et tempus turpis. Nam semper risus convallis, molestie elit vitae, tincidunt urna. Nam at dolor mollis, semper turpis in, blandit sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet mattis purus, et ultricies leo. Vestibulum vel turpis ac tellus elementum vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean lobortis tempor metus, et finibus ex feugiat at. Aliquam auctor elementum tellus et convallis.</p>
+
+						<p>Vestibulum vitae nibh id libero tincidunt aliquet. Cras eleifend sed magna vel elementum. Maecenas iaculis diam tortor, et convallis metus tristique pellentesque. Sed scelerisque condimentum nunc, non vehicula dui rhoncus vel. Aliquam consectetur, turpis in fringilla ultricies, quam est gravida ante, non euismod ligula tortor id odio. Aliquam fermentum urna id nisl porttitor, sed porta enim pulvinar. Maecenas urna lorem.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="section03" class="containerfluid third">
+		<div class="row">
+			<div class="col-lg-12">
+				<div id="links">
+					<a href="#section01" style="padding-left:240px;color:black">site navigation</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		mapboxgl.accessToken = 'pk.eyJ1IjoibXJtaWxsZXIiLCJhIjoiY2ttZXdvNml4MDM2dzJ3azFoOGVsc3Y0bSJ9.iCp0TVLRC_i77iQ8p9gaLg';
+			var map = new mapboxgl.Map({
+			container: 'map', // container ID
+			style: 'mapbox://styles/mrmiller/cknonqvy61jhn17tckc72ctj0', // style URL
+		    center: [-71.05, 42.35], // starting position [lng, lat]
+			zoom: 10.5 // starting zoom
+			});
+	</script>
+
 </body>
 
 </html>
