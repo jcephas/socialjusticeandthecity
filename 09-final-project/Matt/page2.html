@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Practice in Boston</title>
+
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<!--bootstrap code enabling-->
+
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+	<!--mapbox code enabling-->
+</head>
+
+<style>
+	h1 {
+		font:roboto; font-weight:bolder; color:white; justify-content:center;
+	}
+
+	h4 {
+		font:roboto; font-weight:lighter; color:white; justify-content:center; padding-bottom:25px;
+	}
+
+	h5 {
+		font:roboto;font-weight:bold;color:white;padding-top:15px;
+	}
+
+	#links {
+		padding-bottom:25px; font:robto thin; font-weight:lighter; text-decoration:none;
+	}
+
+	#body {
+		font:roboto thin; color:white; font-size:12px; padding-top:10px; padding-bottom:25px; padding-right:200px;
+	}
+
+	.first {
+		background-color:#2A2B66; height:200px;
+	}
+
+	.second {
+		background-color:#5E60E6; height:900px;
+	}
+
+	.third {
+		background-color:#999999;height:50px;
+	}
+</style>
+
+<body>
+	<div id="section01" class="containerfluid first">
+		<div class="row">
+			<div class="col-lg-4">
+			</div>
+
+			<div class="col-lg-4">
+				<h1> practice in boston</h1>
+
+				<h4>where are more opportunities for community partnership and how should we go about it?</h4>
+
+				<div id="links">
+					<a href="aboutme.html" style="color:white">about the author</a> <a href="index.html" style="color:white; padding-left:25px">introduction</a> <a href="citations.html" style="color:white; padding-left:25px">cited works</a>
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+			</div>
+		</div>
+	</div>
+
+	<div id="section02" class="containerfluid second">
+		<div class="container map">
+			<div class="row">
+				<div class="col-lg-6">
+					<div id="map" style="width:600px; height:800px; margin-top:25px">
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<h5>using boston as an example</h5>
+
+					<div id="body">
+						<p>In a world in which the architect ceases to work to make a <b style="font-size:14px"><i>“dramatic statement of power and wealth”</i></b>(Roth 560) and instead seeks to become <b style="font-size:14px"><i>“an enabler, or fixer, rather than an aesthetic dictator”</i></b>(Ward 24), what avenues and modes of practice can they, or rather should they begin to explore? Consider the map to the left. The map depicts Boston in the present day, with the shaded regions representing the areas that the 1930’s Home Owner’s Loan Corporation (HOLC) marked as “undesirable” for investment in red-line grade maps, the darker the region the more “undesirable” the area. White circles represent present-day community centers and black circles represent large, article 80 projects that impact neighborhoods as of 2016. </p>
+
+						<p>It is notable that much of the area that was once designated as “blight” by real-estate interests that once trapped disenfranchised Americans and immigrants is now a massive concentration of large projects. (Herscher 301) <b style="font-size:14px"><i>“Urban renewal often conjoined the displacement of communities of color with the consolidation of adjacent central business districts.”</i></b>(Herscher 302) Thus, we are left with a Boston today in which the vast majority of significant development has been concentrated in areas exclusively or overwhelming populated by a single group of people, while those that once lived there were forced out, either economically or through emminent domain. Additionally, areas still largely populated by minority groups to the south of the city that were marked as undesirable for investment have the least amount of large development in the city.</p>
+
+						<p>By making a serious commitment to engaging with the local, architects can begin break the cycle of neglect and inequitable reclamation that has negatively impacted many Americans throughout the years. Consider the community centers in former HOLC “undesirable” areas that have little significant development surrounding them. We as architects can (and should) engage in these centers of community in dialogue. We should examine them, meet with them, speak with them, and determine what projects (if any) we can do for them and what knowledge we can impart to them to augment their lived experience. Architects can be more than simply <b style="font-size:14px"><i>“purveyors in consumer culture”</i></b> (Roth 558) allowing our built environment to be a commodity bought and sold, but can impart the skills and values of our impression onto those that have the greatest level of experience with what, where, and how they live as well as what they need. Even in projects contracted to external entities, architects should make every effort to engage in open, non-adversarial dialogue with these centers of community. We should not use our knowledge as <b style="font-size:14px"><i>“a conspiracy against laity”</i></b> (Ward 19-20) but instead identify, engage, and support the rich life that exists in the presumed “nothingness” that populates the field of architecture.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="section03" class="containerfluid third">
+		<div class="row">
+			<div class="col-lg-12">
+				<div id="links">
+					<a href="#section01" style="padding-left:75px;color:black">site navigation</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		mapboxgl.accessToken = 'pk.eyJ1IjoibXJtaWxsZXIiLCJhIjoiY2ttZXdvNml4MDM2dzJ3azFoOGVsc3Y0bSJ9.iCp0TVLRC_i77iQ8p9gaLg';
+			var map = new mapboxgl.Map({
+			container: 'map', // container ID
+			style: 'mapbox://styles/mrmiller/cknonqvy61jhn17tckc72ctj0', // style URL
+		    center: [-71.05, 42.35], // starting position [lng, lat]
+			zoom: 10.5 // starting zoom
+			});
+	</script>
+
+</body>
+
+</html>

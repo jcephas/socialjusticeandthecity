@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Border Landscapes | Info </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+</head>
+
+<style>
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 199vw;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+}
+.outer-wrapper {
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.slide {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index:-10;
+  position:relative;
+}
+.title {
+  position:absolute;
+  top:20vh;
+  left:-25vh;
+  text-align:left;
+}
+.source {
+  position:static;
+  z-index:-100;
+}
+.about {
+  top:20vh;
+  left:140vw;
+  width: 50vw;
+  text-align:left;
+  z-index:-50;
+  position:absolute;
+}
+.arrowR {
+  position:absolute;
+  top:47.5%;
+  right:.5%;
+  z-index:100;
+}
+.frameU {
+  float: left;
+  height: 10vh;
+  width: 200vw;
+  top:0%;
+  left:0%;
+  background-color:black;
+  clear:both;
+  z-index:-5;
+  position:fixed;
+}
+.frameD {
+  float: left;
+  height: 10vh;
+  width: 200vw;
+  top:90%;
+  left:0%;
+  background-color:black;
+  clear:both;
+  z-index:-5;
+  position:fixed;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  background: black;
+}
+::-webkit-scrollbar-track {
+display: none;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  background: rgba(255,0,0,0.7); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255,0,0,0.3); 
+}
+::selection {
+  background: red;
+  color:white;
+}
+h1 {
+  color: white;
+  font-size: .75vw;
+}
+sub {
+  color: white;
+  font-size: 1.3vw;
+  background-color:black;
+}
+p {
+  color: black;
+  text-indent:1vw; 
+  font-size:1.1vw;
+  line-height:1.8vw;
+}
+p1 {
+  color: white;
+  background-color:black;
+}
+.hangingindent {
+  padding-left:20px; 
+  text-indent:-20px; 
+  margin-bottom: 5px;
+}
+a:link {
+  color: lightgray;
+  text-decoration: none;
+  font-size:200%;
+}
+a:visited {
+  color: lightgray;
+}
+a:hover {
+  color: white;
+  background-color: red;
+}
+</style>
+
+<body>
+<div class="outer-wrapper">
+  <div class="wrapper">
+
+    <div class="arrowR">
+      <a href="indexCenter.html">→</a>
+    </div>
+
+    <div class="frameU">
+    </div>
+    <div class="frameD">
+    </div>
+
+  <div id="source" class="slide source">
+    <div class="title row">
+      <div class="col-md-1">
+      </div>
+
+      <div class="col-md-2 mx-4">
+        <sub><i>Author + Designer</i></sub>
+        <br>
+        <br>
+        <br>
+        <p>Cammy Kuo is a candidate for a Bachelor of Landscape Architecture in Urban Landscape at Northeastern University. For the creation of this website, their background in urban landscape architecture and graphic and information design is a foundation in supporting and visualizing their evolving understanding of the living landscape through urban environmental justice, community activism, and social justice.  As a designer and an inhabitant, Cammy is fascinated by the gravity and the ephemerality of our lived spaces and spatial imaginaries.</p>
+      </div>
+
+      <div class="col-md-5 mx-4">      
+        <sub><i>Sources</i></sub>
+        <br>
+        <br>
+        <br>
+        <p class="hangingindent">Houseman, Haley ED. "Artists and Activists Trace Boston’s Historic Red Line on the Streets." <i>Hyperallergic.</i> hyperallergic.com/238667/artists-and-activists-trace-bostons-historic-red-line-on-the-streets/. Accessed 15 April 2021.</p>  
+        <p class="hangingindent">Hyun, Jaehwan. "Ecologizing the Korean Demilitarized Zone: Fields, Animals, and Science during the Cold War." <i>Max-Planck Institute for History of Science.</i> www.mpiwg-berlin.mpg.de/feature-story/ecologizing-korean-demilitarized-zone-fields-animals-and-science-during-cold-war. Accessed 10 April 2021.</p>  
+        <p class="hangingindent">Jacobs, Jane. "The Curse of the Border Vacuum."<i>The Death and Life of Great American Cities.</i> Knopf Doubleday Publishing Group, 2016. ProQuest Ebook Central, https://ebookcentral.proquest.com/lib/northeastern-ebooks/detail.action?docID=6041394.</p>
+        <p class="hangingindent">Jung, Jin-Heon. "Crossing and Conversion among North Korean Refugee-Migrants." <i>Religions</i> 2020, 11, 510. doi.org/10.3390/rel11100510.</p>
+        <p class="hangingindent">Korf, Benedikt, and Timothy Raeymaekers. "Introduction: Border, Frontier and the Geography of Rule at the Margins of the State. <i>Violence on the Margins,</i> 2013, pp. 3-27., doi:10.1057/9781137333995_1.</p>
+        <p class="hangingindent">Lefebvre, Henri, et al. "The Right to the City." <i>Writings on Cities. </i>Blackwell, 1996, pp. 147-159.</p>
+        <p class="hangingindent">Miller, Johnny. <i>Unequal Scenes,</i> www.unequalscenes.com. Accessed 15 April 2021.</p>  
+        <p class="hangingindent">"Tribal lands: Most sacred places." <i>azcentral,</i> www.azcentral.com/videos/news/politics/border-issues/2019/01/09/tribal-lands-most-sacred-places/105149352/. Accessed 18 April 2021.</p>  
+    	<p class="hangingindent">Walia, Harsha. Border & Rule: Global Migration, Capitalism, and the Rise of Racist Nationalism. Haymarket Books, 2021.</p>  
+      </div>
+
+      <div class="col-md-3 mx-3"> 
+        <sub><i>About</i></sub>
+        <br>
+        <br>
+        <br>        
+        <p>Created for the course <i>Social Justice & the City: Race, Space & Ethics in Architecture & Urbanism,</i> this website analyzes ethical practices in the design of architecture, landscape architecture, and urban design and planning, conveying these ideas through interactive web design. Through synthesizing a range of interconnected concepts (technologies of the body; the social construction of race; the racialization of space; justice, democracy, and the public, the spatialization of race; politics and aesthetics; planning activism; geo-narratives; intentional communities for a new social order; new models for practice; housing; the right to landscape; and the right to the city) this website explores how these concepts intersect at the border–a tangible, intangible symbol and manifestation of our divided landscapes; this proposal for an alternative model of practice suggests that liminal border spaces are central to the living landscape and must be placed at the forefront of design negotiations.</p>
+      </div>
+
+      <div class="col-md-1">      
+      </div>
+    </div>
+
+  <div id="about" class="slide about">
+  </div>
+
+  </div>
+  </div>
+</div>
+</body>
+</html>

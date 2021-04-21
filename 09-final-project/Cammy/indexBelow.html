@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Border Landscapes | Tangible Borders </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+</head>
+
+<style>
+.wrapper {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+}
+.outer-wrapper {
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.slide {
+  width: 100vw;
+  height: 100vh;
+  z-index:-10;
+  position:absolute;
+}
+.content {
+  position:static;
+  top:10vh;
+  left:0;
+}
+.title {
+  position:absolute;
+  top:13vh;
+  left:10vh;
+  width:60vh;
+  text-align:left;
+  z-index:10;
+}
+.caption {
+  bottom: 5vh;
+  left:10vh;
+  width: 35vw;
+  position: fixed;
+}
+.credit {
+  bottom: 3vh;
+  right: 5vh;
+  width: 50vw;
+  text-align:right;
+  position: fixed;
+}
+.arrowU {
+  position:absolute;
+  top:1%;
+  left:48%;
+  z-index:50;
+}
+::-webkit-scrollbar {
+  display:none;
+}
+::selection {
+  background: red;
+  color:white;
+}
+h1 {
+  color: white;
+  font-size: 3.2vw;
+}
+sub {
+  color: black;
+  font-size: 1.3vw;
+  background-color:white;
+}
+p {
+  color: white;
+  text-indent:1vw; 
+  font-size:1.1vw;
+  line-height:1.8vw;
+}
+caphead {
+  color: gray;
+  font-size: 1vw;
+  font-weight: bold;
+}
+cap {
+  color: gray;
+  text-indent:1vw; 
+  font-size:1vw;
+  line-height:1.0vw;
+}
+cred {
+  color: gray;
+  background-color:black;
+  font-size:.9vw;
+  text-align:right;
+}
+a:link {
+  color: lightgray;
+  text-decoration: none;
+  font-size:200%;
+}
+a:visited {
+  color: lightgray;
+}
+a:hover {
+  color: white;
+  background-color: red;
+}
+.slideshow-container {
+  float: left;
+  width:100%;
+  top:0%;
+  left:0%;
+  clear:both;
+  z-index:-5;
+  position:absolute;
+  background-size: cover;
+}
+img {
+  width:100%;
+  opacity:0.2;
+  filter:grayscale(100%) contrast(130%);
+}
+img:hover {
+  width:100%;
+  opacity:0.5;
+  filter:grayscale(100%) contrast(130%);
+}
+.prev, .next {
+  text-decoration: none;
+  display:inline-block;
+  border-radius:100%;
+  padding: 6px 14px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+}
+.prev {
+  position:fixed;
+  bottom:2%;
+  left:42%;
+}
+.next {
+  position:fixed;
+  bottom:2%;
+  right:42%;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(255,0,0,1);
+}
+.dots {
+  position: relative;
+  transform: rotate(-90deg) translateX(2.8%) translateY(-2.8%);
+}
+.dot {
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: block;
+  left:0%;
+  transition: background-color 0.2s ease;
+}
+.active, .dot:hover {
+  background-color: red;
+}
+
+.active, img:hover {
+  filter: none;
+}
+/* .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+} */
+@-webkit-keyframes fade {
+  from {opacity: .6} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .6} 
+  to {opacity: 1}
+}
+</style>
+
+<body>
+<div class="outer-wrapper">
+  <div class="wrapper">
+
+    <div class="arrowU">
+      <a href="indexCenter.html">↑</a>
+    </div>
+
+    <div class="frame">
+    </div>
+
+    <div id="content" class="slide content">
+      <div class="slideshow-container">
+        <div class="mySlides">
+          <img src="1.jpg">
+          <div class="caption">            
+            <caphead>Jamaica Plain, Boston, MA, USA</caphead>
+            <br>
+            <cap>Using bright red chalk, artists, activists, and other volunteers with City Life/Vida Urbana trace the "redline" along the Washington Avenue corridor.  This simple red line visualized the policies that caused Jamaica Plain to exist today as the new epicenter of Boston's gentrification. On one side, families could engage in home ownership and the accumulation of wealth for future generations; on the other, families settled in dilapidated houses left behind by white flight.  The precarious situation of JP residents continued with the planned Southwest Expressway, its cancellation, and the following redevelopment. JP remains trapped by powerful real estate and political interests.  At the same time, this border landscape gave rise to a coalition of neighborhood activists, historic preservationists, urban environmentalists, transit advocates, and determined citizens elaborating on a history of organizing against foreclosures, gentrification, and redlining.</cap>
+            <br>
+            <br>
+          <div class="credit">
+            <cred>Photo credit: clvu.org</cred>
+          </div>
+          </div>
+        </div>
+        <div class="mySlides">
+          <img src="2.jpg">
+          <div class="caption">            
+            <caphead>Minneapolis, MN, USA</caphead>
+            <br>
+            <cap>Built up by the endemic and systemic racism of American cities, the designed architecture of exclusion in cities was brought to the forefront with unrest following George Floyd's murder in June 2020.  Racially exclusive planning policies divide whites and Blacks. Highways dissect Black neighborhoods.  These policies contribute to one of the highest discrepancies in poverty rates, home ownership, employment, and level of population between whites and non-whites in the country. A series of high-profile police shootings targeting unarmed Black men prove the fact that Minneappolis is structured for the wealthy white populaiton. The destruction accompanying the protests displaced many residents, forcing them to set up camps in the city parks, including the pictued Powderhorn Park and other open spaces. Many local businesses were affected and destroyed, creating a media spectacle that obscured the movement for racial justice.</cap>
+            <br>
+            <br>
+          <div class="credit">
+            <cred>Photo credit: unequalscenes.com</cred>
+          </div>
+          </div>
+        </div>
+        <div class="mySlides">
+          <img src="3.jpg">
+          <div class="caption">  
+            <caphead>Facebook Headquarters, Silicon Valley, CA</caphead>
+            <br>
+            <cap>Despite of California's display of American exceptionalism with the appearance of social and physical mobility, the state's on-going housing crisis continues to persist. Escalating housing prices and poor social safety nets leave many workers in retail, food service, landscaping, and other industries neccesitating unskilled labor out of the very landscapes they caretake. In Silicon Valley, home to some of the world's most valuable companies, the Facebook headquarters, which is worth approximately $800 billion, sits opposite a homeless camp in the scrubland. Vast freeways carry commuters in and out of major cities–San Francisco and Los Angeles–across the state while demarcating undesirable spaces that allow for homeless encampments. With the disruptive innovation brought on by Silicon Valley, immigrant workers who are already heavily exploited in the state have the very notion of their rights threathened.</cap>
+            <br>
+            <br>
+          <div class="credit">
+            <cred>Photo credit: unequalscenes.com</cred>
+          </div>
+          </div>
+        </div>
+        <div class="mySlides">
+          <img src="4.jpg">
+          <div class="caption">            
+            <caphead>Baltimore, MD, USA</caphead>
+            <br>
+            <cap>With the highest murder rate per capita in the US, Baltimore City is marked by violence, poverty, and segregation.  This segregation intrudes with divisions of race, economic class, opportunity, and life expectancy.  Inequality in Baltimore extends to property pricing, and is inextricably linked to gentrification. Baltimore is experiencing both white and Black displacement as its leaders continue to attract wealthy residents rather than increase the quality of life for existing residents. Many homes have boarded-up windows and doors and wooden scaffolding to prevent collapse.  Over 16,000 abandoned properties have been vacant up to decades. Unlike other cities that received federal funding to clear such areas, these buildings remain in Baltimore. Certain areas of West Baltimore have been remodeled for up and coming young residents, while other properties, even just across the street, sit dilapidated and empty.</cap>
+            <br>
+            <br>
+          <div class="credit">
+            <cred>Photo credit: unequalscenes.com</cred>
+          </div>
+          </div>
+        </div>
+        <div class="mySlides">
+          <img src="5.jpg">
+          <div class="caption">            
+            <caphead>Capitol Hill Occupied Protest, Seattle, WA, USA</caphead>
+            <br>
+            <cap>The CHOP rose up as an alternative society in response and to counter the brutality of the state by demanding the defunding of police, investing in local communities, and releasing protesters. Also, known as the Capitol Hill Organized Protest and as the Capitol Hill Autonomous Zone and directed by adaptive guidlines that were constantly updated, this ambiguous nature reflects the transitory experiences of these borderlands. The protest highlights the danger in combating marginalization through border-making. In trying to create a police-free neighborhood, violence continued to exist without resources to invest anti-poverty and community-building programs also partly due to the existing nature of Capitol Hill. Yet, CHOP was intended to be a temporary demonstration aided by some city officials and was able to suggest possibilities for another Seattle. Its experimental nature highlighted dangers to address in the dismantling of borders.</cap>
+            <br>
+            <br>
+          <div class="credit">
+            <cred>Photo credit: gettyimages.com</cred>
+          </div>
+          </div>
+        </div>
+        <div class="mySlides">
+          <img src="6.jpg">
+          <div class="caption">            
+            <caphead>Korean Demilitarized Zone</caphead>
+            <br>
+            <cap> Marked by a fence, guard posts, landmines, propoganda, and a prominent American presence, the vast no-man's-land, transformed into an accidental wildlife sanctuary, separates a lush restored South Korean forest and an eroded barren North Korean hills, resulting from the weight of the Korean War.  Under a materialistic and symbolic regime competition, environmentalism, science, and geopolitics became intertwined by the military-supported fieldworks during the Cold War, enabling a new ecological vision for the DMZ. Alternatively, the majority of North Korean refugee-migrants convert to Protestant missionary networks on their journey, forcing renegotiations of the existing order of meaning, self, and homeland. Religion enables them to search for another place to realize their sacred calling—a place located in the future and in their imagined homeland, though still tied up in late-Cold War sentiments.</cap>
+            <br>
+            <br>
+          <div class="credit">
+            <cred>Photo credit: oneman-onemap.com</cred>
+          </div>
+          </div>
+        </div>
+        <div class="mySlides">
+          <img src="7.jpg">
+          <div class="caption">            
+            <caphead>Grosse Pointe-Detroit Boundary, MI, USA</caphead>
+            <br>
+            <cap>Narratives of rebirth and renewal in Detroit gladly overlook core concerns of urban disinvestment and abandonment as brought about by corporate decisions and encouraged by government policies.  Housing and free trade continue to be considered through a racist lens. The boundary between Detroit and Grosse Point, an affluent white enclave, is symbolic of these race and economic divides. An array of spatial segregationist designs include Fox Canals, large planters, market sheds, mounds of snow, traffic diversions, policing, brick walls, wooden fences, and concrete barriers. Kercheval Avenue, the main entryway into Grosse Pointe Park, leads directly to the Chrysler plant and downtown Detroit. The residents of Grosse Pointe Park have tried for years to barricade this gateway with an array of strategies including a roundabout. The aesthetic transformations in the border landscape define the life of residents on both sides.</cap>
+            <br>
+            <br>
+          <div class="credit">
+            <cred>Photo credit: unequalscenes.com</cred>
+          </div>
+          </div>
+        </div>
+        <div class="mySlides">
+          <img src="8.jpg">
+          <div class="caption">            
+            <caphead>Papwa Sewgolum Gold Course, Durban, South Africa</caphead>
+            <br>
+            <cap>A few meters away and separated by a low concrete fence from the lush, manicured green of a golf course, a sprawling informal settlement is a result of apartheid factors.  Characterized by construction of varying degrees of permanence and a variety of materials, buffer strips of marginal land houses nearly half of the African population of the entire Durban municpal area. The constant transformations of the landscape are apparent with the need for demolition and relocation for physical housing upgrades. The notion of housing has expanded to include sociocultural home environment, physical characteristics of the neighborhood, and the social environment and resources of the communities, all defined by a notable impermanence. Urban migration combined with access to opportunity and poverty have transformed South Africa with the significance of its informal settlements</cap>
+            <br>
+            <br>
+          <div class="credit">
+            <cred>Photo credit: unequalscenes.com</cred>
+          </div>
+          </div>
+        </div>
+        <div class="mySlides">
+          <img src="9.jpg">
+          <div class="caption">            
+            <caphead>US-Mexico Border in Tohono Oʼodham Nation</caphead>
+            <br>
+            <cap>A barbed wire fence and thick metal posts denoting a 62-mile international boundary cuts through the heart of the Tohono O'odham, creating a physical, ecological, and spiritual division. This border was first mapped by US diplomants who paid little attention to its inhabitants. As the US tightened its security procedures, smugglers turned to tribal lands, forcing the council to consider a vehicle barrier that would dig up sacred earth. In O'odham, as the people say, there is no word for "wall." This intrusion cuts off members living in Sonora from relatives and other members in Arizona–save for one unremarkable opening, which allows individuals to travel back and forth if they prove their right with a tribal ID.  However, with each shift in immigration and border policy, tribal members, particularly those in Mexico, find it increasinly difficult to secure their rights.</cap>
+            <br>
+            <br>
+          <div class="credit">
+            <cred>Photo credit: usatoday.com</cred>
+          </div>
+          </div>
+        </div>
+        <div class="mySlides">
+          <img src="10.jpg">
+          <div class="caption">            
+            <caphead>Democratic Republic of the Congo–Rwanda border</caphead>
+            <br>
+            <cap>In the seemingly permanent standoff in this historical "no-man's-land," the territorial disputes define the flow of people and goods. The endless opening and closing of the border has created a space of uncertainty and survival. The liminal quality of the border produce irresolute opportunities and resources for people able to employ the border to generate or sustain livelihoods. These people are often national minorities unable to have full citizenship in either country and traders and hustlers migrating to make a living. With the coexistence of different regulatory regimes on either side of the border, an opportunity structure of smuggling, unofficial exchange rates, and illegal crossings is generated. People of this landscape must constantly engage in maneuvers for power and submission while remaining central to the national urban economic sovereignty. People in this landscape must constantly renegotiate their identities to adapt in survival.</cap>
+            <br>
+            <br>
+          <div class="credit">
+            <cred>Photo credit: maps.google.com</cred>
+          </div>
+          </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
+        <span class="dot" onclick="currentSlide(5)"></span> 
+        <span class="dot" onclick="currentSlide(6)"></span> 
+        <span class="dot" onclick="currentSlide(7)"></span> 
+        <span class="dot" onclick="currentSlide(8)"></span> 
+        <span class="dot" onclick="currentSlide(9)"></span> 
+        <span class="dot" onclick="currentSlide(10)"></span> 
+      </div>
+
+      <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+      </script>
+
+    <div class="title">
+      <sub><i>Conceived Borders: Intangibility in Tangibility</i></sub>
+      <br>
+      <br>
+      <p>Considering the scales at which borders are constructed, from a wall of international lines to the pavement on the street, encourages an understanding for the shared conflicts and conditions between dwellers of different border landscapes. The aesthetic senses of these divisions are actively produced–directly or indirectly–through spatial outreach by the state. The tangibility of our borders expand into our social experiences. Inhabitants of the border are forced to live with the permanence and the transience of these spaces.</p>
+    </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
