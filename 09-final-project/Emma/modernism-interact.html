@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Violence of Modernism</title>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
+        <style>
+            body{
+                background-color: #3b3b3b;
+            }
+
+            h1 {
+                text-align: center;
+                font-family: monospace;
+                color: #ff6347;
+                padding-top: 2%;
+                font-size: 24pt;
+            }
+
+            h3 {
+                text-align: center;
+                font-family: monospace;
+                font-size: 13pt;
+                color: whitesmoke;
+            }
+
+            #links {
+                text-align: center;
+                padding-top: 3px;
+                padding-bottom: 1%;
+                font-family: monospace;
+                border-top: 2px solid rgb(23, 138, 115);
+                margin-right: 20%;
+                margin-left: 20%;
+                letter-spacing: 1px;
+                font-size: 10pt;
+                color: whitesmoke;
+            }
+
+            #links2 {
+                text-align: center;
+                padding-top: 3px;
+                padding-bottom: 2%;
+                font-family: monospace;
+                padding-left: 2%;
+                letter-spacing: 1px;
+                border-top: 2px solid #178a73;
+                margin-right: 20%;
+                margin-left: 20%;
+            }
+
+            a:link, a:visited {
+                text-decoration: none;
+                color: whitesmoke;
+            }
+
+            a:hover {
+                font-style: italic;
+                color: #ff6347;
+            }
+
+            #intro {
+                text-align: center;
+                font-family: monospace;
+                padding-left: 30%;
+                padding-right: 30%;
+                padding-bottom: 2%;
+                line-height: 16pt;
+                font-style: italic;
+                text-align: justify;
+                color: whitesmoke;
+            }
+
+            #map-caption {
+                text-align: center;
+                font-family: monospace;
+                padding-left: 20%;
+                padding-right: 20%;
+                padding-top: 1%;
+                padding-bottom: 1%;
+                line-height: 16pt;
+                font-style: italic;
+                text-align: justify;
+                color: whitesmoke;
+            }
+
+            #igoe {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 35%;
+                color: whitesmoke;
+            }
+
+            #caption {
+                text-align: center;
+                font-family: monospace;
+                line-height: 16pt;
+                font-style: italic;
+                color: whitesmoke;
+                font-size: 11pt;
+            }
+
+            h2 {
+                text-align: center;
+                font-family: monospace;
+                margin-right: 20%;
+                margin-left: 20%;
+                padding-top: 1%;
+                color: whitesmoke;
+            }
+
+            #text {
+                padding-left: 30%;
+                padding-right: 30%;
+                font-size: 12pt;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                line-height: 24pt;
+                text-align: justify;
+                color: black;
+                color: whitesmoke;
+                }
+
+            #map {
+                padding-left: 35%;
+                padding-right: 35%;
+                padding-top: 15%;
+                padding-bottom: 7%;
+                margin-left: 4%;
+            }
+
+            .navbar {
+            width: 100%;
+            background-color: #3b3b3b;
+            overflow: hidden;
+            margin-left: 45%;
+            margin-top: 2%;
+        }
+
+        .navbar a {
+            float: left;
+            padding: 72px;
+            color: white;
+            text-decoration: none;
+            font-family: monospace;
+            font-size: 14px;
+            width: 33.33%;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: rgb(255, 99, 71);
+            color: whitesmoke;
+        }
+
+
+        .navbar a {
+            float: none;
+            display: inline;
+            width: 100%;
+            text-align: left;
+        }
+
+        button {
+                background-color: #af146f;
+                border: none;
+                color: white;
+                padding: 12px 18px;
+                text-align: center;
+                font-size: 11px;
+                margin: 3px 2px;
+                opacity: 0.4;
+                transition: 0.3s;
+                display: inline-block;
+                text-decoration: none;
+                cursor: pointer;
+                margin-left: 47%;
+            }
+
+        button:hover {opacity: 1};
+
+        .map-link:hover {
+                color: rgb(255, 99, 71);
+            }
+
+            .map-link:link, .map-link:visited {
+                text-decoration: underline;
+            }
+
+        </style>
+    </head>
+
+    <h2>Pruitt-Igoe: St. Louis, Missouri</h2>
+    <body>
+
+        <p id="text">Pruitt-Igoe was a housing project that was constructed during the 1950s in St. Louis, Missouri. It was intended to solve the disparity in affordable housing however, its failure attests to the lack of maintenance and responsibility that the developers and architects willfully ignored. In this case, the harm was caused through this lack of afterthought that led to its declining state and ultimate demolition. By putting people in homes in which they did not have the funds to upkeep, without providing external support, its inhabitants were left to its despair.</p>
+
+        <div id="button">
+            <button type="button" onclick="myFunction()">EXPLORE</button>
+        </div>
+
+        <script>
+            function myFunction() {
+                location.href = "violence-of-modernism.html";
+            }
+        </script>
+
+    <h3>Black Population by Zip Code</h3>
+
+        <div id='map' style='width: 400px; height: 300px;'></div>
+        <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZW1tYXBhbGFjaW8iLCJhIjoiY2ttZXd1dTU0Mno1ZDMwdzB5cGQzNnp3aiJ9.WOO3zGxaP9t8WBufMwAUhQ';
+        var map = new mapboxgl.Map({
+            container: 'map', // container ID
+            style: 'mapbox://styles/emmapalacio/cknnachn10baq17ohshets7wj', // style URL
+            center: [-90.2075, 38.6415], // starting position [lng, lat]
+            zoom: 14.5 // starting zoom
+        });
+        </script>
+
+        <button type="button" onClick="reloadThePage()">RECENTER</button>
+            
+        <script>
+            function reloadThePage(){
+                window.location.reload();
+            } 
+            </script>
+
+        <p id="map-caption">This map shows the various public parks that are located within St. Louis along with the Black population of the city, which are distinguished by the purple circles in respect to zip codes. This data has been complied from <a class="map-link" target="_blank" href="https://www.nhgis.org/">IPUMS NHGIS</a> and includes census information from 2015-2019. As we have seen from "The Right to Landscape", public playgrounds provide "environments that forst opportunities for healthy psychological and physical development of a child". As designers it is important for us to consider the network of city infastructure in addition to its inhabitants and their desires. By contextualizing their spatial information with demographic data, we can begin to understand the disparity of these resources to particular communities.</p>
+    </body>
+</html>

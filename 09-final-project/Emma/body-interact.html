@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Body, Identity & Landscape</title>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+
+        <style>
+            body {
+                background-color: rgb(23, 82, 138);
+            }
+
+            #interact{
+                display: block;
+                margin-right: auto;
+                margin-left: auto;
+                padding-top: 15%;
+            }
+
+            button {
+                background-color: whitesmoke;
+                border: none;
+                color: #17528a;
+                padding: 12px 18px;
+                text-align: center;
+                font-size: 11px;
+                margin: 3px 2px;
+                opacity: 0.4;
+                transition: 0.3s;
+                display: inline-block;
+                text-decoration: none;
+                cursor: pointer;
+                margin-left: 47%;
+                margin-top: 3%;
+            }
+
+            button:hover {opacity: 1};
+        </style>
+    </head>
+
+    <body>
+        <script type="application/processing">
+        
+            PFont f;
+            f = createFont("Cambria",16,true);
+
+            void setup() {
+                size(1000, 300);
+                noStroke();
+                fill(#17528a);
+                textFont(f);
+            }
+
+            void draw() {
+                background(#f5f5f5);
+                if ((mouseX <= 500) && (mouseY <= 150)) {
+                    rect(0, 0, 500, 150);
+                    rect(0, 150, 1000, 150);
+                textSize(17);
+                    fill(#18548c);
+                    text("HOW DOES SOCIETY CONTINUE TO GOVERN OUR BODIES?", 528, 80);
+                } else {
+                rect(500, 150, 500, 150);
+								rect(0, 0, 1000, 150);
+                textSize(17);
+                    fill(#18548c);
+                    text("WHO IS MOST AFFECTED?", 150, 230);
+            }
+            }
+        </script>
+        <canvas id="interact"></canvas>
+
+        <div id="button">
+            <button type="button" onclick="myFunction()">EXPLORE</button>
+        </div>
+    
+        <script>
+            function myFunction() {
+            location.href = "body-and-identity.html";
+        }
+        </script>
+    </body>
+</html>
