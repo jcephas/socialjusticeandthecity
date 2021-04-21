@@ -11,76 +11,68 @@
 
 <style>
 	h1 {
-		font: roboto;
-		font-weight: bolder;
-		color: white;
-		padding-left:100px;
+		font:roboto; font-weight:bolder; color:white; justify-content:center;
 	}
 
-	h2 {
-		font:roboto;
-		font-weight:bold;
-		color:white;
-		padding: 0px 0px 0px 150px;
+	h4 {
+		font:roboto; font-weight:lighter; color:white; justify-content:center; padding-bottom:25px;
 	}
 
-	h3 {
-		font: roboto;
-		font-weight: lighter;
-		color: white;
-		padding-left:100px;
-		padding-bottom: 25px;
+	h5 {
+		font:roboto;font-weight:bold;color:white;padding-top:15px;
 	}
 
-	.body1 {
-		font:roboto thin;
-		font-weight:lighter;
-		color:white;
-		font-size:14px;
-		padding-top:25px;
-		padding-right:100px;
+	#links {
+		padding-bottom:25px; font:robto thin; font-weight:lighter; text-decoration:none;
+	}
+
+	#body {
+		font:roboto thin; color:white; font-size:16px; padding-top:50px; padding-bottom:25px; padding-right:500px;
 	}
 
 	.first {
-		background-color:#7B3CA6;
-		height:200px;
+		background-color:#661325; height:175px;
 	}
 
 	.second {
-		background-color:#C585F0;
-		height:800px;
+		background-color:#EA738C; height:800px;
 	}
 
 	.image {
-		padding-left:100px;
-		padding-top:25px;
+		padding-left:300px; padding-top:50px;
 	}
 </style>
 
 <body>
 	<div id="section01" class="containerfluid first">
 		<div class="row">
-			<div class="col-lg-6">
-				<h1> about the author: </h1>
-				<h3> matt miller </h3>
-
-				<a href="index.html" style="color:white;font-family: roboto;font-weight:lighter;font-size:15px;font-style:bold;padding-left:100px">The Right to the City</a>
+			<div class="col-lg-4">
 			</div>
 
-			<div class="col-lg-6">
+			<div class="col-lg-4">
+				<h1> about the author</h1>
+
+				<h4>matt miller</h4>
+
+				<div id="links">
+					<a href="index.html" style="color:white">introduction</a> <a href="page2.html" style="color:white; padding-left:25px">practice in boston</a> <a href="citations.html" style="color:white; padding-left:25px">cited works</a>
+				</div>
+			</div>
+
+			<div class="col-lg-4">
 			</div>
 		</div>
 	</div>
 
 	<div id="section02" class="containerfluid second">
 		<div class="row">
-			<div class="col-lg-4">
-				<img src="matt2.png" class="image" height="400px">
+			<div class="col-lg-6">
+				<img src="matt2.png" class="image" height="500px">
 			</div>
 
-			<div class="col-lg-4">
-				<div class="body1">
-					<p>This page was put together by Matt Miller, a second-year graduate student in the architectural design department at Northeastern University in Boston, Massachusetts. The page was put together as part of Jay Cephas' ARCH6340 course, Social Justice and The City. If you have any questions, Matt can be reached at his email: mrynmllr@gmail.com</p>
+			<div class="col-lg-6">
+				<div id="body">
+					<p>This page was put together by Matt Miller, a second-year graduate student in the architectural design department at Northeastern University in Boston, Massachusetts. The page was put together as part of Jay Cephas' ARCH6340 course, Social Justice and The City. If you have any questions, Matt can be reached at his email: miller.matthew@northeastern.edu</p>
 				</div>
 			</div>
 		</div>
