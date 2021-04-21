@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Trouble with Wilderness</title>
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+
+		<script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+
+		<link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+	</head>
+
+	<style>
+		body
+		{
+			background-color: saddlebrown;
+		}
+		.header
+			{
+				color: seagreen;
+				font-family: monospace;
+				padding-left: 30px;
+				padding-top: 10px;
+				align-content: center;
+			}
+		.map
+			{
+				padding-left: 30px;
+				padding-top: 50px;
+			}
+		.bodyOne
+			{
+				color: lightgreen;
+				padding-left: 30px;
+				font-family: Arial;
+
+			}
+
+	</style>
+
+	<body>
+		<div id="header" style="padding-left: 100px">
+			<h1 class="header">
+				Wilderness as Home
+			</h1>
+		</div>
+
+		<div id="header" style="padding-left: 100px">
+			<h2 class="header">
+				Finding Ourselves in the Landscape
+			</h2>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-1">
+			</div>
+
+			<div class="col-md-5" class="map">
+				<div id='map' style= 'width: 600px; height: 670px;'>			
+				</div>
+
+				<script>
+					mapboxgl.accessToken = 'pk.eyJ1IjoianRyb3NlbnRoYWwiLCJhIjoiY2ttZXlrYmJmMHc4ZDJ5bXhlOXhyMHM3bSJ9.92fSkqss9OHpGtzB76_kEw';
+					var map = new mapboxgl.Map
+					({
+  						container: 'map', // container ID
+  			 			style: 'mapbox://styles/jtrosenthal/cknqdewuv40zw17q9541dbrh6', // style URL
+  						center: [-122, 38], // starting position [lng, lat]
+  						zoom: 6 // starting zoom
+					});
+				</script>
+			</div>
+
+			<div class="col-md-5">
+				<div class="bodyOne">
+					<p>On the left is a map of the land currently managed by the US National Forest Service. Throught the Western United States, aggressive fire suppression has resulted in a glut of trees, creating dense forests that produce high quality timber each year.</p>
+
+					<p>This abundance of trees has also resulted in far more kindling for the forest fires that have ravaged the country. Forest fires are burning hotter, faster, and longer due to a lack of controlled burnings that were previously performed by the indigenous people of California and the Pacific Northwest. </p>
+
+					<p>Traditional Ecological Knowledge (TEK) from the indigenous people of these places would utilize smaller brushfires ocurring outside of the peak of dry season to curb the amount of fuel for these fires to use when they do occur. This also promotes biodiversity and species resilience in the area, as many plants in fire prone areas have evolved to take advantage of smaller brushfires, and the massive forests that grow in the event of fire suppression are generally monocultures, further harming the potential ecological services that can be performed with an intentional fire ecology.</p>
+
+					<p>If landscape architects and land managers can adopt these methods of thinking, by promoting biodiversity in design instead of devoting ourselves to the same cultivars, by using plants that have evolved in the specific conditions of the place that is being worked on, and by promoting the health of ecosystems instead of the pursuit of the aesthetically patoral or sublime, we can design in the service of the planet and the natural world rather than constantly fighting against it.</p>
+
+					<a href="index.html">1. Wilderness as Hell</a>
+					<a href="wilderness2.html">2. Wilderness as Eden</a>
+
+<p></p>
+					<p style="color: black">Information taken from The Trouble with Wilderness by William Cronon</p>
+
+					<p style="color: black">Website produced by Jason Rosenthal</p>
+				</div>
+			</div>
+			<div class="col-sm-1">
+			</div>
+		</div>
+	</body>
+</html>
