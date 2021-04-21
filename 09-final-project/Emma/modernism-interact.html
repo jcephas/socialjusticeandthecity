@@ -8,6 +8,8 @@
         <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
         <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
 
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+
         <style>
             body{
                 background-color: #3b3b3b;
@@ -41,18 +43,6 @@
                 color: whitesmoke;
             }
 
-            #links2 {
-                text-align: center;
-                padding-top: 3px;
-                padding-bottom: 2%;
-                font-family: monospace;
-                padding-left: 2%;
-                letter-spacing: 1px;
-                border-top: 2px solid #178a73;
-                margin-right: 20%;
-                margin-left: 20%;
-            }
-
             a:link, a:visited {
                 text-decoration: none;
                 color: whitesmoke;
@@ -61,18 +51,6 @@
             a:hover {
                 font-style: italic;
                 color: #ff6347;
-            }
-
-            #intro {
-                text-align: center;
-                font-family: monospace;
-                padding-left: 30%;
-                padding-right: 30%;
-                padding-bottom: 2%;
-                line-height: 16pt;
-                font-style: italic;
-                text-align: justify;
-                color: whitesmoke;
             }
 
             #map-caption {
@@ -86,23 +64,6 @@
                 font-style: italic;
                 text-align: justify;
                 color: whitesmoke;
-            }
-
-            #igoe {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 35%;
-                color: whitesmoke;
-            }
-
-            #caption {
-                text-align: center;
-                font-family: monospace;
-                line-height: 16pt;
-                font-style: italic;
-                color: whitesmoke;
-                font-size: 11pt;
             }
 
             h2 {
@@ -121,7 +82,6 @@
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
                 line-height: 24pt;
                 text-align: justify;
-                color: black;
                 color: whitesmoke;
                 }
 
@@ -129,67 +89,98 @@
                 padding-left: 35%;
                 padding-right: 35%;
                 padding-top: 15%;
-                padding-bottom: 7%;
-                margin-left: 4%;
+                padding-bottom: 15%;
+                margin-left: 15%;
             }
-
-            .navbar {
-            width: 100%;
-            background-color: #3b3b3b;
-            overflow: hidden;
-            margin-left: 45%;
-            margin-top: 2%;
-        }
-
-        .navbar a {
-            float: left;
-            padding: 72px;
-            color: white;
-            text-decoration: none;
-            font-family: monospace;
-            font-size: 14px;
-            width: 33.33%;
-            text-align: center;
-        }
-
-        .navbar a:hover {
-            background-color: rgb(255, 99, 71);
-            color: whitesmoke;
-        }
-
-
-        .navbar a {
-            float: none;
-            display: inline;
-            width: 100%;
-            text-align: left;
-        }
 
         button {
-                background-color: #af146f;
-                border: none;
-                color: white;
-                padding: 12px 18px;
-                text-align: center;
-                font-size: 11px;
-                margin: 3px 2px;
-                opacity: 0.4;
-                transition: 0.3s;
-                display: inline-block;
-                text-decoration: none;
-                cursor: pointer;
-                margin-left: 47%;
-            }
+            background-color: rgb(175, 20, 111);
+            border: none;
+            color: white;
+            padding: 12px 18px;
+            font-size: 11px;
+            margin: 3px 2px;
+            opacity: 0.4;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+        }
 
         button:hover {opacity: 1};
 
         .map-link:hover {
-                color: rgb(255, 99, 71);
+            color: rgb(255, 99, 71);
             }
 
-            .map-link:link, .map-link:visited {
-                text-decoration: underline;
+        .map-link:link, .map-link:visited {
+            text-decoration: underline;
             }
+
+        * {
+            box-sizing: border-box;
+            }
+
+        html, body {
+            margin: 0px;
+            padding: 0px;
+            font-family: monospace;
+            text-align: center;
+            }
+
+        #container {
+            width: 80%;
+            height: 50vh;
+            display: flex;
+            flex-direction: row;
+            }
+
+        #options {
+            flex: 1 0 20%;
+            padding-left: 50px;
+            font-size: 11pt;
+            line-height: 26pt;
+            }
+
+        #chart-container {
+            flex: 1 0 60%;
+            }
+
+        #chart {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        #axisLabel {
+            font-size: 13pt;
+            font-weight: bold;
+            color: white;
+            font-family: monospace;
+        }
+
+        .axis {
+            font-size: 12pt;
+            color: white;
+        }
+
+        .tooltip {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            visibility: hidden;
+            pointer-events: none;
+            font-family: monospace;
+            font-size: 12pt;
+            background-color:rgba(255, 255, 255, .5);
+            padding: 10px;
+        }
+
+        text {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 12pt;
+            color: white;
+        }
 
         </style>
     </head>
@@ -231,5 +222,153 @@
             </script>
 
         <p id="map-caption">This map shows the various public parks that are located within St. Louis along with the Black population of the city, which are distinguished by the purple circles in respect to zip codes. This data has been complied from <a class="map-link" target="_blank" href="https://www.nhgis.org/">IPUMS NHGIS</a> and includes census information from 2015-2019. As we have seen from "The Right to Landscape", public playgrounds provide "environments that forst opportunities for healthy psychological and physical development of a child". As designers it is important for us to consider the network of city infastructure in addition to its inhabitants and their desires. By contextualizing their spatial information with demographic data, we can begin to understand the disparity of these resources to particular communities.</p>
+
+        <div id="chart-container">
+            <h3>Missouri - Black Population: Computer Access & Work Commute (2015-2019)</h3>
+            <div id="chart"></div>
+        </div>
+        <div id="chart"></div>
+        <script>
+
+
+        const width = 1000;
+            const height = 750;
+            const margin = {top: 50, left: 125, right: 50, bottom: 110};
+    
+        const svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+
+            const missouri = [
+                {area: "Affton, MI", pop: 1476, computer: 1438, transit: 37},
+                {area: "Berkley, MI", pop: 9332, computer: 8430, transit: 553},
+                {area: "Breckenridge Hills, MI", pop: 9470, computer: 8390, transit: 177},
+                {area: "Brentwood, MI", pop: 329, computer: 310, transit: 0},
+                {area: "Clayton, MI", pop: 1494, computer: 330, transit: 23},
+                {area: "Creve Coeur, MI", pop: 1498, computer: 1385, transit: 0},
+                {area: "Des Peres, MI", pop: 305, computer: 272, transit: 5},
+                {area: "Ferguson, MI", pop: 14582, computer: 13285, transit: 373},
+                {area: "Frontenac, MI", pop: 305, computer: 272, transit: 5},
+                {area: "Jennings, MI", pop: 39462, computer: 35599, transit: 1666},
+                {area: "Kinloch, MI", pop: 218, computer: 154, transit: 7},
+                {area: "Kirkwood, MI", pop: 1939, computer: 1613, transit: 0},
+                {area: "Lemay, MI", pop: 1712, computer: 1571, transit: 252},
+                {area: "Maplewood, MI", pop: 1524, computer: 1260, transit: 143},
+                {area: "Normandy, MI", pop: 19317, computer: 16390, transit: 1006},
+                {area: "North County, MI", pop: 30378, computer: 27990, transit: 1311},
+                {area: "Olivette, MI", pop: 4542, computer: 4292, transit: 129},
+                {area: "Overland, MI", pop: 9470, computer: 8390, transit: 177},
+                {area: "Richmond Heights, MI", pop: 899, computer: 792, transit: 0},
+                {area: "University City, MI", pop: 10877, computer: 9254, transit: 642},
+                {area: "Webster Groves, MI", pop: 2587, computer: 2263, transit: 8},
+                {area: "Sappington, MI", pop: 618, computer: 521, transit: 1},
+                {area: "St. Louis, MI", pop: 152234, computer: 123434, transit: 9784},
+            ];
+
+
+        const computer = {
+            min: d3.min(missouri, function(d) { return +d.computer; }),
+            max: d3.max(missouri, function(d) { return +d.computer; })
+        };
+    
+        const transit = {
+            min: d3.min(missouri, function(d) { return +d.transit; }),
+            max: d3.max(missouri, function(d) { return +d.transit; })
+        };
+    
+        const pop = {
+            min: d3.min(missouri, function(d) { return +d.pop; }),
+            max: d3.max(missouri, function(d) { return +d.pop; })
+        };
+    
+    
+        const xScale = d3.scaleLinear()
+            .domain([transit.min, transit.max])
+            .range([margin.left, width-margin.right]);
+        const yScale = d3.scaleLinear()
+            .domain([computer.min, computer.max])
+            .range([height-margin.bottom, margin.top]);
+        const rScale = d3.scaleSqrt()
+            .domain([pop.min, pop.max])
+            .range([3, 25]);
+        var colorScale = d3.scaleOrdinal()
+            .range(["#af146f"]);
+
+
+        const xAxis = svg.append("g")
+            .attr("class","axis")
+            .attr("transform", `translate(0,${height-margin.bottom})`)
+            .call(d3.axisBottom().scale(xScale));
+        const yAxis = svg.append("g")
+            .attr("class","axis")
+            .attr("transform", `translate(${margin.left},0)`)
+            .call(d3.axisLeft().scale(yScale));
+
+
+        const circle = svg.selectAll("circle")
+            .data(missouri)
+            .enter()
+            .append("circle")
+                .attr("cx", function(d) { return xScale(d.transit); })
+                .attr("cy", function(d) { return yScale(d.computer); })
+                .attr("r", function(d) { return rScale(d.pop); })
+                .attr("fill", function(d) { return colorScale(d.area); });
+
+
+        const xAxisLabel = svg.append("text")
+            .attr("id","axisLabel")
+            .attr("x", width/2.75)
+            .attr("y", height-margin.bottom/2+25)
+            .text("Public Transportation Commute");
+
+        const yAxisLabel = svg.append("text")
+            .attr("id","axisLabel")
+            .attr("transform","rotate(-90)")
+            .attr("x",-height/1.5)
+            .attr("y",margin.left/8)
+            .text("Access to Personal Computer");
+
+        const tooltip = d3.select("#chart")
+            .append("div")
+            .attr("class", "tooltip");
+        circle.on("mouseover", function(e, d) {
+        console.log(d);
+        let cx = +d3.select(this).attr("cx")+490;
+        let cy = +d3.select(this).attr("cy")-75;
+        tooltip.style("visibility", "visible")
+            .style("left", `${cx}px`)
+            .style("top", `${cy}px`)
+            .html(`<b>Area:</b> ${d.area}<br><b>Public Transportation Commute to Work:</b> ${Math.round(d.transit)}<br><b>Owns a Personal Computer:</b> ${Math.round(d.computer)}`);
+        d3.select(this)
+            .attr("stroke", "#af146f")
+            .attr("stroke-width", 15);
+        }).on("mouseout", function() {
+        tooltip.style("visibility", "hidden");
+        d3.select(this)
+            .attr("stroke", "none")
+            .attr("stroke-width", 0);
+        });
+    
+    
+        d3.selectAll(".region--option").on("input", function() {
+            let city = d3.select(this).property("value");
+            let isChecked = d3.select(this).property("checked");
+            console.log(city, isChecked);
+            let selection = points.filter(function(d) {
+                return d.city == city;
+            });
+            if(isChecked == true) {
+                selection.attr("opacity", 1)
+                    .attr("pointer-events", "all");
+            } else {
+                selection.attr("opacity", 0)
+                    .attr("pointer-events", "none");
+            }
+        });
+    
+    
+    </script>
     </body>
 </html>
