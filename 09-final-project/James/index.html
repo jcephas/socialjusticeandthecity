@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Final Project</title>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>  
+    
+     
+
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+
+<style>
+
+	h1,{
+		padding: 20px 0px 0px 20px;		
+	}
+
+	a:hover {
+		color: #ba9b3f;
+		background-color:#5c5c5c;
+		font-size:130%;
+		opacity: 1;
+			}
+
+	a:link {
+  text-decoration: none;
+			}
+
+	a{font-family:"Tahoma", Sans-serif; color:#ffffff;}
+	
+	.first {
+		background-color: #4a4a4a;
+		height: 500px;
+		background-image: url("pi.jpg");
+		background-repeat: no-repeat;
+		background-size: 2048px 1152px;
+		background-position: center;
+		background-blend-mode:multiply; 
+ 		opacity: .6;
+	}
+
+	.second {
+		background-color: #b5b5b5;
+		height: 1350px;
+	}
+
+	.third {
+		background-color:#696969;
+		height: 1150px;
+	}
+
+	.fourth {
+		background-color: white;
+		height: 750px;
+	}
+
+	.fifth {
+		background-color: #e3e3e3;
+		height: 800px;
+	}
+
+	h1{font-family: "Stencil Std", fantasy;
+	  color: white;
+      text-align:center;
+      float: initial;
+      padding-top: 20px;
+      font-size: 3em;
+  }
+
+    h2{font-family: "Tahoma", Sans-serif;
+    font-size: 2em;
+	  color: white;
+      text-align:center;     
+      float: initial; 
+      padding-top: 20px;	
+    }
+
+
+    h3{font-family: "Tahoma", Sans-serif;
+    font-size: 1.5em;
+	  color: white;
+      text-align:center;     
+      float: initial; 	
+    }
+
+
+    p{
+      font-size: 1em;
+      letter-spacing: 0px;
+      color: grey;
+      text-align:left;
+      float: initial;
+      margin-top: 0em;
+      padding-top: 2em;
+      max-width:800px; 
+      color:white;
+      word-spacing: 2px;
+
+      }
+
+      .fly {
+	  background-color: white; 
+	  border: none;
+	  color: white;
+	  padding: 8px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-family: "Tahoma", Sans-serif;
+	  font-size: 16px;
+	  margin: 20px 2px;
+	  transition-duration: 0.4s;
+	  cursor: pointer;
+	  border-radius: 8px;
+	  -webkit-transition-duration: 0.4s; /* Safari */
+	  transition-duration: 0.4s;
+		}
+
+	.fly {
+	  background-color: #c9c9c9; 
+	  color: white; 
+	  border: 2px solid white;
+	}
+
+	.fly:hover {
+	  background-color: #9c9a8e;
+	  color: white;
+	  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19)
+	}
+
+	#marker {
+	background-image: url('crp.png');
+	background-size: cover;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	cursor: pointer;
+	}
+ 
+ 	#marker2 {
+	background-image: url('1.png');
+	background-size: cover;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	cursor: pointer;
+	}
+ 
+ 	.col-lg
+
+	
+
+.mapboxgl-popup {
+max-width: 200px;
+
+</style>
+</head>
+<body>
+
+	<div id="section01" class="first">
+		<br>
+		<br>
+		<h1 style="color: #ffffff">People, Homes, the Pandemic</h1>
+		<br>
+		<br>
+		
+		<h3 style="color: #ffffff;font-size:1.5em;">TABLE OF CONTENTS</h3>
+		<div style="text-align:center">
+		<br>
+		<center>
+		<a href="#section02">Introduction</a>
+		<br>
+		<a href="#section03">Diagram</a>
+		<br>
+		<a href="#section04">Pandemic Update</a>
+		<br>
+		<a href="#section05">Map</a>
+		<br>
+		<br>
+		<a style="color: #c29411;font-size:1em;" href="secondpage.html">About</a>
+		<br>
+		<a style="color: #c29411;font-size:1em;" href="works.html">Cited Works</a>
+		</center>
+	</div>
+	</div>
+
+	<div id="section02" class="second">
+		<br>
+		<br>
+		<br>
+		<center>
+		<p>
+		During the spring season of 2021, the majority of the population stayed and lived most of their lives at their homes, regardless of the differences in the types of housing and lifestyles. People who are able to keep working at homes have the alternatives to work and to live without risking their presence out there with the ongoing pandemic which had caused an increased unemployment rate along with increased real estate value. The situation is complicated – with the increasing number of cases of the Covid-19, the value of houses with lands increased while the rent for apartments went down, but considering the unemployment rate, the market was disordered by the occurring pandemic. 
+		</p>
+
+		
+		<br>
+		<br>
+		<br>
+		<br>
+
+		<img id="myImg"style="border-radius: 20px;" src="housemid.png" alt="Paris" width="400" height="300">
+		<img id="myImg"style="border-radius: 20px;" src="rentmid.png" alt="Paris" width="400" height="300">
+		<p style="font-size: .8em;">Data credit: <i> Zito, Barbara. “2021 Boston Real Estate Market Investing Forecast.” Millionacres, Millionacres, 2 Apr. 2021, www.fool.com/millionacres/market/massachusetts/boston/. </i></p>
+		
+		<p><i style="font-size: 2em;"><p style="font-family: Papyrus,fantasy;color: #ba9b3f;text-align: center;padding-bottom:30px;">
+		“This version leads to contemporary tensions stemming from ideological convictions on private property rights and the supremacy of the economic market value of the land.”</i>
+		</p>
+
+		<p>
+		The occurrence of the pandemic is unfortunate for all people, but one could see how people can be affected on many different levels based on how and where they live. Objectively, people tend not to live in the apartments due to the shared spaces and utilities such as gym or elevator, so the demand for single-family housing went up. But single-family housing can be expensive, especially within dense cities such as the Boston area. In 2021, the current median price is <b> $557,000 </b> which is<b> $227,000 </b>more than the national median price. The year-to-year increased more than 10% as high demand versus low inventory leads to a bidding war which is incredible to think of during a global pandemic.
+		</p>
+
+		<br>
+		
+
+		<a href="#section01">Back to Top</a>
+
+		</center>
+    </div>
+
+    	 <scirpt>
+		
+		</scirpt>
+
+	<div id="section03" class="third">
+		
+		<br>
+		<br>
+		<i><h3 style="font-size: 1.3em;font-weight:bold;font-family: Papyrus,fantasy;color:#ba9b3f ">Timelapse - click and drag</h3></i>
+		<center><i style="font-size: 1em;font-family: Papyrus,fantasy;color:#ba9b3f ">"back to 2009"</i></center>
+		
+		<center>
+			<br>
+		<script type="application/processing">
+		
+		    PImage img;
+    		PImage img2;
+    
+		    float offset = 0;
+		    float easing = 0.05;
+
+		    noCursor();
+    
+		    void setup() {
+		      size(1350, 600);
+		      
+		        img = loadImage("compare.jpg");
+		        img2 = loadImage("compare2.png"); 
+		    }
+
+		    void draw() { 
+
+
+		    if(mousePressed){
+		    	float dx = (mouseX-img2.width/5) - offset;
+		      	offset += dx * easing; 
+		      	image(img, 0, 0,1350,600);
+		    	image(img2, offset, 0,1350,600);
+
+		    	}
+
+		    else{
+		     image(img, 0, 0,1350,600);
+		      
+		      }
+
+		      
+
+    		}
+    
+    
+    
+      </script>
+
+      <canvas></canvas>
+
+      <p style="font-size: .8em;padding-left: 325px;">Image credit: <i> @Google Map</i></p>
+      <p>
+		People, regardless the race or class, were all taken a hit under the scenario, but there will always be differences. Wealthier families tend to have more sparable savings and irreplaceable jobs to endure this ongoing pandemic with regular life routines while their real estate values are going up; whereas other families might be struggling to sustain their regular life standards and to pay the rent or mortgage while facing the results or possibility of losing employment. 	
+		</p>
+
+		<p><i style="font-size: .8em;color:#ba9b3f">*The photos shown above are not intended to represent any actual references between different households during this pandemic. </i></p>
+  </center>
+
+  <br>
+
+		<center><a href="#section01">Back to top</a></center>
+		
+	<br>
+    <br>	
+
+		
+	</div>
+
+	<div id="section04" class="fourth">
+		<br>
+		<br>
+		<h2 style="color: grey;">Pandemic Update</h2>
+		<br>
+		<center>
+		<iframe src="https://ourworldindata.org/grapher/daily-covid-deaths-7-day?tab=chart" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+      </center>
+	</div>
+
+	<div style="margin-left: 50px; " >
+		<br>
+		
+		
+		
+	</div>
+	
+	<div id="section05" class="fifth">
+	<br>
+	<br>
+	<center>
+		<h2 style="font-size: 2em;color:#ba9b3f">Density of Medical Institution comparison </h2>
+		<h3 style="font-size: 1em;color:#ba9b3f;font-style: italic;">Chestnut Hill / Chaldean Town</h3>
+
+				<div id='map' style='width: 1200px; height: 550px;margin-top:40px;'></div>
+              	<button id="fly" class="fly">Relocate</button>
+
+                <script> 
+                 mapboxgl.accessToken = 'pk.eyJ1IjoiemhhbmdkZWgiLCJhIjoiY2ttZXd4bWZ0MGt2aDJvcHEyazN6NzB3aCJ9.WLKMf-78k0CwwtUKiXo55g';
+                          var start = [-71.159, 42.325];
+                          var end = [-83.100, 42.422];
+                          var map = new mapboxgl.Map({
+                          container: 'map',
+                          style: 'mapbox://styles/zhangdeh/ckni1ks1006wm17o4mnuqkv6r',
+                          center: start,
+                          zoom: 12
+                          });
+                           
+                          var isAtStart = true;
+                           
+                          document.getElementById('fly').addEventListener('click', function () {
+
+                          var target = isAtStart ? end : start;
+                           
+
+                          isAtStart = !isAtStart;
+                           
+                          map.flyTo({
+
+                          center: target,
+                          zoom: 12,
+                          bearing: 0,
+                           
+
+                          speed: 4,
+                          curve: .6,
+
+                          easing: function (t) {
+                          return t;
+                          },
+                           
+
+                          essential: true
+                          });
+                          });             
+                           
+                	</script> 
+              
+    	</div>
+	
+	
+		</center>
+	<br>
+		
+	</div>
+	<center><a style="color:grey;" href="#section01">Back to Top</a></center>
+		
+		
+		
+
+</body>
+
+</html>
