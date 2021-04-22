@@ -8,6 +8,8 @@
         <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
         <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
 
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+
         <style>
             body{
                 background-color: #3b3b3b;
@@ -28,6 +30,10 @@
                 color: whitesmoke;
             }
 
+            h4 {
+                color: white;
+            }
+
             #links {
                 text-align: center;
                 padding-top: 3px;
@@ -41,18 +47,6 @@
                 color: whitesmoke;
             }
 
-            #links2 {
-                text-align: center;
-                padding-top: 3px;
-                padding-bottom: 2%;
-                font-family: monospace;
-                padding-left: 2%;
-                letter-spacing: 1px;
-                border-top: 2px solid #178a73;
-                margin-right: 20%;
-                margin-left: 20%;
-            }
-
             a:link, a:visited {
                 text-decoration: none;
                 color: whitesmoke;
@@ -63,46 +57,17 @@
                 color: #ff6347;
             }
 
-            #intro {
-                text-align: center;
-                font-family: monospace;
-                padding-left: 30%;
-                padding-right: 30%;
-                padding-bottom: 2%;
-                line-height: 16pt;
-                font-style: italic;
-                text-align: justify;
-                color: whitesmoke;
-            }
-
             #map-caption {
                 text-align: center;
                 font-family: monospace;
                 padding-left: 20%;
                 padding-right: 20%;
                 padding-top: 1%;
-                padding-bottom: 1%;
                 line-height: 16pt;
                 font-style: italic;
                 text-align: justify;
                 color: whitesmoke;
-            }
-
-            #igoe {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 35%;
-                color: whitesmoke;
-            }
-
-            #caption {
-                text-align: center;
-                font-family: monospace;
-                line-height: 16pt;
-                font-style: italic;
-                color: whitesmoke;
-                font-size: 11pt;
+                padding-bottom: 1%;
             }
 
             h2 {
@@ -121,7 +86,6 @@
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
                 line-height: 24pt;
                 text-align: justify;
-                color: black;
                 color: whitesmoke;
                 }
 
@@ -129,67 +93,108 @@
                 padding-left: 35%;
                 padding-right: 35%;
                 padding-top: 15%;
-                padding-bottom: 7%;
-                margin-left: 4%;
+                padding-bottom: 15%;
+                margin-left: 15%;
             }
-
-            .navbar {
-            width: 100%;
-            background-color: #3b3b3b;
-            overflow: hidden;
-            margin-left: 45%;
-            margin-top: 2%;
-        }
-
-        .navbar a {
-            float: left;
-            padding: 72px;
-            color: white;
-            text-decoration: none;
-            font-family: monospace;
-            font-size: 14px;
-            width: 33.33%;
-            text-align: center;
-        }
-
-        .navbar a:hover {
-            background-color: rgb(255, 99, 71);
-            color: whitesmoke;
-        }
-
-
-        .navbar a {
-            float: none;
-            display: inline;
-            width: 100%;
-            text-align: left;
-        }
 
         button {
-                background-color: #af146f;
-                border: none;
-                color: white;
-                padding: 12px 18px;
-                text-align: center;
-                font-size: 11px;
-                margin: 3px 2px;
-                opacity: 0.4;
-                transition: 0.3s;
-                display: inline-block;
-                text-decoration: none;
-                cursor: pointer;
-                margin-left: 47%;
-            }
+            background-color: rgb(175, 20, 111);
+            border: none;
+            color: white;
+            padding: 12px 18px;
+            font-size: 11px;
+            margin: 3px 2px;
+            opacity: 0.4;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+        }
 
         button:hover {opacity: 1};
 
         .map-link:hover {
-                color: rgb(255, 99, 71);
+            color: rgb(255, 99, 71);
             }
 
-            .map-link:link, .map-link:visited {
-                text-decoration: underline;
+        .map-link:link, .map-link:visited {
+            text-decoration: underline;
             }
+
+        * {
+            box-sizing: border-box;
+            }
+
+        html, body {
+            margin: 0px;
+            padding: 0px;
+            font-family: monospace;
+            text-align: center;
+            }
+
+        #container {
+            width: 80%;
+            height: 50vh;
+            display: flex;
+            flex-direction: row;
+            color: white;
+            }
+
+        #options {
+            flex: 1 0 20%;
+            padding-left: 50px;
+            font-size: 10.5pt;
+            line-height: 26pt;
+            color: white;
+            }
+
+        #chart-container {
+            flex: 1 0 60%;
+            }
+
+        #chart {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .axisLabel {
+            font-size: 13pt;
+            font-weight: bold;
+            color: white;
+            font-family: monospace;
+        }
+
+        .axis {
+            font-size: 12pt;
+            color: white;
+        }
+
+        .tooltip {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            visibility: hidden;
+            pointer-events: none;
+            font-family: monospace;
+            font-size: 12pt;
+            background-color:rgba(0, 0, 0, .5);
+            padding: 10px;
+        }
+
+        text {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 12pt;
+            color: white;
+        }
+
+        #dataTitle {
+            padding-bottom: 5%;
+        }
+
+        #dataCaption {
+            line-height: 15pt;
+        }
 
         </style>
     </head>
@@ -198,16 +203,6 @@
     <body>
 
         <p id="text">Pruitt-Igoe was a housing project that was constructed during the 1950s in St. Louis, Missouri. It was intended to solve the disparity in affordable housing however, its failure attests to the lack of maintenance and responsibility that the developers and architects willfully ignored. In this case, the harm was caused through this lack of afterthought that led to its declining state and ultimate demolition. By putting people in homes in which they did not have the funds to upkeep, without providing external support, its inhabitants were left to its despair.</p>
-
-        <div id="button">
-            <button type="button" onclick="myFunction()">EXPLORE</button>
-        </div>
-
-        <script>
-            function myFunction() {
-                location.href = "violence-of-modernism.html";
-            }
-        </script>
 
     <h3>Black Population by Zip Code</h3>
 
@@ -231,5 +226,196 @@
             </script>
 
         <p id="map-caption">This map shows the various public parks that are located within St. Louis along with the Black population of the city, which are distinguished by the purple circles in respect to zip codes. This data has been complied from <a class="map-link" target="_blank" href="https://www.nhgis.org/">IPUMS NHGIS</a> and includes census information from 2015-2019. As we have seen from "The Right to Landscape", public playgrounds provide "environments that forst opportunities for healthy psychological and physical development of a child". As designers it is important for us to consider the network of city infastructure in addition to its inhabitants and their desires. By contextualizing their spatial information with demographic data, we can begin to understand the disparity of these resources to particular communities.</p>
+        <p id="map-caption">The scatterplot below additionally adds to understanding the context of this area, as the relationship between computer ownership and method of transportation to work are depicted. To construct this visualization, the zip code information was condensed by city or suburb areaa in order to show the comparison between demographics. The Black population is represented by the purple circles, while the White population corresponds to the blue circles. Population size is analogous to the size of each point.</p>
+
+        <div id="button">
+            <button type="button" onclick="myFunction()">THE VIOLENCE OF MODERNISM</button>
+        </div>
+
+    <div>
+        <script>
+            function myFunction() {
+                location.href = "violence-of-modernism.html";
+            }
+        </script>
+
+        <div id="container">
+            <div id="options">
+                <h4>Filter by Demographic</h4>
+                <p id="dataCaption"><i>Hover over points for details</i></p>
+                <input type="checkbox" class="race" value="Black Population" checked> Black Population <br>
+                <input type="checkbox" class="race" value="White Population" checked> White Population <br>
+            </div>
+        <div id="chart-container">
+            <h3 id="dataTitle">Missouri: Computer Access & Work Commute (2015-2019)</h3>
+            <div id="chart"></div>
+        </div>
+        <div id="chart"></div>
+        <script>
+
+
+        const width = 1350;
+            const height = 825;
+            const margin = {top: 50, left: 125, right: 50, bottom: 110};
+
+        const svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+
+            const missouri = [
+                {area: "Affton, MI", pop: 1476, computer: 1438, transit: 37, race: "Black Population"},
+                {area: "Berkley, MI", pop: 9332, computer: 8430, transit: 553, race: "Black Population"},
+                {area: "Breckenridge Hills, MI", pop: 9470, computer: 8390, transit: 177, race: "Black Population"},
+                {area: "Brentwood, MI", pop: 329, computer: 310, transit: 0, race: "Black Population"},
+                {area: "Clayton, MI", pop: 1494, computer: 330, transit: 23, race: "Black Population"},
+                {area: "Creve Coeur, MI", pop: 1498, computer: 1385, transit: 0, race: "Black Population"},
+                {area: "Des Peres, MI", pop: 305, computer: 272, transit: 5, race: "Black Population"},
+                {area: "Ferguson, MI", pop: 14582, computer: 13285, transit: 373, race: "Black Population"},
+                {area: "Frontenac, MI", pop: 305, computer: 272, transit: 5, race: "Black Population"},
+                {area: "Jennings, MI", pop: 39462, computer: 35599, transit: 1666, race: "Black Population"},
+                {area: "Kinloch, MI", pop: 218, computer: 154, transit: 7, race: "Black Population"},
+                {area: "Kirkwood, MI", pop: 1939, computer: 1613, transit: 0, race: "Black Population"},
+                {area: "Lemay, MI", pop: 1712, computer: 1571, transit: 252, race: "Black Population"},
+                {area: "Maplewood, MI", pop: 1524, computer: 1260, transit: 143, race: "Black Population"},
+                {area: "Normandy, MI", pop: 19317, computer: 16390, transit: 1006, race: "Black Population"},
+                {area: "North County, MI", pop: 30378, computer: 27990, transit: 1311, race: "Black Population"},
+                {area: "Olivette, MI", pop: 4542, computer: 4292, transit: 129, race: "Black Population"},
+                {area: "Overland, MI", pop: 9470, computer: 8390, transit: 177, race: "Black Population"},
+                {area: "Richmond Heights, MI", pop: 899, computer: 792, transit: 0, race: "Black Population"},
+                {area: "University City, MI", pop: 10877, computer: 9254, transit: 642, race: "Black Population"},
+                {area: "Webster Groves, MI", pop: 2587, computer: 2263, transit: 8, race: "Black Population"},
+                {area: "Sappington, MI", pop: 618, computer: 521, transit: 1, race: "Black Population"},
+                {area: "St. Louis, MI", pop: 152234, computer: 123434, transit: 9784, race: "Black Population"},
+                {area: "Affton, MI", pop: 45747, computer: 42747, transit: 214, race: "White Population"},
+                {area: "Berkley, MI", pop: 3857, computer: 3464, transit: 6, race: "White Population"},
+                {area: "Breckenridge Hills, MI", pop: 21469, computer: 19693, transit: 109, race: "White Population"},
+                {area: "Brentwood, MI", pop: 7464, computer: 7213, transit: 31, race: "White Population"},
+                {area: "Clayton, MI", pop: 23755, computer: 20283, transit: 231, race: "White Population"},
+                {area: "Creve Coeur, MI", pop: 16004, computer: 14996, transit: 26, race: "White Population"},
+                {area: "Des Peres, MI", pop: 16063, computer: 15692, transit: 21, race: "White Population"},
+                {area: "Ferguson, MI", pop: 6380, computer: 5946, transit: 32, race: "White Population"},
+                {area: "Frontenac, MI", pop: 16063, computer: 15692, transit: 21, race: "White Population"},
+                {area: "Jennings, MI",  pop: 3173, computer: 2455, transit: 30, race: "White Population"},
+                {area: "Kinloch, MI", pop: 104, computer: 93, transit: 2, race: "White Population"},
+                {area: "Kirkwood, MI", pop: 35767, computer: 34601, transit: 75, race: "White Population"},
+                {area: "Lemay, MI", pop: 28971, computer: 26320, transit: 151, race: "White Population"},
+                {area: "Maplewood, MI", pop: 7374, computer: 7068, transit: 199, race: "White Population"},
+                {area: "Normandy, MI", pop: 3261, computer: 2478, transit: 73, race: "White Population"},
+                {area: "North County, MI", pop: 6629, computer: 5374, transit: 159, race: "White Population"},
+                {area: "Olivette, MI", pop: 7005, computer: 6774, transit: 153, race: "White Population"},
+                {area: "Overland, MI", pop: 21469, computer: 19693, transit: 109, race: "White Population"},
+                {area: "Richmond Heights, MI", pop: 7278, computer: 7013, transit: 110, race: "White Population"},
+                {area: "University City, MI", pop: 15064, computer: 14206, transit: 349, race: "White Population"},
+                {area: "Webster Groves, MI", pop: 30290, computer: 28074, transit: 226, race: "White Population"},
+                {area: "Sappington, MI", pop: 470779, computer: 44266, transit: 82, race: "White Population"},
+                {area: "St. Louis, MI", pop: 210239, computer: 192145, transit: 2739, race: "White Population"},
+            ];
+
+
+        const computer = {
+            min: d3.min(missouri, function(d) { return +d.computer; }),
+            max: d3.max(missouri, function(d) { return +d.computer; })
+        };
+        const transit = {
+            min: d3.min(missouri, function(d) { return +d.transit; }),
+            max: d3.max(missouri, function(d) { return +d.transit; })
+        };
+        const pop = {
+            min: d3.min(missouri, function(d) { return +d.pop; }),
+            max: d3.max(missouri, function(d) { return +d.pop; })
+        };
+
+
+        const xScale = d3.scaleLinear()
+            .domain([transit.min, transit.max])
+            .range([margin.left, width-margin.right]);
+        const yScale = d3.scaleLinear()
+            .domain([computer.min, computer.max])
+            .range([height-margin.bottom, margin.top]);
+        const rScale = d3.scaleSqrt()
+            .domain([pop.min, pop.max])
+            .range([3, 25]);
+        var colorScale = d3.scaleOrdinal()
+            .range(["#af146f", "#17528a"]);
+
+
+        const xAxis = svg.append("g")
+            .attr("class","axis")
+            .attr("transform", `translate(0,${height-margin.bottom})`)
+            .call(d3.axisBottom().scale(xScale));
+        const yAxis = svg.append("g")
+            .attr("class","axis")
+            .attr("transform", `translate(${margin.left},0)`)
+            .call(d3.axisLeft().scale(yScale));
+
+
+        const circle = svg.selectAll("circle")
+            .data(missouri)
+            .enter()
+            .append("circle")
+                .attr("cx", function(d) { return xScale(d.transit); })
+                .attr("cy", function(d) { return yScale(d.computer); })
+                .attr("r", function(d) { return rScale(d.pop); })
+                .attr("fill", function(d) { return colorScale(d.race); });
+
+
+        const xAxisLabel = svg.append("text")
+            .attr("class","axisLabel")
+            .attr("x", width/2.4)
+            .attr("y", height-margin.bottom/2+25)
+            .text("Public Transportation Commute to Work");
+
+        const yAxisLabel = svg.append("text")
+            .attr("class","axisLabel")
+            .attr("transform","rotate(-90)")
+            .attr("x",-height/1.7)
+            .attr("y",margin.left/8)
+            .text("Access to a Personal Computer");
+
+        const tooltip = d3.select("#chart")
+            .append("div")
+            .attr("class", "tooltip");
+        circle.on("mouseover", function(e, d) {
+        console.log(d);
+        let cx = +d3.select(this).attr("cx")+30;
+        let cy = +d3.select(this).attr("cy")-105;
+        tooltip.style("visibility", "visible")
+            .style("left", `${cx}px`)
+            .style("top", `${cy}px`)
+            .html(`<b>Area:</b> ${d.area}<br><b>Population:</b> ${d.pop}<br><b>Public Transportation Commute to Work:</b> ${Math.round(d.transit)} People<br><b>Owns a Personal Computer:</b> ${Math.round(d.computer)} People`);
+        d3.select(this)
+            .attr("stroke", "#ffffff")
+            .attr("stroke-width", 15);
+        }).on("mouseout", function() {
+        tooltip.style("visibility", "hidden");
+        d3.select(this)
+            .attr("stroke", "none")
+            .attr("stroke-width", 0);
+        });
+
+
+        d3.selectAll(".race").on("input", function() {
+
+        let race = d3.select(this).property("value");
+        let isChecked = d3.select(this).property("checked");
+
+        console.log(race, isChecked);
+
+        let selection = circle.filter(function(d) {
+            return d.race == race;
+        });
+
+        if(isChecked == true) {
+            selection.attr("opacity", 1)
+                .attr("pointer-events", "all");
+        } else {
+            selection.attr("opacity", 0)
+                .attr("pointer-events", "none");
+        }
+        });
+    </script>
+    </div>
     </body>
 </html>
