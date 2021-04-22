@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Right to City</title>
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+
+		<script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+
+		<link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+	</head>
+
+	<style>
+		body
+		{
+			background-color: dimgrey;
+		}
+		.header
+			{
+				color: lightblue;
+				font-family: monospace;
+				padding-left: 30px;
+				padding-top: 10px;
+				align-content: center;
+			}
+		.map
+			{
+				padding-left: 30px;
+				padding-top: 50px;
+			}
+		.bodyOne
+			{
+				color: darkorange;
+				padding-left: 30px;
+				font-family: Arial;
+
+			}
+
+	</style>
+
+	<body>
+		<div id="header" style="padding-left: 100px">
+			<h1 class="header">
+				Who Prospers from the City?
+			</h1>
+		</div>
+
+		<div id="header" style="padding-left: 100px">
+			<h2 class="header">
+				Passing the Buck in a Culture of White Supremacy
+			</h2>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-1">
+			</div>
+
+			<div class="col-md-5" class="map">
+				<div id='map' style= 'width: 600px; height: 670px;'>			
+				</div>
+
+				<script>
+					mapboxgl.accessToken = 'pk.eyJ1IjoianRyb3NlbnRoYWwiLCJhIjoiY2ttZXlrYmJmMHc4ZDJ5bXhlOXhyMHM3bSJ9.92fSkqss9OHpGtzB76_kEw';
+					var map = new mapboxgl.Map
+					({
+  						container: 'map', // container ID
+  			 			style: 'mapbox://styles/jtrosenthal/ckn58avne0b9s17jy5jhhcvf7', // style URL
+  						center: [-71.05, 42.33], // starting position [lng, lat]
+  						zoom: 10.8 // starting zoom
+					});
+				</script>
+			</div>
+
+			<div class="col-md-5">
+				<div class="bodyOne">
+					<p>Land management has been the source of countless conflicts throughout history. Whether it be on the scale of the annexation of sovereign nations, such as The Kingdom of Hawaii, or more local, such as the gentrification of Harlem and Billionaire’s row, our usage of land is important in contextualizing our relationship with it.</p>
+
+					<p>When Europeans first arrived in the New World, they would regularly steal and settle the lands inhabited by indigenous people, often justifying such actions by saying that they were “improving” the land, frequently by implementing agricultural monocropping over vast swaths of land. While dedicating land to food production is admirable in the goal of feeding others, this was often done in the pursuit of economic exploitation, just as Can Masdeu’s property holders deliberately let the building fall into disrepair in order to eventually sell or otherwise profit off the real estate. </p>
+
+					<p>The issue with these approaches to land management is that they fail to be inclusive of alternative uses for land. While the forests and meadows of the Northeastern United States provided ample game land for indigenous people, and Can Madseu is able to host swaths of people in its facility through squatter activism, neither of these maximize the short term profits for those who manage the land, and thus are viewed as unproductive, despite their long term sustainability. </p>
+
+					<p>Land needs to be viewed not only in the context of capitalism, but should be valued in terms of human and environmental benefit as well. While many of the ways that land is used outside of direct financial benefit, such as native prairies in carbon sequestration and vacant homes being used by squatters as homes, they benefits the present aren’t immediately apparent under the free hand of the market, and thus are ignored. The long term benefits of these structures must be constantly recognized and reaffirmed in order for them to be maintained, and they should be figured into our current economic models if we are to create a more equitable world.</p>
+				</div>
+			</div>
+			<div class="col-sm-1">
+			</div>
+		</div>
+	</body>
+</html>
