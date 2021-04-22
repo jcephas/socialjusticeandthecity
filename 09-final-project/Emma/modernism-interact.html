@@ -230,6 +230,7 @@
             <button type="button" onclick="myFunction()">THE VIOLENCE OF MODERNISM</button>
         </div>
 
+    <div>
         <script>
             function myFunction() {
                 location.href = "violence-of-modernism.html";
@@ -381,7 +382,7 @@
         tooltip.style("visibility", "visible")
             .style("left", `${cx}px`)
             .style("top", `${cy}px`)
-            .html(`<b>Area:</b> ${d.area}<br><b>Demographic:</b> ${d.race}<br><b>Public Transportation Commute to Work:</b> ${Math.round(d.transit)}<br><b>Owns a Personal Computer:</b> ${Math.round(d.computer)}`);
+            .html(`<b>Area:</b> ${d.area}<br><b>Population:</b> ${d.pop}<br><b>Public Transportation Commute to Work:</b> ${Math.round(d.transit)} People<br><b>Owns a Personal Computer:</b> ${Math.round(d.computer)} People`);
         d3.select(this)
             .attr("stroke", "#ffffff")
             .attr("stroke-width", 15);
@@ -413,5 +414,6 @@
         }
         });
     </script>
+    </div>
     </body>
 </html>
