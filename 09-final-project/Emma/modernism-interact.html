@@ -227,7 +227,7 @@
         <p id="map-caption">This map shows the various public parks that are located within St. Louis along with the Black population of the city, which are distinguished by the purple circles in respect to zip codes. This data has been complied from <a class="map-link" target="_blank" href="https://www.nhgis.org/">IPUMS NHGIS</a> and includes census information from 2015-2019. As we have seen from "The Right to Landscape", public playgrounds provide "environments that forst opportunities for healthy psychological and physical development of a child". As designers it is important for us to consider the network of city infastructure in addition to its inhabitants and their desires. By contextualizing their spatial information with demographic data, we can begin to understand the disparity of these resources to particular communities.</p>
 
         <div id="button">
-            <button type="button" onclick="myFunction()">EXPLORE PRUITT-IGOE</button>
+            <button type="button" onclick="myFunction()">THE VIOLENCE OF MODERNISM</button>
         </div>
 
         <script>
@@ -360,16 +360,16 @@
 
         const xAxisLabel = svg.append("text")
             .attr("class","axisLabel")
-            .attr("x", width/2.3)
+            .attr("x", width/2.4)
             .attr("y", height-margin.bottom/2+25)
-            .text("Public Transportation Commute");
+            .text("Public Transportation Commute to Work");
 
         const yAxisLabel = svg.append("text")
             .attr("class","axisLabel")
             .attr("transform","rotate(-90)")
             .attr("x",-height/1.7)
             .attr("y",margin.left/8)
-            .text("Access to Personal Computer");
+            .text("Access to a Personal Computer");
 
         const tooltip = d3.select("#chart")
             .append("div")
