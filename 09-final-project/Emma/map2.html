@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Violence of Modernism</title>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
+        <style>
+            body{
+                background-color: #3b3b3b;
+            }
+
+            h1 {
+                text-align: center;
+                font-family: monospace;
+                color: rgb(255, 99, 71);
+                padding-top: 2%;
+                font-size: 24pt;
+            }
+
+            h3 {
+                text-align: center;
+                font-family: monospace;
+                font-size: 13pt;
+                color: whitesmoke;
+            }
+
+            #quote1 {
+                font-size: 18pt;
+                font-style: italic;
+                font-weight: bold;
+                font-family: 'Times New Roman', Times, serif;
+                padding-top: 20px;
+                color: whitesmoke;
+            }
+
+            #author1 {
+                text-align: right;
+                padding-right: 10%;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 12pt;
+                font-weight: bold;
+                color: whitesmoke;
+            }
+
+            #links {
+                text-align: center;
+                padding-top: 3px;
+                padding-bottom: 1%;
+                font-family: monospace;
+                border-top: 2px solid rgb(23, 138, 115);
+                margin-right: 20%;
+                margin-left: 20%;
+                letter-spacing: 1px;
+                font-size: 10pt;
+                color: whitesmoke;
+            }
+
+            #links2 {
+                text-align: center;
+                padding-top: 3px;
+                padding-bottom: 2%;
+                font-family: monospace;
+                padding-left: 2%;
+                letter-spacing: 1px;
+                border-top: 2px solid rgb(23, 138, 115);
+                margin-right: 20%;
+                margin-left: 20%;
+            }
+
+            a:link, a:visited {
+                text-decoration: none;
+                color: whitesmoke;
+            }
+
+            a:hover {
+                font-style: italic;
+                color: #ff6347;
+            }
+
+            #intro {
+                text-align: center;
+                font-family: monospace;
+                padding-left: 30%;
+                padding-right: 30%;
+                padding-bottom: 2%;
+                line-height: 16pt;
+                font-style: italic;
+                text-align: justify;
+                color: whitesmoke;
+            }
+
+            #map-caption {
+                text-align: center;
+                font-family: monospace;
+                padding-left: 20%;
+                padding-right: 20%;
+                padding-bottom: 1%;
+                padding-top: 1%;
+                line-height: 16pt;
+                font-style: italic;
+                text-align: justify;
+                color: whitesmoke;
+            }
+
+            #igoe {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 47%;
+                color: whitesmoke;
+            }
+
+            #caption {
+                text-align: center;
+                font-family: monospace;
+                line-height: 16pt;
+                font-style: italic;
+                color: whitesmoke;
+                font-size: 11pt;
+            }
+
+            h2 {
+                text-align: center;
+                font-family: monospace;
+                margin-right: 20%;
+                margin-left: 20%;
+                padding-top: 1%;
+                color: whitesmoke;
+            }
+
+            .border1 {
+                text-align: center;
+                font-family: monospace;
+                border-top: 2px solid #178a73;
+                margin-right: 10%;
+                margin-left: 10%;
+                padding-top: 2%;
+            }
+
+            #text {
+                padding-left: 30%;
+                padding-right: 30%;
+                font-size: 12pt;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                line-height: 24pt;
+                text-align: justify;
+                color: black;
+                color: whitesmoke;
+                }
+
+            #map {
+                padding-left: 35%;
+                padding-right: 35%;
+                padding-top: 15%;
+                padding-bottom: 7%;
+                margin-left: 4%;
+            }
+
+            .navbar {
+            width: 100%;
+            background-color: #3b3b3b;
+            overflow: hidden;
+            margin-left: 45%;
+            margin-top: 2%;
+        }
+
+        .navbar a {
+            float: left;
+            padding: 72px;
+            color: white;
+            text-decoration: none;
+            font-family: monospace;
+            font-size: 14px;
+            width: 33.33%;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: rgb(255, 99, 71);
+            color: whitesmoke;
+        }
+
+        .navbar a {
+            float: none;
+            display: inline;
+            width: 100%;
+            text-align: left;
+        }
+
+        button {
+                background-color: rgb(23, 82, 138);
+                border: none;
+                color: white;
+                padding: 12px 18px;
+                text-align: center;
+                font-size: 11px;
+                margin: 3px 2px;
+                opacity: 0.4;
+                transition: 0.3s;
+                display: inline-block;
+                text-decoration: none;
+                cursor: pointer;
+                margin-left: 47%;
+            }
+
+        button:hover {opacity: 1};
+
+        .map-link:hover {
+                color: rgb(255, 99, 71);
+            }
+
+            .map-link:link, .map-link:visited {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>St. Louis: White Population by Zip Code</h2>
+
+        <div id='map' style='width: 400px; height: 300px;'></div>
+        <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZW1tYXBhbGFjaW8iLCJhIjoiY2ttZXd1dTU0Mno1ZDMwdzB5cGQzNnp3aiJ9.WOO3zGxaP9t8WBufMwAUhQ';
+        var map = new mapboxgl.Map({
+            container: 'map', // container ID
+            style: 'mapbox://styles/emmapalacio/cknnaeqyq0h4x17tc7yx57wvm', // style URL
+            center: [-90.2075, 38.6415], // starting position [lng, lat]
+            zoom: 14.5 // starting zoom
+        });
+        </script>
+
+    <button type="button" onClick="reloadThePage()">RECENTER</button>
+
+    <script>
+        function reloadThePage(){
+            window.location.reload();
+        } 
+        </script>
+
+    <p id="map-caption">This map shows the various public parks that are located within St. Louis along with the White population by zip code, which are distinguished by the blue circles. This data has been complied from <a class="map-link" target="_blank" href="https://www.nhgis.org/">IPUMS NHGIS</a> and includes census information from 2015-2019. Click to view the <a class="map-link" href="modernism-interact.html#section2">Black population</a> or return to the <a class="map-link" href="violence-of-modernism.html#section2">main page</a>.</p>
+    </body>
+</html>
