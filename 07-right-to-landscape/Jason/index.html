@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Right to Landscape</title>
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+
+		<script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+
+		<link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+	</head>
+
+	<style>
+		body
+		{
+			background-color: black;
+		}
+		.header
+			{
+				color: white;
+				font-family: monospace;
+				padding-left: 30px;
+				padding-top: 10px;
+				align-content: center;
+			}
+		.map
+			{
+				padding-left: 30px;
+				padding-top: 50px;
+			}
+		.bodyOne
+			{
+				color: white;
+				padding-left: 30px;
+				font-family: Arial;
+
+			}
+
+	</style>
+
+	<body>
+		<div id="header" style="padding-left: 100px">
+			<h1 class="header">
+				What's The Best Way to Use Land?
+			</h1>
+		</div>
+
+		<div id="header" style="padding-left: 100px">
+			<h2 class="header">
+				Land Equity and Understanding Injustice in the Landscape
+			</h2>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-1">
+			</div>
+
+			<div class="col-md-5" class="map">
+				
+
+				<script type="application/processing">
+				size(500,500);
+				void setup()
+					{
+					    background(164,252,255);
+					}
+				void draw()
+			    	{
+			    	  fill(26,210,19);
+					  rect(0,450,500,50);
+					  
+					  fill(141,50,0);
+					  rect(100,200,300,250)
+					  rect(150,80,200,120)
+					  
+					  fill(255,255,134);
+					  rect(100,200,20,250);
+					  rect(200,200,20,250);
+					  rect(300,200,20,250);
+					  rect(400,200,20,250);
+					  rect(100,200,320,20);
+					  rect(100,300,320,20);
+					  rect(100,400,320,20);
+					  rect(150,70,20,130);
+					  rect(350,70,20,130);
+					  rect(150,70,220,20);
+
+			          if(mouseX>100)
+			          {
+			            if(mouseX>200)
+			            {
+			                if(mouseX>300)
+			                {
+			                    if(mouseX>400)
+			                    {
+			                        ellipse(160,360,50,50)
+			                    }
+			                ellipse(260,260,50,50)
+			                }
+			            ellipse(360,260,50,50)
+			            }
+			          ellipse(260,150,50,50)
+			          }
+			        } 		
+			</script>
+
+
+			<canvas></canvas>
+			<p></p>
+			<p style="color: white">Each circle represents a person that can be housed within this abandoned building if housing was recognized as a universal right</p>
+			</div>
+
+			<div class="col-md-5">
+				<div class="bodyOne">
+					<p>Land management has been the source of countless conflicts throughout history. Whether it be on the scale of the annexation of sovereign nations, such as The Kingdom of Hawaii, or more local, such as the gentrification of Harlem and Billionaire’s row, our usage of land is important in contextualizing our relationship with it.</p>
+
+					<p>When Europeans first arrived in the New World, they would regularly steal and settle the lands inhabited by indigenous people, often justifying such actions by saying that they were “improving” the land, frequently by implementing agricultural monocropping over vast swaths of land. While dedicating land to food production is admirable in the goal of feeding others, this was often done in the pursuit of economic exploitation, just as Can Masdeu’s property holders deliberately let the building fall into disrepair in order to eventually sell or otherwise profit off the real estate. </p>
+
+					<p>The issue with these approaches to land management is that they fail to be inclusive of alternative uses for land. While the forests and meadows of the Northeastern United States provided ample game land for indigenous people, and Can Madseu is able to host swaths of people in its facility through squatter activism, neither of these maximize the short term profits for those who manage the land, and thus are viewed as unproductive, despite their long term sustainability. </p>
+
+					<p>Land needs to be viewed not only in the context of capitalism, but should be valued in terms of human and environmental benefit as well. While many of the ways that land is used outside of direct financial benefit, such as native prairies in carbon sequestration and vacant homes being used by squatters as homes, they benefits the present aren’t immediately apparent under the free hand of the market, and thus are ignored. The long term benefits of these structures must be constantly recognized and reaffirmed in order for them to be maintained, and they should be figured into our current economic models if we are to create a more equitable world.</p>
+				</div>
+			</div>
+			<div class="col-sm-1">
+			</div>
+		</div>
+	</body>
+</html>
