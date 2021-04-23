@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+
+<html>
+<head>
+
+		<script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+		<link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet" />
+
+	<title>Conversations</title>
+
+</head>
+
+<style>
+
+
+	h1, h4, a, img, iframe, form {
+		padding: 20px 0px 0px 20px;
+	}
+	p {
+		padding: 20px 250px 20px 250px;
+		line-height: 2;
+	}
+
+	.body {
+  margin: 500px;
+  overflow: hidden;
+}
+
+	a:hover {
+		color:#c9a757;
+	}
+
+	.first {
+			background-color: #c79793;
+			height: 1500px;
+		}
+	
+</style>
+
+<body>
+
+	<div id="section01" class="first">
+<center>
+
+
+
+<h1>Current Scenarios</h1>
+
+
+	<a href="index.html">Homepage</a>
+<a href="solutions.html">Proposed Solutions</a>
+<a href="education.html">Educational Resources</a>
+<a href="author.html">The Author</a>	
+
+
+
+<p>
+Voter suppression is being conducted from both sides of the political aisle, and this is locking people out from voting, and this suppression seems to be targeting the communities of color and young people at a more significant rate.  The problems with the current voting system include, "mail ballot delivery problems, changed voting locations, long lines, registration problems, purged voter rolls, broken machines, and voter intimidation." Apart from that there are registration and voter identity issues, controversial policies in place, online voter suppression, and more. These problems are not just in Boston, they are happening throughout the US, but the voting system in Boston, in many ways, serves as an example to the rest of the nation on how to conduct a proper election.  I believe that this success gives Boston the opportunity to implement new accessibility means and stretch the political reach.   
+</p>
+
+
+<p>
+Here we look at the current voting precincts of Boston, MA and each of the listed polling locations within those voting precincts. This offers a visual for people, and begs the question, is it enough?  Does it fairly and justly serve each community? What can be discovered?
+</p>
+
+
+			<div id="map" style="width: 800px; height: 600px;"></div>
+
+			<script>
+			mapboxgl.accessToken = "pk.eyJ1IjoibHlkb25tYyIsImEiOiJja21ld2MwNmwwdnFvMm5udnl5Z2kxbXZ1In0.OOyOz8SYDdFqmhpsJlZzrg";
+			var map = new mapboxgl.Map({
+			    container: "map", // container ID
+			    style: "mapbox://styles/lydonmc/cknrye5ug023h17r0p4nwsxfd", // style URL
+			    center: [-71.1,42.31], // starting position [lng, lat]
+			    zoom: 10.5 // starting zoom
+			});
+			</script>
+
+<br>
+
+	<a href="index.html">Homepage</a>
+<a href="solutions.html">Proposed Solutions</a>
+<a href="education.html">Educational Resources</a>
+<a href="author.html">The Author</a>	
+
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
