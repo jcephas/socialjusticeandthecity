@@ -7,7 +7,7 @@
 
         <style>
             body {
-                background-color: whitesmoke;
+                background-color: black;
             }
 
             h1 {
@@ -31,7 +31,7 @@
                 padding-bottom: 1%;
                 font-family: monospace;
                 letter-spacing: 1px;
-                border-top: 2px solid rgb(23, 138, 115);
+                border-top: 2px solid tomato;
                 margin-right: 20%;
                 margin-left: 20%;
                 font-size: 10pt;
@@ -47,35 +47,12 @@
 
             a:link, a:visited {
                 text-decoration: none;
-                color: black;
+                color: white;
             }
 
             a:hover {
                 font-style: italic;
-                color: rgb(255, 99, 71);
-            }
-
-            #intro {
-                text-align: center;
-                font-family: monospace;
-                padding-left: 30%;
-                padding-right: 30%;
-                padding-bottom: 2%;
-                line-height: 16pt;
-                font-style: italic;
-                text-align: justify;
-            }
-
-            #vitruvian, #warrior, #williams, #comparison {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 16%;
-            }
-
-            #caption {
-                text-align: center;
-                font-family: monospace;
+                color: tomato;
             }
 
             h2 {
@@ -87,78 +64,36 @@
                 padding-top: 2%;
             }
 
-        .navbar {
-            width: 75%;
-            background-color: whitesmoke;
-            overflow: hidden;
-            margin-left: 23%;
-            margin-right: 13%;
-        }
-
-        .navbar a {
-            float: left;
-            padding: 72px;
-            color: rgb(23, 138, 115);
-            text-decoration: none;
-            font-family: monospace;
-            font-size: 14px;
-            width: 33.33%;
-            text-align: center;
-        }
-
-        .navbar a:hover {
-            background-color: rgb(255, 99, 71);
-            color: whitesmoke;
-        }
-
-        .navbar a {
-            float: none;
-            display: inline;
-            width: 100%;
-            text-align: left;
-        }
-
-        #text {
-                padding-left: 30%;
-                padding-right: 30%;
-                font-size: 12pt;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                line-height: 24pt;
-                text-align: justify;
-                color: black;
-                }
-
-        #citation {
-            font-size: 9pt;
-            line-height: 12pt;
-            border-top: 2px solid rgb(23, 138, 115);
-            padding-top: 20px;
-            text-align: justify;
-            padding-left: 27%;
-            padding-right: 27%;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-
         #interact{
             display: block;
             margin-right: auto;
             margin-left: auto;
             padding-top: 3%;
-            margin-bottom: 2%;
         }
+
+        button {
+                background-color: white;
+                border: none;
+                color: tomato;
+                padding: 12px 18px;
+                text-align: center;
+                font-size: 11px;
+                margin: 3px 2px;
+                opacity: 0.4;
+                transition: 0.3s;
+                display: inline-block;
+                text-decoration: none;
+                cursor: pointer;
+                margin-left: 47.5%;
+                margin-top: 3%;
+                margin-bottom: 2%;
+            }
+
+        button:hover {opacity: 1};
 
         </style>
     </head>
-    
-    <h1 id="title">Empowerment Through Architecture</h1>
         <body>
-
-        <div id="showbar" class="navbar">
-            <a href="arch-empowerment.html#section1">FREEDOM OF EXPRESSION</a>
-            <a href="arch-empowerment.html#section2">THE DISCIPLINARY ALIBI & ARCHITECTURAL EDUCATION</a>
-            <a href="empowerment-interact.html">INTERACT</a>
-        </div>
-
         <script type="application/processing">
         
             PFont f;
@@ -244,25 +179,25 @@
         </script>
         <canvas id="interact"></canvas>
 
-    <div id="section1">
-        <h2>Freedom of Expression</h2>
-            <p id="text">The relationship between identity and landscape is especially salient as it embodies the highly personal and emotional aspects of architecture. Identity and place, or sense of place, holds a similar intertwined relationship to that of race and the body. Throughout time, the struggle to achieve an alternate identity, both personally and through a specific place, is central to how one can feel pride. In addition to this, the equation of land to power suggests the importance of defining a space in ways that support your values. Thus, the right to landscape is a human right that is inherently tied to our freedom of expression. However, there is a fine line between finding empowerment through collective spaces and being harmed by their implications.</p>
-    </div>
+        <div id="button">
+            <button type="button" onclick="myFunction()">EXPLORE</button>
+        </div>
+    
+        <script>
+            function myFunction() {
+            location.href = "arch-empowerment.html";
+        }
+        </script>
 
-    <div id="section2">
-        <h2>The Disciplinary Alibi & Architectural Education</h2>
-            <p id="text">The contradiction of the “disciplinary alibi” and the selfishness of architects can be traced back to the way architecture is taught. Architectural education is notorious for long studio hours and lack of sleep. This overload of work does not provide opportunities for students to engage themselves, which is especially true if architectural education is undertaken during the ages of 18-25. The content of architectural education is also important to reconsider. As we have seen, the failure in projects can often be linked to a lack of understanding. Therefore, more time should be put into learning about other ways of life, instead of a sole concentration on buildings and their systems.</p>
-
-            <p id="text">Empowering people through architecture also means deinstitutionalizing the profession. As Lefebvre notes in <i>Writings on Cities</i>, only those who are exploited truly understand systematic struggles and can create change within communities. Therefore, not only should cities be designed by the people, it is additionally critical for architectural knowledge to be public and accessible.</p>
-    </div>
-</body>
 
     <nav id="links">
         <p><a href="index.html">HOME</a></p>
         <p><a href="about.html">ABOUT</a></p>
         <p><a href="body-interact.html">THE BODY, IDENTITY & LANDSCAPE</a></p>
         <p><a href="modernism-interact.html">THE VIOLENCE OF MODERNISM</a></p>
+        <p><a href="arch-empowerment.html">EMPOWERMENT THROUGH ARCHITECTURE</a></p>
         <p><a href="sources.html">SOURCES</a></p>
     </nav>
+
     </body>
 </html>

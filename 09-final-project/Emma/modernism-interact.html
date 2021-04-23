@@ -35,13 +35,13 @@
             }
 
             #links {
-                text-align: center;
-                padding-top: 3px;
+                text-align: left;
+                margin-top: 525%;
                 padding-bottom: 1%;
+                padding-left: 15%;
                 font-family: monospace;
-                border-top: 2px solid rgb(23, 138, 115);
-                margin-right: 20%;
-                margin-left: 20%;
+                border-left: 2px solid rgb(175, 20, 111);
+                margin-left: 10%;
                 letter-spacing: 1px;
                 font-size: 10pt;
                 color: whitesmoke;
@@ -196,15 +196,17 @@
             line-height: 15pt;
         }
 
+        #plot {
+            display: block;
+        }
         </style>
     </head>
 
     <h2>Pruitt-Igoe: St. Louis, Missouri</h2>
     <body>
-
         <p id="text">Pruitt-Igoe was a housing project that was constructed during the 1950s in St. Louis, Missouri. It was intended to solve the disparity in affordable housing however, its failure attests to the lack of maintenance and responsibility that the developers and architects willfully ignored. In this case, the harm was caused through this lack of afterthought that led to its declining state and ultimate demolition. By putting people in homes in which they did not have the funds to upkeep, without providing external support, its inhabitants were left to its despair.</p>
 
-    <h3>Black Population by Zip Code</h3>
+    <h3>Missouri: Black Population by Zip Code</h3>
 
         <div id='map' style='width: 400px; height: 300px;'></div>
         <script>
@@ -225,20 +227,10 @@
             } 
             </script>
 
-        <p id="map-caption">This map shows the various public parks that are located within St. Louis along with the Black population of the city, which are distinguished by the purple circles in respect to zip codes. This data has been complied from <a class="map-link" target="_blank" href="https://www.nhgis.org/">IPUMS NHGIS</a> and includes census information from 2015-2019. As we have seen from "The Right to Landscape", public playgrounds provide "environments that forst opportunities for healthy psychological and physical development of a child". As designers it is important for us to consider the network of city infastructure in addition to its inhabitants and their desires. By contextualizing their spatial information with demographic data, we can begin to understand the disparity of these resources to particular communities.</p>
+        <p id="map-caption">This map shows the various public parks that are located within Missouri along with the Black population of the city, which are distinguished by the purple circles in respect to zip codes. This data has been complied from <a class="map-link" target="_blank" href="https://www.nhgis.org/">IPUMS NHGIS</a> and includes census information from 2015-2019. As we have seen from "The Right to Landscape", public playgrounds provide "environments that foster opportunities for healthy psychological and physical development of a child" (Egoz, Makhzoumi, Pungetti, 11). As designers it is important for us to consider the network of city infastructure in addition to its inhabitants and their desires. By contextualizing their spatial information with demographic data, we can begin to understand the disparity of these resources to particular communities.</p>
         <p id="map-caption">The scatterplot below additionally adds to understanding the context of this area, as the relationship between computer ownership and method of transportation to work are depicted. To construct this visualization, the zip code information was condensed by city or suburb areaa in order to show the comparison between demographics. The Black population is represented by the purple circles, while the White population corresponds to the blue circles. Population size is analogous to the size of each point.</p>
 
-        <div id="button">
-            <button type="button" onclick="myFunction()">THE VIOLENCE OF MODERNISM</button>
-        </div>
-
-    <div>
-        <script>
-            function myFunction() {
-                location.href = "violence-of-modernism.html";
-            }
-        </script>
-
+    <div id="plot">
         <div id="container">
             <div id="options">
                 <h4>Filter by Demographic</h4>
@@ -251,6 +243,7 @@
             <div id="chart"></div>
         </div>
         <div id="chart"></div>
+        <div>
         <script>
 
 
@@ -384,7 +377,7 @@
         tooltip.style("visibility", "visible")
             .style("left", `${cx}px`)
             .style("top", `${cy}px`)
-            .html(`<b>Area:</b> ${d.area}<br><b>Population:</b> ${d.pop}<br><b>Public Transportation Commute to Work:</b> ${Math.round(d.transit)} People<br><b>Owns a Personal Computer:</b> ${Math.round(d.computer)} People`);
+            .html(`<b>Area:</b> ${d.area}<br><b>Population:</b> ${d.pop}<br><b>Public Transportation Commute to Work:</b> ${Math.round(d.transit)}<br><b>Owns a Personal Computer:</b> ${Math.round(d.computer)}`);
         d3.select(this)
             .attr("stroke", "#ffffff")
             .attr("stroke-width", 15);
@@ -416,6 +409,18 @@
         }
         });
     </script>
+</div>
+
+    <div>
+        <nav id="links">
+            <p><a href="index.html">HOME</a></p>
+            <p><a href="about.html">ABOUT</a></p>
+            <p><a href="body-interact.html">THE BODY, IDENTITY & LANDSCAPE</a></p>
+            <p><a href="violence-of-modernism.html">THE VIOLENCE OF MODERNISM</a></p>
+            <p><a href="empowerment-interact.html">EMPOWERMENT THROUGH ARCHITECTURE</a></p>
+            <p><a href="sources.html">SOURCES</a></p>
+        </nav>
     </div>
+
     </body>
 </html>
